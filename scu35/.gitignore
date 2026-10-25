@@ -1,0 +1,15 @@
+config.json
+out/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.prv
+*.aux
+*.nky
+*.pem
+keys*/
+*.jou
+*.str
+*.log.bak
+.Xil/

@@ -1,0 +1,12 @@
+{
+  "scope": "PUBLIC all-zero diagnostic AES root only. No private HSS state or random secret root is exported. IVs are public.",
+  "root_key_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+  "ivs": {
+    "combo_plm": "c9793c5cc9ecb6fee70c66ed",
+    "combo_pl": "d44bcb96454dcb89f912efaf",
+    "zero_mask_plm": "a10d9245051c434089d63e74",
+    "zero_mask_pl": "651d23224eed594075d20107",
+    "zero_plm": "b1a42376b088a6d7e85cd128",
+    "zero_pl": "4761222d37a0c5e1d89b3df0"
+  }
+}

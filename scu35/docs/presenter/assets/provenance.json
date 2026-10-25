@@ -1,0 +1,50 @@
+{
+  "images": [
+    {
+      "path": "assets/scu35_board.jpg",
+      "width": 1200,
+      "height": 675,
+      "source": "https://www.amd.com/content/dam/amd/en/images/products/adaptive-soc/spartan-ultrascale-plus-scu35-eval-board/3918253-spartan-ultrascale-plus-scu35-eval-board.jpg",
+      "page_url": "https://www.amd.com/en/products/adaptive-socs-and-fpgas/evaluation-boards/scu35.html",
+      "caption": "AMD vendor board photograph, not a photograph of the current loaner setup. Downloaded without modification."
+    }
+  ],
+  "copies": {
+    "pdi_layout.svg": {
+      "source": "sec35/pdi_view/breakdown.svg",
+      "sha256": "9f4540fe95f67eb395b10f3977b6f7f13cb442fd0e4157096713c596a6b6cf85"
+    },
+    "signing.svg": {
+      "source": "sec35/boot/flow.svg",
+      "sha256": "c26e6c079b99317b829d37821947a96dfe1f8aa083e2652934a040ef1afdc6c2"
+    },
+    "rolling.svg": {
+      "source": "sec35/boot/rolling.svg",
+      "sha256": "676d72afca0b64b09a190eae7ec4d1b6462a72ff928c5a60fe880790b15c7e3f"
+    },
+    "pdi_sizes.svg": {
+      "source": "sec35/boot/sizes.svg",
+      "sha256": "084163ef6fd216b0c8b352128076b8e5a13ea4d6a60099f627c223239c146a53"
+    },
+    "native_bulk.svg": {
+      "source": "sec35/fast/report.svg",
+      "sha256": "cee30ea08c2aafb287dacdd5941502c5ada2a55894cb89ee8fe0ff28d7dc6fc8"
+    },
+    "native_latency.svg": {
+      "source": "sec35/fast/latency.svg",
+      "sha256": "22813b4d84ed28c886cff60c94b11551737b9562b3ee1695a3ee0c3d2a6d857c"
+    },
+    "native_pq.svg": {
+      "source": "sec35/fast/pq.svg",
+      "sha256": "a651ed980ccf4f64e41f79c0a86d95cd04d42dbc31b956e6bb5a1ebf34ff5e31"
+    },
+    "pl_crypto.svg": {
+      "source": "sec35/compare/crypto_timing.svg",
+      "sha256": "bdc138b0202cef326575d0d2631b11b29d2275d3b32fd4a7d3a42d225808380a"
+    },
+    "pl_signatures.svg": {
+      "source": "sec35/compare/signature_timing.svg",
+      "sha256": "0defe73f98fa0b73bdf63f3c989db50d9ce5d4e7f2a025121208c25b246fd5a1"
+    }
+  }
+}

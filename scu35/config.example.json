@@ -1,0 +1,11 @@
+{
+  "tools": "/path/to/AMD/2026.1",
+  "build_dir": "/short/local/s35",
+  "jobs": 2,
+  "hardware_vivado": "/path/to/matching/Vivado/bin/vivado",
+  "server": "localhost:3121",
+  "cable": "REPLACE_WITH_YOUR_SCU35_CABLE_SERIAL",
+  "serial_port": "/dev/serial/by-id/REPLACE_WITH_SCU35_UART",
+  "restore_pdi": "/path/to/your/known-good-scu35.pdi",
+  "restore_sha256": "REPLACE_WITH_SHA256_OF_YOUR_RESTORE_PDI"
+}

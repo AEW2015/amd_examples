@@ -1,0 +1,181 @@
+{
+  "checked_utc": "2026-10-25T19:34:37.399469+00:00",
+  "overall": "PASS",
+  "scope": "Public HTTP checks; document module routes also opened with web browsing. No DSL authentication attempted.",
+  "subsections": {
+    "CCU_APB": {
+      "url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/CCU_APB-Module",
+      "label": "CCU_APB registers \u00b7 UG1679",
+      "kind": "public-register-section"
+    },
+    "PMCL_EFUSE": {
+      "url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/EFUSE-Module",
+      "label": "EFUSE registers \u00b7 UG1679",
+      "kind": "public-register-section"
+    },
+    "PMCL_GLOBAL": {
+      "url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/GLOBAL-Module",
+      "label": "GLOBAL registers \u00b7 UG1679",
+      "kind": "public-register-section"
+    },
+    "PMCL_OSPI": {
+      "url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/OSPI_QSPI-Module",
+      "label": "OSPI_QSPI registers \u00b7 UG1679",
+      "kind": "public-register-section"
+    },
+    "PMCL_SLAVE_BOOT": {
+      "url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/SBI-Module",
+      "label": "SBI registers \u00b7 UG1679",
+      "kind": "public-register-section"
+    },
+    "PMCL_TAP": {
+      "url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/TAP-Module",
+      "label": "TAP registers \u00b7 UG1679",
+      "kind": "public-register-section"
+    },
+    "CCU_RD_STREAM": {
+      "url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/CCU_APB-Module",
+      "label": "Related CCU_APB control registers",
+      "kind": "related-control-section",
+      "note": "Stream aperture; linked page documents the associated control block, not this data aperture."
+    },
+    "CCU_WR_STREAM": {
+      "url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/CCU_APB-Module",
+      "label": "Related CCU_APB control registers",
+      "kind": "related-control-section",
+      "note": "Stream aperture; linked page documents the associated control block, not this data aperture."
+    },
+    "SLAVE_BOOT_STREAM": {
+      "url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/SBI-Module",
+      "label": "Related SBI control registers",
+      "kind": "related-control-section",
+      "note": "Stream aperture; linked page documents the associated control block, not this data aperture."
+    },
+    "PMC_AES": {
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/src/server/core/aes/xsecure_aes_core_hw.h",
+      "check_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/src/server/core/aes/xsecure_aes_core_hw.h",
+      "label": "AES register definitions \u00b7 AMD source",
+      "kind": "public-driver-register-definitions",
+      "note": "Public driver definitions; complete security-register documentation is UG1680 in the Design Security Lounge."
+    },
+    "PMCL_SHA3": {
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/src/server/spartanup/xsecure_sha_hw.h",
+      "check_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/src/server/spartanup/xsecure_sha_hw.h",
+      "label": "SHA3 register definitions \u00b7 AMD source",
+      "kind": "public-driver-register-definitions",
+      "note": "Public driver definitions; complete security-register documentation is UG1680 in the Design Security Lounge."
+    },
+    "PMCL_PUF": {
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilpuf/src/spartanup/xpuf_hw.h",
+      "check_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilpuf/src/spartanup/xpuf_hw.h",
+      "label": "PUF register definitions \u00b7 AMD source",
+      "kind": "public-driver-register-definitions",
+      "note": "Public driver definitions; complete security-register documentation is UG1680 in the Design Security Lounge."
+    },
+    "PMCL_TRNG": {
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/XilinxProcessorIPLib/drivers/trngpsx/src/xtrngpsx_hw.h",
+      "check_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/XilinxProcessorIPLib/drivers/trngpsx/src/xtrngpsx_hw.h",
+      "label": "TRNG register definitions \u00b7 AMD source",
+      "kind": "public-driver-register-definitions",
+      "note": "Public driver definitions; complete security-register documentation is UG1680 in the Design Security Lounge."
+    },
+    "PLM_CONFIG": {
+      "url": "https://docs.amd.com/r/en-US/ug860-spartan-ultrascale-config/References",
+      "label": "Register-guide access \u00b7 UG1680 / DSL",
+      "kind": "documentation-access-reference",
+      "note": "No dedicated public UG1679 subsection found. This link identifies the security register guide and its Design Security Lounge access requirement; it is not a register subsection."
+    },
+    "PMCL_DMA": {
+      "url": "https://docs.amd.com/r/en-US/ug860-spartan-ultrascale-config/References",
+      "label": "Register-guide access \u00b7 UG1680 / DSL",
+      "kind": "documentation-access-reference",
+      "note": "No dedicated public UG1679 subsection found. This link identifies the security register guide and its Design Security Lounge access requirement; it is not a register subsection."
+    },
+    "RV_IOMODULE": {
+      "url": "https://docs.amd.com/r/en-US/ug860-spartan-ultrascale-config/References",
+      "label": "Register-guide access \u00b7 UG1680 / DSL",
+      "kind": "documentation-access-reference",
+      "note": "No dedicated public UG1679 subsection found. This link identifies the security register guide and its Design Security Lounge access requirement; it is not a register subsection."
+    },
+    "RV_RAM_DATA_ECC_CTRL": {
+      "url": "https://docs.amd.com/r/en-US/ug860-spartan-ultrascale-config/References",
+      "label": "Register-guide access \u00b7 UG1680 / DSL",
+      "kind": "documentation-access-reference",
+      "note": "No dedicated public UG1679 subsection found. This link identifies the security register guide and its Design Security Lounge access requirement; it is not a register subsection."
+    },
+    "RV_RAM_INSTR_ECC_CTRL": {
+      "url": "https://docs.amd.com/r/en-US/ug860-spartan-ultrascale-config/References",
+      "label": "Register-guide access \u00b7 UG1680 / DSL",
+      "kind": "documentation-access-reference",
+      "note": "No dedicated public UG1679 subsection found. This link identifies the security register guide and its Design Security Lounge access requirement; it is not a register subsection."
+    }
+  },
+  "checks": {
+    "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/CCU_APB-Module": {
+      "status": 200,
+      "final_url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/CCU_APB-Module",
+      "bytes": 48693,
+      "sha256": "2aae9c9b00bec004937fcbf3065c0e64d5205b996a90cdbf7efa4f84aa03f432"
+    },
+    "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/EFUSE-Module": {
+      "status": 200,
+      "final_url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/EFUSE-Module",
+      "bytes": 41452,
+      "sha256": "39d5c52664b434d76a0d636035c37f10708eb245881126101142888a299cf936"
+    },
+    "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/GLOBAL-Module": {
+      "status": 200,
+      "final_url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/GLOBAL-Module",
+      "bytes": 51839,
+      "sha256": "5d38c5d80a42ca8f4b38a7a898ac5dd7058b2d578cdf8236e96fa1ac30ee183b"
+    },
+    "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/OSPI_QSPI-Module": {
+      "status": 200,
+      "final_url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/OSPI_QSPI-Module",
+      "bytes": 69185,
+      "sha256": "d404ab0a193509931e6e6ed18030c63e2ddc93aefcca665ce4217d02ee4eaf7f"
+    },
+    "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/SBI-Module": {
+      "status": 200,
+      "final_url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/SBI-Module",
+      "bytes": 44616,
+      "sha256": "60487f41d2fb81f47f9d4c34883946ed2048b67d3fc0d23c78e7fdf5cfbd401f"
+    },
+    "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/TAP-Module": {
+      "status": 200,
+      "final_url": "https://docs.amd.com/r/en-US/ug1679-spartan-ultrascaleplus-registers/TAP-Module",
+      "bytes": 48113,
+      "sha256": "b4c4b3e3f55b176beb1c9e14717e3108d277a63d501ca18773a08f7cb9530026"
+    },
+    "https://docs.amd.com/r/en-US/ug860-spartan-ultrascale-config/References": {
+      "status": 200,
+      "final_url": "https://docs.amd.com/r/en-US/ug860-spartan-ultrascale-config/References",
+      "bytes": 48339,
+      "sha256": "ca9da06509ce7035ce3db77723c145ff58d96caac92c514fb6b52f9a7008a86e"
+    },
+    "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/XilinxProcessorIPLib/drivers/trngpsx/src/xtrngpsx_hw.h": {
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/XilinxProcessorIPLib/drivers/trngpsx/src/xtrngpsx_hw.h",
+      "bytes": 5000,
+      "sha256": "503ecbf2814b89adb678fd1a949671b096f146aae4573ff90af6921acf20e3bd"
+    },
+    "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilpuf/src/spartanup/xpuf_hw.h": {
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilpuf/src/spartanup/xpuf_hw.h",
+      "bytes": 5117,
+      "sha256": "7f820b7d8da6c4623abc766be3d24482af77a31009f192f1a5cfa1b0ac440e03"
+    },
+    "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/src/server/core/aes/xsecure_aes_core_hw.h": {
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/src/server/core/aes/xsecure_aes_core_hw.h",
+      "bytes": 6369,
+      "sha256": "bb07532ffbee763b57a6bc5d2e18dd620dbf91f49d7a26690425587d160b9c64"
+    },
+    "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/src/server/spartanup/xsecure_sha_hw.h": {
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/src/server/spartanup/xsecure_sha_hw.h",
+      "bytes": 2294,
+      "sha256": "a46b229c5063080fe029f6ea2081199a2728fbd0e91aed8149d845790a511fb5"
+    }
+  }
+}

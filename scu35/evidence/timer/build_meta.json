@@ -1,0 +1,24 @@
+{
+  "build_id": "7d1bf77bc454dd1f",
+  "compiler_args": [
+    "D:\\AMDDesignTools\\2026.1\\Vitis\\gnu\\riscv\\nt\\bin\\riscv64-unknown-elf-gcc.exe",
+    "-march=rv32i_zicsr_zifencei",
+    "-mabi=ilp32",
+    "-DSDT",
+    "-O2",
+    "-g",
+    "-specs=C:\\aiup\\sec35\\timer\\bsp/Xilinx.spec",
+    "-IC:\\aiup\\sec35\\timer\\bsp/include",
+    "C:\\aiup\\sec35\\timer\\bench.c",
+    "-Wl,-T,C:\\aiup\\sec35\\timer/lscript.ld",
+    "-LC:\\aiup\\sec35\\timer\\bsp/lib",
+    "-Wl,--start-group,-lxilstandalone,-lxiltimer,-lxilsecure,-lxilpuf,-lgloss,-lxil,-lgcc,-lc",
+    "-Wl,--end-group",
+    "-Wl,-Map,C:\\aiup\\sec35\\timer/bench.map",
+    "-o",
+    "C:\\aiup\\sec35\\timer\\bench.elf"
+  ],
+  "vendor_hss_sha256": "0f89799e117901653ed046880667e4c518a1ba7fc9e5f080a90346eabef50488",
+  "shared_region": "0x0402b000..0x0402dfff",
+  "self_initializing_shared_state": true
+}

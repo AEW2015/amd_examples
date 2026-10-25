@@ -1,0 +1,12 @@
+
+
+****** Bootgen v2026.1
+  **** Build date : Jun  5 2026-13:21:08
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+[WARNING]: Be careful when version controlling, backing up, and restoring LMS private keys. The private key file contains state. Re-using private key state leads to loss of authenticity. For more information, see NIST SP800-208 Sec. 9.1 https://csrc.nist.gov/pubs/sp/800/208/final.
+[WARNING]: Be careful when version controlling, backing up, and restoring LMS private keys. The private key file contains state. Re-using private key state leads to loss of authenticity. For more information, see NIST SP800-208 Sec. 9.1 https://csrc.nist.gov/pubs/sp/800/208/final.
+
+[INFO]   : Bootimage generated successfully
+

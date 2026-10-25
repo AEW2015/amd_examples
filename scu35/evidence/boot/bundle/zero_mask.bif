@@ -1,0 +1,13 @@
+new_bif:
+{
+ id_code = 0x04e80093
+
+ image {
+ name = pmcl_subsys
+ id = 0x0
+partition {id=0x01, type=bootloader, encryption=aes, dpacm_enable, keysrc=efuse_red_key,
+ aeskeyfile=zero_mask_plm.nky, blocks=4096(*), file=plm.elf}
+ partition {id=0x02, type=pldata, encryption=aes, dpacm_enable,
+ aeskeyfile=zero_mask_pl.nky, blocks=4096(*), file=design.rcdo}
+ }
+}

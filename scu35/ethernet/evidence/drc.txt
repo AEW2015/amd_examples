@@ -1,0 +1,42 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Sun Oct 25 15:33:32 2026
+| Host         : DESKTOP-I75K8PP running 64-bit major release  (build 9200)
+| Command      : report_drc -file C:/aiup/e35/drc.txt
+| Design       : sys_wrapper
+| Device       : xcsu35p-sbvb625-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: impl_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 1
++-----------+----------+-------------------+--------+
+| Rule      | Severity | Description       | Checks |
++-----------+----------+-------------------+--------+
+| RTSTAT-10 | Warning  | No routable loads | 1      |
++-----------+----------+-------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+RTSTAT-10#1 Warning
+No routable loads  
+3 net(s) have no routable loads. The problem bus(es) and/or net(s) are sys_i/pmc/inst/S_AXI_bresp[0], sys_i/pmc/inst/S_AXI_rlast
+sys_i/pmc/inst/S_AXI_rresp[0].
+Related violations: <none>
+
+

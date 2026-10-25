@@ -1,0 +1,8 @@
+{
+    "variant":  "signed",
+    "attempt":  "C:\\aiup\\sec35\\boot\\runs\\20261025T132740057_signed",
+    "pdi_sha256":  "8ab7ac3f967cdab595930f955eade363ba72d5b46930c51394e7a1c72650da54",
+    "restored":  true,
+    "hardware_mutation_attempted":  true,
+    "error":  ""
+}

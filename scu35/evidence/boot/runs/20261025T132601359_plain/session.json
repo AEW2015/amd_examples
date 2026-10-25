@@ -1,0 +1,8 @@
+{
+    "variant":  "plain",
+    "attempt":  "C:\\aiup\\sec35\\boot\\runs\\20261025T132601359_plain",
+    "pdi_sha256":  "12fa0536cf8e8301b324972031c23959c6da82ca1301867d8b7b99cd12f64fce",
+    "restored":  true,
+    "hardware_mutation_attempted":  true,
+    "error":  ""
+}

@@ -1,0 +1,1 @@
+Initial implementation was stopped after synthesis flagged an unsupported foreach loop in XDC and duplicate primary-clock definitions. The corrected build uses explicit pin statements and the existing interface/Clocking Wizard clocks. These are the original rejected inputs and log; they are not the delivered constraints.

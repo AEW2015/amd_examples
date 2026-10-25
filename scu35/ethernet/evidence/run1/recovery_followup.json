@@ -1,0 +1,7 @@
+{
+  "initial_session_sha256": "03220dcc626ee79d38b4f15daf28a541cbf45a7b6a66af6e506836bf1c760de9",
+  "initial_recovery_pass": false,
+  "followup_recovery_pass": true,
+  "evidence": "restore_retry.log",
+  "note": "Reprogrammed same known-good baseline after its application cleanup; DONE=1 ERROR=0, no hardware status clearing."
+}

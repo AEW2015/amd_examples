@@ -1,0 +1,57 @@
+{
+  "signed": {
+    "header": {
+      "key_source": 0,
+      "plm_offset": 20400,
+      "pl_load": 4060086272,
+      "pl_bytes": 1327536,
+      "pl_encoded": 1332720,
+      "plm_bytes": 26048,
+      "plm_encoded": 26144,
+      "attributes": 786432
+    },
+    "ppk_sha256": "b0044dec04aeac5bc1f2d54833b542622e81bb27db8707e8dd5a7af7e2cdc54f",
+    "spk_sha256": "5dc075242e3084a9b978510e4abfba2c3f79a67b856629de0b2e4bac80c9e3b4",
+    "spk_signature_valid": true,
+    "hash_block_signature_valid": true,
+    "boot_header_hash_valid": true,
+    "signature_bytes": 9620,
+    "signature_offset": 10768,
+    "hash_block_offset": 10624,
+    "plm_sha256": "bdafedd897fe86e0f078cf76339baaa0f18826292efc04736c5b08ec9f464498",
+    "pl_sha256": "5be45317976b0799993cec51e9e7cc094806838bbe1d427854c893512bdee5ea",
+    "plm_bytes": 26048,
+    "pl_bytes": 1327536,
+    "chain_chunks": 167
+  },
+  "combo": {
+    "header": {
+      "key_source": 2781070755,
+      "plm_offset": 20400,
+      "pl_load": 4060086272,
+      "pl_bytes": 1327536,
+      "pl_encoded": 1354064,
+      "plm_bytes": 26048,
+      "plm_encoded": 26656,
+      "attributes": 789504
+    },
+    "ppk_sha256": "b0044dec04aeac5bc1f2d54833b542622e81bb27db8707e8dd5a7af7e2cdc54f",
+    "spk_sha256": "5dc075242e3084a9b978510e4abfba2c3f79a67b856629de0b2e4bac80c9e3b4",
+    "spk_signature_valid": true,
+    "hash_block_signature_valid": true,
+    "boot_header_hash_valid": true,
+    "signature_bytes": 9620,
+    "signature_offset": 10768,
+    "hash_block_offset": 10624,
+    "plm_sha256": "0d79e4ac3871397d6f8973963925c1720b1035c23d05164100d30f492eb410cc",
+    "pl_sha256": "51e9b70927c13a5b6f2ca27586396416818b2eebd631d02f2c4c26a1ae125119",
+    "plm_bytes": 26560,
+    "pl_bytes": 1348784,
+    "chain_chunks": 170
+  },
+  "rolling_plm_blocks": 7,
+  "rolling_pl_blocks": 331,
+  "plaintext_matches": true,
+  "hardware_tested": false,
+  "scope": "Public-zero diagnostic root; no device writes, no secrecy or production trust-policy claim. Never roll back signing state."
+}

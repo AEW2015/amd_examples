@@ -1,0 +1,88 @@
+{
+  "checked_utc": "2026-10-25T18:08:00.432970+00:00",
+  "release": "xlnx_rel_v2026.1",
+  "commit": "b5cd5477bb44b9fadd98be10ea2f12705b9287f3",
+  "scope": "Read-only HTTP source inspection; no example execution",
+  "examples": {
+    "nvm": {
+      "path": "lib/sw_services/xilnvm/examples/xilnvm_efuse_spartan_ultrascale_plus_example.c",
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilnvm/examples/xilnvm_efuse_spartan_ultrascale_plus_example.c",
+      "checked_raw_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilnvm/examples/xilnvm_efuse_spartan_ultrascale_plus_example.c",
+      "http_status": 200,
+      "bytes": 46826,
+      "sha256": "b837e12f979a33e5ecf951b43f0ab68f92d0c827db7b69091c88d097b2dd381a"
+    },
+    "puf": {
+      "path": "lib/sw_services/xilpuf/examples/xilpuf_spartan_ultrascale_plus_example.c",
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilpuf/examples/xilpuf_spartan_ultrascale_plus_example.c",
+      "checked_raw_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilpuf/examples/xilpuf_spartan_ultrascale_plus_example.c",
+      "http_status": 200,
+      "bytes": 33806,
+      "sha256": "2fa22ff3696f66c9e65bd353aa4eb869fd01e8025d9552208d5a72e30b77df2c"
+    },
+    "puf_options": {
+      "path": "lib/sw_services/xilpuf/examples/xilpuf_spartan_ultrascale_plus_example.h",
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilpuf/examples/xilpuf_spartan_ultrascale_plus_example.h",
+      "checked_raw_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilpuf/examples/xilpuf_spartan_ultrascale_plus_example.h",
+      "http_status": 200,
+      "bytes": 6444,
+      "sha256": "cc69b2fcf271114f0c848b7d4d77c5ed92557c4118b7fcbb24ab09a7b3c1a380"
+    },
+    "puf_aes": {
+      "path": "lib/sw_services/xilpuf/examples/xilpuf_spartan_ultrascale_plus_enc_dec_data_example.c",
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilpuf/examples/xilpuf_spartan_ultrascale_plus_enc_dec_data_example.c",
+      "checked_raw_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilpuf/examples/xilpuf_spartan_ultrascale_plus_enc_dec_data_example.c",
+      "http_status": 200,
+      "bytes": 23585,
+      "sha256": "c44c6b52c3bdbe6972d100b3f520e80bc8e75db0c8d917344c4015edb7f76ae4"
+    },
+    "sha": {
+      "path": "lib/sw_services/xilsecure/examples/xilsecure_spartanup_sha_server_example.c",
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/examples/xilsecure_spartanup_sha_server_example.c",
+      "checked_raw_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/examples/xilsecure_spartanup_sha_server_example.c",
+      "http_status": 200,
+      "bytes": 9569,
+      "sha256": "bce969a75be2c5b1d3da4e5127f086eeeb598d05a8603cbb06cf35761ad24bfa"
+    },
+    "pq": {
+      "path": "lib/sw_services/xilsecure/examples/xilsecure_spartanup_lms_hss_server_example.c",
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/examples/xilsecure_spartanup_lms_hss_server_example.c",
+      "checked_raw_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/examples/xilsecure_spartanup_lms_hss_server_example.c",
+      "http_status": 200,
+      "bytes": 64519,
+      "sha256": "0f89799e117901653ed046880667e4c518a1ba7fc9e5f080a90346eabef50488"
+    },
+    "aes": {
+      "path": "lib/sw_services/xilsecure/examples/xilsecure_aes_example.c",
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/examples/xilsecure_aes_example.c",
+      "checked_raw_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/lib/sw_services/xilsecure/examples/xilsecure_aes_example.c",
+      "http_status": 200,
+      "bytes": 6199,
+      "sha256": "d6d0885f170f385134a0ac3a8174e5012fc6475bed4d716e557eb79d50656048"
+    },
+    "hrng": {
+      "path": "XilinxProcessorIPLib/drivers/trngpsx/examples/xtrngpsx_hrng_example.c",
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/XilinxProcessorIPLib/drivers/trngpsx/examples/xtrngpsx_hrng_example.c",
+      "checked_raw_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/XilinxProcessorIPLib/drivers/trngpsx/examples/xtrngpsx_hrng_example.c",
+      "http_status": 200,
+      "bytes": 6679,
+      "sha256": "8b3a5b0180f1375ccaabc2e177c07a5524f058357442bf12cb346858868f23d1"
+    },
+    "drng": {
+      "path": "XilinxProcessorIPLib/drivers/trngpsx/examples/xtrngpsx_drng_example.c",
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/XilinxProcessorIPLib/drivers/trngpsx/examples/xtrngpsx_drng_example.c",
+      "checked_raw_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/XilinxProcessorIPLib/drivers/trngpsx/examples/xtrngpsx_drng_example.c",
+      "http_status": 200,
+      "bytes": 8596,
+      "sha256": "31fdc43827fa398f1936ab75cb66c756c4ee0e549310d2272455f8b4173b4f77"
+    },
+    "ptrng": {
+      "path": "XilinxProcessorIPLib/drivers/trngpsx/examples/xtrngpsx_ptrng_example.c",
+      "url": "https://github.com/Xilinx/embeddedsw/blob/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/XilinxProcessorIPLib/drivers/trngpsx/examples/xtrngpsx_ptrng_example.c",
+      "checked_raw_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/b5cd5477bb44b9fadd98be10ea2f12705b9287f3/XilinxProcessorIPLib/drivers/trngpsx/examples/xtrngpsx_ptrng_example.c",
+      "http_status": 200,
+      "bytes": 5937,
+      "sha256": "aaf555daf4d4532eb384e59f75a99e45831ff19e760bdfd7beee7d5d9f0ebd90"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "observed_utc": "2026-10-25T22:34:25.853856+00:00",
+  "tool": "Vivado 2026.1",
+  "part": "xcsu35p-sbvb625-2-e",
+  "axi_ethernet_8_0_catalog_family_supported": true,
+  "ipi_cell_instantiated": true,
+  "standalone_mii_configuration_accepted": true,
+  "mac_output_generation": "INCOMPLETE: stalled during generate_target; stopped own probe",
+  "ip_license_report": "INCOMPLETE: stalled during report_ip_status; stopped own probe",
+  "temac_license_feature_declared": "tri_mode_eth_mac@2015.04",
+  "usable_mac_license": "UNCONFIRMED",
+  "full_dma_bd": "NOT_IMPLEMENTED",
+  "dma_hardware_test": "NOT_RUN",
+  "hardware_operations": "NONE"
+}

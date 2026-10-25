@@ -1,0 +1,49 @@
+# Experimental PMC DMA and SHA3 stream API
+
+This is an isolated, original candidate driver based on the local PMC exploration sequences in `examples/scu35_pmc_exploration/benchmarks.c` and `loader.c`. It remains outside the stable BSP library/build and does not copy vendor code. An archived independent-PDI hardware run exercised the generic copy and SHA3 APIs for the tested matrix described below. A later SDK-candidate run also exercised invalid-argument rejection and timeout recovery; those bounded results still do not qualify untested paths or make this module part of the stable BSP. Review it before use.
+
+## API
+
+`pmc_stream.h` exposes:
+
+- `pmc_stream_init()` to program DMA source CTRL `0x040e000c=0x013ffa00` and destination CTRL `0x040e080c=0x813ffa00`, set both MSB registers to zero, and clear completion status. Call once after independently ensuring the channels are idle; subsequent initialization attempts return invalid without touching MMIO.
+- `pmc_stream_dma_copy(source, destination, bytes, timeout_cycles, result)` to move a non-overlapping 4-byte-aligned range of 4–8192 bytes inside the reserved scratch window `0x04027000..0x04028fff` or staging window `0x0402c000..0x0402dfff`. Restricting addresses to those windows avoids code, data, monitor, mailbox, and stack reservations.
+- `pmc_stream_sha3_256(source, bytes, timeout_cycles, digest, result)` to compute standard SHA3-256 over one of those windows. SHA uses the source DMA channel only; there is no destination-channel transfer. Compare the returned digest with the independent `sha3_256()` software routine in the caller when a known-answer cross-check is needed.
+
+The relative timeout is measured with a high/low/high coherent `mcycle` read. A second fixed polling bound prevents an infinite wait if the counter does not advance. Each call returns a status and can fill `pmc_stream_result_t` with the final ISR/error masks, progress-address snapshots, engine status for SHA, elapsed cycles, and whether quiescence was observed.
+
+## Observed MMIO sequence
+
+For RAM copy, the candidate preserves the previous SSS configuration, selects route `5` (DMA source to DMA destination), clears both ISR done bits by writing W1C value `2`, sets destination address/MSB/size before setting source address/MSB, fences, then writes source size to trigger. Completion requires done bit `2` on both channels. Source error bits are the mask `0x5c` in source ISR `0x040e0014`; destination error bits are `0xdc` in destination ISR `0x040e0814`. These masks are not register addresses. It checks both progress registers against start address plus byte count.
+
+For SHA3, the candidate preserves the previous route, selects `0x500` (DMA source to SHA3 stream input), resets the engine (`0x04100004` = 1 then 0), selects SHA3 mode (`0x041000a0` = 0), enables automatic padding (`0x041000a4` = 1), starts (`0x04100000` = 1), arms only the source channel, fences, and triggers with source size `bytes | 1` (the observed LAST_WORD flag). Completion requires source ISR done bit `2` and SHA status bit 0. It reads eight little-endian digest words from `0x04100010..0x0410002c` into digest byte order.
+
+The driver writes DMA CTRL only in `pmc_stream_init()`, not per transfer. It preserves and restores the entire SSS value after the operation is known quiescent. A result marked `quiescent=0` deliberately leaves the SSS route selected for that operation; changing routing while a stream may still be active risks redirecting in-flight data.
+
+## Ownership and recovery
+
+These MMIO blocks are shared hardware. The caller must hold exclusive ownership of both DMA channels, the SSS router, and (for SHA) the SHA3 engine for the whole call. Do not call from an interrupt handler or concurrently with the PLM, monitor, another DMA client, or another SHA client. `pmc_stream_init()` itself assumes both channels are idle; the observed register set does not provide a documented idle check in this experimental module.
+
+If a timeout or error leaves `quiescent=0`, do not call another transfer, reinitialize controls, or restore SSS manually. Stop using the experimental operation and recover through the project's reviewed stock-image reload path, which restores the known DMA/router state. A returned error with `quiescent=1` means no transfer was observed active, so restoring the saved SSS route is safe; still review the error fields and expected data before continuing.
+
+No PMP, clock, UART, interrupt, or persistent configuration registers are changed by this module.
+
+## Archived hardware validation
+
+`stream_results.txt` (historical source-workspace path; see ../../../docs/native.md) records 32 hardware cases using the archived independent PDI: DMA copy (kind 1) and SHA3-256 (kind 2), each at 4, 8, 12, 16, 32, 64, 128, 132, 136, 140, 256, 272, 512, 1024, 4096, and 8192 bytes. The cases reported zero API faults, status zero, quiescent true, positive `mcycle` deltas, matching DMA progress, and correct copy checksum or software/hardware SHA3 digest. The run recorded zero post-probe EAM errors and successful stock-image restoration. This is bounded evidence for those lengths and this board/image; the separate SDK-candidate validation below covers only its listed invalid-argument and timeout/recovery cases. Neither run qualifies the remaining DMA/SHA error paths, all possible RAM layouts, concurrency, or every consumer of the shared SSS/DMA blocks.
+
+Use the independent analyzer (historical source-workspace path; see ../../../docs/native.md) to verify the archived results and pinned artifact hashes. Its report is stream_analysis.json (historical source-workspace path; see ../../../docs/native.md). No clock rate is assumed; cycle counts remain raw deltas. Keep this candidate in `experimental/` and outside `libpmc_bsp.a` until the remaining error paths, recovery conditions, and ownership assumptions are reviewed.
+
+## Archived SDK candidate API validation
+
+The `sdk_candidates_v1` hardware run also exercised the stream API beyond the original 32-case transfer matrix. Op19 rejected use before initialization, duplicate initialization, and 14 invalid DMA/SHA arguments without observed MMIO mutation. Its deliberate timeout returned `PMC_STREAM_TIMEOUT` with `quiescent=0` after 161 cycles and retained SSS route 5 while the DMA was active. The test then observed late DONE and idle on both channels, verified all 8,192 copied bytes, restored SSS to 5, cleared completion status, and passed normal DMA-copy and SHA3 calls afterward. The final image recorded DONE asserted and zero EAM/error status before and after stock-image restoration. These results cover the exact cases in this record, not general timeout timing, all recovery/error paths, concurrency, or every shared DMA/SSS client.
+
+Run analyze_sdk_candidates.py (historical source-workspace path; see ../../../docs/native.md) to check the eight API records and their exact PDI, ELF, BSP library, RCDO, CDO spec, source snapshot, and hardware-log SHA-256 bindings. It reports the current archive at sdk_candidates_analysis.json (historical source-workspace path; see ../../../docs/native.md).
+
+## Experimental PIT2 one-shot interrupt API
+
+`pmc_pit2_irq.h/.c` contains a separate, original, bounded machine-interrupt example. `pmc_pit2_irq_once(timer_load, timeout_cycles, result)` follows the observed PIT2/IRQ10 sequence: stop PIT2, mask and acknowledge IOModule IRQ10, load PIT2, install an aligned machine trap handler, enable only machine external interrupt bit `0x800`, enable global MIE, then start and busy-poll against a coherent `mcycle` deadline. The handler snapshots `mcause`, IOModule status/pending, stops PIT2, masks the IOModule sources, acknowledges IRQ10, and clears `mie`. The caller then repeats source cleanup, checks mask/acknowledgement and restores interrupt context; its zero control-register read is not proof of timer stop because that control has no established readback, and restores the saved `mtvec`, `mie`, and `mstatus` before returning. It does not use WFI, because sleeping would make the awake cycle deadline unclear.
+
+The caller must exclusively own the IOModule/PIT2 and IRQ10 for the full call. The routine rejects entry when global `mstatus.MIE` is set or `mie` is nonzero, leaving the caller's interrupt context untouched. It cannot discover another client's ownership of the peripheral registers. Result fields include hit count, machine cause, captured and final status/pending, final enable mask, elapsed `mcycle`, and cleanup mismatch bits. A timeout is bounded but does not qualify every timer state or recovery condition.
+
+The hash-bound `sdk_candidates_v1` image exercised the PIT2 API in seven records (alongside one stream record). Three normal calls each observed one hit, cause `0x8000000b`, status/pending `0x10`, and about 10,203 `mcycle` ticks; all reported zero cleanup mismatches and restored `mtvec`, `mie`, and `mstatus`. A forced timeout returned `PMC_PIT2_IRQ_TIMEOUT` after about 1,022 cycles with cleanup zero. An active incoming `mie=0x800` was rejected without changing it; wrapper cleanup restored its original context. Zero timer-load and zero timeout arguments both returned `PMC_PIT2_IRQ_INVALID`. This is **Hardware PASS (scoped candidate API)** for those cases on the archived independent image. It does not qualify other interrupt sources, an active global-MIE context, concurrent ownership, every PIT state, or the broader interrupt router. The API remains outside `libpmc_bsp.a`. See the candidate analyzer (historical source-workspace path; see ../../../docs/native.md), hash-bound report (historical source-workspace path; see ../../../docs/native.md), and immutable hardware record (historical source-workspace path; see ../../../docs/native.md).

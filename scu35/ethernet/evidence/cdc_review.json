@@ -1,0 +1,14 @@
+{
+  "status": "reviewed_for_lab_demonstration",
+  "pdi_sha256": "20d94e8dfafd9408768d886696e23463e56b46872e0c390d00998f4e7a10c002",
+  "cdc_details_sha256": "023328a46e8c6ebdfffdca44b6356c39f983149a574c296903c990fa47503f16",
+  "remaining_critical": {
+    "CDC-11": 4
+  },
+  "findings": [
+    "All four critical paths originate at Processor System Reset peripheral_aresetn and end at parallel vendor Ethernet Lite reset synchronizers, depth 2 or 4. They are reset-fanout warnings, not user payload crossings.",
+    "Two CDC-2 warnings concern two-stage carrier-sense and MDIO input synchronizers missing ASYNC_REG in vendor MAC.",
+    "CDC-15 warnings concern vendor XPM FIFO memory enables and MDM debug protocol crossings."
+  ],
+  "decision": "Retain all warnings without adding user waivers. Scoped review supports volatile laboratory functional testing; no production CDC, reset-phase stress or MTBF qualification is claimed."
+}

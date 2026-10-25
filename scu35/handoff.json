@@ -1,0 +1,116 @@
+{
+  "overall": "PASS",
+  "created_utc": "2026-10-25T20:25:37.431564+00:00",
+  "scope": "Publication/reproduction gates: clean Windows implementation plus offline Windows/Linux tests; no new hardware test.",
+  "checks": {
+    "fresh_windows_2026_1_implementation": {
+      "status": "pass",
+      "evidence": "evidence/reproduction/implementation_checks.json"
+    },
+    "fresh_platform_bsp": {
+      "status": "pass",
+      "evidence": "evidence/reproduction/platform.log"
+    },
+    "native_image_reproduces_recorded_hash": {
+      "status": "pass",
+      "evidence": "evidence/reproduction/native_pdi_verification.json"
+    },
+    "spaced_checkout_hardware_bsp_firmware": {
+      "status": "pass",
+      "evidence": "evidence/reproduction/spaced_platform.log"
+    },
+    "offline_windows_ubuntu_ci": {
+      "status": "pass",
+      "evidence": "https://github.com/AEW2015/amd_examples/actions/runs/40229852739"
+    },
+    "fresh_h15_packaging": {
+      "status": "pass",
+      "evidence": "evidence/reproduction/h15_packaging.json"
+    },
+    "fresh_rebuilt_image_sign_encrypt_and_tamper": {
+      "status": "pass",
+      "evidence": "evidence/reproduction/fresh_image_packaging.json"
+    }
+  },
+  "artifacts": [
+    {
+      "role": "rtl",
+      "path": "hw/sec_top.v",
+      "sha256": "de8bb672337989842ab3ec3fe1490894fe8ef8202af9f41c36adc0cc89d82f52"
+    },
+    {
+      "role": "constraints",
+      "path": "hw/sec_top.xdc",
+      "sha256": "dc7ff2ca58d346db752f7de6ee692611d4bf0ce8e0822252f547376909a9b8a5"
+    },
+    {
+      "role": "block_design",
+      "path": "hw/sys.bd",
+      "sha256": "db32d1cf13d70282ac32a52a7e28968bbf3192a21b4622da34517634fcd0fa95"
+    },
+    {
+      "role": "application_source",
+      "path": "fw/bench.c",
+      "sha256": "695bb96a78f5b6c80d25b3a8781525208563446365127f4fcd02d8516dd3abb5"
+    },
+    {
+      "role": "rebuild",
+      "path": "lab.py",
+      "sha256": "5633ebdc073c92b819ae412c7a096dc8feae7746fa95c3a7bdeaf186ed328e86"
+    },
+    {
+      "role": "routed_checkpoint",
+      "path": "reference/rebuilt/routed.dcp",
+      "sha256": "a98a8567a6076949ea2726bda3d33583d54c08b4cb7175326cc310bb63acca2e"
+    },
+    {
+      "role": "programming_image",
+      "path": "reference/rebuilt/demo.pdi",
+      "sha256": "8d8e6e42274ee22fbba41db1174876225021111d8b70616bf469e9d92456009c"
+    },
+    {
+      "role": "application_elf",
+      "path": "reference/rebuilt/bench.elf",
+      "sha256": "064e87df9e4f11701c541bd30de4505b8796604b2bf55a40ec9fc49f2777d85a"
+    },
+    {
+      "role": "hardware_handoff",
+      "path": "reference/rebuilt/hw.xsa",
+      "sha256": "1ac1fe9e24944d23674557eb0d99b047b8a34df33ee9f49779890eb3f27c6a68"
+    },
+    {
+      "role": "stock_plm",
+      "path": "reference/rebuilt/plm.elf",
+      "sha256": "fcdd4370633f343466245b7f99893bed2e235e3c890bc98225f03ed6ac992c72"
+    },
+    {
+      "role": "raw_runtime_capture",
+      "path": "evidence/timer/uart.txt",
+      "sha256": "3f1a9e360713266fa6cfbe8618580316320902ac9c1ae0887df78e2a209c8389"
+    },
+    {
+      "role": "raw_native_capture",
+      "path": "evidence/native/results.txt",
+      "sha256": "9ee261c698993f2334fa95f599b19c549cdcd91a2c0de4daef5aaaefc7227fbd"
+    }
+  ],
+  "limitations": [
+    "New reference/rebuilt PDI has not been run on hardware. Recorded hardware PDIs remain separately identified.",
+    "Linux Vivado/Vitis implementation and hardware session were not executed here; installed-tool path overrides are provided.",
+    "Fresh H15 packaging used the retained AXI Timer source image; the final clean rebuilt image was also packaged with H5 for a fast functional test.",
+    "The optional native PL fixture reimplementation and portable hardware runners were not freshly exercised; the native firmware rebuild reproduced the recorded image exactly.",
+    "Hybrid-C handoff checker was unavailable; local source/hash/correctness/implementation checks were used."
+  ],
+  "tested_python_packages": {
+    "cryptography": "50.0.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.4.0",
+    "jupyterlab": "4.6.4",
+    "pandas": "2.3.3",
+    "matplotlib": "3.11.2",
+    "beautifulsoup4": "4.15.0",
+    "requests": "2.34.2",
+    "pyserial": "3.5"
+  }
+}

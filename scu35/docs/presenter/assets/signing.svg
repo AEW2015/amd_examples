@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="280" viewBox="0 0 1100 280">
+    <rect width="1100" height="280" fill="#f4f7fa"/><g font-family="Arial" fill="#183246">
+    <text x="25" y="35" font-size="23">Real PL design → signed PDI → BootROM verification → running application</text>
+    <g font-size="17" text-anchor="middle"><rect x="25" y="65" width="215" height="110" rx="10" fill="#d2e5f5"/><text x="132" y="100">AMD PLM + PL design</text><text x="132" y="132">MicroBlaze-V / UART</text>
+    <text x="265" y="125">→</text><rect x="290" y="65" width="240" height="110" rx="10" fill="#c8e8de"/><text x="410" y="100">SHA3 payload roots</text><text x="410" y="132">HSS-SHAKE256 signature</text>
+    <text x="550" y="125">→</text><rect x="575" y="65" width="220" height="110" rx="10" fill="#e8ddf5"/><text x="685" y="100">BootROM / AMD PLM</text><text x="685" y="132">Verify before use</text>
+    <text x="815" y="125">→</text><rect x="840" y="65" width="230" height="110" rx="10" fill="#c8e8de"/><text x="955" y="100">DONE=1, ERROR=0</text><text x="955" y="132">Expected build ID + tests</text></g>
+    <text x="25" y="215" font-size="18">One changed signature bit → first error 0x0347 → DONE=0 → stock recovery verified</text>
+    <text x="25" y="250" font-size="16">Development authentication demonstrated. Owner-key pinning and permanent enforcement are not established.</text></g></svg>

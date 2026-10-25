@@ -1,0 +1,8 @@
+{
+    "variant":  "badsig",
+    "attempt":  "C:\\aiup\\sec35\\boot\\runs\\20261025T132903046_badsig",
+    "pdi_sha256":  "e6c061f360f909d00ec58e21885d5941f8aa2573f9285c59664444379d5aef44",
+    "restored":  true,
+    "hardware_mutation_attempted":  true,
+    "error":  ""
+}

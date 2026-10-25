@@ -1,0 +1,14 @@
+[
+  {
+    "vaddr": "0x0",
+    "file_bytes": 53220,
+    "ram_bytes": 67728,
+    "end": "0x10890"
+  },
+  {
+    "vaddr": "0x402b000",
+    "file_bytes": 0,
+    "ram_bytes": 2784,
+    "end": "0x402bae0"
+  }
+]

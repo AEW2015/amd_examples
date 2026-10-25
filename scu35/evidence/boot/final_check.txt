@@ -1,0 +1,57 @@
+{
+  "overall": "PASS",
+  "checks": {
+    "image_crypto_and_payloads": {
+      "status": "pass",
+      "evidence": "sec35\\boot\\builds\\20261025T132320653245\\inspection.json",
+      "plm_rolling_payload_blocks": 7,
+      "pl_rolling_payload_blocks": 331
+    },
+    "positive_and_negative_tests": {
+      "status": "pass",
+      "evidence": "sec35/boot/tests.txt",
+      "tests": 6
+    },
+    "hardware_authentication": {
+      "status": "pass",
+      "evidence": "sec35/boot/hardware.json",
+      "valid_signed_loaded": true,
+      "one_bit_signature_change_rejected": true
+    },
+    "hardware_combined_rolling_image": {
+      "status": "pass",
+      "evidence": "C:\\aiup\\sec35\\boot\\runs\\20261025T133714820_combo",
+      "done": 1,
+      "error": 0,
+      "application_completed": true
+    },
+    "hardware_encrypted_tamper": {
+      "status": "pass",
+      "evidence": "C:\\aiup\\sec35\\boot\\runs\\20261025T133530340_badroll",
+      "first_error": "0x589",
+      "vendor_description": "not established"
+    },
+    "stock_recovery": {
+      "status": "pass",
+      "evidence": "sec35/boot/hardware.json",
+      "sessions": 7
+    },
+    "no_permanent_programming_commands": {
+      "status": "pass",
+      "evidence": "Captured probe.tcl / restore.tcl in each run",
+      "scope": "Command audit; does not claim independent before/after fuse readback"
+    },
+    "notebooks": {
+      "status": "pass",
+      "evidence": "notebooks/boot",
+      "executed_code_cells": 20,
+      "mode": "Replay of newly acquired real hardware captures; no extra hardware in notebook execution"
+    },
+    "reused_routed_design": {
+      "status": "pass",
+      "evidence": "sec35/compare/manifest.json",
+      "scope": "Unchanged routed PL payload; original source-bound timing/DRC retained. No fresh implementation required or claimed."
+    }
+  },
+  "artifacts": 195
+}

@@ -1,0 +1,8 @@
+{
+    "variant":  "zero",
+    "attempt":  "C:\\aiup\\sec35\\boot\\runs\\20261025T133156675_zero",
+    "pdi_sha256":  "b639388ff14226583268c3a9d62fec302daa74762ae289605cdfd76dffc02083",
+    "restored":  true,
+    "hardware_mutation_attempted":  true,
+    "error":  ""
+}

@@ -1,0 +1,108 @@
+{
+  "source": "C:\\aiup\\sec35\\compare\\compare.pdi",
+  "pdi_sha256": "12fa0536cf8e8301b324972031c23959c6da82ca1301867d8b7b99cd12f64fce",
+  "total_bytes": 1359840,
+  "part": "xcsu35p-sbvb625-2-e",
+  "vendor_utility": "AMD Bootgen 2026.1, -arch spartanup -read / -dump boot_files",
+  "file_layout": [
+    {
+      "name": "Boot headers/root hashes/padding",
+      "offset": 0,
+      "bytes": 976
+    },
+    {
+      "name": "PLM encoded partition",
+      "offset": 976,
+      "bytes": 26144
+    },
+    {
+      "name": "FPGA CDO encoded partition",
+      "offset": 27120,
+      "bytes": 1332720
+    }
+  ],
+  "breakdown": [
+    {
+      "name": "PLM firmware payload",
+      "bytes": 26048,
+      "KiB": 25.4375,
+      "percent": 1.915519472879162
+    },
+    {
+      "name": "FPGA configuration stream",
+      "bytes": 1326152,
+      "KiB": 1295.0703125,
+      "percent": 97.52264972349688
+    },
+    {
+      "name": "CDO commands / framing",
+      "bytes": 1384,
+      "KiB": 1.3515625,
+      "percent": 0.1017766796093658
+    },
+    {
+      "name": "Partition SHA3 chain bytes",
+      "bytes": 5280,
+      "KiB": 5.15625,
+      "percent": 0.3882809742322626
+    },
+    {
+      "name": "Boot headers / root hashes / padding",
+      "bytes": 976,
+      "KiB": 0.953125,
+      "percent": 0.07177314978232734
+    }
+  ],
+  "plm": {
+    "input_elf": "C:\\aiup\\sec35\\compare\\static_files\\plm.elf",
+    "elf_container_bytes": 2478888,
+    "elf_sha256": "fcdd4370633f343466245b7f99893bed2e235e3c890bc98225f03ed6ac992c72",
+    "payload_bytes": 26048,
+    "encoded_bytes": 26144,
+    "chain_bytes": 96,
+    "chunks": 4,
+    "loads": [
+      {
+        "address_hex": "0x4020000",
+        "file_bytes": 26048,
+        "memory_bytes": 27632
+      },
+      {
+        "address_hex": "0x402a200",
+        "file_bytes": 0,
+        "memory_bytes": 3072
+      }
+    ]
+  },
+  "fpga": {
+    "cdo_payload_bytes": 1327536,
+    "encoded_bytes": 1332720,
+    "chain_bytes": 5184,
+    "stream_bytes": 1326152,
+    "stream_commands": 1,
+    "other_cdo_bytes": 1384,
+    "cdo_commands": {
+      "0x119": 7,
+      "0x103": 86,
+      "0x101": 2,
+      "0x111": 1,
+      "0x10d": 1,
+      "0x130": 1
+    },
+    "chunks": 163
+  },
+  "checks": {
+    "bootgen_dumps_match": true,
+    "partition_sha3_chains_valid": true,
+    "plm_elf_load_bytes_match": true,
+    "all_bytes_accounted": true,
+    "original_pdi_unchanged": true
+  },
+  "notes": [
+    "Normal Vivado-generated image with the supplied AMD PLM, not the custom native benchmark image.",
+    "ELF file size includes metadata/debug information; only file-backed load bytes are packaged.",
+    "Configuration stream includes configuration packets/framing, not only LUT/BRAM frame contents.",
+    "Read-only offline inspection. No hardware programming or eFUSE access performed.",
+    "Bootgen printed WARNING: dl3 detected; complete raw output is retained."
+  ]
+}

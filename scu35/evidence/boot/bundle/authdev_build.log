@@ -1,0 +1,9 @@
+
+
+****** Bootgen v2026.1
+  **** Build date : Jun  5 2026-13:21:08
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+[ERROR]  : BIF attribute error !!! 'bh_auth_enable' is not supported with the mentioned '-arch'.
+	   Bootheader or eFuse authentication will be chosen based on eFuse bits.

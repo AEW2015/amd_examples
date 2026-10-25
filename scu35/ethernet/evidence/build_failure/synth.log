@@ -1,0 +1,396 @@
+
+*** Running vivado
+    with args -log sys_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sys_wrapper.tcl
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 24-jun-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sun Oct 25 15:19:37 2026
+# Process ID         : 32732
+# Current directory  : C:/aiup/e35/prj/eth.runs/synth_1
+# Command line       : vivado.exe -log sys_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sys_wrapper.tcl
+# Log file           : C:/aiup/e35/prj/eth.runs/synth_1/sys_wrapper.vds
+# Journal file       : C:/aiup/e35/prj/eth.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-I75K8PP
+# Platform           : Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor             
+# CPU Frequency      : 3593 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34304 MB
+# Swap memory        : 49182 MB
+# Total Virtual      : 83487 MB
+# Available Virtual  : 33105 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Sun Oct 25 15:19:37 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Users/lavat/AppData/Roaming/Xilinx/Vivado/2026.1/Vivado_init.tcl'
+source sys_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 614.512 ; gain = 270.883
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/AMDDesignTools/2026.1/Vivado/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design C:/aiup/e35/prj/eth.srcs/sources_1/bd/hw/sys.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ sys_low_0
+sys_high_0
+INFO: [Project 1-4468] Skipped adding '..\..\..\..\..\eth.elf' file in synth run script
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 674.520 ; gain = 60.008
+Command: synth_design -top sys_wrapper -part xcsu35p-sbvb625-2-e
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xcsu35p'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xcsu35p'
+INFO: [Device 21-403] Loading part xcsu35p-sbvb625-2-e
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26532
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1478.027 ; gain = 577.543
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sys_wrapper' [C:/aiup/e35/prj/eth.gen/sources_1/bd/hw/hdl/sys_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/AMDDesignTools/2026.1/Vivado/scripts/rt/data/unisim_comp.v:87508]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [D:/AMDDesignTools/2026.1/Vivado/scripts/rt/data/unisim_comp.v:87508]
+INFO: [Synth 8-6157] synthesizing module 'sys' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:226]
+INFO: [Synth 8-6157] synthesizing module 'sys_axi_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_axi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_axi_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_axi_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'sys_axi_0' is unconnected for instance 'axi' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:426]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'sys_axi_0' is unconnected for instance 'axi' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:426]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'sys_axi_0' is unconnected for instance 'axi' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:426]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'sys_axi_0' is unconnected for instance 'axi' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:426]
+WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'sys_axi_0' is unconnected for instance 'axi' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:426]
+WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'sys_axi_0' is unconnected for instance 'axi' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:426]
+WARNING: [Synth 8-7023] instance 'axi' of module 'sys_axi_0' has 111 connections declared, but only 105 given [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:426]
+INFO: [Synth 8-6157] synthesizing module 'sys_clock_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_clock_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_clock_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_clock_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sys_ethernet_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_ethernet_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_ethernet_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_ethernet_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'sys_ethernet_0' is unconnected for instance 'ethernet' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:537]
+WARNING: [Synth 8-7023] instance 'ethernet' of module 'sys_ethernet_0' has 34 connections declared, but only 33 given [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:537]
+INFO: [Synth 8-6157] synthesizing module 'sys_high_0' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_high_0/synth/sys_high_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_11_xlconstant' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ipshared/ff42/hdl/xlconstant_v1_1_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_11_xlconstant' (0#1) [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ipshared/ff42/hdl/xlconstant_v1_1_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'sys_high_0' (0#1) [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_high_0/synth/sys_high_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'sys_low_0' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_low_0/synth/sys_low_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_11_xlconstant__parameterized0' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ipshared/ff42/hdl/xlconstant_v1_1_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_11_xlconstant__parameterized0' (0#1) [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ipshared/ff42/hdl/xlconstant_v1_1_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'sys_low_0' (0#1) [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_low_0/synth/sys_low_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'sys_mb_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_mb_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_mb_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_mb_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'Interrupt_Ack' of module 'sys_mb_0' is unconnected for instance 'mb' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:577]
+WARNING: [Synth 8-7071] port 'Dbg_Trig_In' of module 'sys_mb_0' is unconnected for instance 'mb' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:577]
+WARNING: [Synth 8-7071] port 'Dbg_Trig_Ack_Out' of module 'sys_mb_0' is unconnected for instance 'mb' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:577]
+WARNING: [Synth 8-7023] instance 'mb' of module 'sys_mb_0' has 56 connections declared, but only 53 given [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:577]
+INFO: [Synth 8-6157] synthesizing module 'mb_local_memory_imp_O56743' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:13]
+INFO: [Synth 8-6157] synthesizing module 'sys_dlmb_bram_if_cntlr_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_dlmb_bram_if_cntlr_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sys_dlmb_v10_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_dlmb_v10_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'sys_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:138]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'sys_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:138]
+INFO: [Synth 8-6157] synthesizing module 'sys_ilmb_bram_if_cntlr_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_ilmb_bram_if_cntlr_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sys_ilmb_v10_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_ilmb_v10_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'sys_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:184]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'sys_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:184]
+INFO: [Synth 8-6157] synthesizing module 'sys_lmb_bram_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_lmb_bram_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'sys_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:209]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'sys_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:209]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'sys_lmb_bram_0' has 16 connections declared, but only 14 given [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:209]
+INFO: [Synth 8-6155] done synthesizing module 'mb_local_memory_imp_O56743' (0#1) [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:13]
+INFO: [Synth 8-6157] synthesizing module 'sys_mdm_1_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_mdm_1_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sys_pmc_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_pmc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_pmc_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_pmc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sys_rst_sysclk_100M_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_rst_sysclk_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_rst_sysclk_100M_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_rst_sysclk_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'sys_rst_sysclk_100M_0' is unconnected for instance 'rst_sysclk_100M' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:699]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'sys_rst_sysclk_100M_0' is unconnected for instance 'rst_sysclk_100M' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:699]
+WARNING: [Synth 8-7023] instance 'rst_sysclk_100M' of module 'sys_rst_sysclk_100M_0' has 10 connections declared, but only 8 given [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:699]
+INFO: [Synth 8-6157] synthesizing module 'sys_timer_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_timer_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_timer_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_timer_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'generateout0' of module 'sys_timer_0' is unconnected for instance 'timer' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:708]
+WARNING: [Synth 8-7071] port 'generateout1' of module 'sys_timer_0' is unconnected for instance 'timer' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:708]
+WARNING: [Synth 8-7071] port 'pwm0' of module 'sys_timer_0' is unconnected for instance 'timer' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:708]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'sys_timer_0' is unconnected for instance 'timer' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:708]
+WARNING: [Synth 8-7023] instance 'timer' of module 'sys_timer_0' has 26 connections declared, but only 22 given [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:708]
+INFO: [Synth 8-6157] synthesizing module 'sys_uart_0' [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_uart_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_uart_0' (0#1) [C:/aiup/e35/prj/eth.runs/synth_1/.Xil/Vivado-32732-DESKTOP-I75K8PP/realtime/sys_uart_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'sys_uart_0' is unconnected for instance 'uart' [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:731]
+WARNING: [Synth 8-7023] instance 'uart' of module 'sys_uart_0' has 22 connections declared, but only 21 given [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:731]
+INFO: [Synth 8-6155] done synthesizing module 'sys' (0#1) [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/synth/sys.v:226]
+INFO: [Synth 8-6155] done synthesizing module 'sys_wrapper' (0#1) [C:/aiup/e35/prj/eth.gen/sources_1/bd/hw/hdl/sys_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1607.918 ; gain = 707.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1607.918 ; gain = 707.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1607.918 ; gain = 707.434
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1607.918 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_mb_0/sys_mb_0/sys_mb_0_in_context.xdc] for cell 'sys_i/mb'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_mb_0/sys_mb_0/sys_mb_0_in_context.xdc] for cell 'sys_i/mb'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_dlmb_v10_0/sys_dlmb_v10_0/sys_ilmb_v10_0_in_context.xdc] for cell 'sys_i/mb_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_dlmb_v10_0/sys_dlmb_v10_0/sys_ilmb_v10_0_in_context.xdc] for cell 'sys_i/mb_local_memory/dlmb_v10'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_ilmb_v10_0/sys_ilmb_v10_0/sys_ilmb_v10_0_in_context.xdc] for cell 'sys_i/mb_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_ilmb_v10_0/sys_ilmb_v10_0/sys_ilmb_v10_0_in_context.xdc] for cell 'sys_i/mb_local_memory/ilmb_v10'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_dlmb_bram_if_cntlr_0/sys_dlmb_bram_if_cntlr_0/sys_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'sys_i/mb_local_memory/dlmb_bram_if_cntlr'
+create_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1607.918 ; gain = 0.000
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_dlmb_bram_if_cntlr_0/sys_dlmb_bram_if_cntlr_0/sys_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'sys_i/mb_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_ilmb_bram_if_cntlr_0/sys_ilmb_bram_if_cntlr_0/sys_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'sys_i/mb_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_ilmb_bram_if_cntlr_0/sys_ilmb_bram_if_cntlr_0/sys_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'sys_i/mb_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_lmb_bram_0/sys_lmb_bram_0/sys_lmb_bram_0_in_context.xdc] for cell 'sys_i/mb_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_lmb_bram_0/sys_lmb_bram_0/sys_lmb_bram_0_in_context.xdc] for cell 'sys_i/mb_local_memory/lmb_bram'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_mdm_1_0/sys_mdm_1_0/sys_mdm_1_0_in_context.xdc] for cell 'sys_i/mdm_1'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_mdm_1_0/sys_mdm_1_0/sys_mdm_1_0_in_context.xdc] for cell 'sys_i/mdm_1'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0_in_context.xdc] for cell 'sys_i/rst_sysclk_100M'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0_in_context.xdc] for cell 'sys_i/rst_sysclk_100M'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_axi_0/sys_axi_0/sys_axi_0_in_context.xdc] for cell 'sys_i/axi'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_axi_0/sys_axi_0/sys_axi_0_in_context.xdc] for cell 'sys_i/axi'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_uart_0/sys_uart_0/sys_uart_0_in_context.xdc] for cell 'sys_i/uart'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_uart_0/sys_uart_0/sys_uart_0_in_context.xdc] for cell 'sys_i/uart'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_pmc_0/sys_pmc_0/sys_pmc_0_in_context.xdc] for cell 'sys_i/pmc'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_pmc_0/sys_pmc_0/sys_pmc_0_in_context.xdc] for cell 'sys_i/pmc'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_timer_0/sys_timer_0/sys_timer_0_in_context.xdc] for cell 'sys_i/timer'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_timer_0/sys_timer_0/sys_timer_0_in_context.xdc] for cell 'sys_i/timer'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_clock_0/sys_clock_0/sys_clock_0_in_context.xdc] for cell 'sys_i/clock'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_clock_0/sys_clock_0/sys_clock_0_in_context.xdc] for cell 'sys_i/clock'
+Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_ethernet_0/sys_ethernet_0/sys_ethernet_0_in_context.xdc] for cell 'sys_i/ethernet'
+Finished Parsing XDC File [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_ethernet_0/sys_ethernet_0/sys_ethernet_0_in_context.xdc] for cell 'sys_i/ethernet'
+Parsing XDC File [C:/aiup/amdpub/scu35/ethernet/board.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'sysclk' completely overrides clock 'sysclk_p'.
+New: create_clock -period 10.000 -name sysclk [get_ports sysclk_p], [C:/aiup/amdpub/scu35/ethernet/board.xdc:6]
+Previous: create_clock -period 10.000 [get_ports sysclk_p], [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_clock_0/sys_clock_0/sys_clock_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+CRITICAL WARNING: [Designutils 20-1307] Command 'foreach' is not supported in the xdc constraint file. [C:/aiup/amdpub/scu35/ethernet/board.xdc:13]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'mii_rx' completely overrides clock 'mii_rx_clk'.
+New: create_clock -period 40.000 -name mii_rx [get_ports mii_rx_clk], [C:/aiup/amdpub/scu35/ethernet/board.xdc:25]
+Previous: create_clock -period 40.000 [get_ports mii_rx_clk], [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_ethernet_0/sys_ethernet_0/sys_ethernet_0_in_context.xdc:2]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+CRITICAL WARNING: [Constraints 18-1056] Clock 'mii_tx' completely overrides clock 'mii_tx_clk'.
+New: create_clock -period 40.000 -name mii_tx [get_ports mii_tx_clk], [C:/aiup/amdpub/scu35/ethernet/board.xdc:26]
+Previous: create_clock -period 40.000 [get_ports mii_tx_clk], [c:/aiup/e35/prj/eth.gen/sources_1/bd/hw/ip/sys_ethernet_0/sys_ethernet_0/sys_ethernet_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+Finished Parsing XDC File [C:/aiup/amdpub/scu35/ethernet/board.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/aiup/amdpub/scu35/ethernet/board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sys_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sys_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/aiup/e35/prj/eth.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/aiup/e35/prj/eth.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1607.918 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1607.918 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'sys_i/mb_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1607.918 ; gain = 707.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcsu35p-sbvb625-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1607.918 ; gain = 707.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1607.918 ; gain = 707.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1607.918 ; gain = 707.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 48 (col length:48)
+BRAMs: 96 (col length: RAMB18 48 RAMB36 24)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1638.359 ; gain = 737.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1896.434 ; gain = 995.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1896.883 ; gain = 996.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1907.648 ; gain = 1007.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2183.230 ; gain = 1282.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2183.230 ; gain = 1282.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2183.230 ; gain = 1282.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2183.230 ; gain = 1282.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2183.230 ; gain = 1282.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2183.230 ; gain = 1282.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------+----------+
+|      |BlackBox name            |Instances |
++------+-------------------------+----------+
+|1     |sys_axi_0                |         1|
+|2     |sys_clock_0              |         1|
+|3     |sys_ethernet_0           |         1|
+|4     |sys_mb_0                 |         1|
+|5     |sys_mdm_1_0              |         1|
+|6     |sys_pmc_0                |         1|
+|7     |sys_rst_sysclk_100M_0    |         1|
+|8     |sys_timer_0              |         1|
+|9     |sys_uart_0               |         1|
+|10    |sys_dlmb_bram_if_cntlr_0 |         1|
+|11    |sys_dlmb_v10_0           |         1|
+|12    |sys_ilmb_bram_if_cntlr_0 |         1|
+|13    |sys_ilmb_v10_0           |         1|
+|14    |sys_lmb_bram_0           |         1|
++------+-------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------+------+
+|      |Cell                   |Count |
++------+-----------------------+------+
+|1     |sys_axi                |     1|
+|2     |sys_clock              |     1|
+|3     |sys_dlmb_bram_if_cntlr |     1|
+|4     |sys_dlmb_v10           |     1|
+|5     |sys_ethernet           |     1|
+|6     |sys_ilmb_bram_if_cntlr |     1|
+|7     |sys_ilmb_v10           |     1|
+|8     |sys_lmb_bram           |     1|
+|9     |sys_mb                 |     1|
+|10    |sys_mdm_1              |     1|
+|11    |sys_pmc                |     1|
+|12    |sys_rst_sysclk_100M    |     1|
+|13    |sys_timer              |     1|
+|14    |sys_uart               |     1|
+|15    |IBUF                   |    10|
+|16    |IOBUF                  |     1|
+|17    |OBUF                   |     8|
++------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2183.230 ; gain = 1282.746
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 2183.230 ; gain = 1282.746
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 2183.230 ; gain = 1282.746
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2183.230 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2183.230 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 11 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 10 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instance 
+
+Synth Design complete | Checksum: 2c13491e
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+68 Infos, 31 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:30 . Memory (MB): peak = 2183.230 ; gain = 1508.711
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2183.230 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/aiup/e35/prj/eth.runs/synth_1/sys_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file sys_wrapper_utilization_synth.rpt -pb sys_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 15:21:26 2026...

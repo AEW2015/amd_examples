@@ -1,0 +1,11 @@
+{
+  "pdi_sha256": "bec47dbf470d0ef41127a43a7777ec6ef128328db3e1281f24ae5edb6611eb35",
+  "elf_sha256": "e635ddaa867781a44a288f5acd084322a2db938c958b4273a48cf02c6c8c188b",
+  "inputs": {
+    "inputs/pq_vectors.json": "2cd5b9fed1fa02f9dd01cfef377397619c9181abe8bcdbd7b99ec2cee610df64",
+    "inputs/pq_upload.tcl": "f92ebafbebc7b64e0142daa703c0113552bb76c08ae90a60332055c07de618b6",
+    "inputs/hss.c": "0f89799e117901653ed046880667e4c518a1ba7fc9e5f080a90346eabef50488"
+  },
+  "hardware_tested": false,
+  "fixture_scope": "Retained, hash-checked PL fixture. Its original RTL/XDC/build source is included under fixture/. Firmware rebuilt here."
+}

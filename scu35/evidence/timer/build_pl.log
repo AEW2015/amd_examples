@@ -1,0 +1,1559 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 24-jun-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sun Oct 25 11:25:22 2026
+# Process ID         : 32780
+# Current directory  : C:/aiup
+# Command line       : vivado.exe -mode batch -source C:/aiup/sec35/timer/build_pl.tcl -log C:/aiup/sec35/timer/build_pl.log -journal C:/aiup/sec35/timer/build_pl.jou
+# Log file           : C:/aiup/sec35/timer/build_pl.log
+# Journal file       : C:/aiup/sec35/timer/build_pl.jou
+# Running On         : DESKTOP-I75K8PP
+# Platform           : Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor             
+# CPU Frequency      : 3593 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34304 MB
+# Swap memory        : 49182 MB
+# Total Virtual      : 83487 MB
+# Available Virtual  : 38207 MB
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/lavat/AppData/Roaming/Xilinx/Vivado/2026.1/Vivado_init.tcl'
+source C:/aiup/sec35/timer/build_pl.tcl
+# set out C:/aiup/sec35/timer
+# set project_dir C:/aiup/s35tmr
+# if {[file exists $project_dir]} {error "Fresh directory required: $project_dir"}
+# if {[version -short] ne "2026.1"} {error "Vivado 2026.1 required"}
+# open_project C:/aiup/s35cmp/cmp.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/AMDDesignTools/2026.1/Vivado/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design C:/aiup/s35cmp/cmp.srcs/sources_1/bd/sys/sys.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ sys_low_0
+sys_high_0
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 693.934 ; gain = 351.445
+# save_project_as tmr $project_dir -force
+WARNING: [IP_Flow 19-3571] IP 'sys_cycles_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'sys_cycles_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+# set bd [get_files */sys.bd]
+# open_bd_design C:/aiup/s35tmr/tmr.srcs/sources_1/bd/sys/sys.bd
+Reading block design file <C:/aiup/s35tmr/tmr.srcs/sources_1/bd/sys/sys.bd>...
+Adding component instance block -- xilinx.com:ip:microblaze_riscv:1.0 - mb
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding component instance block -- xilinx.com:ip:mdm_riscv:1.0 - mdm_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_sysclk_100M
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - low
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - high
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - uart
+Adding component instance block -- xilinx.com:ip:pmcbridge:1.0 - pmc
+Adding component instance block -- xilinx.com:module_ref:cycles:1.0 - cycles_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - timer
+Successfully read diagram <sys> from block design file <C:/aiup/s35tmr/tmr.srcs/sources_1/bd/sys/sys.bd>
+open_bd_design: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 718.109 ; gain = 24.176
+# delete_bd_objs [get_bd_cells cycles_0] [get_bd_cells timer]
+# set dangling [get_bd_nets -quiet cycles_0_count]
+# if {[llength $dangling]} {delete_bd_objs $dangling}
+# set timer [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 timer]
+# set_property -dict [list CONFIG.C_COUNT_WIDTH {32} CONFIG.C_ONE_TIMER_ONLY {0}] $timer
+CRITICAL WARNING: [BD 41-1276] Cannot set the parameter C_COUNT_WIDTH on /timer. Parameter does not exist
+CRITICAL WARNING: [BD 41-1276] Cannot set the parameter C_ONE_TIMER_ONLY on /timer. Parameter does not exist
+# connect_bd_intf_net [get_bd_intf_pins axi/M02_AXI] [get_bd_intf_pins timer/S_AXI]
+# connect_bd_net [get_bd_ports sysclk] [get_bd_pins timer/s_axi_aclk]
+# connect_bd_net [get_bd_pins rst_sysclk_100M/peripheral_aresetn] [get_bd_pins timer/s_axi_aresetn]
+# connect_bd_net [get_bd_pins low/dout] [get_bd_pins timer/capturetrig0] [get_bd_pins timer/capturetrig1] [get_bd_pins timer/freeze]
+# assign_bd_address -offset 0x40000000 -range 0x10000 -target_address_space [get_bd_addr_spaces mb/Data] [get_bd_addr_segs timer/S_AXI/Reg] -force
+Slave segment '/timer/S_AXI/Reg' is being assigned into address space '/mb/Data' at <0x4000_0000 [ 64K ]>.
+# validate_bd_design
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/axi/S00_AXI' to master interface '/axi/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0402_0000 [ 64K ]> from slave interface '/axi/S00_AXI' to master interface '/axi/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0404_0000 [ 12K ]> from slave interface '/axi/S00_AXI' to master interface '/axi/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0405_0000 [ 64K ]> from slave interface '/axi/S00_AXI' to master interface '/axi/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0406_0000 [ 128K ]> from slave interface '/axi/S00_AXI' to master interface '/axi/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0408_0000 [ 512K ]> from slave interface '/axi/S00_AXI' to master interface '/axi/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0410_0000 [ 256K ]> from slave interface '/axi/S00_AXI' to master interface '/axi/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0416_0000 [ 64K ]> from slave interface '/axi/S00_AXI' to master interface '/axi/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi/S00_AXI' to master interface '/axi/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] sys_axi_0: SmartConnect sys_axi_0 is in Ultralite mode.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-9] /mb: Setting C_BASE_VECTORS to 0x00000000.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-23] /mb: Setting C_PC_WIDTH to 17.
+# save_bd_design
+Wrote  : <C:\aiup\s35tmr\tmr.srcs\sources_1\bd\sys\sys.bd> 
+save_bd_design: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 761.230 ; gain = 0.000
+# file copy -force [get_property NAME $bd] $out/inputs/sys.bd
+# set unused [get_files -all -quiet */cycles.v]
+# if {[llength $unused]} {remove_files $unused}
+# set old [get_files -quiet -filter {FILE_TYPE == ELF}]
+# if {[llength $old]} {remove_files $old}
+CRITICAL WARNING: [filemgmt 20-1679] Unable to remove the file: c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mb_0/data/riscv_bootloop.elf
+from the fileset 'sources_1'.
+File is part of a sub-design (IP, Block Design, DSP Design, etc.) and must be removed via the sub-design parent.
+# add_files -norecurse $out/bench.elf
+# set elf [get_files -all $out/bench.elf]
+# set_property SCOPED_TO_REF sys $elf
+# set_property SCOPED_TO_CELLS {mb} $elf
+# generate_target all $bd
+INFO: [BD 41-1662] The design 'sys.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v
+Verilog Output written to : c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/sim/sys.v
+Verilog Output written to : c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/hdl/sys_wrapper.v
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Exporting to file c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_axi_0/bd_0/hw_handoff/sys_axi_0.hwh
+Generated Hardware Definition File c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_axi_0/bd_0/synth/sys_axi_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_timer_1/sys_timer_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block timer .
+Exporting to file c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/hw_handoff/sys.hwh
+Generated Hardware Definition File c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.hwdef
+INFO: [BD 41-3262] Generated VHDL Instantiation Template file C:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/sys.vho
+INFO: [BD 41-3262] Generated Verilog Instantiation Template file C:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/sys.veo
+INFO: [BD 41-3262] Generated System Verilog Instantiation Template file C:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/sys_sv.sveo
+generate_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 777.758 ; gain = 8.078
+# update_compile_order -fileset sources_1
+# reset_run synth_1
+# launch_runs synth_1 -jobs 8
+[Sun Oct 25 11:26:32 2026] Launched sys_axi_0_synth_1, sys_timer_1_synth_1...
+Run output will be captured here:
+sys_axi_0_synth_1: C:/aiup/s35tmr/tmr.runs/sys_axi_0_synth_1/runme.log
+sys_timer_1_synth_1: C:/aiup/s35tmr/tmr.runs/sys_timer_1_synth_1/runme.log
+[Sun Oct 25 11:26:32 2026] Launched synth_1...
+Run output will be captured here: C:/aiup/s35tmr/tmr.runs/synth_1/runme.log
+# wait_on_run synth_1
+[Sun Oct 25 11:26:32 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log sec_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sec_top.tcl
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 24-jun-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sun Oct 25 11:28:51 2026
+# Process ID         : 18568
+# Current directory  : C:/aiup/s35tmr/tmr.runs/synth_1
+# Command line       : vivado.exe -log sec_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sec_top.tcl
+# Log file           : C:/aiup/s35tmr/tmr.runs/synth_1/sec_top.vds
+# Journal file       : C:/aiup/s35tmr/tmr.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-I75K8PP
+# Platform           : Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor             
+# CPU Frequency      : 3593 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34304 MB
+# Swap memory        : 49182 MB
+# Total Virtual      : 83487 MB
+# Available Virtual  : 37535 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Sun Oct 25 11:28:51 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Users/lavat/AppData/Roaming/Xilinx/Vivado/2026.1/Vivado_init.tcl'
+source sec_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 614.547 ; gain = 271.281
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/AMDDesignTools/2026.1/Vivado/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design C:/aiup/s35tmr/tmr.srcs/sources_1/bd/sys/sys.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ sys_low_0
+sys_high_0
+INFO: [Project 1-4468] Skipped adding '..\..\..\..\..\sec35\timer\bench.elf' file in synth run script
+Command: synth_design -top sec_top -part xcsu35p-sbvb625-2-e
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xcsu35p'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xcsu35p'
+INFO: [Device 21-403] Loading part xcsu35p-sbvb625-2-e
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 43284
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1472.418 ; gain = 576.387
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sec_top' [C:/aiup/sec35/sec_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [D:/AMDDesignTools/2026.1/Vivado/scripts/rt/data/unisim_comp.v:82833]
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [D:/AMDDesignTools/2026.1/Vivado/scripts/rt/data/unisim_comp.v:82833]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/AMDDesignTools/2026.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/AMDDesignTools/2026.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6157] synthesizing module 'sys_wrapper' [C:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/hdl/sys_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'sys' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:226]
+INFO: [Synth 8-6157] synthesizing module 'sys_axi_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_axi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_axi_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_axi_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'sys_axi_0' is unconnected for instance 'axi' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:362]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'sys_axi_0' is unconnected for instance 'axi' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:362]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'sys_axi_0' is unconnected for instance 'axi' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:362]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'sys_axi_0' is unconnected for instance 'axi' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:362]
+WARNING: [Synth 8-7023] instance 'axi' of module 'sys_axi_0' has 92 connections declared, but only 88 given [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:362]
+INFO: [Synth 8-6157] synthesizing module 'sys_high_0' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_high_0/synth/sys_high_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_11_xlconstant' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ipshared/ff42/hdl/xlconstant_v1_1_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_11_xlconstant' (0#1) [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ipshared/ff42/hdl/xlconstant_v1_1_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'sys_high_0' (0#1) [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_high_0/synth/sys_high_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'sys_low_0' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_low_0/synth/sys_low_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_11_xlconstant__parameterized0' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ipshared/ff42/hdl/xlconstant_v1_1_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_11_xlconstant__parameterized0' (0#1) [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ipshared/ff42/hdl/xlconstant_v1_1_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'sys_low_0' (0#1) [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_low_0/synth/sys_low_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'sys_mb_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_mb_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_mb_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_mb_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'Interrupt_Ack' of module 'sys_mb_0' is unconnected for instance 'mb' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:457]
+WARNING: [Synth 8-7071] port 'Dbg_Trig_In' of module 'sys_mb_0' is unconnected for instance 'mb' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:457]
+WARNING: [Synth 8-7071] port 'Dbg_Trig_Ack_Out' of module 'sys_mb_0' is unconnected for instance 'mb' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:457]
+WARNING: [Synth 8-7023] instance 'mb' of module 'sys_mb_0' has 56 connections declared, but only 53 given [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:457]
+INFO: [Synth 8-6157] synthesizing module 'mb_local_memory_imp_O56743' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:13]
+INFO: [Synth 8-6157] synthesizing module 'sys_dlmb_bram_if_cntlr_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_dlmb_bram_if_cntlr_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sys_dlmb_v10_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_dlmb_v10_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'sys_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:138]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'sys_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:138]
+INFO: [Synth 8-6157] synthesizing module 'sys_ilmb_bram_if_cntlr_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_ilmb_bram_if_cntlr_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sys_ilmb_v10_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_ilmb_v10_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'sys_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:184]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'sys_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:184]
+INFO: [Synth 8-6157] synthesizing module 'sys_lmb_bram_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_lmb_bram_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'sys_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:209]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'sys_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:209]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'sys_lmb_bram_0' has 16 connections declared, but only 14 given [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:209]
+INFO: [Synth 8-6155] done synthesizing module 'mb_local_memory_imp_O56743' (0#1) [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:13]
+INFO: [Synth 8-6157] synthesizing module 'sys_mdm_1_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_mdm_1_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sys_pmc_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_pmc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_pmc_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_pmc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sys_rst_sysclk_100M_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_rst_sysclk_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_rst_sysclk_100M_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_rst_sysclk_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'sys_rst_sysclk_100M_0' is unconnected for instance 'rst_sysclk_100M' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:579]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'sys_rst_sysclk_100M_0' is unconnected for instance 'rst_sysclk_100M' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:579]
+WARNING: [Synth 8-7023] instance 'rst_sysclk_100M' of module 'sys_rst_sysclk_100M_0' has 10 connections declared, but only 8 given [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:579]
+INFO: [Synth 8-6157] synthesizing module 'sys_timer_1' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_timer_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_timer_1' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_timer_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'generateout0' of module 'sys_timer_1' is unconnected for instance 'timer' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:588]
+WARNING: [Synth 8-7071] port 'generateout1' of module 'sys_timer_1' is unconnected for instance 'timer' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:588]
+WARNING: [Synth 8-7071] port 'pwm0' of module 'sys_timer_1' is unconnected for instance 'timer' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:588]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'sys_timer_1' is unconnected for instance 'timer' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:588]
+WARNING: [Synth 8-7023] instance 'timer' of module 'sys_timer_1' has 26 connections declared, but only 22 given [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:588]
+INFO: [Synth 8-6157] synthesizing module 'sys_uart_0' [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_uart_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_uart_0' (0#1) [C:/aiup/s35tmr/tmr.runs/synth_1/.Xil/Vivado-18568-DESKTOP-I75K8PP/realtime/sys_uart_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'sys_uart_0' is unconnected for instance 'uart' [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:611]
+WARNING: [Synth 8-7023] instance 'uart' of module 'sys_uart_0' has 22 connections declared, but only 21 given [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:611]
+INFO: [Synth 8-6155] done synthesizing module 'sys' (0#1) [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/synth/sys.v:226]
+INFO: [Synth 8-6155] done synthesizing module 'sys_wrapper' (0#1) [C:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/hdl/sys_wrapper.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'sec_top' (0#1) [C:/aiup/sec35/sec_top.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1602.730 ; gain = 706.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1602.730 ; gain = 706.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1602.730 ; gain = 706.699
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1602.730 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mb_0/sys_mb_0/sys_mb_0_in_context.xdc] for cell 'system_i/sys_i/mb'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mb_0/sys_mb_0/sys_mb_0_in_context.xdc] for cell 'system_i/sys_i/mb'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_dlmb_v10_0/sys_dlmb_v10_0/sys_dlmb_v10_0_in_context.xdc] for cell 'system_i/sys_i/mb_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_dlmb_v10_0/sys_dlmb_v10_0/sys_dlmb_v10_0_in_context.xdc] for cell 'system_i/sys_i/mb_local_memory/dlmb_v10'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_ilmb_v10_0/sys_ilmb_v10_0/sys_dlmb_v10_0_in_context.xdc] for cell 'system_i/sys_i/mb_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_ilmb_v10_0/sys_ilmb_v10_0/sys_dlmb_v10_0_in_context.xdc] for cell 'system_i/sys_i/mb_local_memory/ilmb_v10'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_dlmb_bram_if_cntlr_0/sys_dlmb_bram_if_cntlr_0/sys_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'system_i/sys_i/mb_local_memory/dlmb_bram_if_cntlr'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1602.730 ; gain = 0.000
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_dlmb_bram_if_cntlr_0/sys_dlmb_bram_if_cntlr_0/sys_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'system_i/sys_i/mb_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_ilmb_bram_if_cntlr_0/sys_ilmb_bram_if_cntlr_0/sys_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'system_i/sys_i/mb_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_ilmb_bram_if_cntlr_0/sys_ilmb_bram_if_cntlr_0/sys_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'system_i/sys_i/mb_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_lmb_bram_0/sys_lmb_bram_0/sys_lmb_bram_0_in_context.xdc] for cell 'system_i/sys_i/mb_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_lmb_bram_0/sys_lmb_bram_0/sys_lmb_bram_0_in_context.xdc] for cell 'system_i/sys_i/mb_local_memory/lmb_bram'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mdm_1_0/sys_mdm_1_0/sys_mdm_1_0_in_context.xdc] for cell 'system_i/sys_i/mdm_1'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mdm_1_0/sys_mdm_1_0/sys_mdm_1_0_in_context.xdc] for cell 'system_i/sys_i/mdm_1'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0_in_context.xdc] for cell 'system_i/sys_i/rst_sysclk_100M'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0_in_context.xdc] for cell 'system_i/sys_i/rst_sysclk_100M'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_axi_0/sys_axi_0/sys_axi_0_in_context.xdc] for cell 'system_i/sys_i/axi'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_axi_0/sys_axi_0/sys_axi_0_in_context.xdc] for cell 'system_i/sys_i/axi'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_uart_0/sys_uart_0/sys_uart_0_in_context.xdc] for cell 'system_i/sys_i/uart'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_uart_0/sys_uart_0/sys_uart_0_in_context.xdc] for cell 'system_i/sys_i/uart'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_pmc_0/sys_pmc_0/sys_pmc_0_in_context.xdc] for cell 'system_i/sys_i/pmc'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_pmc_0/sys_pmc_0/sys_pmc_0_in_context.xdc] for cell 'system_i/sys_i/pmc'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_timer_1/sys_timer_1/sys_timer_1_in_context.xdc] for cell 'system_i/sys_i/timer'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_timer_1/sys_timer_1/sys_timer_1_in_context.xdc] for cell 'system_i/sys_i/timer'
+Parsing XDC File [C:/aiup/sec35/sec_top.xdc]
+Finished Parsing XDC File [C:/aiup/sec35/sec_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/aiup/sec35/sec_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sec_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sec_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/aiup/s35tmr/tmr.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/aiup/s35tmr/tmr.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1602.730 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1602.730 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'system_i/sys_i/mb_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1602.730 ; gain = 706.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcsu35p-sbvb625-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1602.730 ; gain = 706.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1602.730 ; gain = 706.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1602.730 ; gain = 706.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 48 (col length:48)
+BRAMs: 96 (col length: RAMB18 48 RAMB36 24)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1630.211 ; gain = 734.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1886.160 ; gain = 990.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1886.160 ; gain = 990.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1895.703 ; gain = 999.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2171.910 ; gain = 1275.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2171.910 ; gain = 1275.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2171.910 ; gain = 1275.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2171.910 ; gain = 1275.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2171.910 ; gain = 1275.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2171.910 ; gain = 1275.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------+----------+
+|      |BlackBox name            |Instances |
++------+-------------------------+----------+
+|1     |sys_axi_0                |         1|
+|2     |sys_mb_0                 |         1|
+|3     |sys_mdm_1_0              |         1|
+|4     |sys_pmc_0                |         1|
+|5     |sys_rst_sysclk_100M_0    |         1|
+|6     |sys_timer_1              |         1|
+|7     |sys_uart_0               |         1|
+|8     |sys_dlmb_bram_if_cntlr_0 |         1|
+|9     |sys_dlmb_v10_0           |         1|
+|10    |sys_ilmb_bram_if_cntlr_0 |         1|
+|11    |sys_ilmb_v10_0           |         1|
+|12    |sys_lmb_bram_0           |         1|
++------+-------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------+------+
+|      |Cell                   |Count |
++------+-----------------------+------+
+|1     |sys_axi                |     1|
+|2     |sys_dlmb_bram_if_cntlr |     1|
+|3     |sys_dlmb_v10           |     1|
+|4     |sys_ilmb_bram_if_cntlr |     1|
+|5     |sys_ilmb_v10           |     1|
+|6     |sys_lmb_bram           |     1|
+|7     |sys_mb                 |     1|
+|8     |sys_mdm_1              |     1|
+|9     |sys_pmc                |     1|
+|10    |sys_rst_sysclk_100M    |     1|
+|11    |sys_timer              |     1|
+|12    |sys_uart               |     1|
+|13    |BUFG                   |     1|
+|14    |IBUF                   |     2|
+|15    |IBUFDS                 |     1|
+|16    |OBUF                   |     1|
++------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2171.910 ; gain = 1275.879
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2171.910 ; gain = 1275.879
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2171.910 ; gain = 1275.879
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2171.910 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2183.289 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+Synth Design complete | Checksum: 5be0e06e
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+68 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:01:20 . Memory (MB): peak = 2183.289 ; gain = 1508.055
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2183.289 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/aiup/s35tmr/tmr.runs/synth_1/sec_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file sec_top_utilization_synth.rpt -pb sec_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 11:30:25 2026...
+[Sun Oct 25 11:30:30 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:03:59 . Memory (MB): peak = 777.758 ; gain = 0.000
+# if {[get_property STATUS [get_runs synth_1]] ne "synth_design Complete!"} {error "Synthesis failed"}
+# launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Oct 25 11:30:33 2026] Launched impl_1...
+Run output will be captured here: C:/aiup/s35tmr/tmr.runs/impl_1/runme.log
+# wait_on_run impl_1
+[Sun Oct 25 11:30:33 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log sec_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source sec_top.tcl -notrace
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 24-jun-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sun Oct 25 11:30:53 2026
+# Process ID         : 7388
+# Current directory  : C:/aiup/s35tmr/tmr.runs/impl_1
+# Command line       : vivado.exe -log sec_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sec_top.tcl -notrace
+# Log file           : C:/aiup/s35tmr/tmr.runs/impl_1/sec_top.vdi
+# Journal file       : C:/aiup/s35tmr/tmr.runs/impl_1\vivado.jou
+# Running On         : DESKTOP-I75K8PP
+# Platform           : Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor             
+# CPU Frequency      : 3593 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34304 MB
+# Swap memory        : 49182 MB
+# Total Virtual      : 83487 MB
+# Available Virtual  : 37681 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Sun Oct 25 11:30:53 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Users/lavat/AppData/Roaming/Xilinx/Vivado/2026.1/Vivado_init.tcl'
+source sec_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 614.289 ; gain = 272.855
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/AMDDesignTools/2026.1/Vivado/data/ip'.
+INFO: [Project 1-3968] Successfully associated ELF file C:/aiup/sec35/timer/bench.elf to BD sys and cell mb.
+WARNING: [filemgmt 56-12] File 'C:/aiup/sec35/timer/bench.elf' cannot be added to the project because it already exists in the project, skipping this file
+Command: link_design -top sec_top -part xcsu35p-sbvb625-2-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcsu35p-sbvb625-2-e
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_axi_0/sys_axi_0.dcp' for cell 'system_i/sys_i/axi'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mb_0/sys_mb_0.dcp' for cell 'system_i/sys_i/mb'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mdm_1_0/sys_mdm_1_0.dcp' for cell 'system_i/sys_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_pmc_0/sys_pmc_0.dcp' for cell 'system_i/sys_i/pmc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0.dcp' for cell 'system_i/sys_i/rst_sysclk_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_timer_1/sys_timer_1.dcp' for cell 'system_i/sys_i/timer'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_uart_0/sys_uart_0.dcp' for cell 'system_i/sys_i/uart'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_dlmb_bram_if_cntlr_0/sys_dlmb_bram_if_cntlr_0.dcp' for cell 'system_i/sys_i/mb_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_dlmb_v10_0/sys_dlmb_v10_0.dcp' for cell 'system_i/sys_i/mb_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_ilmb_bram_if_cntlr_0/sys_ilmb_bram_if_cntlr_0.dcp' for cell 'system_i/sys_i/mb_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_ilmb_v10_0/sys_ilmb_v10_0.dcp' for cell 'system_i/sys_i/mb_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_lmb_bram_0/sys_lmb_bram_0.dcp' for cell 'system_i/sys_i/mb_local_memory/lmb_bram'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 943.832 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 160 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mb_0/sys_mb_0.xdc] for cell 'system_i/sys_i/mb/U0'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mb_0/sys_mb_0.xdc] for cell 'system_i/sys_i/mb/U0'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0_board.xdc] for cell 'system_i/sys_i/rst_sysclk_100M/U0'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_rst_sysclk_100M_0/sys_rst_sysclk_100M_0_board.xdc] for cell 'system_i/sys_i/rst_sysclk_100M/U0'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_axi_0/bd_0/ip/ip_0/bd_84b4_sc_ul_0_cdc.xdc] for cell 'system_i/sys_i/axi/inst/sc_ul/inst'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-11' -from list should not be empty. [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_axi_0/bd_0/ip/ip_0/bd_84b4_sc_ul_0_cdc.xdc:24]
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_axi_0/bd_0/ip/ip_0/bd_84b4_sc_ul_0_cdc.xdc] for cell 'system_i/sys_i/axi/inst/sc_ul/inst'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_axi_0/smartconnect.xdc] for cell 'system_i/sys_i/axi/inst'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_axi_0/smartconnect.xdc] for cell 'system_i/sys_i/axi/inst'
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_uart_0/sys_uart_0_board.xdc] for cell 'system_i/sys_i/uart/U0'
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_uart_0/sys_uart_0_board.xdc] for cell 'system_i/sys_i/uart/U0'
+Parsing XDC File [C:/aiup/sec35/sec_top.xdc]
+create_clock: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1030.859 ; gain = 41.480
+Finished Parsing XDC File [C:/aiup/sec35/sec_top.xdc]
+Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mdm_1_0/sys_mdm_1_0.xdc] for cell 'system_i/sys_i/mdm_1/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mdm_1_0/sys_mdm_1_0.xdc:6]
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1411.090 ; gain = 380.230
+Finished Parsing XDC File [c:/aiup/s35tmr/tmr.gen/sources_1/bd/sys/ip/sys_mdm_1_0/sys_mdm_1_0.xdc] for cell 'system_i/sys_i/mdm_1/U0'
+INFO: [Project 1-1714] 7 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[23].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[24].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/sys_i/mb_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+Generating merged BMM file for the design top 'sec_top'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: C:/aiup/sec35/timer/bench.elf 
+INFO: [Project 1-1687] 1 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1411.090 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 67 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 48 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 16 instances
+
+60 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:48 . Memory (MB): peak = 1411.090 ; gain = 735.645
+Command: opt_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xcsu35p'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xcsu35p'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1411.090 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1cf5fe1d2
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.574 . Memory (MB): peak = 1411.090 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 1cf5fe1d2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1881.270 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1cf5fe1d2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1881.270 ; gain = 0.000
+Phase 1 Initialization | Checksum: 1cf5fe1d2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1881.270 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 1cf5fe1d2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1881.293 ; gain = 0.023
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 1cf5fe1d2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.173 . Memory (MB): peak = 1881.293 ; gain = 0.023
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: 1cf5fe1d2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1881.293 ; gain = 0.023
+Phase 2 Timer Update And Timing Data Collection | Checksum: 1cf5fe1d2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.185 . Memory (MB): peak = 1881.293 ; gain = 0.023
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 3 inverters resulting in an inversion of 69 pins
+INFO: [Opt 31-138] Pushed 4 inverter(s) to 228 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 1eb5da3d4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.508 . Memory (MB): peak = 1881.293 ; gain = 0.023
+Retarget | Checksum: 1eb5da3d4
+INFO: [Opt 31-389] Phase Retarget created 55 cells and removed 106 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 1c2e24059
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.589 . Memory (MB): peak = 1881.293 ; gain = 0.023
+Constant propagation | Checksum: 1c2e24059
+INFO: [Opt 31-389] Phase Constant propagation created 6 cells and removed 113 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1881.293 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Phase 5 Sweep | Checksum: 18f1b935b
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1881.293 ; gain = 0.023
+Sweep | Checksum: 18f1b935b
+INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 70 cells
+INFO: [Opt 31-1021] In phase Sweep, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG system_i/sys_i/mdm_1/U0/Use_E2.BSCAN_I/tck_BUFG_inst to drive 51 load(s) on clock net system_i/sys_i/mdm_1/U0/Use_E2.BSCAN_I/tck_BUFGCE
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 6 BUFG optimization | Checksum: 1a476245e
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1881.293 ; gain = 0.023
+BUFG optimization | Checksum: 1a476245e
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+INFO: [Opt 31-1021] In phase BUFG optimization, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 1a476245e
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1881.293 ; gain = 0.023
+Shift Register Optimization | Checksum: 1a476245e
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 19de1678a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1881.293 ; gain = 0.023
+Post Processing Netlist | Checksum: 19de1678a
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 19b75bfac
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1881.293 ; gain = 0.023
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 19b75bfac
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1881.293 ; gain = 0.023
+Phase 9 Finalization | Checksum: 19b75bfac
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1881.293 ; gain = 0.023
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              55  |             106  |                                              1  |
+|  Constant propagation         |               6  |             113  |                                              1  |
+|  Sweep                        |               1  |              70  |                                              1  |
+|  BUFG optimization            |               1  |               0  |                                              1  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              1  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 19b75bfac
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1881.293 ; gain = 0.023
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Power 33-23] Power model is not available for PMC_AXI32_0
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 32 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 64
+Ending PowerOpt Patch Enables Task | Checksum: 19b75bfac
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.223 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 19b75bfac
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1881.293 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 19b75bfac
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1881.293 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+96 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1881.293 ; gain = 470.203
+INFO: [Vivado 12-24828] Executing command : report_drc -file sec_top_drc_opted.rpt -pb sec_top_drc_opted.pb -rpx sec_top_drc_opted.rpx
+Command: report_drc -file sec_top_drc_opted.rpt -pb sec_top_drc_opted.pb -rpx sec_top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/aiup/s35tmr/tmr.runs/impl_1/sec_top_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1881.293 ; gain = 0.000
+generate_parallel_reports: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1881.293 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1881.293 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/aiup/s35tmr/tmr.runs/impl_1/sec_top_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xcsu35p'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xcsu35p'
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 194ebbfff
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1881.293 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1ebc8d92f
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1881.293 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 235f2373e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1881.293 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 235f2373e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1881.293 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 235f2373e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1881.293 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 2d4ac9c84
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1881.293 ; gain = 0.000
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+INFO: [Place 30-3162] Check ILP status : ILP-based clock placer completed successfully.
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 27ac63d50
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1881.293 ; gain = 0.000
+
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 27ac63d50
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 1947.562 ; gain = 66.270
+
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 2e7eb8fd3
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1947.562 ; gain = 66.270
+
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 2e7eb8fd3
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1947.562 ; gain = 66.270
+Phase 2.1.1 Partition Driven Placement | Checksum: 2e7eb8fd3
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1947.562 ; gain = 66.270
+Phase 2.1 Floorplanning | Checksum: 2b6af5c38
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1947.562 ; gain = 66.270
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 2b6af5c38
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1947.562 ; gain = 66.270
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 2b6af5c38
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1947.562 ; gain = 66.270
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 23bed3677
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:31 . Memory (MB): peak = 1985.098 ; gain = 103.805
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 23bed3677
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:32 . Memory (MB): peak = 1985.098 ; gain = 103.805
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 79 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 35 nets or LUTs. Breaked 0 LUT, combined 35 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-670] No setup violation found.  Equivalent Driver Rewiring was not performed.
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1985.098 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |             35  |                    35  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Equivalent Driver Rewiring                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |             35  |                    35  |           0  |           4  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 27fb2726c
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:33 . Memory (MB): peak = 1985.098 ; gain = 103.805
+Phase 2.5 Global Place Phase2 | Checksum: 2a20706ac
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:38 . Memory (MB): peak = 1992.688 ; gain = 111.395
+Phase 2 Global Placement | Checksum: 2a20706ac
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:38 . Memory (MB): peak = 1992.688 ; gain = 111.395
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1f4fedcbc
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:43 . Memory (MB): peak = 1992.688 ; gain = 111.395
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 220279ae4
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:44 . Memory (MB): peak = 1992.688 ; gain = 111.395
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 1aea92b8f
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:00:53 . Memory (MB): peak = 2000.531 ; gain = 119.238
+
+Phase 3.3.2 Slice Area Swap
+
+Phase 3.3.2.1 Slice Area Swap Initial
+Phase 3.3.2.1 Slice Area Swap Initial | Checksum: 223045ac9
+
+Time (s): cpu = 00:01:44 ; elapsed = 00:00:58 . Memory (MB): peak = 2011.105 ; gain = 129.812
+Phase 3.3.2 Slice Area Swap | Checksum: 223045ac9
+
+Time (s): cpu = 00:01:44 ; elapsed = 00:00:58 . Memory (MB): peak = 2011.105 ; gain = 129.812
+Phase 3.3 Small Shape DP | Checksum: 1aef40076
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2011.105 ; gain = 129.812
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 18b9ab684
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:09 . Memory (MB): peak = 2011.105 ; gain = 129.812
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 190ccc657
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:09 . Memory (MB): peak = 2011.105 ; gain = 129.812
+Phase 3 Detail Placement | Checksum: 190ccc657
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:09 . Memory (MB): peak = 2011.105 ; gain = 129.812
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1d754e9b1
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=5.146 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 10622f320
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 2062.195 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1602f6751
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 2062.195 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1d754e9b1
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:17 . Memory (MB): peak = 2062.195 ; gain = 180.902
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=5.146. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 18564b6c7
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:17 . Memory (MB): peak = 2062.195 ; gain = 180.902
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:17 . Memory (MB): peak = 2062.195 ; gain = 180.902
+Phase 4.1 Post Commit Optimization | Checksum: 237ea90ee
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:17 . Memory (MB): peak = 2062.195 ; gain = 180.902
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2098.699 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 223d5b3d8
+
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:22 . Memory (MB): peak = 2098.699 ; gain = 217.406
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                4x4|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                4x4|
+|___________|___________________|___________________|___________________|
+|       West|                1x1|                1x1|                4x4|
+|___________|___________________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 223d5b3d8
+
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:22 . Memory (MB): peak = 2098.699 ; gain = 217.406
+Phase 4.3 Placer Reporting | Checksum: 223d5b3d8
+
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:22 . Memory (MB): peak = 2098.699 ; gain = 217.406
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2098.699 ; gain = 0.000
+
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:22 . Memory (MB): peak = 2098.699 ; gain = 217.406
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1a31d6d7a
+
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:22 . Memory (MB): peak = 2098.699 ; gain = 217.406
+Ending Placer Task | Checksum: 1775e1e57
+
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:22 . Memory (MB): peak = 2098.699 ; gain = 217.406
+130 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:31 ; elapsed = 00:01:33 . Memory (MB): peak = 2098.699 ; gain = 217.406
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_io -file sec_top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.178 . Memory (MB): peak = 2098.699 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file sec_top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2098.699 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file sec_top_utilization_placed.rpt -pb sec_top_utilization_placed.pb
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2098.699 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2098.699 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2106.559 ; gain = 7.859
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2106.559 ; gain = 7.859
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.147 . Memory (MB): peak = 2106.559 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2106.559 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2106.559 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.191 . Memory (MB): peak = 2106.559 ; gain = 7.859
+INFO: [Common 17-1381] The checkpoint 'C:/aiup/s35tmr/tmr.runs/impl_1/sec_top_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xcsu35p'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xcsu35p'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2112.562 ; gain = 6.004
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 5.147 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+141 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2112.562 ; gain = 6.004
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2130.477 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2130.477 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2139.430 ; gain = 8.953
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2139.430 ; gain = 8.953
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.152 . Memory (MB): peak = 2139.430 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2139.430 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2139.430 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.196 . Memory (MB): peak = 2139.430 ; gain = 8.953
+INFO: [Common 17-1381] The checkpoint 'C:/aiup/s35tmr/tmr.runs/impl_1/sec_top_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xcsu35p'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xcsu35p'
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: f9e637e9 ConstDB: 0 ShapeSum: 1312b08 RouteDB: 7c46bb66
+Nodegraph reading from file.  Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.254 . Memory (MB): peak = 2139.430 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 47f7c369 | NumContArr: e89c3acd | Constraints: 49cb3d40 | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 23d083613
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2139.430 ; gain = 0.000
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 23d083613
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2139.430 ; gain = 0.000
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 23d083613
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2139.430 ; gain = 0.000
+
+Phase 2.3 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.3 Global Clock Net Routing | Checksum: 1c579ce4e
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2139.430 ; gain = 0.000
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1bdf39512
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2139.430 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.418  | TNS=0.000  | WHS=-0.382 | THS=-0.423 |
+
+
+Phase 2.5 Soft Constraint Pins - Fast Budgeting
+Phase 2.5 Soft Constraint Pins - Fast Budgeting | Checksum: 14da9b9fc
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0186924 %
+  Global Horizontal Routing Utilization  = 0.00532873 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 3914
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 3039
+  Number of Partially Routed Nets     = 875
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: bab7179d
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: bab7179d
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 24d260978
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2174.598 ; gain = 35.168
+Phase 4 Initial Routing | Checksum: 261fe729d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 875
+ Number of Nodes with overlaps = 73
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.996  | TNS=0.000  | WHS=-0.001 | THS=-0.001 |
+
+Phase 5.1 Global Iteration 0 | Checksum: 20cbebcfe
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 5.2 Additional Iteration for Hold
+Phase 5.2 Additional Iteration for Hold | Checksum: 1c20a5ecc
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 2174.598 ; gain = 35.168
+Phase 5 Rip-up And Reroute | Checksum: 1c20a5ecc
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.996  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.996  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 6.1 Delay CleanUp | Checksum: 1a5e21e4d
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 1a5e21e4d
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2174.598 ; gain = 35.168
+Phase 6 Delay and Skew Optimization | Checksum: 1a5e21e4d
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.996  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 1f96ce64a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2174.598 ; gain = 35.168
+Phase 7 Post Hold Fix | Checksum: 1f96ce64a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 4.0182 %
+  Global Horizontal Routing Utilization  = 4.20259 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 1f96ce64a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 1f96ce64a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 1f96ce64a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 11 Resolve XTalk
+Phase 11 Resolve XTalk | Checksum: 1f96ce64a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 12 Post Process Routing
+Phase 12 Post Process Routing | Checksum: 1f96ce64a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Phase 13 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=3.996  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 13 Post Router Timing | Checksum: 1f96ce64a
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2174.598 ; gain = 35.168
+Total Elapsed time in route_design: 13.613 secs
+
+Phase 14 Post-Route Event Processing
+Phase 14 Post-Route Event Processing | Checksum: 82d8a0db
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2174.598 ; gain = 35.168
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 82d8a0db
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2174.598 ; gain = 35.168
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+154 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 2174.598 ; gain = 35.168
+INFO: [Vivado 12-24828] Executing command : report_drc -file sec_top_drc_routed.rpt -pb sec_top_drc_routed.pb -rpx sec_top_drc_routed.rpx
+Command: report_drc -file sec_top_drc_routed.rpt -pb sec_top_drc_routed.pb -rpx sec_top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/aiup/s35tmr/tmr.runs/impl_1/sec_top_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2174.598 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_methodology -file sec_top_methodology_drc_routed.rpt -pb sec_top_methodology_drc_routed.pb -rpx sec_top_methodology_drc_routed.rpx
+Command: report_methodology -file sec_top_methodology_drc_routed.rpt -pb sec_top_methodology_drc_routed.pb -rpx sec_top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/aiup/s35tmr/tmr.runs/impl_1/sec_top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file sec_top_timing_summary_routed.rpt -pb sec_top_timing_summary_routed.pb -rpx sec_top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Vivado 12-24838] Running report commands "report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file sec_top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_route_status -file sec_top_route_status.rpt -pb sec_top_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file sec_top_power_routed.rpt -pb sec_top_power_summary_routed.pb -rpx sec_top_power_routed.rpx
+Command: report_power -file sec_top_power_routed.rpt -pb sec_top_power_summary_routed.pb -rpx sec_top_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+171 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2174.598 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file sec_top_clock_utilization_routed.rpt
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file sec_top_bus_skew_routed.rpt -pb sec_top_bus_skew_routed.pb -rpx sec_top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+generate_parallel_reports: Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 2174.598 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2174.598 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2174.598 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2174.598 ; gain = 0.000
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 2174.598 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.151 . Memory (MB): peak = 2174.598 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2174.598 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2174.598 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.253 . Memory (MB): peak = 2174.598 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/aiup/s35tmr/tmr.runs/impl_1/sec_top_routed.dcp' has been generated.
+Command: write_bitstream -force sec_top.bit
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xcsu35p'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xcsu35p'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Generating merged BMM file for the design top 'sec_top'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: C:/aiup/sec35/timer/bench.elf 
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Initializing bitstream generation complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2174.598 ; gain = 0.000
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./sec_top.bit...
+Writing CDO partition ./sec_top.rcdo...
+Generate Bitstream complete. Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2174.598 ; gain = 0.000
+INFO: [Vivado 12-25145] BIF generation start
+INFO: [Project 1-1179] Generating sec_top.bif file ...
+INFO: [Project 1-5210] BIF generation completed successfully.
+INFO: [Project 1-5226] sec_top.bif generated
+INFO: [Vivado 12-25143] BIF generation completed Successfully
+INFO: [Vivado 12-29392] Write bitstream does not generate a Programmable Device Image (PDI). To generate a PDI for programming spartanuplus hardware, use the following bootgen command:
+bootgen -arch spartanuplus -image <name of the generated .bif file> -o <name of the output .pdi file>
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+192 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 2174.598 ; gain = 0.000
+PDI generation start
+!! WARNING !!
+"PYTHONPATH" variable is set greater than default max string limit of "519" characters.
+Please ignore this, if you have already made changes to your system registry to accept more than
+default limit of 519 characters.
+!! WARNING !!
+
+
+****** Bootgen v2026.1
+  **** Build date : Jun  5 2026-13:21:08
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+[INFO]   : Bootimage generated successfully
+
+PDI generation completed
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 11:35:39 2026...
+[Sun Oct 25 11:35:43 2026] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:05:10 . Memory (MB): peak = 777.758 ; gain = 0.000
+# if {[get_property STATUS [get_runs impl_1]] ne "write_bitstream Complete!"} {error "Implementation failed"}
+# open_run impl_1
+INFO: [Device 21-403] Loading part xcsu35p-sbvb625-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.137 . Memory (MB): peak = 1034.184 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 158 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1068.547 ; gain = 0.000
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1436.047 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1436.047 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1436.047 ; gain = 0.000
+Read placeStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 1448.773 ; gain = 12.727
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1448.773 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.725 . Memory (MB): peak = 1504.422 ; gain = 55.648
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.869 . Memory (MB): peak = 1504.422 ; gain = 68.375
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.950 . Memory (MB): peak = 1504.422 ; gain = 68.375
+Generating merged BMM file for the design top 'sec_top'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: C:/aiup/sec35/timer/bench.elf 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1504.422 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 66 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 47 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 16 instances
+
+open_run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:44 . Memory (MB): peak = 1504.422 ; gain = 726.664
+# report_timing_summary -file $out/timing.txt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+# report_drc -file $out/drc.txt
+Command: report_drc -file C:/aiup/sec35/timer/drc.txt
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/aiup/sec35/timer/drc.txt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1616.730 ; gain = 82.020
+# report_utilization -file $out/utilization.txt
+# write_checkpoint -force $out/routed.dcp
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1616.730 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1616.730 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1616.730 ; gain = 0.000
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.081 . Memory (MB): peak = 1616.730 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.164 . Memory (MB): peak = 1616.730 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1616.730 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1616.730 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.271 . Memory (MB): peak = 1616.730 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/aiup/sec35/timer/routed.dcp' has been generated.
+# write_hw_platform -fixed -force -file $out/timer.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/aiup/sec35/timer/timer.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/aiup/sec35/timer/timer.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (D:/AMDDesignTools/2026.1/Vivado/data/embeddedsw) loading 6 seconds
+write_hw_platform: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1629.793 ; gain = 13.062
+# set files [open $out/source_bindings.txt w]
+# foreach f [get_files -all] {puts $files "[get_property FILE_TYPE $f]\t[get_property NAME $f]"}
+# close $files
+# close_design
+# cd $project_dir/tmr.runs/impl_1
+# exec D:/AMDDesignTools/2026.1/Vivado/bin/bootgen.bat -arch spartanup -image sec_top.bif -o $out/compare.pdi -w
+# file copy -force sec_top.rcdo $out/compare.rcdo
+# file copy -force sec_top.bif $out/compare.bif
+# file mkdir $out/static_files
+# file copy -force static_files/plm.elf $out/static_files/plm.elf
+# close_project
+# puts "TIMER_BUILD_COMPLETE"
+TIMER_BUILD_COMPLETE
+# exit
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 11:36:55 2026...

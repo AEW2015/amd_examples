@@ -1,0 +1,8 @@
+{
+    "variant":  "zero_mask",
+    "attempt":  "C:\\aiup\\sec35\\boot\\runs\\20261025T133357498_zero_mask",
+    "pdi_sha256":  "76757c3bd688c79acb14e20e5ad48d2cb5e08fc91542ef4cab1d0734b794f957",
+    "restored":  true,
+    "hardware_mutation_attempted":  true,
+    "error":  ""
+}

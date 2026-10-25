@@ -1,0 +1,5 @@
+{
+    "ProcessId":  43592,
+    "ExecutablePath":  "C:\\Xilinx\\2025.2\\Vivado\\bin\\unwrapped\\win64.o\\hw_server.exe",
+    "CommandLine":  "\"C:/Xilinx/2025.2/Vivado/bin/unwrapped/win64.o/hw_server.exe\"   -s tcp::3121"
+}

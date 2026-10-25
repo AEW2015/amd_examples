@@ -1,0 +1,672 @@
+{
+  "overall": "PASS",
+  "created_utc": "2026-10-25T12:55:14.029889+00:00",
+  "artifacts": [
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\.gitignore",
+      "sha256": "0318e8167457c9111b2a0e31f8d91514409999a8a7141716da3ae244d7124105"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\aes_test.c",
+      "sha256": "04aeb6137825f10ced4e7c1ed3476885e33d471f72b03e4330a1054294d68133"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\analyze.py",
+      "sha256": "df1cea34be4588b2f9f46e54cf58543780c998ced3d5fbe974d7e7d80c50e317"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\analyze_counter_clocks.py",
+      "sha256": "590a4b70d0f2dadeafbbb5001bca10825d0da7be50f0a1e2762a921e5d32ece0"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\benchmarks.c",
+      "sha256": "a329311240ef00dbb12bb435bfa693afa3f74d629c1ebb8e79118c2db25d654b"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\benchmarks.h",
+      "sha256": "8e3158f008488b2fc781649bd36c11d7649d8be9fc85cad5a3dd705138aa22b7"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\build.py",
+      "sha256": "6bfd3f88b2b76f6cd6eb923466513a41512c4485b762192f202e5a0c46f4362e"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\build_notebook.py",
+      "sha256": "d58f0e6a71beffe67c706a80951e7badde9c0023556ad65fc248872b0da0dd5e"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\config_spec.h",
+      "sha256": "f18c60bc87fea6ef87f174c25680af047b1801ba6eecf4dd0eb85dc1e8fdfac7"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\execute_notebook.py",
+      "sha256": "1580bc672d6ef71e82309c63c89db8d8bc94c5a31fc468e1dfd483d2e0b9284c"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\fast.c",
+      "sha256": "6ee6269041f9d9efb5c24dc881ef5085267182a154691da4fe84da1d0a7cc0d3"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\hardware_pq.log",
+      "sha256": "4419d934533ea28bf9ec92d240b85dbab9fab780f2860f97eb4e63f446bc7c25"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\hardware_pq2.log",
+      "sha256": "5080984fe2dea45d4d07056a1d3421af63599af846da961d804d05a8077f44a4"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\hardware_pq3.log",
+      "sha256": "49eb4dfbb20fbe08320f2076686c46a1ae0904d8322f0e95f4fba4030370a01a"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\hello.c",
+      "sha256": "0f896f64a8e027094ff782308f04e885c44a73eb6829ae48c2d365920988c25a"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\iomodule_tests.c",
+      "sha256": "d32d910e01595c7909ef2280dd2cbac22eba18afca6a837233c8c55d1cb84336"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\latency.png",
+      "sha256": "73fc992be6304361574dd81232e863081ab637232b87a2f576392e43daaa290b"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\latency.svg",
+      "sha256": "22813b4d84ed28c886cff60c94b11551737b9562b3ee1695a3ee0c3d2a6d857c"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\latest_capture.json",
+      "sha256": "6ca40057bcb8706073c0968e278f532b6ed2201ae097b6a6620e0fbf3e8e77a1"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\live_notebook_check.txt",
+      "sha256": "4c9007cef4adb7b159e39148c3389a4c1cc1aeed2a861829c14dc9d2908de348"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\loader.c",
+      "sha256": "ed78ae9b7d67a052d8e5cda8176f6b80375f492954011c10ffb2cc238f4835ac"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\monitor.c",
+      "sha256": "647de58e0204b4146a35fff5fe3178cc21c044aabb8104c5711fb7762b67e33f"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\native_pq.c",
+      "sha256": "6126edf7a9579bf5ccf803d8c14fcd865381650a2fa1046a3d4bafd87f5805fc"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\notebook_check.txt",
+      "sha256": "4c9007cef4adb7b159e39148c3389a4c1cc1aeed2a861829c14dc9d2908de348"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\notebook_run.txt",
+      "sha256": "01632e77afd12579cb8c0accc38e00dcd822e42ba5daedc00d0f7cdaa17f48ca"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\pdi_tools.py",
+      "sha256": "b994e613f0b3d6b674ffdbe3d37476680a78b13be5677f9a854e31838cd622db"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\peripheral_tests.c",
+      "sha256": "dfa38f60011437e058a9bd50e2ff9f5266b024ad61f3bc09901938a929051c3c"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\pit2_api_test.c",
+      "sha256": "c8c090b79c75512693666fb6648d6e78ff33e58803a95cb7b36a532ce749adb0"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\plm.ld",
+      "sha256": "8a37e449766e636692c0fc7ad2831c87a902e4c868d4978608ff59f957f15efc"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\pmc.bif",
+      "sha256": "a354acafdf09b3b45ecc54f30df4c9b4d37fcf63d3b89f6d3fbfa7991d090dfc"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\pq.csv",
+      "sha256": "39f79061dc7f3016caa3486bf12021f16fdf153c4b606eb3180d47d8bb318f54"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\pq.png",
+      "sha256": "199138ca2615bb1888f66a0039d25f23ee26cb75146ceec6de1297ccab0aaad9"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\pq.svg",
+      "sha256": "a651ed980ccf4f64e41f79c0a86d95cd04d42dbc31b956e6bb5a1ebf34ff5e31"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\probe.S",
+      "sha256": "970a1b216c6998a24f8f5c78de7bef7bc2dc24dd66ae4fc08f8a59351e39b189"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\README.md",
+      "sha256": "8db4861e06d05828c9a0b418af0e0d4db9e4bf2442104dc33177a845e14ccf67"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\report.csv",
+      "sha256": "b4e9db4039c126e72b6b4e1e7b67a19c6e6ee0b22bedf616d3809529e67e29fe"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\report.html",
+      "sha256": "fb7a4bee3cf73b74df17d27b8e669302a084ba71be880200d42d8abe665e9af4"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\report.json",
+      "sha256": "24942075a8ce207e3ce915ccc447bbdd37c5c9e659ada54bce30c8bc644376f4"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\report.png",
+      "sha256": "1d240d8c784442b79c58307ea0b6d6408285cc8f0a58598e61e112610c904afa"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\report.svg",
+      "sha256": "cee30ea08c2aafb287dacdd5941502c5ada2a55894cb89ee8fe0ff28d7dc6fc8"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\run.ps1",
+      "sha256": "28bf0478b2f08ea4fe674fd4a221086060bafb5971bf9f9925167d38007e463b"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\sha3.c",
+      "sha256": "9c7df1a1bde8b5f567c4d2d5f2e7ea8002b2a6cc9b5840146aefc819f726db5d"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\startup.S",
+      "sha256": "14ca6b79992657e169e86a7b6cb6ec510605a6d280dbbbb08bc70fc3e82f98b1"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\stream_test.c",
+      "sha256": "8f7cbbb5bacb9f59e012638607ce02bd94457410bd7b07139bf6cd8876621349"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\test.tcl",
+      "sha256": "5c26adf987958951e2c65c7104c97dbd9944f2f16c6a395211d4a2dd9be045ce"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\test_analyze.py",
+      "sha256": "80dbc0b341085f6cbdc17b0eef2778d29fb1b7e1f9bffc99ff877f339c83c3e8"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\tests.txt",
+      "sha256": "f52794b044c79736fe6cab6f76dc2d9744799d070b0952442c6a2a775d627f74"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\trng_test.c",
+      "sha256": "dc0c3241016a6dc8c0ccd262fe844e0783f313ccebaa820198ccc5eb724f6db6"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\trng_test.h",
+      "sha256": "0aac08d86cdc5437c86542ed3705489d60890f2ce626af73111e88d47b5dbdad"
+    },
+    {
+      "role": "source_report_or_runner",
+      "path": "sec35\\fast\\verify.py",
+      "sha256": "a5980b563ab86ab4212b06e5dddcb0aaae0c39be92452548fc3c7e6b3240030c"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\bootgen.log",
+      "sha256": "a48253b932d2120c8939f267edc889e13879440ba5f872e796eee47b122d8cc5"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\build_meta.json",
+      "sha256": "1633686197226f547a132563f7cc3a7baa16327f6f1678bab70528ebba31ddcf"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\cdo_spec.json",
+      "sha256": "2bd99d2dcea7f3fb510f248e6a88ef1c5a2c4a97ad1504c6dfbc8169616f9878"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\compile_failed_gp.txt",
+      "sha256": "6f71d86b80d07d8d0744de0bd2d9c58616f042568073ed7d9fa3cc31ac06b91c"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\compile_failed_memcpy.txt",
+      "sha256": "c868ce527898994fd93f745d0787734f3874feb60ccc8633920111ca2c0803ea"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\decoded_cdo.bin",
+      "sha256": "e5a55f9504c0a0623e0b155d9585fa5694af24ac42441f0d60af4c49c1f598c9"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\disassembly.txt",
+      "sha256": "af3b9ac1304734616dccf0306f2fb40ce5b328c63b9a9a895c577cf1187b2661"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\elf_headers.txt",
+      "sha256": "a27cdb36c0f434eb8c5e2a85fbe1711995600895218847b3a4b557351b5f3c8f"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\pdi_verification.json",
+      "sha256": "5bfe1293f4e6739d32507674c0d49333ca406e9721fbe8cba0b6d8e964099c6a"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\plm.elf",
+      "sha256": "1c41c47f6495ebbf19f2f5f61cf3d4bb8747591f70b32c835d834fc61c8022ef"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\plm.map",
+      "sha256": "a8211054f6fd855889f1d7611b18d8b63378401b627a8d131899be4edf51b53f"
+    },
+    {
+      "role": "native_build",
+      "path": "sec35\\fast\\build\\pmc_independent.pdi",
+      "sha256": "bec47dbf470d0ef41127a43a7777ec6ef128328db3e1281f24ae5edb6611eb35"
+    },
+    {
+      "role": "configuration_input",
+      "path": "sec35\\fast\\inputs\\cdo_spec.json",
+      "sha256": "2bd99d2dcea7f3fb510f248e6a88ef1c5a2c4a97ad1504c6dfbc8169616f9878"
+    },
+    {
+      "role": "configuration_input",
+      "path": "sec35\\fast\\inputs\\hss.c",
+      "sha256": "0f89799e117901653ed046880667e4c518a1ba7fc9e5f080a90346eabef50488"
+    },
+    {
+      "role": "configuration_input",
+      "path": "sec35\\fast\\inputs\\pq_upload.tcl",
+      "sha256": "f92ebafbebc7b64e0142daa703c0113552bb76c08ae90a60332055c07de618b6"
+    },
+    {
+      "role": "configuration_input",
+      "path": "sec35\\fast\\inputs\\pq_vectors.json",
+      "sha256": "2cd5b9fed1fa02f9dd01cfef377397619c9181abe8bcdbd7b99ec2cee610df64"
+    },
+    {
+      "role": "configuration_input",
+      "path": "sec35\\fast\\inputs\\system_wrapper.rcdo",
+      "sha256": "4d02adc47fa2cf63e3f1b9556154eeca49192d97ce6c3171f2309482381fee2c"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\build_manifest.txt",
+      "sha256": "6a30432298afb017ed2c946ccfae986f17ef9b09e67dc5ef2e0f957659d9cbbd"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\footprint_report.json",
+      "sha256": "5625d2e4828848a98e4e3db01345abbe45d27b7a80a8056f2aaec6c00c5a35db"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\footprint_report.md",
+      "sha256": "b6ab32852bf785cff42200fd9266417930dd5fd11c5ac3b3df0288ae7959e564"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\hello.elf",
+      "sha256": "31537d9e5326da569947f414a36a44c63e9dc58583263aaef815ec47b2854bda"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\hello.elf_headers.txt",
+      "sha256": "2d51e2461d2aa69b8fa38bba93276f682772cb3d0c254b9794cb3e474b4d3652"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\hello.map",
+      "sha256": "ba1c9c5ad44046591f7472d68200664d2f835a2d10c9e262188d0b07ab3d7d94"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\hello.o",
+      "sha256": "24071ee64ec612789207e6979b50d4dfa956cb58f27c9995edeb6c875aa49024"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\hello.symbols.txt",
+      "sha256": "c9dafb270cd3c92140d5554eaf9880dadcc0193ad6ccfb7c0940ca97756bb923"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\libpmc_bsp.a",
+      "sha256": "d42e3a4c6b9d2b2f50f645ec669f6a7f1e2e8e9022972c7ed37d95d2b19234ac"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\pmc_bsp.o",
+      "sha256": "a6808f5acd6ff1298c8d22f24faf7b2d75bac967847b1bb30bd96bffcbd799a7"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\reproducibility_current.json",
+      "sha256": "4952ce63292926f372224e5b67bb0dd68ea7ecf298bf6bdb2bec7cb5fb8dc0cc"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\reproducibility_v1.json",
+      "sha256": "5b1c3ba98e7075493f39cdee1932db1045d0c8cc4720a8666d5fa8d923af9e3f"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\startup.o",
+      "sha256": "681f956df0710a149aa6799734179fc091554d98748c98be34ac87f95c89dc9a"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\uart_echo.elf",
+      "sha256": "c323d3ad3cff0b0f0ff2f55109fee65267aa4991c94f6fa50af80ee9801a1a1f"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\uart_echo.map",
+      "sha256": "efacb2dfffb6b1f5fb0cebd77c8d413531c2cf89f56e32eb58f970f056ea524b"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\uart_echo.o",
+      "sha256": "4ddaac92c59c3465431fdeb67a31668dc3a5ee15995a1862aca66bbd674bf05e"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\build\\uart_echo_startup.o",
+      "sha256": "681f956df0710a149aa6799734179fc091554d98748c98be34ac87f95c89dc9a"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\experimental\\pmc_periodic_irq.c",
+      "sha256": "8a792faaa775c868cbc3fdc445c8e3ad96f05889ee56d64f8d2abab93935d75b"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\experimental\\pmc_periodic_irq.h",
+      "sha256": "7b1320acaef0ecd74f6da8530442f170fd294401bae0416cbd8e9b851afd6494"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\experimental\\pmc_pit2_irq.c",
+      "sha256": "e3d6e3649347df75a9c85e1fbfc8fd19b8f47fa51206a30c83062bf56163269d"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\experimental\\pmc_pit2_irq.h",
+      "sha256": "4cbd6bfaa81f8111e6fb47755f4ded43161b89fef7381c64b08bd12741c6a366"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\experimental\\pmc_stream.c",
+      "sha256": "633d283e067f4e39d0ab2db4c2f87cdae395c9528716059ecd152bf79fb385ee"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\experimental\\pmc_stream.h",
+      "sha256": "e42498f72f105308e028405bfc24d26eb5944d8308ada0476a2260575d7100f4"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\experimental\\README.md",
+      "sha256": "92d53957363829d74d989701683fa28770d08881555194d15b83b2960932d67a"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\experimental\\timer_irq.c",
+      "sha256": "1d56550d6dce6ddd26d26c3d6a05d7f7bf8eedf53fc3bc32d633198eeb6b79d7"
+    },
+    {
+      "role": "bsp_snapshot",
+      "path": "sec35\\fast\\bsp\\include\\pmc_bsp.h",
+      "sha256": "f4bc088e8db291f1b366dde3f68cb0fba88a6556f2a5e6541386ec4c6f31c4bf"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\build_fpga.tcl",
+      "sha256": "770f4bb49479c6159336ed533662903460b0c550d19657055ae36598893cddbe"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\constraints\\cdc.xdc",
+      "sha256": "b7f3ce746af3587ada3d1c2ed5507bb0707a44ba391c7976155fc7e683c91bd7"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\constraints\\scu35.xdc",
+      "sha256": "4a229b648c4fbc1b1f57b254ecd2d92ec0d728f2a9ea8aa6d7eb4a5faddb2578"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\export_reports.tcl",
+      "sha256": "cba8548fd6a83168e72bb0c0f84f731729512a6bbc9e7cb67914f107410d78aa"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\fpga_build_attempt_03.log",
+      "sha256": "63453ebb2f0166eb687c40268a8b989ed6382f3329d379ba94eb5788a5e17a60"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\fpga_export_attempt_01.log",
+      "sha256": "40c52fc704f83fcfed046e22573a2b5a95eb17035568d3a275caa12000419242"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\README.md",
+      "sha256": "eec2a746e35f6734c7f5b9cccff87503379f7e7912df63c6883b7c421f080e2d"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\reports\\bus_skew.rpt",
+      "sha256": "9bf84ccad9ea4bd40b521e3336de14e67a744a87267e858a4ab1b02e58881351"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\reports\\cdc.rpt",
+      "sha256": "393a7958a8dc6e926a22a5befdd6d8d1a19dbc84067c2582ddfc4291fc39f869"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\reports\\drc.rpt",
+      "sha256": "5fab22d540cdabf724a139d07416f54bbfe02a8294dfc5b368ce07d868df1ae0"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\reports\\route_status.rpt",
+      "sha256": "2b6bbb8e7cc22d3b1bf93c74297f77c843ccde7c29931e16e5e90093b45f2283"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\reports\\timing_summary.rpt",
+      "sha256": "f2ea4a1267bd4bfb9b5a5a7c05f5e3eb49b9c55a1812682f23b24784b2b5fc86"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\reports\\utilization.rpt",
+      "sha256": "9f19c8cb915bb50b88deab0e8335445a361aadab5b31a70ff7bbd44f1252cf27"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\rtl\\reference_writer.v",
+      "sha256": "5268553375ab18abc83a9fbad17c3db5c13887704bab78c8d24c5b4af2cad477"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\rtl\\top.v",
+      "sha256": "92a2f74905fddbd1f921b3562f31ac5a444f31998fb8bf5fb34030b8d5da85a0"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\scu35_pmc_clock_fixture.xsa",
+      "sha256": "ae4d0921869ab2ca7759e2dda7db1da0cc75e0ee99480c347ce2a8358d57cb5b"
+    },
+    {
+      "role": "reused_pl_fixture",
+      "path": "sec35\\fast\\fixture\\top_routed.dcp",
+      "sha256": "bc11207504da3db582e654dc46e1fbafdebe75eaf873927bb8175a8ce1cc513f"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "sec35\\fast\\runs\\20261025T125241220\\results.txt",
+      "sha256": "9ee261c698993f2334fa95f599b19c549cdcd91a2c0de4daef5aaaefc7227fbd"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "sec35\\fast\\runs\\20261025T125241220\\stdout.txt",
+      "sha256": "90b9cace98fb67256eca74dc66cf1c51f064e57c8c5ca024b7986b3b1ad012aa"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "sec35\\fast\\runs\\20261025T125241220\\test.pdi",
+      "sha256": "bec47dbf470d0ef41127a43a7777ec6ef128328db3e1281f24ae5edb6611eb35"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "sec35\\fast\\runs\\20261025T125241220\\plm.elf",
+      "sha256": "1c41c47f6495ebbf19f2f5f61cf3d4bb8747591f70b32c835d834fc61c8022ef"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "sec35\\fast\\runs\\20261025T125241220\\test.tcl",
+      "sha256": "5c26adf987958951e2c65c7104c97dbd9944f2f16c6a395211d4a2dd9be045ce"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "sec35\\fast\\runs\\20261025T125241220\\build_meta.json",
+      "sha256": "1633686197226f547a132563f7cc3a7baa16327f6f1678bab70528ebba31ddcf"
+    },
+    {
+      "role": "executed_notebook",
+      "path": "notebooks\\scu35_fast.ipynb",
+      "sha256": "4bf3bc22b22d93cc4fe69d33f08c5b78cd70c2fa53196c081e9b964fc0d34d99"
+    },
+    {
+      "role": "retained_failed_capture_evidence",
+      "path": "sec35\\fast\\runs\\20261025T121220094\\results.txt",
+      "sha256": "e3dab6d8f87b8732dac7715ee211af429a190cd69e568763ea12945a3a8e5ff0"
+    },
+    {
+      "role": "retained_failed_capture_evidence",
+      "path": "sec35\\fast\\runs\\20261025T121220094\\capture_validation.json",
+      "sha256": "c17d25b0132736825e0d850050fa1ab9c8c96ecc6eda7f1dd1eea37e7432ae35"
+    },
+    {
+      "role": "retained_failed_capture_evidence",
+      "path": "sec35\\fast\\runs\\20261025T121220094\\recovery_review.txt",
+      "sha256": "53075cd684e2350a544ffe512b070949433231dd54f5c6856ccf1ddbcd246743"
+    },
+    {
+      "role": "retained_failed_capture_evidence",
+      "path": "sec35\\fast\\initial_fast\\analyze.py",
+      "sha256": "eb3413d6e12aeff41064e97835b97099a5c18c7d28de64b84b845fbc98c9adc7"
+    }
+  ],
+  "scope": "Native PMC resident-buffer crypto throughput; independent firmware and retained unchanged PL fixture; not secure-boot or crypto qualification",
+  "checks": {
+    "compiled_source_binding": {
+      "status": "pass",
+      "evidence": "sec35/fast/build/build_meta.json"
+    },
+    "elf_pdi_payload": {
+      "status": "pass",
+      "evidence": "sec35/fast/build/pdi_verification.json"
+    },
+    "owned_ram_layout": {
+      "status": "pass",
+      "evidence": "sec35/fast/build/elf_headers.txt"
+    },
+    "reused_pl_fixture": {
+      "status": "pass",
+      "evidence": "sec35/fast/fixture/scu35_pmc_clock_fixture.xsa",
+      "note": "Packaged RCDO matches retained XSA; PL not reimplemented"
+    },
+    "historical_fixture_timing_drc": {
+      "status": "pass",
+      "evidence": "sec35/fast/fixture/reports/timing_summary.rpt",
+      "wns_ns": 3.509,
+      "whs_ns": 0.009,
+      "note": "Historical unchanged fixture reports, not a new route"
+    },
+    "hardware_correctness": {
+      "status": "pass",
+      "evidence": "sec35\\fast\\runs\\20261025T125241220\\results.txt",
+      "timed_batches": 90,
+      "bulk_batches": 66,
+      "pq_batches": 24,
+      "pq_malformed_guards": 6,
+      "padded_shake_kats": 10,
+      "hash_checks": 36,
+      "full_aes_checks": 24,
+      "stream_tag_and_final_chunk_checks": 6
+    },
+    "stock_recovery": {
+      "status": "pass",
+      "evidence": "sec35\\fast\\runs\\20261025T125241220\\results.txt",
+      "readback": "DONE=1 ERROR=0"
+    },
+    "notebook_execution": {
+      "status": "pass",
+      "evidence": "notebooks/scu35_fast.ipynb",
+      "fresh_hardware": true
+    },
+    "capture_regression_tests": {
+      "status": "pass",
+      "evidence": "sec35/fast/tests.txt"
+    }
+  },
+  "limitations": [
+    "Fastest measured configuration in this matrix, not a silicon maximum",
+    "PQ verifier is an independent benchmark port; demonstrated parameters are n=32/h=5/w=2 and one-level HSS, not a production qualification",
+    "PL and firmware fresh-directory rebuilds not performed; firmware build and packaging executed with matching retained fixture",
+    "Nominal 100 MHz reference, not calibrated frequency metrology",
+    "No stream decryption, all-intermediate-ciphertext readback, eFUSE/flash programming or secure-boot enforcement",
+    "Hybrid C c_check_handoff unavailable; local integrity/evidence checks used"
+  ]
+}

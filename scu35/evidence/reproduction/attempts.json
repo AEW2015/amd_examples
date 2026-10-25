@@ -1,0 +1,32 @@
+[
+  {
+    "attempt": "Initial clean BD import",
+    "observed": "Wrapper directory was derived incorrectly after import.",
+    "correction": "Use the path returned by make_wrapper.",
+    "evidence": "initial_wrapper_failure.log"
+  },
+  {
+    "attempt": "Initial Vitis launch",
+    "observed": "Vitis rejected platform.py as a reserved module name while returning exit code zero.",
+    "correction": "Use build_platform.py and require its completion marker and output library.",
+    "evidence": "Observed console excerpt; original log was replaced during retry."
+  },
+  {
+    "attempt": "Spaced source checkout",
+    "observed": "Vivado interpreted a single-file string as a space-separated file list.",
+    "correction": "Pass an explicit Tcl list for source/import files.",
+    "evidence": "initial_spaced_path_failure.log"
+  },
+  {
+    "attempt": "Windows compiler with spaced checkout",
+    "observed": "cc1.exe: fatal error: unicode\\scu35\\fw\\bench.c: No such file or directory",
+    "correction": "Stage byte-identical C/linker inputs under the short build directory.",
+    "evidence": "Observed compiler output; original failure log replaced during retry."
+  },
+  {
+    "attempt": "Initial fresh AES packaging verification",
+    "observed": "InvalidTag when treating the second .nky IV as the PL partition IV.",
+    "correction": "Verify using Bootgen\u2019s partition IV increment from the first partition. New independent signing state was generated for each retry.",
+    "evidence": "Observed console exception; no private signing state distributed."
+  }
+]

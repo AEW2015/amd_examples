@@ -1,0 +1,13 @@
+{
+  "scope": "Corrected XDC: explicit pin statements, existing primary clocks, asynchronous fabric/MII groups. First rejected implementation is retained in attempt1.",
+  "files": {
+    "ethernet/build.tcl": "f542da7d6e4ff1c3f7d5762d8f24f2ab33ae490c66bad8fcfedb31232f3fd50f",
+    "ethernet/board.xdc": "3cea9a2b101825f0a8606335a8e2d2fe4ad14539d06cf187cccc51269162bb12",
+    "ethernet/main.c": "8a8686d80393ef33dd5f24e2ffeb66cf099c2389e57cdbc68c2d6f253d1544d2",
+    "ethernet/build_platform.py": "0099e859f9d2185e602cd2b73c7d0176f2e06bcdc835b4aaa1e2209e222f3dc2",
+    "ethernet/build.py": "930d2fbf37f764d5cd12ffc864d169013d8f85791d058dea84a9e13f4463e145",
+    "hw/sys.bd": "db32d1cf13d70282ac32a52a7e28968bbf3192a21b4622da34517634fcd0fa95",
+    "hw/program.tcl": "aa235848e30118015ae609f346ce7a49075af8bd15a310e3582994e74fe79ff4",
+    "fw/lscript.ld": "37df10b3762ae8fb856929924aad2133528ece30f8c93d10f42ecf44fd6e8ada"
+  }
+}

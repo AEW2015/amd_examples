@@ -1,0 +1,93 @@
+{
+  "created_utc": "2026-10-25T13:25:11.180199+00:00",
+  "folder": "C:\\aiup\\sec35\\boot\\builds\\20261025T132320653245",
+  "part": "xcsu35p-sbvb625-2-e",
+  "bootgen": "2026.1",
+  "hss_height": 15,
+  "hss_levels": 2,
+  "build_id": "7f0f05e3c7820bf9",
+  "source_pdi_sha256": "12fa0536cf8e8301b324972031c23959c6da82ca1301867d8b7b99cd12f64fce",
+  "authdev_flag": "UNSUPPORTED: Bootgen selects boot-header/eFUSE authentication based on device eFUSE bits; see authdev_build.log",
+  "source_rcdo_sha256": "e67cbcd69e74ef806650a7f841a8f9c5cb30af686c98ab57de6131c29f7c1685",
+  "key_directory": "keys01",
+  "rolling_scope": "OFFLINE ONLY: random demonstration eFUSE red key; not provisioned on board",
+  "hardware": "NOT TESTED",
+  "files": {
+    "authdev.bif": {
+      "bytes": 526,
+      "sha256": "f4f6cef72f94866a03d6b97dbbb66f7d52a31594d9b0068b97ccb33e347ce844"
+    },
+    "bench.elf": {
+      "bytes": 390124,
+      "sha256": "239e7ba234cdfc360b27c56364afb620aebfa11d1de16c4ec00a2847138f3527"
+    },
+    "design.rcdo": {
+      "bytes": 3318744,
+      "sha256": "e67cbcd69e74ef806650a7f841a8f9c5cb30af686c98ab57de6131c29f7c1685"
+    },
+    "plain.bif": {
+      "bytes": 191,
+      "sha256": "15c8ddedff698c9a5f537fb1b0732ed4f8a98784755a4c2182370202c3b53324"
+    },
+    "plain.pdi": {
+      "bytes": 1359840,
+      "sha256": "12fa0536cf8e8301b324972031c23959c6da82ca1301867d8b7b99cd12f64fce"
+    },
+    "plm.elf": {
+      "bytes": 2478888,
+      "sha256": "fcdd4370633f343466245b7f99893bed2e235e3c890bc98225f03ed6ac992c72"
+    },
+    "rolling.bif": {
+      "bytes": 321,
+      "sha256": "0f425020f980faf23414b9fcce94c4791620e35ee3ccd52bd2c634e0cdeaf98e"
+    },
+    "rolling.pdi": {
+      "bytes": 1381712,
+      "sha256": "72e17232bff8f957f0d608d50130266b35c9b8d483d59e952be91b30d80d1fb0"
+    },
+    "signed.bif": {
+      "bytes": 495,
+      "sha256": "4e4fd76a739bd6be270eca1f957cf8316ee1a127e02cf07b6bd22d8e530b062b"
+    },
+    "signed.pdi": {
+      "bytes": 1379264,
+      "sha256": "8ab7ac3f967cdab595930f955eade363ba72d5b46930c51394e7a1c72650da54"
+    },
+    "zero.pdi": {
+      "bytes": 1381712,
+      "sha256": "b639388ff14226583268c3a9d62fec302daa74762ae289605cdfd76dffc02083"
+    },
+    "zero.bif": {
+      "bytes": 331,
+      "sha256": "169e84f5ba7cb740e0477c018a5c9f0e4a92fe08b16e892635ecbd4e884cfc0e"
+    },
+    "zero_mask.pdi": {
+      "bytes": 1381712,
+      "sha256": "76757c3bd688c79acb14e20e5ad48d2cb5e08fc91542ef4cab1d0734b794f957"
+    },
+    "zero_mask.bif": {
+      "bytes": 369,
+      "sha256": "7c16e281e10e05746605471775d0c0dea494a25ab56c08e623e9c83022e8f08a"
+    },
+    "badroll.pdi": {
+      "bytes": 1381712,
+      "sha256": "9dbed3f467b21ff6a66a77e31a633d5e5dddc5d53665122984e8fff8e146ff87"
+    },
+    "combo.pdi": {
+      "bytes": 1401120,
+      "sha256": "5b37b0553a6459b32859207d821c0d9dd3f31deb2e7b121a2548bffc1cc008cf"
+    },
+    "combo.bif": {
+      "bytes": 660,
+      "sha256": "e62e18a06610aca890ef750d2cade50043ca0868d658676e6ccdd96e323245f3"
+    }
+  },
+  "zero_scope": "Public all-zero test key; existing eFUSE key-source attempt only. No eFUSE programming; no security claim.",
+  "badroll_scope": {
+    "ciphertext_bit_offset": 1156,
+    "outer_sha3_root_repaired": true,
+    "hashblock_aad_tag_recomputed_with_public_zero_root": true,
+    "inner_gcm_tag_unchanged": true
+  },
+  "combo_scope": "HSS signed + AES-GCM rolling keys; PUBLIC all-zero eFUSE diagnostic root, no provisioning"
+}

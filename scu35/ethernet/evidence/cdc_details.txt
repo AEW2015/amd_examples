@@ -1,0 +1,106 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date              : Sun Oct 25 15:35:17 2026
+| Host              : DESKTOP-I75K8PP running 64-bit major release  (build 9200)
+| Command           : report_cdc -details -file C:/aiup/e35/cdc_details.txt
+| Design            : sys_wrapper
+| Device            : xcsu35p-sbvb625
+| Speed File        : -2  PRODUCTION 1.14 03-03-2026
+| Design State      : Routed
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+ID      Severity  Count  Description
+------  --------  -----  --------------------------------------------------
+CDC-2   Warning       2  1-bit synchronized with missing ASYNC_REG property
+CDC-3   Info         16  1-bit synchronized with ASYNC_REG property
+CDC-11  Critical      4  Fan-out from launch flop to destination clock
+CDC-15  Warning      13  Clock enable controlled CDC structure detected
+
+Source Clock: input port clock
+Destination Clock: clk_out1_sys_clock_0
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                         Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  --------------------------------------------------  -----  ----------  -------------  -------------------------------------------------------------------------------------
+  1  CDC-2  Warning   1-bit synchronized with missing ASYNC_REG property      2  False Path  mii_crs        sys_i/ethernet/U0/XEMAC_I/EMAC_I/C_SENSE_SYNC_1/D
+  2  CDC-2  Warning   1-bit synchronized with missing ASYNC_REG property      2  False Path  mdio_mdio_io   sys_i/ethernet/U0/XEMAC_I/MDIO_GEN.MDIO_IF_I/mdio_in_reg1_reg/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property              4  False Path  reset_n        sys_i/rst_sysclk_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/syncstages_ff_reg[0]/D
+  4  CDC-3  Info      1-bit synchronized with ASYNC_REG property              4  False Path  uartb_rxd      sys_i/uart/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/syncstages_ff_reg[0]/D
+
+Source Clock: mii_rx_clk
+Destination Clock: clk_out1_sys_clock_0
+CDC Type: No Common Primary Clock
+
+Row  ID      Severity  Description                                     Depth  Exception            Source (From)                                                                                                                                                                             Destination (To)
+---  ------  --------  ----------------------------------------------  -----  -------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMA/CLK     sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[0]/D
+  2  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMA_D1/CLK  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[1]/D
+  3  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMB/CLK     sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[2]/D
+  4  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMB_D1/CLK  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[3]/D
+  5  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMC/CLK     sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[4]/D
+  6  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMC_D1/CLK  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[5]/D
+  7  CDC-3   Info      1-bit synchronized with ASYNC_REG property          2  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/C                                      sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst/syncstages_ff_reg[0]/D
+
+Source Clock: mii_tx_clk
+Destination Clock: clk_out1_sys_clock_0
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                 Depth  Exception            Source (From)                                                                                                                                         Destination (To)
+---  -----  --------  ------------------------------------------  -----  -------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      6  Asynch Clock Groups  mii_tx_clk                                                                                                                                            sys_i/ethernet/U0/XEMAC_I/EMAC_I/CDC_TX_CLK/syncstages_ff_reg[0]/D
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property      4  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.ram_empty_i_reg/C                     sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/CDC_FIFO_EMPTY/syncstages_ff_reg[0]/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg/C  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst/syncstages_ff_reg[0]/D
+
+Source Clock: sys_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Test_Access_Port.BUFG_UPDATE/Using_FPGA.Native/O
+Destination Clock: clk_out1_sys_clock_0
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                 Depth  Exception            Source (From)                                                        Destination (To)
+---  -----  --------  ------------------------------------------  -----  -------------------  -------------------------------------------------------------------  ---------------------------------------------------------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  Asynch Clock Groups  sys_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/dmcontrol_hartreset_reg/C  sys_i/mb/U0/<hidden>/<hidden>/<hidden>/<hidden>
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property      4  Asynch Clock Groups  sys_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/dmcontrol_ndmreset_reg/C   sys_i/rst_sysclk_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/syncstages_ff_reg[0]/D
+
+Source Clock: clk_out1_sys_clock_0
+Destination Clock: mii_rx_clk
+CDC Type: No Common Primary Clock
+
+Row  ID      Severity  Description                                    Depth  Exception            Source (From)                                                                                                                                         Destination (To)
+---  ------  --------  ---------------------------------------------  -----  -------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1  CDC-11  Critical  Fan-out from launch flop to destination clock      4  Asynch Clock Groups  sys_i/rst_sysclk_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C                                                                                        sys_i/ethernet/U0/BUS_RST_RX_SYNC_CORE_I/syncstages_ff_reg[0]/D
+  2  CDC-11  Critical  Fan-out from launch flop to destination clock      4  Asynch Clock Groups  sys_i/rst_sysclk_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C                                                                                        sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/CDC_FIFO_RST/syncstages_ff_reg[0]/D
+  3  CDC-3   Info      1-bit synchronized with ASYNC_REG property         2  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg/C  sys_i/ethernet/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst/syncstages_ff_reg[0]/D
+
+Source Clock: clk_out1_sys_clock_0
+Destination Clock: mii_tx_clk
+CDC Type: No Common Primary Clock
+
+Row  ID      Severity  Description                                     Depth  Exception            Source (From)                                                                                                                                                                             Destination (To)
+---  ------  --------  ----------------------------------------------  -----  -------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1  CDC-11  Critical  Fan-out from launch flop to destination clock       4  Asynch Clock Groups  sys_i/rst_sysclk_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C                                                                                                                            sys_i/ethernet/U0/BUS_RST_TX_SYNC_CORE_I/syncstages_ff_reg[0]/D
+  2  CDC-3   Info      1-bit synchronized with ASYNC_REG property          3  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/axi_phy_tx_en_i_p_reg/C                                                                                                                               sys_i/ethernet/U0/CDC_PHY_TX_DATA_OUT/syncstages_ff_reg[0][0]/D
+  3  CDC-3   Info      1-bit synchronized with ASYNC_REG property          3  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/axi_phy_tx_en_i_p_reg/C                                                                                                                               sys_i/ethernet/U0/CDC_PHY_TX_DATA_OUT/syncstages_ff_reg[0][1]/D
+  4  CDC-3   Info      1-bit synchronized with ASYNC_REG property          3  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/axi_phy_tx_en_i_p_reg/C                                                                                                                               sys_i/ethernet/U0/CDC_PHY_TX_DATA_OUT/syncstages_ff_reg[0][2]/D
+  5  CDC-3   Info      1-bit synchronized with ASYNC_REG property          3  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/axi_phy_tx_en_i_p_reg/C                                                                                                                               sys_i/ethernet/U0/CDC_PHY_TX_DATA_OUT/syncstages_ff_reg[0][3]/D
+  6  CDC-3   Info      1-bit synchronized with ASYNC_REG property          3  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/axi_phy_tx_en_i_p_reg/C                                                                                                                               sys_i/ethernet/U0/CDC_PHY_TX_EN_O/syncstages_ff_reg[0]/D
+  7  CDC-11  Critical  Fan-out from launch flop to destination clock       2  Asynch Clock Groups  sys_i/rst_sysclk_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C                                                                                                                            sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/CDC_PHY_TX_RST/syncstages_ff_reg[0]/D
+  8  CDC-3   Info      1-bit synchronized with ASYNC_REG property          2  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/STATE0A/C                                                                                                                       sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/CDC_TX_EN/syncstages_ff_reg[0]/D
+  9  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMA/CLK     sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[0]/D
+ 10  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMB/CLK     sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[2]/D
+ 11  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMB_D1/CLK  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[3]/D
+ 12  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMC/CLK     sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[4]/D
+ 13  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMC_D1/CLK  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_reg.doutb_reg_reg[5]/D
+ 14  CDC-3   Info      1-bit synchronized with ASYNC_REG property          2  Asynch Clock Groups  sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/C                                      sys_i/ethernet/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst/syncstages_ff_reg[0]/D
+
+Source Clock: clk_out1_sys_clock_0
+Destination Clock: sys_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Test_Access_Port.BUFG_UPDATE/Using_FPGA.Native/O
+CDC Type: No Common Primary Clock
+
+Row  ID      Severity  Description                                     Depth  Exception            Source (From)                                             Destination (To)
+---  ------  --------  ----------------------------------------------  -----  -------------------  --------------------------------------------------------  --------------------------------------------------------
+  1  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/mb/U0/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>  sys_i/mb/U0/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  2  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Asynch Clock Groups  sys_i/mb/U0/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>  sys_i/mb/U0/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+

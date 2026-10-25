@@ -1,0 +1,8 @@
+{
+    "variant":  "combo",
+    "attempt":  "C:\\aiup\\sec35\\boot\\runs\\20261025T133714820_combo",
+    "pdi_sha256":  "5b37b0553a6459b32859207d821c0d9dd3f31deb2e7b121a2548bffc1cc008cf",
+    "restored":  true,
+    "hardware_mutation_attempted":  true,
+    "error":  ""
+}

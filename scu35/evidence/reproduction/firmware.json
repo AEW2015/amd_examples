@@ -1,0 +1,6 @@
+{
+  "build_id": "7d1bf77bc454dd1f",
+  "source_sha256": "695bb96a78f5b6c80d25b3a8781525208563446365127f4fcd02d8516dd3abb5",
+  "elf_sha256": "064e87df9e4f11701c541bd30de4505b8796604b2bf55a40ec9fc49f2777d85a",
+  "note": "Firmware ID labels the C source snapshot; ELF SHA binds this compiler/BSP build."
+}

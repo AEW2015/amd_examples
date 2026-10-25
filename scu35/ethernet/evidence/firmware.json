@@ -1,0 +1,22 @@
+{
+  "source_sha256": "8a8686d80393ef33dd5f24e2ffeb66cf099c2389e57cdbc68c2d6f253d1544d2",
+  "elf_sha256": "695e0b4c53abe984f90b87badc73d793aab1f187bcf76de17a2c8d1415aa4beb",
+  "compiler_command": [
+    "D:\\AMDDesignTools\\2026.1\\Vitis\\gnu\\riscv\\nt\\bin\\riscv64-unknown-elf-gcc.exe",
+    "-march=rv32i_zicsr_zifencei",
+    "-mabi=ilp32",
+    "-DSDT",
+    "-O2",
+    "-g",
+    "-specs=C:\\aiup\\e35\\vsw\\plat\\export\\plat\\sw\\mb/Xilinx.spec",
+    "-IC:\\aiup\\e35\\vsw\\plat\\export\\plat\\sw\\mb/include",
+    "C:\\aiup\\e35\\src\\main.c",
+    "-Wl,-T,C:\\aiup\\e35\\src/lscript.ld",
+    "-LC:\\aiup\\e35\\vsw\\plat\\export\\plat\\sw\\mb/lib",
+    "-Wl,--start-group,-lxilstandalone,-lxiltimer,-lxilsecure,-lgloss,-lxil,-lgcc,-lc",
+    "-Wl,--end-group",
+    "-Wl,-Map,C:\\aiup\\e35/eth.map",
+    "-o",
+    "C:\\aiup\\e35\\eth.elf"
+  ]
+}

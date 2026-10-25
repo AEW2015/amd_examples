@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="290" viewBox="0 0 1100 290">
+    <rect width="1100" height="290" fill="#f4f7fa"/><g font-family="Arial" fill="#183246">
+    <text x="25" y="35" font-size="23">AES-GCM rolling keys: recover the next key only after verifying the current block</text>
+    <g font-size="17" text-anchor="middle"><rect x="25" y="65" width="220" height="115" rx="10" fill="#f5dfb6"/><text x="135" y="98">Root key K0</text><text x="135" y="128">Secure header</text><text x="135" y="155">K1 / IV1 / length</text>
+    <text x="268" y="125">→</text><rect x="290" y="65" width="230" height="115" rx="10" fill="#d2e5f5"/><text x="405" y="98">Block 0, key K1</text><text x="405" y="128">Design data + K2 / IV2</text><text x="405" y="155">128-bit GCM tag</text>
+    <text x="543" y="125">→</text><rect x="565" y="65" width="230" height="115" rx="10" fill="#c8e8de"/><text x="680" y="98">Block 1, key K2</text><text x="680" y="128">Design data + K3 / IV3</text><text x="680" y="155">128-bit GCM tag</text>
+    <text x="815" y="125">…</text><rect x="850" y="65" width="220" height="115" rx="10" fill="#e8ddf5"/><text x="960" y="98">Final block</text><text x="960" y="128">Design data</text><text x="960" y="155">Zero next-block trailer</text></g>
+    <text x="25" y="220" font-size="18">Actual image: 7 PLM payload blocks + 331 PL payload blocks; every tag independently checked.</text>
+    <text x="25" y="255" font-size="16">Live image uses a PUBLIC ALL-ZERO diagnostic root through the existing eFUSE path. No fuse writes; no secrecy claim.</text></g></svg>

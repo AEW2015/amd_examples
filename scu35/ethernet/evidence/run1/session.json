@@ -1,0 +1,11 @@
+{
+  "pdi_sha256": "20d94e8dfafd9408768d886696e23463e56b46872e0c390d00998f4e7a10c002",
+  "restore_sha256": "4cde96513b9d7de10e8b4dee8574b11a36539797548163491d4021c020f291ce",
+  "cable": "52041A454A5PA",
+  "server": "localhost:3121",
+  "started_utc": "2026-10-25T21:36:18.692450+00:00",
+  "hardware_pass": true,
+  "recovery_pass": false,
+  "recovery_error": "RuntimeError('Programming/status failed: restore.log')",
+  "finished_utc": "2026-10-25T21:37:13.138128+00:00"
+}

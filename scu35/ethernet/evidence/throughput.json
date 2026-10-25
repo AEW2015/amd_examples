@@ -1,0 +1,486 @@
+{
+  "scope": "Ethernet Lite image unchanged; host-only transport optimization",
+  "short_pipeline_probe": [
+    {
+      "elapsed_s": 0.3154318999731913,
+      "packets": 300,
+      "input_bytes": 307200,
+      "payload_Mbps": 7.791222131334441,
+      "window": 1,
+      "op": 3,
+      "verified": true
+    },
+    {
+      "elapsed_s": 0.15849990001879632,
+      "packets": 300,
+      "input_bytes": 307200,
+      "payload_Mbps": 15.50537255675591,
+      "window": 2,
+      "op": 3,
+      "verified": true
+    },
+    {
+      "elapsed_s": 0.32688489998690784,
+      "packets": 300,
+      "input_bytes": 307200,
+      "payload_Mbps": 7.518242660026297,
+      "window": 1,
+      "op": 1,
+      "verified": true
+    },
+    {
+      "elapsed_s": 0.18243869999423623,
+      "packets": 300,
+      "input_bytes": 307200,
+      "payload_Mbps": 13.470826091600317,
+      "window": 2,
+      "op": 1,
+      "verified": true
+    }
+  ],
+  "short_dashboard_checks": {
+    "overall": "PASS",
+    "payload_bytes": 1024,
+    "window": 2,
+    "batch_packets": 64,
+    "rows": [
+      {
+        "op": 3,
+        "payload_Mbps": 11.891612902896462,
+        "last_batch_Mbps": 14.574932059682883,
+        "median_rtt_us": 1045.95,
+        "last_device_us": 427.51,
+        "verified_packets_session": 3328
+      },
+      {
+        "op": 1,
+        "payload_Mbps": 9.777548386825979,
+        "last_batch_Mbps": 4.116418077993581,
+        "median_rtt_us": 1202.5,
+        "last_device_us": 511.54,
+        "verified_packets_session": 5760
+      },
+      {
+        "op": 2,
+        "payload_Mbps": 8.980247859005265,
+        "last_batch_Mbps": 11.461074516671262,
+        "median_rtt_us": 1343.8,
+        "last_device_us": 585.25,
+        "verified_packets_session": 8000
+      },
+      {
+        "op": 5,
+        "payload_Mbps": 17.84017064568096,
+        "last_batch_Mbps": 16.946025550950083,
+        "median_rtt_us": 752.6,
+        "last_device_us": 319.97,
+        "verified_packets_session": 12352
+      },
+      {
+        "op": 6,
+        "payload_Mbps": 17.441032258604867,
+        "last_batch_Mbps": 19.607761012331142,
+        "median_rtt_us": 749.1,
+        "last_device_us": 320.0,
+        "verified_packets_session": 16640
+      }
+    ],
+    "checks": {
+      "valid_roundtrip": "PASS",
+      "modified_tag": "REJECTED",
+      "replayed_packet": "REJECTED",
+      "time": "16:25:55"
+    },
+    "timing": "Observed wall-clock input payload rate, includes host validation, amortized probes and logging; not raw link rate."
+  },
+  "sustained_two_flight": {
+    "overall": "FAIL",
+    "verified_packets": 56192,
+    "errors": 1,
+    "events": [
+      {
+        "time": "16:26:56",
+        "message": "Recovery verified; hardware released"
+      },
+      {
+        "time": "16:26:30",
+        "message": "Restoring known-good runtime image"
+      },
+      {
+        "time": "16:26:30",
+        "message": "timed out"
+      },
+      {
+        "time": "16:25:55",
+        "message": "Controls updated"
+      },
+      {
+        "time": "16:25:55",
+        "message": "Valid packet accepted \u00b7 modified tag rejected \u00b7 replay rejected"
+      },
+      {
+        "time": "16:25:55",
+        "message": "Running real tag-tamper and replay checks"
+      },
+      {
+        "time": "16:25:55",
+        "message": "Controls updated"
+      },
+      {
+        "time": "16:25:53",
+        "message": "Controls updated"
+      },
+      {
+        "time": "16:25:51",
+        "message": "Controls updated"
+      },
+      {
+        "time": "16:25:49",
+        "message": "Controls updated"
+      },
+      {
+        "time": "16:25:47",
+        "message": "Controls updated"
+      },
+      {
+        "time": "16:25:45",
+        "message": "Controls updated"
+      },
+      {
+        "time": "16:25:44",
+        "message": "Valid packet accepted \u00b7 modified tag rejected \u00b7 replay rejected"
+      },
+      {
+        "time": "16:25:44",
+        "message": "Running real tag-tamper and replay checks"
+      },
+      {
+        "time": "16:25:44",
+        "message": "Board ready \u00b7 physical Ethernet payload path online"
+      },
+      {
+        "time": "16:25:39",
+        "message": "Waiting for host link and ARP reachability"
+      },
+      {
+        "time": "16:25:16",
+        "message": "Loading volatile Ethernet design over exact SCU35 JTAG target"
+      }
+    ],
+    "recovery": "Verified DONE=1 and ERROR=0; lease released"
+  },
+  "single_flight_health": {
+    "overall": "PASS",
+    "duration_s": 60,
+    "window": 1,
+    "batch_packets": 64,
+    "rows": [
+      {
+        "time": 1792967464.4574895,
+        "count": 64,
+        "payload_Mbps": 0.0
+      },
+      {
+        "time": 1792967465.462734,
+        "count": 704,
+        "payload_Mbps": 5.080310077487287
+      },
+      {
+        "time": 1792967466.4664207,
+        "count": 1408,
+        "payload_Mbps": 5.418330708644033
+      },
+      {
+        "time": 1792967467.4689236,
+        "count": 2176,
+        "payload_Mbps": 5.706300791544459
+      },
+      {
+        "time": 1792967468.4719508,
+        "count": 3008,
+        "payload_Mbps": 5.959290338492192
+      },
+      {
+        "time": 1792967469.4763374,
+        "count": 3776,
+        "payload_Mbps": 6.02510481471697
+      },
+      {
+        "time": 1792967470.4800565,
+        "count": 4544,
+        "payload_Mbps": 6.0691516454234575
+      },
+      {
+        "time": 1792967471.4844592,
+        "count": 5312,
+        "payload_Mbps": 6.100697601798638
+      },
+      {
+        "time": 1792967472.4871006,
+        "count": 6144,
+        "payload_Mbps": 6.177273967532291
+      },
+      {
+        "time": 1792967473.4910734,
+        "count": 6848,
+        "payload_Mbps": 6.132023391836181
+      },
+      {
+        "time": 1792967474.4959471,
+        "count": 7616,
+        "payload_Mbps": 6.147866838935888
+      },
+      {
+        "time": 1792967475.5001986,
+        "count": 8384,
+        "payload_Mbps": 6.160846063473949
+      },
+      {
+        "time": 1792967476.5045369,
+        "count": 9216,
+        "payload_Mbps": 6.207417122050603
+      },
+      {
+        "time": 1792967477.5098257,
+        "count": 9920,
+        "payload_Mbps": 6.173753784992086
+      },
+      {
+        "time": 1792967478.5130587,
+        "count": 10688,
+        "payload_Mbps": 6.1821145049102615
+      },
+      {
+        "time": 1792967479.5171773,
+        "count": 11456,
+        "payload_Mbps": 6.189366228951241
+      },
+      {
+        "time": 1792967480.5192327,
+        "count": 12096,
+        "payload_Mbps": 6.124403131586245
+      },
+      {
+        "time": 1792967481.5226276,
+        "count": 12736,
+        "payload_Mbps": 6.072833976819419
+      },
+      {
+        "time": 1792967482.5286982,
+        "count": 13568,
+        "payload_Mbps": 6.113892339988364
+      },
+      {
+        "time": 1792967483.532821,
+        "count": 14272,
+        "payload_Mbps": 6.095733528844151
+      },
+      {
+        "time": 1792967484.5360405,
+        "count": 15040,
+        "payload_Mbps": 6.100616210844615
+      },
+      {
+        "time": 1792967485.5404947,
+        "count": 15872,
+        "payload_Mbps": 6.134492468028693
+      },
+      {
+        "time": 1792967486.5443716,
+        "count": 16640,
+        "payload_Mbps": 6.141591677977647
+      },
+      {
+        "time": 1792967487.548726,
+        "count": 17408,
+        "payload_Mbps": 6.144088562162162
+      },
+      {
+        "time": 1792967488.5533814,
+        "count": 18112,
+        "payload_Mbps": 6.128464911917098
+      },
+      {
+        "time": 1792967489.5566635,
+        "count": 18816,
+        "payload_Mbps": 6.114084935323382
+      },
+      {
+        "time": 1792967490.5629888,
+        "count": 19392,
+        "payload_Mbps": 6.084304754508636
+      },
+      {
+        "time": 1792967491.56724,
+        "count": 20160,
+        "payload_Mbps": 6.117545834146341
+      },
+      {
+        "time": 1792967492.571952,
+        "count": 20864,
+        "payload_Mbps": 6.0916341027304455
+      },
+      {
+        "time": 1792967493.5765133,
+        "count": 21568,
+        "payload_Mbps": 6.069463837672982
+      },
+      {
+        "time": 1792967494.5813134,
+        "count": 22144,
+        "payload_Mbps": 5.996790941445603
+      },
+      {
+        "time": 1792967495.585388,
+        "count": 22848,
+        "payload_Mbps": 5.975304440635925
+      },
+      {
+        "time": 1792967496.5887458,
+        "count": 23552,
+        "payload_Mbps": 5.961216564622499
+      },
+      {
+        "time": 1792967497.592991,
+        "count": 24320,
+        "payload_Mbps": 5.957591760734439
+      },
+      {
+        "time": 1792967498.59678,
+        "count": 25088,
+        "payload_Mbps": 5.947194961860208
+      },
+      {
+        "time": 1792967499.601155,
+        "count": 25856,
+        "payload_Mbps": 5.954197508360757
+      },
+      {
+        "time": 1792967500.6050527,
+        "count": 26624,
+        "payload_Mbps": 5.950581232909055
+      },
+      {
+        "time": 1792967501.610176,
+        "count": 27328,
+        "payload_Mbps": 5.9366095584429015
+      },
+      {
+        "time": 1792967502.6153834,
+        "count": 28096,
+        "payload_Mbps": 5.929424010901139
+      },
+      {
+        "time": 1792967503.61992,
+        "count": 28736,
+        "payload_Mbps": 5.898190684028928
+      },
+      {
+        "time": 1792967504.6231387,
+        "count": 29504,
+        "payload_Mbps": 5.905078238617036
+      },
+      {
+        "time": 1792967505.6283193,
+        "count": 30272,
+        "payload_Mbps": 5.898190684028928
+      },
+      {
+        "time": 1792967506.6340463,
+        "count": 31040,
+        "payload_Mbps": 5.9366095584429015
+      },
+      {
+        "time": 1792967507.6374557,
+        "count": 31744,
+        "payload_Mbps": 5.943587184834124
+      },
+      {
+        "time": 1792967508.6413143,
+        "count": 32384,
+        "payload_Mbps": 5.912204865167543
+      },
+      {
+        "time": 1792967509.6451783,
+        "count": 32966,
+        "payload_Mbps": 0.14985365854594623
+      },
+      {
+        "time": 1792967510.6478827,
+        "count": 33358,
+        "payload_Mbps": 6.211943127660481
+      },
+      {
+        "time": 1792967511.6521337,
+        "count": 34126,
+        "payload_Mbps": 6.267859352933598
+      },
+      {
+        "time": 1792967512.6581764,
+        "count": 34702,
+        "payload_Mbps": 4.4323864735396326
+      },
+      {
+        "time": 1792967513.6634297,
+        "count": 35470,
+        "payload_Mbps": 5.4493829322273815
+      },
+      {
+        "time": 1792967514.6672456,
+        "count": 36238,
+        "payload_Mbps": 5.7471456860388095
+      },
+      {
+        "time": 1792967515.6706953,
+        "count": 37006,
+        "payload_Mbps": 5.8893375130931735
+      },
+      {
+        "time": 1792967516.6732745,
+        "count": 37774,
+        "payload_Mbps": 5.95412760686327
+      },
+      {
+        "time": 1792967517.6777956,
+        "count": 38542,
+        "payload_Mbps": 6.011859661139687
+      },
+      {
+        "time": 1792967518.6812708,
+        "count": 39310,
+        "payload_Mbps": 6.052718398369057
+      },
+      {
+        "time": 1792967519.6847892,
+        "count": 40142,
+        "payload_Mbps": 6.150005865107752
+      },
+      {
+        "time": 1792967520.6891723,
+        "count": 40910,
+        "payload_Mbps": 6.166001583177677
+      },
+      {
+        "time": 1792967521.6923857,
+        "count": 41678,
+        "payload_Mbps": 6.168719748418809
+      },
+      {
+        "time": 1792967522.6971238,
+        "count": 42446,
+        "payload_Mbps": 6.180022469809413
+      },
+      {
+        "time": 1792967523.7010565,
+        "count": 43150,
+        "payload_Mbps": 6.145208870871265
+      }
+    ],
+    "checks": {
+      "valid_roundtrip": "PASS",
+      "modified_tag": "REJECTED",
+      "replayed_packet": "REJECTED",
+      "time": "16:31:04"
+    }
+  }
+}

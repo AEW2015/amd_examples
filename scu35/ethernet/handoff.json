@@ -1,0 +1,172 @@
+{
+  "overall": "PASS",
+  "scope": "SCU35 laboratory Ethernet crypto demonstration; not production CDC, networking, security or line-rate qualification.",
+  "artifacts": [
+    {
+      "role": "firmware_source",
+      "path": "main.c",
+      "sha256": "8a8686d80393ef33dd5f24e2ffeb66cf099c2389e57cdbc68c2d6f253d1544d2"
+    },
+    {
+      "role": "constraints",
+      "path": "board.xdc",
+      "sha256": "3cea9a2b101825f0a8606335a8e2d2fe4ad14539d06cf187cccc51269162bb12"
+    },
+    {
+      "role": "rebuild",
+      "path": "build.tcl",
+      "sha256": "f542da7d6e4ff1c3f7d5762d8f24f2ab33ae490c66bad8fcfedb31232f3fd50f"
+    },
+    {
+      "role": "host",
+      "path": "host.py",
+      "sha256": "db4b9979b68211b6e860de3ba137c2c02f6a04b5924569c9c3836e14042a04f6"
+    },
+    {
+      "role": "bd",
+      "path": "reference/sys_built.bd",
+      "sha256": "6caaa5775873cd24fb71eecbbfa9869bf4d7f7b5707b3b83589285e743a0ffec"
+    },
+    {
+      "role": "bd_tcl",
+      "path": "reference/sys.tcl",
+      "sha256": "ba5ce9f51a92cade5aab76c2c7e2d1f6663a5a0c61b35234f1f77eb7d4b56a40"
+    },
+    {
+      "role": "elf",
+      "path": "reference/eth.elf",
+      "sha256": "695e0b4c53abe984f90b87badc73d793aab1f187bcf76de17a2c8d1415aa4beb"
+    },
+    {
+      "role": "programming_image",
+      "path": "reference/ethernet.pdi",
+      "sha256": "20d94e8dfafd9408768d886696e23463e56b46872e0c390d00998f4e7a10c002"
+    },
+    {
+      "role": "hardware_handoff",
+      "path": "reference/hw.xsa",
+      "sha256": "922143646f77cfd406617fab1c508d9f2831a7c22379fdae98fd5b6036470107"
+    },
+    {
+      "role": "routed_checkpoint",
+      "path": "reference/routed.dcp",
+      "sha256": "e5919b98311ad4e55653015544b4dca440e1d33078decb6788f14d826aa00202"
+    },
+    {
+      "role": "plm",
+      "path": "reference/plm.elf",
+      "sha256": "fcdd4370633f343466245b7f99893bed2e235e3c890bc98225f03ed6ac992c72"
+    },
+    {
+      "role": "timing",
+      "path": "evidence/timing_summary.txt",
+      "sha256": "524cf952ff6f8e48181678e43d40927b26b758b9141a4b6c13da448c62ad5e26"
+    },
+    {
+      "role": "drc",
+      "path": "evidence/drc.txt",
+      "sha256": "db7d358e419aa95504da5bbf4707e29249b5495d88760e0120540d3cd4712eaf"
+    },
+    {
+      "role": "cdc",
+      "path": "evidence/cdc.txt",
+      "sha256": "1c2f61c64ac6900e2cf8664dc87b91befaa677e86c6cc95e9eabec21b2dd96ea"
+    },
+    {
+      "role": "cdc_review",
+      "path": "evidence/cdc_review.json",
+      "sha256": "b03213045e20b1083be2d5917e00f234660ba60f6cedbfaae0e71c0c87a265a6"
+    },
+    {
+      "role": "cdc_details",
+      "path": "evidence/cdc_details.txt",
+      "sha256": "023328a46e8c6ebdfffdca44b6356c39f983149a574c296903c990fa47503f16"
+    },
+    {
+      "role": "hardware_session",
+      "path": "evidence/run2/session.json",
+      "sha256": "e6317bb1117d4a0bb14653c8fdf08b87f5d3e8babe6c71c0a5ad45e1efd541e1"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "evidence/run2/program.log",
+      "sha256": "85ad67205cf28fe650df72a8f844a5de53f9c1a4b40b5a431c5a488d1b2e8c63"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "evidence/run2/restore.log",
+      "sha256": "8f91bab3e2566ac6a0ec5a1e87b094853c6371301d6c247d31e96d1bac1f4581"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "evidence/run2/uart.txt",
+      "sha256": "f684e73d76fd50f37f8d132f12eef486b7a061536e1096be45568639fd5e78e3"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "evidence/run2/ethernet/results.json",
+      "sha256": "bf9575f868b497b14604ef7dc333814708328f61ecfe4180a688553029cb42cd"
+    }
+  ],
+  "checks": {
+    "source_binding": {
+      "status": "pass",
+      "evidence": "evidence/firmware.json"
+    },
+    "memory": {
+      "status": "pass",
+      "local_bram_used_bytes": 67728,
+      "local_bram_free_bytes": 63344,
+      "shared_used_bytes": 2784
+    },
+    "catalog_ip": {
+      "status": "pass",
+      "ip_instances": {
+        "mb": "xilinx.com:ip:microblaze_riscv:1.0",
+        "mb_local_memory/dlmb_v10": "xilinx.com:ip:lmb_v10:3.0",
+        "mb_local_memory/ilmb_v10": "xilinx.com:ip:lmb_v10:3.0",
+        "mb_local_memory/dlmb_bram_if_cntlr": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
+        "mb_local_memory/ilmb_bram_if_cntlr": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
+        "mb_local_memory/lmb_bram": "xilinx.com:ip:blk_mem_gen:8.4",
+        "mdm_1": "xilinx.com:ip:mdm_riscv:1.0",
+        "rst_sysclk_100M": "xilinx.com:ip:proc_sys_reset:5.0",
+        "low": "xilinx.com:ip:xlconstant:1.1",
+        "high": "xilinx.com:ip:xlconstant:1.1",
+        "axi": "xilinx.com:ip:smartconnect:1.0",
+        "uart": "xilinx.com:ip:axi_uartlite:2.0",
+        "pmc": "xilinx.com:ip:pmcbridge:1.0",
+        "timer": "xilinx.com:ip:axi_timer:2.0",
+        "clock": "xilinx.com:ip:clk_wiz:6.0",
+        "ethernet": "xilinx.com:ip:axi_ethernetlite:3.0"
+      },
+      "scope": "Generated top wrapper only; no custom functional RTL"
+    },
+    "routed_timing": {
+      "status": "pass",
+      "setup_slack_ns": 3.867,
+      "hold_slack_ns": 0.012,
+      "evidence": "evidence/timing_summary.txt",
+      "scope": "100 MHz fabric and 100 Mb/s MII, with documented PCB skew assumption and slow-control exceptions"
+    },
+    "drc": {
+      "status": "pass",
+      "evidence": "evidence/drc.txt"
+    },
+    "cdc_review": {
+      "status": "pass",
+      "evidence": "evidence/cdc_review.json",
+      "scope": "Review completed for laboratory use; four vendor reset-fanout critical warnings remain unwaived. Production CDC/reset-stress qualification is not claimed."
+    },
+    "hardware_and_recovery": {
+      "status": "pass",
+      "evidence": "evidence/run2/session.json"
+    },
+    "host_client_revision": {
+      "status": "pass",
+      "original_host_sha256": "046758f20484ca7b36b91d4449d1360383375e691281d15a16766f29755f4111",
+      "current_host_sha256": "db4b9979b68211b6e860de3ba137c2c02f6a04b5924569c9c3836e14042a04f6",
+      "evidence": "evidence/throughput.json",
+      "scope": "Client response decoding was extracted into a shared decode method for transport experiments. Current client passed exact payload/digest checks, negative cases and conservative single-flight health checks. Original PDI/firmware/build and dated run2 evidence are unchanged; the sustained two-flight failure is preserved separately."
+    }
+  }
+}

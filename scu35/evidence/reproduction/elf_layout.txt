@@ -1,0 +1,57 @@
+There are 30 section headers, starting at offset 0x62f2c:
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text.init        PROGBITS        00000000 001000 0000c8 00  AX  0   0  4
+  [ 2] .text             PROGBITS        000000c8 0010c8 00dfb8 00  AX  0   0  4
+  [ 3] .note.gnu.build-id NOTE            0000e080 00f080 000024 00   A  0   0  4
+  [ 4] .rodata           PROGBITS        0000e0c0 00f0c0 002d08 00   A  0   0 64
+  [ 5] .shared           NOBITS          0402b000 013000 002cbc 00  WA  0   0 64
+  [ 6] .data             PROGBITS        00010dc8 011dc8 0007b8 00  WA  0   0  8
+  [ 7] .drvcfg_sec       PROGBITS        00011580 012580 000088 00  WA  0   0  4
+  [ 8] .eh_frame         PROGBITS        00011608 012608 000004 00  WA  0   0  4
+  [ 9] .init_array       INIT_ARRAY      0001160c 01260c 000008 04  WA  0   0  4
+  [10] .fini_array       FINI_ARRAY      00011614 012614 000004 04  WA  0   0  4
+  [11] .sdata            PROGBITS        00011618 012618 000018 00  WA  0   0  4
+  [12] .bss              NOBITS          00011630 012630 000b2c 00  WA  0   0  4
+  [13] .sbss             NOBITS          0001215c 012630 000054 00  WA  0   0  4
+  [14] .heap             NOBITS          000121b0 012630 000800 00  WA  0   0  1
+  [15] .stack            NOBITS          000129b0 012630 002000 00  WA  0   0  1
+  [16] .riscv.attributes RISCV_ATTRIBUTES 00000000 012630 000035 00      0   0  1
+  [17] .comment          PROGBITS        00000000 012665 000012 01  MS  0   0  1
+  [18] .debug_line       PROGBITS        00000000 012677 019497 00      0   0  1
+  [19] .debug_line_str   PROGBITS        00000000 02bb0e 00113f 01  MS  0   0  1
+  [20] .debug_info       PROGBITS        00000000 02cc4d 017e9e 00      0   0  1
+  [21] .debug_abbrev     PROGBITS        00000000 044aeb 004352 00      0   0  1
+  [22] .debug_aranges    PROGBITS        00000000 048e40 000868 00      0   0  8
+  [23] .debug_str        PROGBITS        00000000 0496a8 004bb7 01  MS  0   0  1
+  [24] .debug_loclists   PROGBITS        00000000 04e25f 00c788 00      0   0  1
+  [25] .debug_rnglists   PROGBITS        00000000 05a9e7 001c4e 00      0   0  1
+  [26] .debug_frame      PROGBITS        00000000 05c638 002380 00      0   0  4
+  [27] .symtab           SYMTAB          00000000 05e9b8 0028e0 10     28 366  4
+  [28] .strtab           STRTAB          00000000 061298 001b59 00      0   0  1
+  [29] .shstrtab         STRTAB          00000000 062df1 00013a 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), p (processor specific)
+
+Elf file type is EXEC (Executable file)
+Entry point 0x0
+There are 4 program headers, starting at offset 52
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  RISCV_ATTRIBUT 0x012630 0x00000000 0x00000000 0x00035 0x00000 R   0x1
+  LOAD           0x001000 0x00000000 0x00000000 0x11630 0x149b0 RWE 0x1000
+  LOAD           0x000000 0x0402b000 0x0402b000 0x00000 0x02cbc RW  0x1000
+  NOTE           0x00f080 0x0000e080 0x0000e080 0x00024 0x00024 R   0x4
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .riscv.attributes 
+   01     .text.init .text .note.gnu.build-id .rodata .data .drvcfg_sec .eh_frame .init_array .fini_array .sdata .bss .sbss .heap .stack 
+   02     .shared 
+   03     .note.gnu.build-id 

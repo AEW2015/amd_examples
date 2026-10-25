@@ -1,0 +1,20 @@
+new_bif:
+{
+ id_code = 0x04e80093
+ lms_key_params {
+ primary {lms_shake256_h15_w2, lms_shake256_h15_w2}
+ secondary {lms_shake256_h15_w2, lms_shake256_h15_w2}
+ }
+ ppkfile = keys01/primary.key.pub
+ spkfile = keys01/secondary.key.pub
+ pskfile = keys01/primary.key.prv
+ sskfile = keys01/secondary.key.prv
+ boot_config {bh_auth_enable}
+
+ image {
+ name = pmcl_subsys
+ id = 0x0
+partition {id=0x01, type=bootloader, authentication=hss-shake256, file=plm.elf}
+partition {id=0x02, type=pldata, file=design.rcdo}
+ }
+}

@@ -1,0 +1,25 @@
+name: SCU35 offline reproduction
+on:
+  push:
+    paths: ['scu35/**', '.github/workflows/scu35.yml']
+  pull_request:
+    paths: ['scu35/**', '.github/workflows/scu35.yml']
+jobs:
+  replay:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r scu35/requirements.txt
+      - run: python scu35/lab.py verify
+      - run: python scu35/scripts/check_links.py
+      - run: python scu35/ethernet/verify_capture.py scu35/ethernet/evidence/run2/ethernet/results.json
+      - run: python scu35/scripts/build_site.py
+      - run: python scu35/scripts/check_site.py
+      - run: python scu35/scripts/execute_notebooks.py
+      - run: python scu35/lab.py replay --out scu35/out/comparison.html

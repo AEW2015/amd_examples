@@ -1,0 +1,251 @@
+{
+  "overall": "PASS",
+  "project": "C:/aiup/s35tmr/tmr.xpr",
+  "build_id": "7d1bf77bc454dd1f",
+  "capture": "C:\\aiup\\sec35\\timer\\runs\\20261025T173733720\\uart.txt",
+  "timer": {
+    "ip": "AXI Timer 2.0",
+    "hardware_bits": 64,
+    "clock_hz": 100000000,
+    "elapsed_report_bits": 32,
+    "read_cycles": 34,
+    "carry_delta": 4117,
+    "monotonic_reads": 1000,
+    "monotonic_min_delta": 37,
+    "monotonic_max_delta": 51
+  },
+  "checks": {
+    "timer_hardware_tests": "pass",
+    "functional_crypto_capture": "pass",
+    "routed_timing": "pass",
+    "drc_no_errors_or_critical_warnings": "pass",
+    "stock_recovery": "pass",
+    "prior_demo_files_unchanged": "pass",
+    "executed_tutorial": {
+      "status": "pass",
+      "code_cells": 5,
+      "hardware_cell": "Disabled; recorded capture replayed"
+    },
+    "actual_vivado_exports": "pass"
+  },
+  "functional": {
+    "rows": 31,
+    "hash_vectors": 10,
+    "aes_vectors": 5,
+    "puf_cycles": 5,
+    "rng_modes": 3
+  },
+  "limitations": [
+    "Counter clock is nominal 100 MHz from the retained design constraints; no independent frequency metrology.",
+    "CMP v2 reports modulo-32-bit elapsed intervals below 42.95 seconds; no claim of 64-bit duration reporting.",
+    "Existing stock BSP is reused for unchanged UART/CPU/PMC mapping; AXI Timer uses direct PG079 register access.",
+    "Protected boot images and native-PMC benchmark remain their prior builds; this is the updated PL functional benchmark."
+  ],
+  "artifacts": [
+    {
+      "path": "sec35/timer/compare.pdi",
+      "sha256": "4cde96513b9d7de10e8b4dee8574b11a36539797548163491d4021c020f291ce",
+      "bytes": 1359840
+    },
+    {
+      "path": "sec35/timer/compare.rcdo",
+      "sha256": "8f567cfcba25a196307962e7eb52cfc227392838c5fbf9ea15562213df986f94",
+      "bytes": 3318744
+    },
+    {
+      "path": "sec35/timer/bench.elf",
+      "sha256": "19ed485758a544fcd11646495f9996db3105b123c5eb64ce3c2922b411a2b8f2",
+      "bytes": 406876
+    },
+    {
+      "path": "sec35/timer/bench.c",
+      "sha256": "695bb96a78f5b6c80d25b3a8781525208563446365127f4fcd02d8516dd3abb5",
+      "bytes": 77782
+    },
+    {
+      "path": "sec35/timer/timer_io.c",
+      "sha256": "fc39c9784ac0444f40ee9a3e98568d2d0fb1fa6d3f157dad25eb06b02406b845",
+      "bytes": 2297
+    },
+    {
+      "path": "sec35/timer/build_sw.py",
+      "sha256": "2529de930b83f65a24e0b01d2c21abbf6d0b321cad533feb3d31ec169286d2b8",
+      "bytes": 3626
+    },
+    {
+      "path": "sec35/timer/prepare.py",
+      "sha256": "381937f11cf084d36d5449f4e90202cae936530a108007b968ef5d5524fb77df",
+      "bytes": 1570
+    },
+    {
+      "path": "sec35/timer/build_pl.tcl",
+      "sha256": "82305688ef492ac1891fc354b0c031a7c9414d3706c333189a0cc4966161e7f7",
+      "bytes": 2861
+    },
+    {
+      "path": "sec35/timer/inputs/sys.bd",
+      "sha256": "d13b487edcf4ddb7a333efd7ede0b058ba4043132889e5c504259d3dd2b63b5a",
+      "bytes": 28058
+    },
+    {
+      "path": "sec35/timer/inputs/sec_top.v",
+      "sha256": "de8bb672337989842ab3ec3fe1490894fe8ef8202af9f41c36adc0cc89d82f52",
+      "bytes": 466
+    },
+    {
+      "path": "sec35/timer/inputs/sec_top.xdc",
+      "sha256": "dc7ff2ca58d346db752f7de6ee692611d4bf0ce8e0822252f547376909a9b8a5",
+      "bytes": 538
+    },
+    {
+      "path": "sec35/timer/build_meta.json",
+      "sha256": "4e2201676600ad5d8898af022661bf48bee1d4980761a68783fc676e40b80b6b",
+      "bytes": 890
+    },
+    {
+      "path": "sec35/timer/image_meta.json",
+      "sha256": "a425ee471628740a154a5ce406165c72bd29a69254b839482c20d49d37f06070",
+      "bytes": 382
+    },
+    {
+      "path": "sec35/timer/routed.dcp",
+      "sha256": "6b162ea7d6224468316a417f44471eac42e5c77ea87ce03b8a3748a220d49721",
+      "bytes": 2993560
+    },
+    {
+      "path": "sec35/timer/timer.xsa",
+      "sha256": "84750bc2aa0aea5844664bd5f380437ad9a7521f2a97879e3ee9db8f6aa133f0",
+      "bytes": 523093
+    },
+    {
+      "path": "sec35/timer/timing.txt",
+      "sha256": "9eedd320aaa952a55f3664dea5146202f9e8302c5186f3e5cb0ec9ca6c2e2bff",
+      "bytes": 72424
+    },
+    {
+      "path": "sec35/timer/drc.txt",
+      "sha256": "00e29a3b208a4a8548a6c9c589ed22866d7f7dfe8daedc1be9b39272f50ebdba",
+      "bytes": 1669
+    },
+    {
+      "path": "sec35/timer/utilization.txt",
+      "sha256": "ee944b898d2248b9232f2b3d3aaba1827f3e6820442ea17f1c8be8d60d58f172",
+      "bytes": 13201
+    },
+    {
+      "path": "sec35/timer/source_bindings.txt",
+      "sha256": "db6ffbdf31b67df9062384dd06fa0c6d8206dd8470601dec870ff06253709401",
+      "bytes": 19306
+    },
+    {
+      "path": "sec35/timer/build_pl.log",
+      "sha256": "c960c984330dc43fc2c3be89e29f0d895754001d9fbb21e7ccf5f803030a49ec",
+      "bytes": 118159
+    },
+    {
+      "path": "sec35/timer/elf_layout.txt",
+      "sha256": "13c3a5d8b07bb08c46f22225dab262e4d78d0e8f2c4674f09f883007d442962c",
+      "bytes": 3662
+    },
+    {
+      "path": "sec35/timer/baseline.json",
+      "sha256": "e5695d7961f66a56c3d84dd40fbe17f38d8893db47d29b5fb23e95bb30ab7f60",
+      "bytes": 572
+    },
+    {
+      "path": "sec35/timer/run.ps1",
+      "sha256": "5b3d2e7c38eb27867565e4c5ba957bed9709a7c380633bd4fd26adca90b5d105",
+      "bytes": 5071
+    },
+    {
+      "path": "sec35/timer/program.tcl",
+      "sha256": "4edef85d8eaa801d82f0c7bc02ed242c3b48cfcde2844b08e9a0f3c4d272af60",
+      "bytes": 1174
+    },
+    {
+      "path": "sec35/timer/runs/20261025T173733720/uart.txt",
+      "sha256": "3f1a9e360713266fa6cfbe8618580316320902ac9c1ae0887df78e2a209c8389",
+      "bytes": 11448
+    },
+    {
+      "path": "sec35/timer/runs/20261025T173733720/restore.stdout.txt",
+      "sha256": "7e19583b2ea4f916c9aa0069944d17e1f53ee5ba92c894f8179c020c0aea54e6",
+      "bytes": 3003
+    },
+    {
+      "path": "sec35/timer/runs/20261025T173733720/program.stdout.txt",
+      "sha256": "9aa832e3addc2c15289ec6ddbf2a3a79584d5f4a227f2b8b4d1fff542dfafc9c",
+      "bytes": 2975
+    },
+    {
+      "path": "notebooks/scu35_timer.ipynb",
+      "sha256": "4f985cab55a615df6755365d49eeca197913b42e85316ffb7e1a68690367029f",
+      "bytes": 29994
+    },
+    {
+      "path": "sec35/timer/report.html",
+      "sha256": "e28233ad9e3adf473067fa977bf5349209b668c44b025e66a598057ad3120f92",
+      "bytes": 48004
+    },
+    {
+      "path": "sec35/timer/report.json",
+      "sha256": "bb89f117beb7ee69abc8d7bbdca6bf22ae6f00d76dad3e8d28fcae5839fb3ea5",
+      "bytes": 36978
+    },
+    {
+      "path": "sec35/timer/README.md",
+      "sha256": "0d89e083da6e6a91e58b25a18fd15cf454e3e268e23bc0dc67b6ee773893e55b",
+      "bytes": 4710
+    },
+    {
+      "path": "sec35/timer/build_notebook.py",
+      "sha256": "0650870e77c532944429cdf14ab4ae636128f0354cf67f8203cd677f0d1fa389",
+      "bytes": 6147
+    },
+    {
+      "path": "sec35/timer/export_bd.tcl",
+      "sha256": "86d35138e9299ad79cae50f2549fa2601146da259ea851f737acd40642dd8afe",
+      "bytes": 539
+    },
+    {
+      "path": "sec35/timer/export_bd.log",
+      "sha256": "e6931306ae5837a4faa6648dd1ec77b69cf64b19997abc41afcef74d3fb9c025",
+      "bytes": 4771
+    },
+    {
+      "path": "docs/pmc/presenter/assets/timer_vivado.svg",
+      "sha256": "cca4e3410089029612a44cadd2768a94f45bef39a69d0f2949d5585f84c307a9",
+      "bytes": 21162
+    },
+    {
+      "path": "docs/pmc/presenter/assets/timer_vivado.pdf",
+      "sha256": "d48148bf1246826fedebe78da9057cd5917f1776521bd6ce91cf905eda62bafd",
+      "bytes": 73544
+    },
+    {
+      "path": "s35tmr/tmr.xpr",
+      "sha256": "eb4d81a9d34fda196d7cee4309fe4442575165c723a76a12409bb2245b6848de",
+      "bytes": 43210
+    },
+    {
+      "path": "sec35/sec_top.v",
+      "sha256": "de8bb672337989842ab3ec3fe1490894fe8ef8202af9f41c36adc0cc89d82f52",
+      "bytes": 466
+    },
+    {
+      "path": "sec35/sec_top.xdc",
+      "sha256": "dc7ff2ca58d346db752f7de6ee692611d4bf0ce8e0822252f547376909a9b8a5",
+      "bytes": 538
+    },
+    {
+      "path": "s35tmr/tmr.srcs/sources_1/bd/sys/sys.bd",
+      "sha256": "1d4d57b27d5f8481d30e84a229cad1afb43e1e7f45f2792a926a097bc5ad22a5",
+      "bytes": 28056
+    },
+    {
+      "path": "sec35/timer/inputs/sys_final.bd",
+      "sha256": "1d4d57b27d5f8481d30e84a229cad1afb43e1e7f45f2792a926a097bc5ad22a5",
+      "bytes": 28056
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+
+
+****** Bootgen v2026.1
+  **** Build date : Jun  5 2026-13:21:08
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+[WARNING]: dl3 detected
+--------------------------------------------------------------------------------
+   BOOTIMAGE COMPONENTS
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+   BOOT HEADER
+--------------------------------------------------------------------------------
+     width_detection (0x10) : 0x665599aa
+            image_id (0x14) : 0x584c4e58
+ encryption_keystore (0x18) : 0x00000000
+          plm_offset (0x1c) : 0x000003d0
+    pmccdo_load_addr (0x20) : 0xf2000000
+       pmccdo_length (0x24) : 0x001441b0
+ pmccdo_total_length (0x28) : 0x001455f0
+          plm_length (0x2c) : 0x000065c0
+    plm_total_length (0x30) : 0x00006620
+          attributes (0x34) : 0x00000300
+      grey/black_key (0x38) : 0x000000000000000000000000000000000000000000000000
+                              0000000000000000
+       grey/black_iv (0x58) : 0x000000000000000000000000
+      plm_sec_hdr_iv (0x64) : 0x000000000000000000000000
+           revoke_id (0x70) : 0x00000000
+         auth_header (0x74) : 0x00000004
+     hash_block_size (0x78) : 0x00000090
+      total_ppk_size (0x7C) : 0x00000000
+     actual_ppk_size (0x80) : 0x00000000
+     total_sign_size (0x84) : 0x00000000
+    actual_sign_size (0x88) : 0x00000000
+          puf_pdi_id (0x8C) : 0x00000000
+         puf_shutter (0x90) : 0x01000020
+         puf_ro_swap (0x94) : 0x00000000
+       puf_hd_length (0x98) : 0x00000000
+              pdi_id (0xD8) : 0x00000000
+           checksum (0x33C) : 0x4e34ad39
+ attribute list - 
+           puf_hd_source [efuse]           puf_mode [puf-12k]      
+               integrity [sha-3]             dpa_cm [disabled]     
+              rsa_signed [no]                  dice [disabled]     
+--------------------------------------------------------------------------------
+   Hash Block0
+--------------------------------------------------------------------------------
+     BH hash index          : 00000000
+     BH hash digest         : 0a3f2e23a19d9cdac889c6343bdfc30d1c3fcecb9fcd9a9b
+                              fea5b27db549ff97
+     PLM hash index         : 01000000
+     PLM hash digest        : f1914a921334251c785ebafea2ba47ecf49bc0fa32ec47e5
+                              dcd11587e80b217d
+     PMC data index         : 02000000
+     PMC data digest        : c414c90e6d8ca38e760b37eb1ef6cf849dc74862e0368c53
+                              b9297b3a18cf1d51
+               padding      : 00000000000000000000000000000000
+--------------------------------------------------------------------------------

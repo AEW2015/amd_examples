@@ -1,0 +1,25 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date              : Sun Oct 25 15:33:34 2026
+| Host              : DESKTOP-I75K8PP running 64-bit major release  (build 9200)
+| Command           : report_cdc -file C:/aiup/e35/cdc.txt
+| Design            : sys_wrapper
+| Device            : xcsu35p-sbvb625
+| Speed File        : -2  PRODUCTION 1.14 03-03-2026
+| Design State      : Routed
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+Severity  Source Clock                                                                                Destination Clock                                                                           CDC Type                 Exceptions           Endpoints  Safe  Unsafe  Unknown  No ASYNC_REG  
+--------  ------------------------------------------------------------------------------------------  ------------------------------------------------------------------------------------------  -----------------------  -------------------  ---------  ----  ------  -------  ------------  
+Critical  clk_out1_sys_clock_0                                                                        mii_rx_clk                                                                                  No Common Primary Clock  Asynch Clock Groups          3     1       2        0             0  
+Critical  clk_out1_sys_clock_0                                                                        mii_tx_clk                                                                                  No Common Primary Clock  Asynch Clock Groups         14    12       2        0             0  
+Warning   input port clock                                                                            clk_out1_sys_clock_0                                                                        No Common Primary Clock  False Path                   4     4       0        0             2  
+Warning   mii_rx_clk                                                                                  clk_out1_sys_clock_0                                                                        No Common Primary Clock  Asynch Clock Groups          7     7       0        0             0  
+Warning   clk_out1_sys_clock_0                                                                        sys_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Test_Access_Port.BUFG_UPDATE/Using_FPGA.Native/O  No Common Primary Clock  Asynch Clock Groups          2     2       0        0             0  
+Info      mii_tx_clk                                                                                  clk_out1_sys_clock_0                                                                        No Common Primary Clock  Asynch Clock Groups          3     3       0        0             0  
+Info      sys_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Test_Access_Port.BUFG_UPDATE/Using_FPGA.Native/O  clk_out1_sys_clock_0                                                                        No Common Primary Clock  Asynch Clock Groups          2     2       0        0             0  
+

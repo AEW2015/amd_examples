@@ -1,0 +1,9 @@
+
+
+****** Bootgen v2026.1
+  **** Build date : Jun  5 2026-13:21:08
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+[WARNING]: dl3 detected
+[ERROR]  : '-verify' option is not supported for LMS/HSS authenticated images on this architecture.

@@ -1,0 +1,8 @@
+{
+    "variant":  "badroll",
+    "attempt":  "C:\\aiup\\sec35\\boot\\runs\\20261025T133530340_badroll",
+    "pdi_sha256":  "9dbed3f467b21ff6a66a77e31a633d5e5dddc5d53665122984e8fff8e146ff87",
+    "restored":  true,
+    "hardware_mutation_attempted":  true,
+    "error":  ""
+}

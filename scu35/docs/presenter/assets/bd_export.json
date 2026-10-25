@@ -1,0 +1,36 @@
+{
+  "overall": "PASS",
+  "tool": "Vivado 2026.1",
+  "action": "Read-only project open, actual IPI SVG and PDF export",
+  "source_bd_unchanged": true,
+  "hardware_access": false,
+  "rebuild": false,
+  "note": "Read-only mode reports locked IPs; no IP upgrades or design validation claimed.",
+  "artifacts": [
+    {
+      "path": "s35cmp/cmp.srcs/sources_1/bd/sys/sys.bd",
+      "sha256": "6de858f5367b1b10efe580018726e69915fa9dfbf00653835f29c7d066fcc7af",
+      "bytes": 29633
+    },
+    {
+      "path": "docs/pmc/presenter/assets/sys_vivado.svg",
+      "sha256": "05096ea47b57f43aa4dcb345cb0c92da0376239b34a79ea697cd6ae7dadbf814",
+      "bytes": 21961
+    },
+    {
+      "path": "docs/pmc/presenter/assets/sys_vivado.pdf",
+      "sha256": "3bf839c4c2da2e831afe749e0440296be512b9a2b80fd4e3d4d6dc1b8bca7559",
+      "bytes": 78907
+    },
+    {
+      "path": "docs/pmc/presenter/export_bd.tcl",
+      "sha256": "35a9225be613efd7677ab309538a86f32ced743e15a8c699b2447a259079bac5",
+      "bytes": 666
+    },
+    {
+      "path": "docs/pmc/presenter/export_bd_final.log",
+      "sha256": "9896a8c451f39c9c54e6f72a9eea4655468c1bdf252649d704bba58346af2e26",
+      "bytes": 5170
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+
+
+****** Bootgen v2026.1
+  **** Build date : Jun  5 2026-13:21:08
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+[WARNING]: The last encryption block size is truncated to 3936 to fit into the secure chunk of 7KB.
+[WARNING]: DPA key rolling countermeasure is enabled.
+	       Boot time will be impacted, Refer to boot time estimator spreadsheet for calculations.
+[WARNING]: DPA masking countermeasure enabled.
+	       Boot time will be impacted, Refer to boot time estimator spreadsheet for calculations.
+[WARNING]: Seed needed for KDF is generated using RAND_Bytes. To have a secure keying material, we encourage the users to provide the Seed. 
+	   Refer to UG1283 for more details
+[WARNING]: Fixed Input Data needed for KDF is generated using RAND_Bytes. To have a secure keying material, we encourage the users to provide the Fixed Input Data. 
+	   Refer to UG1283 for more details
+[WARNING]: Be careful when version controlling, backing up, and restoring LMS private keys. The private key file contains state. Re-using private key state leads to loss of authenticity. For more information, see NIST SP800-208 Sec. 9.1 https://csrc.nist.gov/pubs/sp/800/208/final.
+[WARNING]: Be careful when version controlling, backing up, and restoring LMS private keys. The private key file contains state. Re-using private key state leads to loss of authenticity. For more information, see NIST SP800-208 Sec. 9.1 https://csrc.nist.gov/pubs/sp/800/208/final.
+
+[INFO]   : Bootimage generated successfully
+

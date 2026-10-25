@@ -1,0 +1,1239 @@
+{
+  "overall": "PASS",
+  "created_utc": "2026-10-25T13:48:40.082899+00:00",
+  "scope": "Real-design signing, development authentication and public-zero-root rolling-key configuration; no permanent provisioning or production-security certification",
+  "external_checker": "hybrid-C c_check_handoff unavailable; local artifact and semantic checks used",
+  "artifacts": [
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/build.json",
+      "sha256": "15bc90f400d20154a06fcbee4898caa7ce245ee059f34411629cbbad40102333",
+      "bytes": 2118
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/dfx_runtime.txt",
+      "sha256": "6b79b19b9972a2cbc7e6bd149064451ea025b2910ec57e208083d307f94a741e",
+      "bytes": 113
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/lease.json",
+      "sha256": "18e374725fd54d3deb1fe0ffe0bb7fa235f2ec3b701bee4b232318064ee7d3d2",
+      "bytes": 315
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/probe.tcl",
+      "sha256": "6dce00fe6fbfb502f1037dbfc8b2b11e6a91fd20970194814b4e01feb4b1d0a0",
+      "bytes": 1549
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/restore.stdout.txt",
+      "sha256": "dc48da853ac493f4fc825337beff9ef002d73f0335e73ccd4f953bd4124324f7",
+      "bytes": 3008
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/restore.tcl",
+      "sha256": "4edef85d8eaa801d82f0c7bc02ed242c3b48cfcde2844b08e9a0f3c4d272af60",
+      "bytes": 1174
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/results.txt",
+      "sha256": "f5a9a97ed8110d52c013d5e35a371a0548272e91c75138b8e1a6cc465c4cf9bb",
+      "bytes": 4139
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/server.json",
+      "sha256": "25cf0872c9a1606347fd9e958e2a209e515db68da695f9af9eb462412e5cb201",
+      "bytes": 228
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/session.json",
+      "sha256": "c4652f6719e90ddfe0b0ce1152e359d11a40c12459cf77a86ede4a7098474cad",
+      "bytes": 279
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/stdout.txt",
+      "sha256": "311e5f3a3d5c557fe1c4c88341ca23e1933b50e2faad9593cfa1c9c9109d423c",
+      "bytes": 7496
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/test.pdi",
+      "sha256": "12fa0536cf8e8301b324972031c23959c6da82ca1301867d8b7b99cd12f64fce",
+      "bytes": 1359840
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/uart.txt",
+      "sha256": "8d33cac86076015485120f3a46fbe122368e0ad99ae157a481c8971783749014",
+      "bytes": 11353
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/vivado.log",
+      "sha256": "75efee57a81228a4bc93c952de21c90d38dc55a292889930acd5c0019b4637e5",
+      "bytes": 3802
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132601359_plain/vivado_37984.backup.log",
+      "sha256": "9b7f11a8afa5f44f69eb1d8cebbbebd8e87d4b56ff9b63b771cbca547f0e7e58",
+      "bytes": 8224
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/build.json",
+      "sha256": "15bc90f400d20154a06fcbee4898caa7ce245ee059f34411629cbbad40102333",
+      "bytes": 2118
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/dfx_runtime.txt",
+      "sha256": "6b79b19b9972a2cbc7e6bd149064451ea025b2910ec57e208083d307f94a741e",
+      "bytes": 113
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/lease.json",
+      "sha256": "dc7720ea0e300f44842fbc1fefdb671944b0238aaa4d7a794de1657ab382bfa9",
+      "bytes": 316
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/probe.tcl",
+      "sha256": "6dce00fe6fbfb502f1037dbfc8b2b11e6a91fd20970194814b4e01feb4b1d0a0",
+      "bytes": 1549
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/restore.stdout.txt",
+      "sha256": "a9626f23ee561b7873f1435da0e60afb1d23815298b3317eb6941b6744bb7dcd",
+      "bytes": 3009
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/restore.tcl",
+      "sha256": "4edef85d8eaa801d82f0c7bc02ed242c3b48cfcde2844b08e9a0f3c4d272af60",
+      "bytes": 1174
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/results.txt",
+      "sha256": "f5a9a97ed8110d52c013d5e35a371a0548272e91c75138b8e1a6cc465c4cf9bb",
+      "bytes": 4139
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/server.json",
+      "sha256": "25cf0872c9a1606347fd9e958e2a209e515db68da695f9af9eb462412e5cb201",
+      "bytes": 228
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/session.json",
+      "sha256": "3b308e5823c8e8874ed76405518f24cb0348c45b516c18d95d63150f3fc1f21e",
+      "bytes": 281
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/stdout.txt",
+      "sha256": "f286edab10d8b3c6839619233368ecb2c78bc0be9fb8aa6cd72e9ad4c00e1a9c",
+      "bytes": 7498
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/test.pdi",
+      "sha256": "8ab7ac3f967cdab595930f955eade363ba72d5b46930c51394e7a1c72650da54",
+      "bytes": 1379264
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/uart.txt",
+      "sha256": "ca84107f95a5b4a48b39a508859c93daf2bd47c1477b0159ca00a9cca2eabe5c",
+      "bytes": 11353
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/vivado.log",
+      "sha256": "c1eac38c0f9594b0a9763fc8d6afb123d2a1f2cc19a9a46f7d786b76021308bd",
+      "bytes": 3807
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132740057_signed/vivado_30432.backup.log",
+      "sha256": "43f713d134d2082716f82f9ce4f5199ea5ad174dc2c0362b7c2d644dba931533",
+      "bytes": 8232
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/build.json",
+      "sha256": "15bc90f400d20154a06fcbee4898caa7ce245ee059f34411629cbbad40102333",
+      "bytes": 2118
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/dfx_runtime.txt",
+      "sha256": "6b79b19b9972a2cbc7e6bd149064451ea025b2910ec57e208083d307f94a741e",
+      "bytes": 113
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/lease.json",
+      "sha256": "36f552950f5b70fdc694ed0a5dfce05d035c2095fe130623fb9abb6b24e3c6df",
+      "bytes": 316
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/probe.tcl",
+      "sha256": "6dce00fe6fbfb502f1037dbfc8b2b11e6a91fd20970194814b4e01feb4b1d0a0",
+      "bytes": 1549
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/restore.stdout.txt",
+      "sha256": "a020871a56d2e7c5e2a350fbc095f7cdeb1777cb46311aeea51b99cc135fc54a",
+      "bytes": 3009
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/restore.tcl",
+      "sha256": "4edef85d8eaa801d82f0c7bc02ed242c3b48cfcde2844b08e9a0f3c4d272af60",
+      "bytes": 1174
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/results.txt",
+      "sha256": "a464ae03fe130572845eb56d453cbe10391de0bd19c0b7bba2acb03aea379f1f",
+      "bytes": 4213
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/server.json",
+      "sha256": "25cf0872c9a1606347fd9e958e2a209e515db68da695f9af9eb462412e5cb201",
+      "bytes": 228
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/session.json",
+      "sha256": "dc18f434827912286661dd57137b74b706a302d2c1378665c706e74e2915dc99",
+      "bytes": 281
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/stderr.txt",
+      "sha256": "c51a583768576423d21b1b3e8cdc513a121638734cea3bd629af2cedc561f817",
+      "bytes": 356
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/stdout.txt",
+      "sha256": "a70b4808754f396d395408af71c301bc35e2259f1e53e5663be8c91ff23a9126",
+      "bytes": 7924
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/test.pdi",
+      "sha256": "e6c061f360f909d00ec58e21885d5941f8aa2573f9285c59664444379d5aef44",
+      "bytes": 1379264
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/vivado.log",
+      "sha256": "4ec785176fc7e42f7a7d29919be5c660cd517e15d9af202f2e878ca8c70d3b64",
+      "bytes": 3807
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T132903046_badsig/vivado_53388.backup.log",
+      "sha256": "dc4cc6e402be31bde03e23d71b89130f69dfd9452c85976de383ae25a2804d80",
+      "bytes": 9008
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/build.json",
+      "sha256": "9af74744f244179415cec3da8538e264b6deafa38a71bf03bbdcb126b68f8e00",
+      "bytes": 2513
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/dfx_runtime.txt",
+      "sha256": "6b79b19b9972a2cbc7e6bd149064451ea025b2910ec57e208083d307f94a741e",
+      "bytes": 113
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/lease.json",
+      "sha256": "3f39ea4ae8f037abbc19372215b4de700220982b0eb1c032c8b6899135daeb66",
+      "bytes": 314
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/probe.tcl",
+      "sha256": "6dce00fe6fbfb502f1037dbfc8b2b11e6a91fd20970194814b4e01feb4b1d0a0",
+      "bytes": 1549
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/restore.stdout.txt",
+      "sha256": "6bb6d7d5b609dce4f586f59cd408fc057f7cb6ac6b70a2c4056b7aecc81d9375",
+      "bytes": 3007
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/restore.tcl",
+      "sha256": "4edef85d8eaa801d82f0c7bc02ed242c3b48cfcde2844b08e9a0f3c4d272af60",
+      "bytes": 1174
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/results.txt",
+      "sha256": "2ccbc6d7a65e8b1fa59b9a8d967bab67f8e66308729a6ef49c9aaf5632c29db8",
+      "bytes": 4213
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/server.json",
+      "sha256": "25cf0872c9a1606347fd9e958e2a209e515db68da695f9af9eb462412e5cb201",
+      "bytes": 228
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/session.json",
+      "sha256": "d1fa660d2c616d837eb9c37e8968aeb7ebf571f2280fde9bf14ac00f3c41ce8f",
+      "bytes": 277
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/stderr.txt",
+      "sha256": "c6decb9057508cea6e153ab039c343c095dea1443f99d9917aae2f9ecb4133be",
+      "bytes": 354
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/stdout.txt",
+      "sha256": "cc133e125331bcf875eb17e8e2752ca27bd9aec55e4254610fd3d5d703e22da2",
+      "bytes": 7922
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/test.pdi",
+      "sha256": "b639388ff14226583268c3a9d62fec302daa74762ae289605cdfd76dffc02083",
+      "bytes": 1381712
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/vivado.log",
+      "sha256": "abfc746adb15f52977594a908da4f64a6c43161595a7d3b81d149f85336c6a1b",
+      "bytes": 3796
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133156675_zero/vivado_54932.backup.log",
+      "sha256": "04de2ce3f8e058cdee8cd7fc2d1048c8470b35cd81ed98a9f4a8ba5086e2b2d9",
+      "bytes": 8992
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/build.json",
+      "sha256": "2ee735d74c263abbe62b4478bc3266ddf5ec467061e3fb0678c61453f82a1897",
+      "bytes": 2791
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/dfx_runtime.txt",
+      "sha256": "6b79b19b9972a2cbc7e6bd149064451ea025b2910ec57e208083d307f94a741e",
+      "bytes": 113
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/lease.json",
+      "sha256": "68be12a9ceac311065bc544bde2087069940061f484aa5ab8b8433906f5dbb05",
+      "bytes": 319
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/probe.tcl",
+      "sha256": "6dce00fe6fbfb502f1037dbfc8b2b11e6a91fd20970194814b4e01feb4b1d0a0",
+      "bytes": 1549
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/restore.stdout.txt",
+      "sha256": "9ec5e5c69aa3b3ca977368a40a86ca089ec7c618cc43b765387559039973f785",
+      "bytes": 3012
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/restore.tcl",
+      "sha256": "4edef85d8eaa801d82f0c7bc02ed242c3b48cfcde2844b08e9a0f3c4d272af60",
+      "bytes": 1174
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/results.txt",
+      "sha256": "1c2810db7ac9a42145dd6cc5afcd098a9d5838efc34af2ce26c4dd873f4bf2e8",
+      "bytes": 4139
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/server.json",
+      "sha256": "25cf0872c9a1606347fd9e958e2a209e515db68da695f9af9eb462412e5cb201",
+      "bytes": 228
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/session.json",
+      "sha256": "23aea976a34fdfc290ec8018af5b12a225641958600ba3b2c0299cfc167bc454",
+      "bytes": 287
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/stdout.txt",
+      "sha256": "50472e927053106b715431728e68afd7e038b2ce9efbad819eca08e118df4a41",
+      "bytes": 7505
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/test.pdi",
+      "sha256": "76757c3bd688c79acb14e20e5ad48d2cb5e08fc91542ef4cab1d0734b794f957",
+      "bytes": 1381712
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/uart.txt",
+      "sha256": "4e07158a147427a1f2b1e8d466488688a783aa82c9f53535a253bdd935080941",
+      "bytes": 11353
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/vivado.log",
+      "sha256": "f2ade4450522d7c95a5e9e38c58dad8aeca17ad90b12804d37f04f6b26deba88",
+      "bytes": 3822
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133357498_zero_mask/vivado_52632.backup.log",
+      "sha256": "1d1b9ff8d02de1915f0e9b3a24310a2099213f71442b1ad935b306057e352d9d",
+      "bytes": 8257
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/build.json",
+      "sha256": "eca9d08b015c7b3feb42c797a8692a18a30a45d8981c173deb88ee7d97d791c2",
+      "bytes": 3135
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/dfx_runtime.txt",
+      "sha256": "6b79b19b9972a2cbc7e6bd149064451ea025b2910ec57e208083d307f94a741e",
+      "bytes": 113
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/lease.json",
+      "sha256": "aebcc5e897fff9a6e4211b033fce9f7bc61fcf9f3395f3cf3d1c1750c68dc7ae",
+      "bytes": 317
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/probe.tcl",
+      "sha256": "6dce00fe6fbfb502f1037dbfc8b2b11e6a91fd20970194814b4e01feb4b1d0a0",
+      "bytes": 1549
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/restore.stdout.txt",
+      "sha256": "d55f9f0b8257daa487d752b60890f3b7c79b7f60042b014509eeeebeb8b546ed",
+      "bytes": 3010
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/restore.tcl",
+      "sha256": "4edef85d8eaa801d82f0c7bc02ed242c3b48cfcde2844b08e9a0f3c4d272af60",
+      "bytes": 1174
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/results.txt",
+      "sha256": "b3cc3ceb0a06fd919a79c606d0d237116fd60d60c2c4e5f35f9a82b9fd7650fe",
+      "bytes": 4213
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/server.json",
+      "sha256": "25cf0872c9a1606347fd9e958e2a209e515db68da695f9af9eb462412e5cb201",
+      "bytes": 228
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/session.json",
+      "sha256": "fde6b1172e4690b360e34f580e8c69d12fc3579e4c9b4a044922ca10af5ec4f0",
+      "bytes": 283
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/stderr.txt",
+      "sha256": "3c5b1c225f17b2084633b9c194fed1fd13ed40b39c1cae578b72a163f630127f",
+      "bytes": 357
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/stdout.txt",
+      "sha256": "4ca73c46fecc6853b8a927f24ff56e74a3e1a25bd26a7f222cf9a238cb85cd75",
+      "bytes": 7925
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/test.pdi",
+      "sha256": "9dbed3f467b21ff6a66a77e31a633d5e5dddc5d53665122984e8fff8e146ff87",
+      "bytes": 1381712
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/vivado.log",
+      "sha256": "7d56d52d3d6b5a5fb97ebf832ee7a4c2f293f4f7f183fbf97835466ef4e045fa",
+      "bytes": 3812
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133530340_badroll/vivado_12284.backup.log",
+      "sha256": "81f76f50d258703974dcf40264f5950a94f531b1790caca21a4fa8e85ae76f79",
+      "bytes": 9016
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/build.json",
+      "sha256": "633cbb0d6d0c640375c7d30abb2485c33ed1a300780ff0282c8f5ddcb699213d",
+      "bytes": 3516
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/dfx_runtime.txt",
+      "sha256": "b75c9e4c66aa27b672ca9b417568b0eb52826563b51020c6a96eccbf45e9dea3",
+      "bytes": 113
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/lease.json",
+      "sha256": "29ecf3986327c1c4e653719d8da17667fca1b00c39fab0ebaa98d8f23fb62c51",
+      "bytes": 315
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/probe.tcl",
+      "sha256": "6dce00fe6fbfb502f1037dbfc8b2b11e6a91fd20970194814b4e01feb4b1d0a0",
+      "bytes": 1549
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/restore.stdout.txt",
+      "sha256": "7b71406d6e973db3dec5d53cddcaf0771ca2b9d18467cbeacbf7e1a68a48a1c9",
+      "bytes": 3008
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/restore.tcl",
+      "sha256": "4edef85d8eaa801d82f0c7bc02ed242c3b48cfcde2844b08e9a0f3c4d272af60",
+      "bytes": 1174
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/results.txt",
+      "sha256": "f5a9a97ed8110d52c013d5e35a371a0548272e91c75138b8e1a6cc465c4cf9bb",
+      "bytes": 4139
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/server.json",
+      "sha256": "25cf0872c9a1606347fd9e958e2a209e515db68da695f9af9eb462412e5cb201",
+      "bytes": 228
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/session.json",
+      "sha256": "2a40686c3459f91a734f2d3b7582fcd596c2648abd7bf56f625d2cce02dbd716",
+      "bytes": 279
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/stdout.txt",
+      "sha256": "68c7a79cdd7c85d947e5cee7825214a9825808fafdf1301c03433c0cc9da43e4",
+      "bytes": 7496
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/test.pdi",
+      "sha256": "5b37b0553a6459b32859207d821c0d9dd3f31deb2e7b121a2548bffc1cc008cf",
+      "bytes": 1401120
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/uart.txt",
+      "sha256": "4be89b01606688429c57ede1dd7ee5700f5394c121ab324c8453d92d17607e11",
+      "bytes": 11353
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/vivado.log",
+      "sha256": "74d61de11de200c6843047f42e2382c525a137f84cbf0928dc70ba2c066952a0",
+      "bytes": 3802
+    },
+    {
+      "role": "hardware_capture_and_recovery",
+      "path": "sec35/boot/runs/20261025T133714820_combo/vivado_5632.backup.log",
+      "sha256": "6298f4a9a80a79332bfb4a093ff7ef1054e4cf51ee4bb447a3b7c7550f622856",
+      "bytes": 8223
+    },
+    {
+      "role": "executed_tutorial",
+      "path": "notebooks/boot/01_signed.ipynb",
+      "sha256": "11e4074e3b3ec68f4c6953c37215452afb04c4bfa994dd12db4cc8dfd974ed5d",
+      "bytes": 14448
+    },
+    {
+      "role": "executed_tutorial",
+      "path": "notebooks/boot/02_auth.ipynb",
+      "sha256": "9f218d08a0564a8a3ead3db509f026ed314d8634f728770e4ca21055ed459ac5",
+      "bytes": 13030
+    },
+    {
+      "role": "executed_tutorial",
+      "path": "notebooks/boot/03_rolling.ipynb",
+      "sha256": "94098fee45f74caff8dc27052619097a05a735f3ac98cec87bf8de1f218069f1",
+      "bytes": 61845
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/routed.dcp",
+      "sha256": "c45e380e46594f1157f387a0e0e3b9e2811a1e01ba64efd25572fd137201754d",
+      "bytes": 2888745
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/compare.xsa",
+      "sha256": "e8be823bd4886f8e1be7a74119f4ceabbe2eaea584a4bbc3a5e9fb7993cd2d6f",
+      "bytes": 519300
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/bench.elf",
+      "sha256": "239e7ba234cdfc360b27c56364afb620aebfa11d1de16c4ec00a2847138f3527",
+      "bytes": 390124
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/bench.c",
+      "sha256": "177b7629992e2c19aec891d727180fb421d93e67b6e347e9ce75a1c9df59546d",
+      "bytes": 75365
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/features.c",
+      "sha256": "1ed9c2f549339415e08ebc7334e5b8dfd546f30514115e4a0687c809a4f8915c",
+      "bytes": 4676
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/lscript.ld",
+      "sha256": "37df10b3762ae8fb856929924aad2133528ece30f8c93d10f42ecf44fd6e8ada",
+      "bytes": 5160
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/build_sw.py",
+      "sha256": "2529de930b83f65a24e0b01d2c21abbf6d0b321cad533feb3d31ec169286d2b8",
+      "bytes": 3626
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/build_meta.json",
+      "sha256": "379b5e3017d8c4bb7a1abdff2cffccd4b90f02b745419bd2a94d37a62ef512a3",
+      "bytes": 904
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/source_bindings.txt",
+      "sha256": "94b6629117d3e3cd554921435585d3e90071645c1dd3b370d553ed50ae636907",
+      "bytes": 20333
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/refresh_image.tcl",
+      "sha256": "f5710ff29a56e4a220b8122f656828bb13dd239c0482fb165f60b04591acc9d0",
+      "bytes": 1422
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/refresh2.log",
+      "sha256": "eaf047347d8b7beb920e07ee0729f90b6321592ca335212e3423b77f7786ea8f",
+      "bytes": 188122
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/timing.txt",
+      "sha256": "915aa5a950610924d228d3a5f74f86b4bf6e90fe747eef189f1e3b2dbb9b5052",
+      "bytes": 73205
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/drc.txt",
+      "sha256": "32cd57cd362c06605b14f83d669b069e5bc642b6d032744172c7fb1965186190",
+      "bytes": 1671
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/utilization.txt",
+      "sha256": "8a1ab36e468d4fc7b8d3bab394372a7a5b1898c834f81fec762276abbe8d1a6c",
+      "bytes": 13239
+    },
+    {
+      "role": "reused_pl_design_and_build_evidence",
+      "path": "sec35/compare/manifest.json",
+      "sha256": "ecd2af8b7606672227ca1edfc9e7200876472a21ac58f6af13e44699d3d9bdeb",
+      "bytes": 30128
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/authdev.bif",
+      "sha256": "f4f6cef72f94866a03d6b97dbbb66f7d52a31594d9b0068b97ccb33e347ce844",
+      "bytes": 526
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/authdev_build.log",
+      "sha256": "e85e325ebcdce2afe5f5f7f43c2b00fa4bd4f6e61fef83b908d6394ed04293d6",
+      "bytes": 386
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/badroll.pdi",
+      "sha256": "9dbed3f467b21ff6a66a77e31a633d5e5dddc5d53665122984e8fff8e146ff87",
+      "bytes": 1381712
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/badsig.pdi",
+      "sha256": "e6c061f360f909d00ec58e21885d5941f8aa2573f9285c59664444379d5aef44",
+      "bytes": 1379264
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/bench.elf",
+      "sha256": "239e7ba234cdfc360b27c56364afb620aebfa11d1de16c4ec00a2847138f3527",
+      "bytes": 390124
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/build.json",
+      "sha256": "633cbb0d6d0c640375c7d30abb2485c33ed1a300780ff0282c8f5ddcb699213d",
+      "bytes": 3516
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/combo.bif",
+      "sha256": "e62e18a06610aca890ef750d2cade50043ca0868d658676e6ccdd96e323245f3",
+      "bytes": 660
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/combo.pdi",
+      "sha256": "5b37b0553a6459b32859207d821c0d9dd3f31deb2e7b121a2548bffc1cc008cf",
+      "bytes": 1401120
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/combo_build.log",
+      "sha256": "f553c95590ccff309d6c1c65d18baa5d86e6f7a814116942819a0fa61d45bdc0",
+      "bytes": 1607
+    },
+    {
+      "role": "local_demo_aes_key_input_not_displayed",
+      "path": "sec35/boot/builds/20261025T132320653245/combo_pl.nky",
+      "sha256": "cc66ed1efd4d85af4d99fc49a92eb3939a205f9d4f5cf41c8e8e067bf9250291",
+      "bytes": 122
+    },
+    {
+      "role": "local_demo_aes_key_input_not_displayed",
+      "path": "sec35/boot/builds/20261025T132320653245/combo_plm.nky",
+      "sha256": "d0531154d3e83e70045a7cc8c57f0c359d7f716e1b18b451bf5114a1827ac6f8",
+      "bytes": 122
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/combo_read.log",
+      "sha256": "21d687becfd3f1ef5c55b715c24de93fbd6cd6720862d7de654465695b5c6785",
+      "bytes": 100353
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/design.rcdo",
+      "sha256": "e67cbcd69e74ef806650a7f841a8f9c5cb30af686c98ab57de6131c29f7c1685",
+      "bytes": 3318744
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/hss_ref.py",
+      "sha256": "4e2fe1c20b3f6cf25ec15dbd2f381b48bb568729763d96b547c89c7d2960f0ed",
+      "bytes": 6721
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/inspection.json",
+      "sha256": "61bf65b6709e93714229a821897f16aa61dcb442c999bc84839014cd130a06e7",
+      "bytes": 75880
+    },
+    {
+      "role": "local_demo_aes_key_input_not_displayed",
+      "path": "sec35/boot/builds/20261025T132320653245/pl.nky",
+      "sha256": "9a067adff90eaa5dad9425089384065e76ee336609867d80e370356f3ac6c8fd",
+      "bytes": 122
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/plain.bif",
+      "sha256": "15c8ddedff698c9a5f537fb1b0732ed4f8a98784755a4c2182370202c3b53324",
+      "bytes": 191
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/plain.pdi",
+      "sha256": "12fa0536cf8e8301b324972031c23959c6da82ca1301867d8b7b99cd12f64fce",
+      "bytes": 1359840
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/plain_read.log",
+      "sha256": "328aee2155e2737a178d4e680ba658280b3f634bfc341c88d85fd8f38f873518",
+      "bytes": 2875
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/plm.elf",
+      "sha256": "fcdd4370633f343466245b7f99893bed2e235e3c890bc98225f03ed6ac992c72",
+      "bytes": 2478888
+    },
+    {
+      "role": "local_demo_aes_key_input_not_displayed",
+      "path": "sec35/boot/builds/20261025T132320653245/plm.nky",
+      "sha256": "56f72e08a31843dd467787824aad0e27264829a90aecf78257da9e8ed05562fd",
+      "bytes": 122
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/rolling.bif",
+      "sha256": "0f425020f980faf23414b9fcce94c4791620e35ee3ccd52bd2c634e0cdeaf98e",
+      "bytes": 321
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/rolling.pdi",
+      "sha256": "72e17232bff8f957f0d608d50130266b35c9b8d483d59e952be91b30d80d1fb0",
+      "bytes": 1381712
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/rolling_build.log",
+      "sha256": "828b2b0e607e052a5d09f64595795ded2547c55259a60d38f9f85ed9177e04f1",
+      "bytes": 897
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/rolling_read.log",
+      "sha256": "320442c067b0957cf3e381cb1f467ea905bd39821ebb8d5273da19fb0f7117f0",
+      "bytes": 2875
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/signed.bif",
+      "sha256": "4e4fd76a739bd6be270eca1f957cf8316ee1a127e02cf07b6bd22d8e530b062b",
+      "bytes": 495
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/signed.pdi",
+      "sha256": "8ab7ac3f967cdab595930f955eade363ba72d5b46930c51394e7a1c72650da54",
+      "bytes": 1379264
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/signed_build.log",
+      "sha256": "8db1f40027bf3605d3c9ecf7dd2c0b20c9e1f35fe4af5b63726d98f32627c9b0",
+      "bytes": 827
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/signed_read.log",
+      "sha256": "b9363a9197db716cc9a59e68d1f1c28b19a0ba21ba3a4cec5a7e0fd3204da20b",
+      "bytes": 100353
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/signed_vendor_verify.log",
+      "sha256": "3c07bc44471d5b22c1251ceb18de1c41c945888cc9a6f25eda15bfa20bd136e3",
+      "bytes": 338
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/source_drc.txt",
+      "sha256": "32cd57cd362c06605b14f83d669b069e5bc642b6d032744172c7fb1965186190",
+      "bytes": 1671
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/source_manifest.json",
+      "sha256": "ecd2af8b7606672227ca1edfc9e7200876472a21ac58f6af13e44699d3d9bdeb",
+      "bytes": 30128
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/source_rebuild.tcl",
+      "sha256": "b5d40b9e28ace450936b9bf51cf04e7b348b2473ab0a5b65d2d96464eb2007d6",
+      "bytes": 1608
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/source_source_bindings.txt",
+      "sha256": "94b6629117d3e3cd554921435585d3e90071645c1dd3b370d553ed50ae636907",
+      "bytes": 20333
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/source_timing.txt",
+      "sha256": "915aa5a950610924d228d3a5f74f86b4bf6e90fe747eef189f1e3b2dbb9b5052",
+      "bytes": 73205
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/source_utilization.txt",
+      "sha256": "8a1ab36e468d4fc7b8d3bab394372a7a5b1898c834f81fec762276abbe8d1a6c",
+      "bytes": 13239
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/zero.bif",
+      "sha256": "169e84f5ba7cb740e0477c018a5c9f0e4a92fe08b16e892635ecbd4e884cfc0e",
+      "bytes": 331
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/zero.pdi",
+      "sha256": "b639388ff14226583268c3a9d62fec302daa74762ae289605cdfd76dffc02083",
+      "bytes": 1381712
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/zero_build.log",
+      "sha256": "828b2b0e607e052a5d09f64595795ded2547c55259a60d38f9f85ed9177e04f1",
+      "bytes": 897
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/zero_mask.bif",
+      "sha256": "7c16e281e10e05746605471775d0c0dea494a25ab56c08e623e9c83022e8f08a",
+      "bytes": 369
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/zero_mask.pdi",
+      "sha256": "76757c3bd688c79acb14e20e5ad48d2cb5e08fc91542ef4cab1d0734b794f957",
+      "bytes": 1381712
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/zero_mask_build.log",
+      "sha256": "751a964bd3df5e9c5dcbfc3811a43e7e1b3953cf06b6ee095aa510113aa78729",
+      "bytes": 1041
+    },
+    {
+      "role": "local_demo_aes_key_input_not_displayed",
+      "path": "sec35/boot/builds/20261025T132320653245/zero_mask_pl.nky",
+      "sha256": "621c8ef9d754744d1d7158e5feab0c4ea080bd90bf2a6f867022e9a3dc78d4ff",
+      "bytes": 122
+    },
+    {
+      "role": "local_demo_aes_key_input_not_displayed",
+      "path": "sec35/boot/builds/20261025T132320653245/zero_mask_plm.nky",
+      "sha256": "613b612b520242479794f07cf52c6b2078a394675403f2b4a8ec66a687bdd92f",
+      "bytes": 122
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/zero_mask_read.log",
+      "sha256": "f92d7ac071b4687eb47616fe155ea3841b061c14b03d07e515df74e231183b14",
+      "bytes": 2875
+    },
+    {
+      "role": "local_demo_aes_key_input_not_displayed",
+      "path": "sec35/boot/builds/20261025T132320653245/zero_pl.nky",
+      "sha256": "9a0c150737b0f28779ba215a69948236aad83a79353e2cd887d580a3661144a2",
+      "bytes": 122
+    },
+    {
+      "role": "local_demo_aes_key_input_not_displayed",
+      "path": "sec35/boot/builds/20261025T132320653245/zero_plm.nky",
+      "sha256": "60f57428218d2cbe383a50e654abf85c53b0dc90731ba98b577ea3c164274800",
+      "bytes": 122
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/zero_read.log",
+      "sha256": "8528067c303029a8fe30491e4fd155278190708c5f682e26cd5737b6ade4781b",
+      "bytes": 2875
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/design_src/base.ld",
+      "sha256": "543b9aaae6abc53bfd1e6d19007e858b935dbd2bb3eb0834dee74dc7f80bd5fd",
+      "bytes": 4860
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/design_src/cycles.v",
+      "sha256": "1b657ede6a9f7b7842bdb2b6289fca9a7a5439dc6e1a854bda5807ffbe878d48",
+      "bytes": 264
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/design_src/hss.c",
+      "sha256": "0f89799e117901653ed046880667e4c518a1ba7fc9e5f080a90346eabef50488",
+      "bytes": 64519
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/design_src/sec_top.v",
+      "sha256": "de8bb672337989842ab3ec3fe1490894fe8ef8202af9f41c36adc0cc89d82f52",
+      "bytes": 466
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/design_src/sec_top.xdc",
+      "sha256": "dc7ff2ca58d346db752f7de6ee692611d4bf0ce8e0822252f547376909a9b8a5",
+      "bytes": 538
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/design_src/sys.bd",
+      "sha256": "6de858f5367b1b10efe580018726e69915fa9dfbf00653835f29c7d066fcc7af",
+      "bytes": 29633
+    },
+    {
+      "role": "image_build_inputs_and_checks",
+      "path": "sec35/boot/builds/20261025T132320653245/__pycache__/hss_ref.cpython-311.pyc",
+      "sha256": "e0e2ebe1b9d75401b77511e526eff052c0794d7651e1b6e22a538420837e575a",
+      "bytes": 11823
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/.gitignore",
+      "sha256": "6e682f7082039a2755e10c8158e98c20260d051aa756acdadcff6d96b610754a",
+      "bytes": 46
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/build.py",
+      "sha256": "eed02bbe886019a728eadb6c786c8d293ebec428af805b1f18962f6a5328380b",
+      "bytes": 7317
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/build_badroll.py",
+      "sha256": "889e5414e7e216a1cd2712580aaf4eff0c6876d3779a8a4a8975825bafc36617",
+      "bytes": 1260
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/build_combo.py",
+      "sha256": "85de36d9e87d3bfe26bce176f83b9ccb4aac4612caa20cc66c0cd7e41dbfe1ee",
+      "bytes": 1358
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/build_zero.py",
+      "sha256": "532b88fc5a956b2742e8092167512ba697a5aaa898f01d1c598417256e225bcd",
+      "bytes": 1373
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/evidence.py",
+      "sha256": "f50a7076d7f855d9222ff6d691efd7c8b3245fe2a6320ca6f2be25bd9ff9121d",
+      "bytes": 3783
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/flow.svg",
+      "sha256": "c26e6c079b99317b829d37821947a96dfe1f8aa083e2652934a040ef1afdc6c2",
+      "bytes": 1433
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/hardware.json",
+      "sha256": "f3785ff8364b09aab2aaa56443ca8c1fdd9f45c12e4d6544bc3e99d31cfea4e8",
+      "bytes": 9428
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/image_checks.txt",
+      "sha256": "33ed114caec5dc8116451ec32b5c0b1d15a1e5cbbc51cc2e96dbd9dbfacfdd0e",
+      "bytes": 1148
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/latest_build.json",
+      "sha256": "c7edd042bcc30aa6b5bd38b6548b848237fb4e2a4a8361716fc73d99046d4145",
+      "bytes": 74
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/pdicheck.py",
+      "sha256": "e1b6193c4ca170da52c5536675fc45918050fe2f4eb6ca60de90a1065172b6a3",
+      "bytes": 9472
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/probe.tcl",
+      "sha256": "6dce00fe6fbfb502f1037dbfc8b2b11e6a91fd20970194814b4e01feb4b1d0a0",
+      "bytes": 1549
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/README.md",
+      "sha256": "f208ace3ac42efd079e3732d6cb83bdb973c4591258a38642ab892f0087de747",
+      "bytes": 6051
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/rebuild_pl.tcl",
+      "sha256": "66fc63764f5e40e8a3383614d7361a09f7609af2464d7644b1460cfb2d3eed06",
+      "bytes": 1820
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/report.html",
+      "sha256": "5e26d2013609160a0b89a479af4160d737d8b764155b4bb5714176379ed878eb",
+      "bytes": 3466
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/report.py",
+      "sha256": "097e39cbd3903f133ba4bdb9d8c2ad09f572bfd90c88e4f787f112fd82995aad",
+      "bytes": 7113
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/rolling.svg",
+      "sha256": "676d72afca0b64b09a190eae7ec4d1b6462a72ff928c5a60fe880790b15c7e3f",
+      "bytes": 1602
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/run.ps1",
+      "sha256": "9341b87a64ea37eb92bce32c6fc09d798afc3571cb421ed596cbf2f1f2e97f88",
+      "bytes": 4968
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/sizes.png",
+      "sha256": "9ce6c7204a58a74e9258848aa33def1b1834cf71e14d61026dc2cd82ccfebd51",
+      "bytes": 42433
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/sizes.svg",
+      "sha256": "084163ef6fd216b0c8b352128076b8e5a13ea4d6a60099f627c223239c146a53",
+      "bytes": 36075
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/tests.txt",
+      "sha256": "4d50d5f29f782b207f3e052f5609df1dedf1e2f50ad060cf96d7b79c5f4a1e60",
+      "bytes": 707
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/test_pdi.py",
+      "sha256": "627c64b4611b8494fda5eed12fc3531e1f993e3c388e4da071821c1bec39b087",
+      "bytes": 2252
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/tutorials.py",
+      "sha256": "59f0d7a56f6bde082177d0e2dd1fccfb23188ccc44c8d67194bc5ae1b8b76ce1",
+      "bytes": 17077
+    },
+    {
+      "role": "tutorial_tools_and_report",
+      "path": "sec35/boot/verify.py",
+      "sha256": "3e131fea2f3924832328f2ccf555796af331d09465c7d80b8329bea6a70151ca",
+      "bytes": 7298
+    }
+  ],
+  "checks": {
+    "image_crypto_and_payloads": {
+      "status": "pass",
+      "evidence": "sec35\\boot\\builds\\20261025T132320653245\\inspection.json",
+      "plm_rolling_payload_blocks": 7,
+      "pl_rolling_payload_blocks": 331
+    },
+    "positive_and_negative_tests": {
+      "status": "pass",
+      "evidence": "sec35/boot/tests.txt",
+      "tests": 6
+    },
+    "hardware_authentication": {
+      "status": "pass",
+      "evidence": "sec35/boot/hardware.json",
+      "valid_signed_loaded": true,
+      "one_bit_signature_change_rejected": true
+    },
+    "hardware_combined_rolling_image": {
+      "status": "pass",
+      "evidence": "C:\\aiup\\sec35\\boot\\runs\\20261025T133714820_combo",
+      "done": 1,
+      "error": 0,
+      "application_completed": true
+    },
+    "hardware_encrypted_tamper": {
+      "status": "pass",
+      "evidence": "C:\\aiup\\sec35\\boot\\runs\\20261025T133530340_badroll",
+      "first_error": "0x589",
+      "vendor_description": "not established"
+    },
+    "stock_recovery": {
+      "status": "pass",
+      "evidence": "sec35/boot/hardware.json",
+      "sessions": 7
+    },
+    "no_permanent_programming_commands": {
+      "status": "pass",
+      "evidence": "Captured probe.tcl / restore.tcl in each run",
+      "scope": "Command audit; does not claim independent before/after fuse readback"
+    },
+    "notebooks": {
+      "status": "pass",
+      "evidence": "notebooks/boot",
+      "executed_code_cells": 20,
+      "mode": "Replay of newly acquired real hardware captures; no extra hardware in notebook execution"
+    },
+    "reused_routed_design": {
+      "status": "pass",
+      "evidence": "sec35/compare/manifest.json",
+      "scope": "Unchanged routed PL payload; original source-bound timing/DRC retained. No fresh implementation required or claimed."
+    }
+  },
+  "limitations": [
+    "Development signature checking demonstrated; plain PDI also accepted. Owner-key pinning, revocation and permanent enforcement not established.",
+    "Encryption-only zero_mask reached DONE and completed the app but latched SSS_CFG_ERR (0x200000); combined signed/encrypted image was error-free. Cause not established.",
+    "Main AES root is public and all-zero; accepted existing eFUSE path, no secret-key confidentiality claim.",
+    "Bootgen -verify for LMS/HSS and explicit bh_auth_enable were rejected; retained logs distinguish tool limits.",
+    "Private HSS signing state stays local and is not included in the manifest or notebook output.",
+    "No production-security, side-channel, power-cycle boot-source, owner-key provisioning or permanent-enforcement qualification."
+  ]
+}

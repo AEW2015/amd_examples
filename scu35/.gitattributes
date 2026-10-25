@@ -1,0 +1,10 @@
+# Preserve exact evidence/source bytes across Windows and Linux checkouts.
+# The SHA-256 manifest must not depend on core.autocrlf.
+* -text
+* whitespace=cr-at-eol
+*.rcdo binary
+*.pdi binary
+*.elf binary
+*.xsa binary
+*.dcp binary
+*.pdf binary
