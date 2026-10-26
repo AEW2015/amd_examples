@@ -60,5 +60,13 @@ def main():
     # Public distribution must not contain private signing state or tool/venv caches.
     forbidden=[p for p in ROOT.rglob('*') if p.is_file() and not any(x in p.parts for x in ['out','.venv']) and p.suffix in ['.prv','.aux','.nky','.pem']]
     assert not forbidden,forbidden
+    ethernet=ROOT/'ethernet/evidence/run3'
+    if ethernet.exists():
+        sys.path.insert(0,str(ROOT/'ethernet'))
+        from verify_capture import verify as verify_ethernet
+        verify_ethernet(ethernet/'ethernet/results.json')
+        session=json.loads((ethernet/'session.json').read_text())
+        assert session['hardware_pass'] and session['recovery_pass']
+        assert sha(ROOT/'ethernet/reference/ethernet.pdi')==session['pdi_sha256']
     print(json.dumps({'overall':'PASS','sha256_files':len(paths),'runtime_rows':31,'hash_vectors':10,'aes_vectors':5,'native_bulk_batches':66,'native_pq_batches':24,'public_hss_signatures':'PASS','tampered_hss_rejected':True,'combo_rolling_blocks':len(roll_a)+len(roll_b),'decrypted_payloads_match':True,'hardware_operations':'NONE'},indent=2))
 if __name__=='__main__':main()

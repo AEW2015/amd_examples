@@ -1,5 +1,35 @@
 # Live crypto dashboard
 
+## Launch from the lab configuration
+
+Configure the parent `config.json` as for the PMC notebooks, then run from the
+`scu35` directory:
+
+```text
+python ethernet/launch.py test
+python ethernet/launch.py dashboard
+```
+
+The first command programs the Ethernet image, runs the physical packet suite,
+and verifies recovery. The second programs it again and keeps the live HTML
+dashboard and board reservation active. Open the localhost URL it prints.
+Use `--port 8045` if the default dashboard port is already occupied.
+
+The launcher uses `hardware_vivado`, `server`, `cable`, `serial_port`,
+`build_dir`, and the recovery image/hash from the shared lab configuration.
+The supplied `ethernet/reference/ethernet.pdi` is the default demo image;
+`ethernet_pdi` can select your fresh build. Optional configuration keys are
+`ethernet_bind`, `ethernet_board`, `ethernet_dashboard_port`,
+`ethernet_restore_pdi`, `ethernet_restore_sha256`, and
+`ethernet_restore_completion_marker` for the automated test's documented
+cleanup/retry procedure. Dashboard recovery recognizes the timer baseline's
+`CMP_DONE,0` marker. No host network settings are changed automatically.
+
+The [Ethernet notebook](demo.ipynb) can run the same program/test/recovery flow
+with `LIVE=True`, and contains saved live packet and fresh Python outputs.
+Restore/stop the dashboard before running that cell: the dashboard is the
+exclusive Ethernet client and owns the board while it is active.
+
 Run `dashboard.py` with the lab Python environment (`requirements.txt`, including pyserial and cryptography). It serves a self-contained page at **http://127.0.0.1:8035/**. No CDN, browser extension or JavaScript package installation is needed.
 
 The server **programs the selected volatile PDI and retains the hardware reservation while running**. Start it only for an authorized, exclusively available SCU35. Use a Vivado client matching your running hardware server. All tool, cable, UART, PDI, recovery and output paths are explicit:

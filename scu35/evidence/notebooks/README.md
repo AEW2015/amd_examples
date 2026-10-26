@@ -13,9 +13,10 @@ programming/recovery logs and, for runtime, raw UART and comparison data.
 public verifier. Its AES root is explicitly public all-zero diagnostic data.
 No private signing state, enrollment data, PUF keys or fuse writers are included.
 
-The separate `ethernet/demo.ipynb` was also executed and saved: it freshly
-verified its original dated physical Ethernet capture without programming the
-Ethernet design or claiming new network measurements.
+The separate `ethernet/demo.ipynb` now includes a later fresh physical-Ethernet
+execution: volatile programming, packet tests and benchmarks, fresh Python
+timings and verified recovery. Its evidence is in `ethernet/evidence/run3/`.
+Earlier dated Ethernet captures remain under their original run directories.
 
 Execution notes are in UTC; these sessions occurred on October 25, 2026 in the
 lab's America/Denver timezone. Restore success means the selected recovery PDI

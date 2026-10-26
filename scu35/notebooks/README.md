@@ -6,7 +6,9 @@ The run flags are restored to their portable disabled defaults after capture;
 that does not change the provenance of the saved outputs. Inspect
 `../evidence/notebooks/executions.json` for execution records and the archived
 UART/program/recovery evidence for the fresh sessions. The separate Ethernet
-notebook verifies its dated physical capture without switching to that design.
+notebook uses its own IPI image: `LIVE=True` programs it, runs physical packet
+tests, records fresh Python timings, and verifies recovery. Its saved fresh
+capture is under `ethernet/evidence/run3/`.
 
 Use a Python environment with `../requirements.txt` installed. Select that exact
 interpreter in the notebook kernel picker. Configuration is read from the lab's

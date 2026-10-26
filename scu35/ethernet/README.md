@@ -20,6 +20,13 @@ python build.py --tools D:/AMDDesignTools/2026.1 --out C:/aiup/e35
 
 ## Physical setup and payload test
 
+For a configured lab, use `python ethernet/launch.py test` from the parent
+`scu35` directory, or open [demo.ipynb](demo.ipynb) and enable `LIVE=True`.
+Both paths program the matching Ethernet PDI, run actual payload tests, capture
+results and verify recovery. To retain the design and open the live HTML
+dashboard instead, run `python ethernet/launch.py dashboard`; see
+[dashboard setup](DASHBOARD.md). No separate ELF download is required.
+
 - Direct Ethernet cable between the SCU35 RJ45 and host adapter.
 - Host adapter: `192.168.10.1/24`; SCU35: `192.168.10.2/24`, UDP port 6000.
 - Connect the SCU35 JTAG and USB UART; select the exact cable and matching hardware-server client.
