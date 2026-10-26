@@ -28,6 +28,24 @@ Windows PowerShell activation: `.venv\Scripts\Activate.ps1`. Linux bash activati
 
 ## Build the shared platform
 
+### Repeat hardware and Python measurements inside the notebooks
+
+Open [00_start.ipynb](notebooks/00_start.ipynb) for an overview or
+[10_hardware.ipynb](notebooks/10_hardware.ipynb) for the build/program workflow.
+After configuring `config.json`, set `LIVE = True` in a runtime notebook and run
+its cells. It programs the repository-generated IPI `demo.pdi`, streams UART
+timing rows into the notebook, checks the complete capture, measures Python
+again, and displays fresh comparison tables and plots. `bench.elf` is embedded
+in BRAM during image generation; no separate Vitis ELF download is needed.
+
+Each feature notebook can independently repeat the full suite and display its
+own feature group. `REPEATS` selects independent hardware/host runs. Session
+logs, raw UART, HTML/JSON reports and hashes are saved under
+`<build_dir>/runs/`. The configured recovery PDI is reloaded afterward.
+`LIVE = False` explicitly shows recorded hardware plus freshly measured Python;
+a failed live run never falls back to recorded results. See the
+[notebook guide](notebooks/README.md) for timing limits and special cases.
+
 Install **Vivado and Vitis 2026.1** with Spartan UltraScale+ / SU35P device support. Use an OS supported by **both** tools: see [AMD Vitis requirements](https://docs.amd.com/r/en-US/ug1742-vitis-release-notes/Installation-Requirements), [Vivado installation guide](https://docs.amd.com/r/en-US/ug973-vivado-release-notes-install-license), and [Linux prerequisite installation](https://docs.amd.com/r/en-US/ug1400-vitis-embedded/Installing-the-Vitis-Software-Platform). AMD licensing, packages and cable drivers are installed through AMD's normal installer. The target board runs bare-metal firmware; no Linux OS is installed on the SCU35.
 
 Copy `config.example.json` to **`config.json`** and set `tools` to the directory containing `Vivado/` and `Vitis/` and `build_dir` to a **fresh, short local directory**, such as `C:/s35` or `/tmp/s35`. The checkout location is discovered automatically. Paths can also be supplied through `AMD_TOOLS`, `SCU35_BUILD` and `SCU35_CONFIG`; there is no requirement for `C:/aiup` or a particular username/drive. For nonstandard installations, exact `vivado`, `vitis`, `bootgen`, `gcc`, `ar`, `readelf` and `objdump` paths or a `riscv_bin` directory may be set in the same JSON.
