@@ -20,6 +20,20 @@ python build.py --tools D:/AMDDesignTools/2026.1 --out C:/aiup/e35
 
 ## Physical setup and payload test
 
+The hosted Ethernet chapter includes an actual Vivado IPI image before the
+results, with [SVG](../docs/presenter/assets/ethernet_vivado.svg) and
+[PDF](../docs/presenter/assets/ethernet_vivado.pdf) exports for full-size viewing.
+To repeat this documentation-only export with Vivado 2026.1 in a GUI-capable
+session:
+
+```text
+vivado -mode batch -source ethernet/export_bd.tcl -tclargs /short/e35/prj/eth.xpr /short/e35/ethernet_vivado
+```
+
+The script opens the project read-only and does not save BD changes, synthesize,
+or program hardware. `evidence/ipi_export.json` binds the image exports to the
+delivered block-design snapshot.
+
 For a configured lab, use `python ethernet/launch.py test` from the parent
 `scu35` directory, or open [demo.ipynb](demo.ipynb) and enable `LIVE=True`.
 Both paths program the matching Ethernet PDI, run actual payload tests, capture

@@ -1,0 +1,10 @@
+{
+  "scope": "Read-only Vivado IP Integrator documentation export; no hardware access or saved BD edits",
+  "tool_version": "2026.1",
+  "source_bd": "ethernet/reference/sys_built.bd",
+  "source_bd_sha256": "947cdac32e8dd18b10152fe26c820b3e4d6b2284c6acc481cfb56cf5e818c925",
+  "files": {
+    "docs/presenter/assets/ethernet_vivado.svg": "2e19235bf07ecf7e49c81051bbb5d34f4eb23b3b67f8ba111d025cda9ce533f6",
+    "docs/presenter/assets/ethernet_vivado.pdf": "b0cdcc1be40006ce2c560f171a9343fb1eee18d1b4fd5944879e9477b90cb3bd"
+  }
+}

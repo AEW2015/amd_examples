@@ -24,7 +24,11 @@ def static(site):
  chapter_count=len(expected.select('.chapter'))
  assert len(soup.select('.chapter'))==len(soup.select('[data-complete]'))==chapter_count
  assert soup.select_one('#ethernet') and soup.select_one('#tab-ethernet')
- assert len(soup.select('#ethernet img[src^="data:"]'))==3
+ assert len(soup.select('#ethernet img[src^="data:"]'))==len(expected.select('#ethernet img'))
+ assert soup.select_one('#ethernet-ipi-export img[src^="data:"]')
+ ethernet=soup.select_one('#ethernet')
+ descendants=list(ethernet.descendants)
+ assert descendants.index(ethernet.select_one('#ethernet-system-explanation'))<descendants.index(ethernet.select_one('#ethernet-results'))
  assert not soup.select('.lesson-box,.lesson-check')
  notebooks=soup.select_one('#notebooks')
  assert notebooks is not None and soup.select_one('#tab-notebooks')
