@@ -59,6 +59,11 @@ The build is deliberately ordered **IPI → XSA → Vitis platform/BSP → appli
 
 For manual practice, the same stages can be run separately:
 
+When importing AMD SHA or LMS/HSS examples into a manually built Vitis
+platform, follow the [shared-memory checks](docs/hardware.md#vendor-sha-and-lmshss-shared-memory).
+Both the application inputs and DMA-read library scratch must be accessible to
+the PMC; CPU-local BRAM alone does not satisfy that requirement.
+
 ```text
 python lab.py build --phase hardware
 python lab.py build --phase platform

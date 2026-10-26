@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-26",
+  "scope": "Separate manually created SCU35 2026.1 XSA/platform; not the repository reference image.",
+  "toolchain": "Vivado/Vitis 2026.1 build; 2025.2 hardware client/server",
+  "change": "Move xsecure_lms_core.c.obj .bss/.sbss scratch into shared .data; expand owned shared region to 16 KiB at 0x0402C000. Vendor C and BSP libraries unchanged.",
+  "before": "No LMS/HSS success output during the bounded debugger run; internal scratch was in local BRAM.",
+  "after": {
+    "lms": "PASS",
+    "hss": "PASS",
+    "recovery": "DONE=1 ERROR=0",
+    "shared_data_end": "0x0402FA34"
+  },
+  "input_sha256": {
+    "before_elf": "2edab6f88cf7d69b70c56ec562754db7b8ce4669abd80a861e59fd4b4e758eef",
+    "fixed_elf": "e8a5a191d03aeb33fd1c49e9505ae8113b91d7330a87f466a7ca7b2c0872a4e2",
+    "vendor_example_c": "0f89799e117901653ed046880667e4c518a1ba7fc9e5f080a90346eabef50488",
+    "platform_xsa": "f155b4730d6ed4092ee42401926474fa531edb2ed812979dc30065081189b7b5",
+    "programmed_pdi": "88c2b3358b4f80791b1ff33c28f87cd9446d4b55fe96e22bba2c3a568c4cb6c0",
+    "platform_plm": "fcdd4370633f343466245b7f99893bed2e235e3c890bc98225f03ed6ac992c72"
+  },
+  "files": {
+    "before.ld": "58b6363f625bcede69150ea48a9b0427114cd03a02dcbb94710fe45932f42f75",
+    "fixed.ld": "861b56172c85c384fa9e196885854e69f548102e1e9733173513ae3c503b7988",
+    "program.log": "741bbf0f13389900e29a49c58fa448e1919259538c281b35e8b556705bf0a931",
+    "restore.log": "db8e30b1f03c74448411a74ec741dc365089f4f43228c2b3d524f33c8d6c0b14",
+    "uart.txt": "b08501d988c0aa7248240a39c8b6992a2f627364c5776000acd05ba8223309d8"
+  },
+  "limitations": [
+    "Manual XSA/PDI/ELF not distributed in this small diagnostic capture; hashes identify the tested inputs.",
+    "No new performance or negative-signature qualification claim.",
+    "Separate manual SHA linker correction was built/inspected only; no new SHA hardware test in this session."
+  ]
+}

@@ -29,6 +29,13 @@ and verifies recovery. The second programs it again and keeps the live HTML
 dashboard and board reservation active. Open the localhost URL it prints.
 Use `--port 8045` if the default dashboard port is already occupied.
 
+Before starting, close/disconnect the terminal using the configured UART.
+The dashboard opens that port exclusively before programming. An access-denied
+serial error means startup did not reach FPGA programming. Do not close the
+whole IDE or change ports blindly; disconnect its serial console and retry.
+Use the URL printed by the new launch, since an older tab may show a stopped
+session on another port.
+
 The launcher uses `hardware_vivado`, `server`, `cable`, `serial_port`,
 `build_dir`, and the recovery image/hash from the shared lab configuration.
 The supplied `ethernet/reference/ethernet.pdi` is the default demo image;
@@ -37,7 +44,9 @@ The supplied `ethernet/reference/ethernet.pdi` is the default demo image;
 `ethernet_restore_pdi`, `ethernet_restore_sha256`, and
 `ethernet_restore_completion_marker` for the automated test's documented
 cleanup/retry procedure. Dashboard recovery recognizes the timer baseline's
-`CMP_DONE,0` marker. No host network settings are changed automatically.
+`CMP_DONE,0` marker. Prefer the explicitly selected quiet, known-good recovery
+image used in the successful v2 repeat; the earlier timer-image transition
+failure remains unresolved. No host network settings are changed automatically.
 
 The [Ethernet notebook](demo.ipynb) can run the same program/test/recovery flow
 with `LIVE=True`, and contains saved live packet and fresh Python outputs.
@@ -53,6 +62,14 @@ python ethernet/dashboard.py --vivado <matching-vivado> --pdi <ethernet.pdi> --r
 ```
 
 Keep that process running and open the printed URL. With a foreground process, Ctrl+C requests recovery before shutdown. In the browser, **Restore board & stop traffic** restores the supplied known-good PDI, requires clean DONE/error status and releases the reservation; the HTTP page remains available. A forced process kill or power loss cannot execute cleanup: inspect the retained lock/logs and recover explicitly before reuse. The supplied timer reference is a lab runtime image, not the owner's original factory image.
+
+To stop the demo, use **Restore board & stop traffic** and wait for the verified
+recovery message. Traffic stops before recovery. Closing the browser tab does
+not stop the Python service. The HTTP page can remain open in the restored
+state; terminate that specific dashboard process only after recovery if the
+server itself should close. Leave the shared hardware server and other boards
+alone. If JTAG reports no devices, check board power/cable connectivity and
+preserve the failed log and reservation; do not claim restoration succeeded.
 
 Live controls:
 
@@ -88,4 +105,4 @@ The experimental first 300-packet transport probe measured 15.5 Mb/s plain echo 
 
 `measurements.jsonl`, `uart.txt` and programming/recovery logs are saved under `--out`. Preserve failed logs and any reservation if recovery fails. The build still has four reviewed, unwaived CDC-11 critical warnings; functional success is not production CDC or network-security qualification.
 
-Validated locally on Windows with the real SCU35 Ethernet link: all five mode buttons, payload changes, four-second pause/resume, actual bad-tag/replay rejection, desktop/mobile layouts and a complete restore/restart cycle. Cross-OS server portability has not been hardware-tested.
+Validated locally on Windows with the real SCU35 Ethernet link: all seven mode buttons, live LMS/HSS cases, payload changes, pause/resume, actual bad-tag/replay rejection, desktop/mobile layouts and a complete restore/restart cycle. Cross-OS server portability has not been hardware-tested.
