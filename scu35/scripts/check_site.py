@@ -26,6 +26,11 @@ def static(site):
  assert soup.select_one('#ethernet') and soup.select_one('#tab-ethernet')
  assert len(soup.select('#ethernet img[src^="data:"]'))==3
  assert not soup.select('.lesson-box,.lesson-check')
+ notebooks=soup.select_one('#notebooks')
+ assert notebooks is not None and soup.select_one('#tab-notebooks')
+ notebook_links=notebooks.select('a[href$=".ipynb"]')
+ assert len(notebook_links)==len(list((ROOT/'notebooks').glob('*.ipynb')))+1
+ assert all(a['href'].startswith('https://github.com/AEW2015/amd_examples/blob/scu35-pmc-lab/scu35/') for a in notebook_links)
  assert 'Check your understanding' not in soup.get_text()
  assert 'Learning goal' not in soup.get_text()
  image_count=len(expected.select('img[src]'))

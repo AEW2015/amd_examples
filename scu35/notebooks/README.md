@@ -1,5 +1,13 @@
 # Repeatable notebook runs
 
+The committed notebooks include real saved cell outputs. Each execution note
+identifies fresh hardware, recorded hardware, and freshly executed host checks.
+The run flags are restored to their portable disabled defaults after capture;
+that does not change the provenance of the saved outputs. Inspect
+`../evidence/notebooks/executions.json` for execution records and the archived
+UART/program/recovery evidence for the fresh sessions. The separate Ethernet
+notebook verifies its dated physical capture without switching to that design.
+
 Use a Python environment with `../requirements.txt` installed. Select that exact
 interpreter in the notebook kernel picker. Configuration is read from the lab's
 local, ignored `config.json` or `SCU35_CONFIG`.

@@ -1,0 +1,58 @@
+{
+  "signed": {
+    "header": {
+      "key_source": 0,
+      "plm_offset": 19120,
+      "pl_load": 4060086272,
+      "pl_bytes": 1327536,
+      "pl_encoded": 1332720,
+      "plm_bytes": 26048,
+      "plm_encoded": 26144,
+      "attributes": 786432
+    },
+    "ppk_sha256": "6861e5df0680eae6630b529463e0829e99e1a9f48d24674f5f5614feee3730d4",
+    "spk_sha256": "b6ea08c1c27f68e75df768b7eb8a19188cc3e0c1f7c083d8588c8fc46dcab303",
+    "spk_signature_valid": true,
+    "hash_block_signature_valid": true,
+    "boot_header_hash_valid": true,
+    "signature_bytes": 8980,
+    "signature_offset": 10128,
+    "hash_block_offset": 9984,
+    "plm_sha256": "bdafedd897fe86e0f078cf76339baaa0f18826292efc04736c5b08ec9f464498",
+    "pl_sha256": "d7a33ea02987eb16953bc1a9ea1e060c4d90114c57d22f98db3ea127da0ef77a",
+    "plm_bytes": 26048,
+    "pl_bytes": 1327536,
+    "chain_chunks": 167
+  },
+  "combo": {
+    "header": {
+      "key_source": 2781070755,
+      "plm_offset": 19120,
+      "pl_load": 4060086272,
+      "pl_bytes": 1327536,
+      "pl_encoded": 1354064,
+      "plm_bytes": 26048,
+      "plm_encoded": 26656,
+      "attributes": 789504
+    },
+    "ppk_sha256": "6861e5df0680eae6630b529463e0829e99e1a9f48d24674f5f5614feee3730d4",
+    "spk_sha256": "b6ea08c1c27f68e75df768b7eb8a19188cc3e0c1f7c083d8588c8fc46dcab303",
+    "spk_signature_valid": true,
+    "hash_block_signature_valid": true,
+    "boot_header_hash_valid": true,
+    "signature_bytes": 8980,
+    "signature_offset": 10128,
+    "hash_block_offset": 9984,
+    "plm_sha256": "f128638615f758d89778527a9537dc84eb201e1fe09204f9658a2ad7ae31a48e",
+    "pl_sha256": "c31d738cd1c8b4824334c739bf1b28e89e415f8935c4e00cd7d51ef1d85aa12c",
+    "plm_bytes": 26560,
+    "pl_bytes": 1348784,
+    "chain_chunks": 170
+  },
+  "tampered_signature_rejected": true,
+  "rolling_plm_blocks": 7,
+  "rolling_pl_blocks": 331,
+  "plaintext_matches": true,
+  "hardware_tested": false,
+  "scope": "Public-zero diagnostic root; no device writes, no secrecy or production trust-policy claim. Never roll back signing state."
+}

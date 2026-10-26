@@ -1,0 +1,5 @@
+{
+  "root_key_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+  "initial_iv_hex": "4cd440e224ee5db2f26777d2",
+  "scope": "Public-zero diagnostic root; no private signing state or device key exported."
+}

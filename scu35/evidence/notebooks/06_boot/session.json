@@ -1,0 +1,9 @@
+{
+  "pdi_sha256": "eb5f33bec492625a3c03c200645a79761397aa1aa087f7f542d8420f46cccf00",
+  "restore_sha256": "3edbbaa0eb1373812d032b7090620949e969706c3c6e9e9f3b40a8466abd0020",
+  "mode": "boot",
+  "server": "localhost:3121",
+  "cable": "52041A454A5PA",
+  "demo_pass": true,
+  "recovery_pass": true
+}

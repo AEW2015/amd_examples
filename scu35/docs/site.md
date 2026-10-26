@@ -9,6 +9,13 @@ Both views contain recorded hardware evidence. The browser never programs the bo
 
 Chapter 18, **Complete example: Ethernet crypto** (`#ethernet`), brings the IPI design, MicroBlaze V firmware, reference PDI/ELF/XSA, notebook, local dashboard, measured packet results and reproduction commands together. Its screenshots and LMS/HSS plots are recorded evidence. The live dashboard runs locally with a connected SCU35; Pages does not host a board connection. The AXI Ethernet/AXI DMA architecture is described as a separate unbuilt follow-on.
 
+Chapter 19, **Notebook walkthroughs** (`#notebooks`), explains each of the 11 PMC
+notebooks plus the separate Ethernet notebook and links directly to the files on
+the source branch. It describes live flags, embedded firmware, saved-output
+provenance, repeat measurements and timing limits. Published notebooks retain
+executed outputs with an execution note; hardware defaults stay disabled for
+the next visitor. The site links to these saved results and never runs a kernel.
+
 To regenerate from this directory with the documented Python environment:
 
 ```text

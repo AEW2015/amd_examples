@@ -1,0 +1,167 @@
+[
+  {
+    "notebook": "01_sha.ipynb",
+    "started_utc": "2026-10-26T03:30:48.843353+00:00",
+    "completed_utc": "2026-10-26T03:31:38.448813+00:00",
+    "mode": "fresh hardware + fresh Python",
+    "hardware_enabled_during_execution": true,
+    "portable_defaults_restored": true,
+    "evidence_directory": "evidence/notebooks/01_sha",
+    "files": {
+      "uart.txt": "d9c83122a680c97f5f24dcf3d221de5c863599c05fb05c30f0d3bc9a728096eb",
+      "session.json": "13216a6b9a59a53f252e9268f4cb9022eb22df0d0570aa70b73e334153cc5500",
+      "program.log": "f23db6effde72bea57914f7ff7df0e349870e651e5889a5bcb798aa01ee7bfad",
+      "restore.log": "9a1fc187618c6394ea20e37d185366b4d8cb1452929754150cf2c49597eca38d",
+      "comparison.json": "b8ab999e7732f8450c431a5c1c4ddf0b81eddb444b25d15559baff610fd8b58c",
+      "notebook_report.json": "6e58d3952e7df40236def7344467d6d5334e70193d5fe158509d65f7eea24fef"
+    },
+    "notebook_sha256": "f29365fba952b60541257040eddac081a5bb4cc567df197de54385d8b500d050"
+  },
+  {
+    "notebook": "02_aes.ipynb",
+    "started_utc": "2026-10-26T03:31:38.462246+00:00",
+    "completed_utc": "2026-10-26T03:32:28.682365+00:00",
+    "mode": "fresh hardware + fresh Python",
+    "hardware_enabled_during_execution": true,
+    "portable_defaults_restored": true,
+    "evidence_directory": "evidence/notebooks/02_aes",
+    "files": {
+      "uart.txt": "62a7bb38c34c9e1ac23520c86eb7568aeca47213804dc4b7ed8d7f7670b65c0f",
+      "session.json": "13216a6b9a59a53f252e9268f4cb9022eb22df0d0570aa70b73e334153cc5500",
+      "program.log": "1fed62472c087648e2fca46ded6721321c754e3df8c2ca6bfd98977e084efaf2",
+      "restore.log": "7becdd2d268341caac52c76be120dfac1424faad0f508901509c0439cee00b02",
+      "comparison.json": "9f74e7ce53285603cc0c73112a672b57f76daa5f12f4e47794f30b1f3ec9908c",
+      "notebook_report.json": "7744e05ac96405cee52c786473df4b3c4cb769dc83c10d9b2f93e7a4e6ae8351"
+    },
+    "notebook_sha256": "cf042e2e6e11d84c32c1f38e3f3c9b692c61762b84649ce6d986d12d34856a06"
+  },
+  {
+    "notebook": "03_pq.ipynb",
+    "started_utc": "2026-10-26T03:32:28.696516+00:00",
+    "completed_utc": "2026-10-26T03:33:18.602984+00:00",
+    "mode": "fresh hardware + fresh Python",
+    "hardware_enabled_during_execution": true,
+    "portable_defaults_restored": true,
+    "evidence_directory": "evidence/notebooks/03_pq",
+    "files": {
+      "uart.txt": "7f8c8654e16a5eb97564defa0e6a425d57b9d78dd85908e4486a3a3ce4f3ff1b",
+      "session.json": "13216a6b9a59a53f252e9268f4cb9022eb22df0d0570aa70b73e334153cc5500",
+      "program.log": "a40fb9c9b9332fd5699b573f05e5b726f33f5ec3cb91259653ee55f4971562ca",
+      "restore.log": "ea2fbf795696348f5e8f492d3a5ecced6d67ab3212c952e912b86b465e062032",
+      "comparison.json": "09b882cf4e1f5402642628459a993de2074055a0d81300608f27a90b28aba5cb",
+      "notebook_report.json": "5252ad94faf4eb2e338252ce09be6de2dd0534e1840e7a952d17b19b25cf6f20"
+    },
+    "notebook_sha256": "67b38d131f0abff08afa74d7be2e7ab364bad40a07e5d15fa01bf13609e3667f"
+  },
+  {
+    "notebook": "04_puf.ipynb",
+    "started_utc": "2026-10-26T03:33:18.616519+00:00",
+    "completed_utc": "2026-10-26T03:34:08.337470+00:00",
+    "mode": "fresh hardware + fresh Python",
+    "hardware_enabled_during_execution": true,
+    "portable_defaults_restored": true,
+    "evidence_directory": "evidence/notebooks/04_puf",
+    "files": {
+      "uart.txt": "02caf456049f80d77ae624adde6f9adc0342fe577100bd4fefd4afd03cc0d33d",
+      "session.json": "13216a6b9a59a53f252e9268f4cb9022eb22df0d0570aa70b73e334153cc5500",
+      "program.log": "e05bbebe0af6b2a55c2e1b4f7fd5c2a60f82f6f79533c9727c15d2d740f3fe27",
+      "restore.log": "b99927c04dfff11f60011217e56b29ac3f74e3e4a331b563cb00b37c28dbaab3",
+      "comparison.json": "2305c0574da2d387214d8c38a05b536bd49ae249896bef03d23f7b4c2792a6ac",
+      "notebook_report.json": "2a9ed39ea596191ef551f6090d672b2c88c7ebd91273bba55b600eb934ad2f0e"
+    },
+    "notebook_sha256": "92a47b9f60b8ab23df125cd776fdea490d5885f90f9c4b5c53c6c3287fbe0928"
+  },
+  {
+    "notebook": "05_rng.ipynb",
+    "started_utc": "2026-10-26T03:34:08.351480+00:00",
+    "completed_utc": "2026-10-26T03:34:58.130190+00:00",
+    "mode": "fresh hardware + fresh Python",
+    "hardware_enabled_during_execution": true,
+    "portable_defaults_restored": true,
+    "evidence_directory": "evidence/notebooks/05_rng",
+    "files": {
+      "uart.txt": "a0bb8ec9d002f13bc82933537542895a60127bc6dcdb9255a0b5fdebe1429c58",
+      "session.json": "13216a6b9a59a53f252e9268f4cb9022eb22df0d0570aa70b73e334153cc5500",
+      "program.log": "542a572ab306ecd8a383fc404d636b8bc3e0879d309e8cbd3d987070f9db7c67",
+      "restore.log": "bdb0a98031991a062028a631dfcbb3b6db7cd352d621deab2784825fbc455a2d",
+      "comparison.json": "a732d190f03e8bc4c592bec97f046891117a1e2f75d33d602f75574a16c24d77",
+      "notebook_report.json": "8e7e3e4d4f7b4994b35e3eeece812f01d3b1f55529d628c0bd1857e344ff6146"
+    },
+    "notebook_sha256": "bbac7a3f817753005ea04d6c73ebed4806b4b916932c7baf3cfc806e280cfd5a"
+  },
+  {
+    "notebook": "08_highspeed.ipynb",
+    "started_utc": "2026-10-26T03:34:58.142295+00:00",
+    "completed_utc": "2026-10-26T03:35:48.411449+00:00",
+    "mode": "fresh hardware + fresh Python",
+    "hardware_enabled_during_execution": true,
+    "portable_defaults_restored": true,
+    "evidence_directory": "evidence/notebooks/08_highspeed",
+    "files": {
+      "uart.txt": "d9bdbdd2785e7a61f26777973d46028d8f49b947f6b420d9ad264f90f306eee1",
+      "session.json": "13216a6b9a59a53f252e9268f4cb9022eb22df0d0570aa70b73e334153cc5500",
+      "program.log": "c70e2f39a9892c45f5084f152467661dc27dbb596e81da42aa10e9dd15576cff",
+      "restore.log": "e2d5ac637d08ab69b0f40036b039b6c294fe052cad58b5b621e9cd246471a631",
+      "comparison.json": "59526c70c57dce7fbca6830be81da7ff1352e21510ed8b05b04a77d89963e651",
+      "notebook_report.json": "63120b11f11a244921e7c17c5e2cb2909145ec06167b2d7eb134c29663b2e686"
+    },
+    "notebook_sha256": "701630c94c2f62a172c7a0ac25bd76facedf3743858a53ac223ffd55c494e6b8"
+  },
+  {
+    "notebook": "06_boot.ipynb",
+    "started_utc": "2026-10-26T03:35:48.427452+00:00",
+    "completed_utc": "2026-10-26T03:36:33.781712+00:00",
+    "mode": "fresh hardware + fresh Python",
+    "hardware_enabled_during_execution": true,
+    "portable_defaults_restored": true,
+    "evidence_directory": "evidence/notebooks/06_boot",
+    "files": {
+      "session.json": "7bb70745d34816104b1fa24fd09074b665e11acda31b85158891a9c4b30286d8",
+      "program.log": "84608567232fbe5a614c304060c7f3e388908469a296e59f78641518af54dc32",
+      "restore.log": "28cf00634d76b120c2361ed22724b7e753d72c3b3a540d2bfbf5625c5d3518fa"
+    },
+    "notebook_sha256": "19bb5b2838799647a8d5c92e2b2b8612fdf388a173279d587dfde1cdc6712b86"
+  },
+  {
+    "notebook": "07_efuse_rolling.ipynb",
+    "started_utc": "2026-10-26T03:36:33.787711+00:00",
+    "completed_utc": "2026-10-26T03:37:18.829028+00:00",
+    "mode": "fresh hardware + fresh Python",
+    "hardware_enabled_during_execution": true,
+    "portable_defaults_restored": true,
+    "evidence_directory": "evidence/notebooks/07_efuse_rolling",
+    "files": {
+      "session.json": "6a6d6211624216fe53e2cf3b9950ea8da956891f784fd370c81e5615efff2e02",
+      "program.log": "b4879cb61943fe691115647a9a40e52b14c77f7faccb7b6025fd04a995cc40a8",
+      "restore.log": "435d391ff5a68599e8a2e07d059eae7c15870673e42db4c868d76394ce09a376"
+    },
+    "notebook_sha256": "fd3466ea28a8ce3d24b6e5a084038a2d1d6174615c04a9c8b0903919775bd78f"
+  },
+  {
+    "notebook": "09_pdi.ipynb",
+    "started_utc": "2026-10-26T03:37:18.834029+00:00",
+    "completed_utc": "2026-10-26T03:37:24.712181+00:00",
+    "mode": "fresh file inspection / Python; recorded board evidence",
+    "hardware_enabled_during_execution": false,
+    "portable_defaults_restored": true,
+    "notebook_sha256": "60e938b33f8d3ffc471926f2cfdc5e71f9eb4bf6e52705f271b1d8e2c643a680"
+  },
+  {
+    "notebook": "00_start.ipynb",
+    "started_utc": "2026-10-26T03:37:24.728178+00:00",
+    "completed_utc": "2026-10-26T03:37:29.157910+00:00",
+    "mode": "fresh file inspection / Python; recorded board evidence",
+    "hardware_enabled_during_execution": false,
+    "portable_defaults_restored": true,
+    "notebook_sha256": "47415114968fbe21911c9b3f10020798f51fffdde6c7e48ad0f8748599ba9fde"
+  },
+  {
+    "notebook": "10_hardware.ipynb",
+    "started_utc": "2026-10-26T03:37:29.166038+00:00",
+    "completed_utc": "2026-10-26T03:37:34.813710+00:00",
+    "mode": "fresh file inspection / Python; recorded board evidence",
+    "hardware_enabled_during_execution": false,
+    "portable_defaults_restored": true,
+    "notebook_sha256": "c0ca9defc79b7d4d781d34fb292527309400e9e8acbdd17b646adda06e6c8dc3"
+  }
+]

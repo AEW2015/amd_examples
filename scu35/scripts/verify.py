@@ -25,6 +25,21 @@ def main():
     import analyze
     native=analyze.validate(ROOT/'evidence/native/results.txt')
     assert len(native['rows'])==66 and len(native['pq_rows'])==24
+    executions=ROOT/'evidence/notebooks/executions.json'
+    if executions.exists():
+        import nbformat
+        for item in json.loads(executions.read_text()):
+            notebook=ROOT/'notebooks'/item['notebook']
+            assert sha(notebook)==item['notebook_sha256'],notebook
+            nb=nbformat.read(notebook,as_version=4);nbformat.validate(nb)
+            outputs=[o for cell in nb.cells for o in cell.get('outputs',[])]
+            assert outputs and not any(o.output_type=='error' for o in outputs),notebook
+            if item.get('evidence_directory'):
+                folder=ROOT/item['evidence_directory']
+                for name,expected in item['files'].items():assert sha(folder/name)==expected,(folder,name)
+                session=json.loads((folder/'session.json').read_text())
+                assert session['demo_pass'] and session['recovery_pass'],folder
+                if session['mode']=='runtime':assert len(parse_capture(folder/'uart.txt','7d1bf77bc454dd1f')['rows'])==31
     sys.path.insert(0,str(ROOT/'scripts'))
     from pdi import verify_signed,header,parts,decrypt_chain
     s,_=verify_signed((ROOT/'reference/boot/signed.pdi').read_bytes(),ROOT/'evidence/boot/bundle')
