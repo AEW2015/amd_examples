@@ -8,3 +8,71 @@
 
 .main-column{display:flex;flex-direction:column;gap:20px;align-self:start}.workspace{align-items:start}.main-column .bottom-grid{margin-top:0}.proofs article{min-height:105px}.diagram-methods{display:flex;gap:8px;flex-wrap:wrap;margin:5px 0 15px}.diagram-methods button{font-size:11px}.diagram-methods button.selected{border-color:var(--cyan);color:var(--cyan);background:#173e49}.diagram-methods [data-op="7"],.diagram-methods [data-op="8"]{border-color:#597447;color:var(--lime)}
 .route:not(.active){marker-end:url(#arrow-dim);marker-start:none}.system-panel.running .route.active{stroke-dasharray:9 5;animation:flow-dash 1.5s linear infinite}@keyframes flow-dash{to{stroke-dashoffset:-28}}
+.screen-controls{display:none}
+/* Full-HD presentation: use the viewport for the diagram and live result,
+   rather than stacking both beneath a decorative hero and large controls. */
+@media(min-width:1280px){
+ body.screen-mode{overflow:hidden}
+ .screen-mode main{max-width:none;height:100dvh;padding:10px 20px;display:grid;grid-template-columns:minmax(0,1.8fr) minmax(440px,1fr);grid-template-rows:48px 26px 88px minmax(0,1fr) 30px;grid-template-areas:"header header" "status status" "metrics metrics" "diagram live" "footer footer";gap:8px 12px}
+ .screen-mode header{grid-area:header;height:auto;min-height:0;border-bottom:1px solid var(--line)}
+ .screen-mode .logo{font-size:16px;padding:4px 7px}.screen-mode .brand{gap:12px;font-size:12px}.screen-mode .brand small{font-size:8px;margin-top:1px}.screen-mode .header-right{gap:12px}
+ .screen-mode .hero,.screen-mode .details{display:none}
+ .screen-mode .status-strip{grid-area:status;padding:3px 10px;font-size:9px}
+ .screen-mode .metrics{grid-area:metrics;margin:0;gap:12px;min-height:0}
+ .screen-mode .metrics article{padding:7px 12px}
+ .screen-mode .metrics article>strong{font-size:28px;line-height:1.1;margin:3px 0}
+ .screen-mode .metrics article>strong small{font-size:12px}
+ .screen-mode .metrics article>div{font-size:10px;line-height:1.25}
+ .screen-mode .metrics .tiny{font-size:9px}.screen-mode .metrics .metric-note{font-size:9px;line-height:1.2}
+ .screen-mode .system-panel{grid-area:diagram;min-width:0;min-height:0;margin:0;padding:12px;overflow:hidden;display:flex;flex-direction:column;gap:6px}
+ .screen-mode .system-panel .panel-title{margin:0;min-height:23px}
+ .screen-mode .system-panel h2{font-size:16px}
+ .screen-mode .diagram-methods{margin:0;gap:5px;flex-shrink:0}
+ .screen-mode .diagram-methods button{font-size:11px;padding:6px 8px}
+ .screen-mode .screen-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:11px;flex-shrink:0}
+ .screen-controls label{display:flex;align-items:center;gap:5px;color:var(--muted)}
+ .screen-controls select,.screen-controls button{font-size:11px;padding:4px 8px}
+ .screen-mode .system-panel #system-diagram{flex:1;min-height:0;width:100%;height:100%}
+ .screen-mode .block-title{font-size:14px}.screen-mode .block-detail{font-size:10px}
+ .screen-mode .diagram-legend{gap:12px;font-size:10px;flex-shrink:0}
+ .screen-mode #block-explainer{margin:0;min-height:34px;padding:7px 9px;font-size:11px;line-height:1.4;flex-shrink:0}
+ .screen-mode .method-steps{margin:0;gap:6px;flex-shrink:0}
+ .screen-mode .method-steps li{font-size:10px;line-height:1.35;padding:7px}
+ .screen-mode .method-steps li:before{font-size:15px;margin-bottom:2px}
+ .screen-mode #path-detail{margin:0;font-size:9px;line-height:1.3;flex-shrink:0}
+ .screen-mode .workspace{grid-area:live;display:block;min-width:0;min-height:0;margin:0;height:100%;overflow:hidden}
+ .screen-mode .control-panel{display:none}
+ .screen-mode .main-column{height:100%;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(180px,.8fr) 78px minmax(0,1fr);gap:8px;min-width:0;min-height:0}
+ .screen-mode.pq-view .main-column{display:grid;grid-template-rows:minmax(0,1fr) 163px 78px;gap:8px}
+ .screen-mode .main-column .panel{padding:12px;min-width:0;min-height:0}
+ .screen-mode .panel-title{margin-bottom:8px}.screen-mode .panel-title h2{font-size:15px}
+ .screen-mode .chart-panel{overflow:hidden;display:flex;flex-direction:column}
+ .screen-mode .chart-panel .panel-title{flex-wrap:wrap;gap:3px}
+ .screen-mode .legend{font-size:9px}
+ .screen-mode .chart-panel canvas{height:100%!important;min-height:0;flex:1;width:100%}
+ .screen-mode .chart-foot{font-size:8px;margin-top:3px}
+ .screen-mode .proofs{gap:6px;min-height:0}
+ .screen-mode .proofs article{min-height:0;padding:8px}
+ .screen-mode .proofs .tiny{font-size:8px;letter-spacing:0}
+ .screen-mode .proofs strong{font-size:16px;margin:4px 0 2px}
+ .screen-mode .proofs small{font-size:9px;line-height:1.2;display:block}
+ .screen-mode .main-column .bottom-grid{display:grid;min-height:0;gap:8px;grid-template-columns:1fr 1fr;margin:0}
+ .screen-mode .bottom-grid>.panel{overflow:auto}
+ .screen-mode .bottom-grid .hex-row{margin-top:7px}.screen-mode .hex-row code{font-size:10px}
+ .screen-mode.pq-view .bottom-grid{display:none}
+ .screen-mode #post-quantum{margin:0;overflow:auto}
+ .screen-mode #post-quantum .panel-title{flex-wrap:wrap;gap:4px}
+ .screen-mode #post-quantum .tag{font-size:8px;padding:3px 5px}
+ .screen-mode .pq-cases{margin:6px 0;gap:4px}
+ .screen-mode .pq-cases button{padding:5px;font-size:10px}
+ .screen-mode #pq-description{font-size:11px;line-height:1.35;margin:6px 0}
+ .screen-mode .pq-outcome{gap:10px}.screen-mode .pq-outcome .tiny{font-size:9px}
+ .screen-mode .pq-outcome strong{font-size:23px;margin-top:3px}.screen-mode .pq-outcome small{font-size:10px}
+ .screen-mode #pq-upload,.screen-mode #pq-progress-totals{font-size:10px;line-height:1.35;margin:6px 0}
+ .screen-mode #post-quantum h3{font-size:12px;margin:7px 0 4px}
+ .screen-mode #pq-progress-chart text{font-size:14px}
+ .screen-mode #post-quantum>.pq-scope:last-child{display:none}
+ .screen-mode footer{grid-area:footer;padding:0;font-size:9px;gap:12px;min-height:0}
+ .screen-mode footer button{font-size:10px;padding:5px 8px}
+ .screen-mode #recovery{max-width:500px}
+}

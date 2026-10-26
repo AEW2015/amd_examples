@@ -1,5 +1,19 @@
 # Live crypto dashboard
 
+## 1080p presentation layout
+
+Desktop windows default to a viewport-sized presentation: diagram and method
+controls on the left, live result and plots on the right, with metrics and the
+recovery button always visible. It was checked at 1920×1080, 1920×940, 1600×900
+and 1366×768 without page scrolling. Full screen uses the entire display.
+
+Use **Detailed view** in the header to return to the longer packet/log and
+explanation layout. The choice is remembered in that browser. Small windows
+and mobile automatically use the scrolling layout. Presentation mode has its
+own payload, pace, pause and tamper-test controls; PQ displays its fixed
+56-byte message size. Completed-work plots show measured counter/work deltas
+within the recent window, while the text retains all-session totals.
+
 ## Launch from the lab configuration
 
 Configure the parent `config.json` as for the PMC notebooks, then run from the

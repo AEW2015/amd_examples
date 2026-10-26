@@ -1,0 +1,42 @@
+{
+  "overall": "PASS",
+  "viewport_checks": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "pageWidth": 1920,
+      "pageHeight": 1080,
+      "footerBottom": 1070,
+      "diagramBottom": 1032
+    },
+    {
+      "width": 1920,
+      "height": 940,
+      "pageWidth": 1920,
+      "pageHeight": 940,
+      "footerBottom": 930,
+      "diagramBottom": 892
+    },
+    {
+      "width": 1600,
+      "height": 900,
+      "pageWidth": 1600,
+      "pageHeight": 900,
+      "footerBottom": 890,
+      "diagramBottom": 852
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "pageWidth": 1366,
+      "pageHeight": 768,
+      "footerBottom": 758,
+      "diagramBottom": 720
+    }
+  ],
+  "detail_toggle_and_persistence": "PASS",
+  "compact_controls": "PASS",
+  "mobile": "PASS",
+  "js_errors": [],
+  "scope": "Frontend layout only; no FPGA programming or firmware/timing changes. Graph uses actual counter/work deltas in the recent window."
+}

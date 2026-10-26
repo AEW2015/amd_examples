@@ -41,17 +41,17 @@
     {
       "role": "web",
       "path": "web/index.html",
-      "sha256": "5772fdf4b2e0e2df8dcee64024423f943f2485ee9db130c825f22d9750e8d9a4"
+      "sha256": "0cbe0328700ade4c3eb4f16d7cb7c7c0b5d6bf98d340c5aebb7faf66b13129df"
     },
     {
       "role": "web",
       "path": "web/app.js",
-      "sha256": "6f9a6110e74c7e93c343d9e64da46fb844b78fb67c938b17488687410fae27aa"
+      "sha256": "e0c04a7011ae9607f664238d6790063a7964aef8a9318f9d1485ddf8681b9a52"
     },
     {
       "role": "web",
       "path": "web/style.css",
-      "sha256": "6cd97bdcb0fe1011691f10e10bb3ccbac04bfeac5b88c4743d5b98df97ad2069"
+      "sha256": "c8c284b267398ac4b63f64235ca32eb5d8accae9a0205c9c284629a5af50b0f6"
     },
     {
       "role": "reference",
@@ -147,6 +147,11 @@
       "role": "hardware_evidence",
       "path": "evidence/run4/ethernet/results.json",
       "sha256": "2c0139a0e96be2bf57257778572bccbf9a87ba613e6241e1455eb866c4daeccd"
+    },
+    {
+      "role": "ui_evidence",
+      "path": "evidence/layout_1080p.json",
+      "sha256": "998bee3964780a2edcb79441d254f1bd24a8a9be69f4f3bdc68ecf515fabd6d6"
     }
   ],
   "checks": {
@@ -211,6 +216,11 @@
       "status": "pass",
       "evidence": "evidence/run4/dashboard_check.json",
       "scope": "Seven live modes, eight signature cases, block highlights, progress plots, desktop/mobile, no JS errors"
+    },
+    "layout_1080p": {
+      "status": "pass",
+      "evidence": "evidence/layout_1080p.json",
+      "scope": "Viewport layout, controls and mobile; firmware unchanged"
     }
   }
 }

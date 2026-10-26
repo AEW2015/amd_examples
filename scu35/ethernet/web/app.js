@@ -1,6 +1,20 @@
 'use strict';
 const $=id=>document.getElementById(id);
 let status=null,token='',busy=false,lastCount=-1;
+let presentation=true;
+try{presentation=localStorage.getItem('scu35:screen-layout')!=='detail';}catch{}
+function layout(){
+ const enabled=presentation&&window.innerWidth>=1280;
+ document.body.classList.toggle('screen-mode',enabled);
+ $('layout-toggle').textContent=enabled?'Detailed view':'Presentation view';
+ $('layout-toggle').setAttribute('aria-pressed',String(enabled));
+ if(status)render(status);
+}
+$('layout-toggle').onclick=()=>{
+ presentation=!document.body.classList.contains('screen-mode');
+ try{localStorage.setItem('scu35:screen-layout',presentation?'screen':'detail');}catch{}
+ layout();
+};
 const fmt=(n,d=1)=>Number(n||0).toLocaleString(undefined,{maximumFractionDigits:d,minimumFractionDigits:d});
 const hex=value=>(value||'').match(/.{1,2}/g)?.join(' ')||'—';
 async function control(data){
@@ -17,6 +31,10 @@ $('pace').onchange=event=>control({pace:event.target.value});
 $('size').onchange=event=>control({size:Number(event.target.value)});
 $('pause').onclick=()=>control({running:!status?.config.running});
 $('checks').onclick=()=>control({check:true});
+$('screen-size').onchange=event=>control({size:Number(event.target.value)});
+$('screen-pace').onchange=event=>control({pace:event.target.value});
+$('screen-pause').onclick=()=>control({running:!status?.config.running});
+$('screen-checks').onclick=()=>control({check:true});
 $('restore').onclick=()=>{if(confirm('Stop traffic and restore the configured recovery image?'))control({restore:true});};
 $('fullscreen').onclick=()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
 
@@ -75,13 +93,18 @@ function path(s){
 }
 
 function pqProgress(rows){
- const points=rows.filter(row=>row.pq_completed!==null&&row.pq_completed!==undefined);
- if(!points.length){$('pq-progress-chart').innerHTML='<text x="30" y="60">Waiting for live verification checkpoints…</text>';return;}
- const W=780,H=285,L=60,R=20,T=25,B=45;
+ const samples=rows.filter(row=>row.pq_completed!==null&&row.pq_completed!==undefined);
+ if(!samples.length){$('pq-progress-chart').innerHTML='<text x="30" y="60">Waiting for live verification checkpoints…</text>';return;}
+ const first=samples[0];
+ const points=samples.map(row=>({...row,pq_completed:row.pq_completed-first.pq_completed,
+  pq_device_work_us:row.pq_device_work_us-first.pq_device_work_us,
+  pq_python_work_us:row.pq_python_work_us-first.pq_python_work_us}));
+ const W=780,H=document.body.classList.contains('screen-mode')?225:285,L=60,R=20,T=25,B=45;
+ $('pq-progress-chart').setAttribute('viewBox',`0 0 ${W} ${H}`);
  const xmax=Math.max(1,...points.map(p=>p.pq_device_work_us/1000),...points.map(p=>p.pq_python_work_us/1000))*1.08;
  const ymax=Math.max(1,...points.map(p=>p.pq_completed))*1.1;
  const X=x=>L+x/xmax*(W-L-R),Y=y=>H-B-y/ymax*(H-T-B);
- let svg='<title>Live completed verifications versus cumulative measured API work</title>';
+ let svg='<title>Live completed verifications versus measured API work in the recent window</title>';
  for(let i=0;i<=4;i++){
   const y=ymax*i/4,x=xmax*i/4;
   svg+=`<path d="M${L} ${Y(y)}H${W-R}" stroke="#2b3b49"/><text x="${L-8}" y="${Y(y)+4}" text-anchor="end">${Math.round(y)}</text><text x="${X(x)}" y="${H-B+20}" text-anchor="middle">${x.toFixed(0)}</text>`;
@@ -90,7 +113,7 @@ function pqProgress(rows){
   svg+=`<polyline points="${points.map(p=>`${X(p[key]/1000)},${Y(p.pq_completed)}`).join(' ')}" fill="none" stroke="${color}" stroke-width="2.5"/>`;
   for(const p of points)svg+=`<circle cx="${X(p[key]/1000)}" cy="${Y(p.pq_completed)}" r="3" fill="${color}"><title>${label}: ${p.pq_completed} completed, ${(p[key]/1000).toFixed(2)} ms measured work</title></circle>`;
  }
- svg+='<text x="60" y="15">Completed verifications · cyan SCU35 / green Python</text><text x="390" y="280" text-anchor="middle">Cumulative measured verification work (ms); transport and gaps excluded</text>';
+ svg+=`<text x="60" y="15">Recent completions · cyan SCU35 / green Python</text><text x="390" y="${H-5}" text-anchor="middle">Measured verification work in this window (ms); transport excluded</text>`;
  $('pq-progress-chart').innerHTML=svg;
 }
 
@@ -108,6 +131,10 @@ function render(s){
  $('errors').textContent=s.errors?`${s.errors} session error(s)`:'No failed payload / decision comparisons';
  $('load').style.width=Math.min(100,s.payload_Bps/12500000*100)+'%';
  $('pause').textContent=paused?'Resume traffic':'Pause traffic';$('size').value=s.config.size;$('size').disabled=pq||!live;
+ $('screen-size').value=pq?56:s.config.size;$('screen-size').disabled=pq||!live;
+ $('screen-size').title=pq?'PQ profile uses a fixed 56-byte message':'Payload bytes';
+ $('screen-pace').value=s.config.pace;$('screen-pace').disabled=!live;
+ $('screen-pause').textContent=paused?'Resume':'Pause';$('screen-pause').disabled=!live;$('screen-checks').disabled=!live;
  $('pace').value=s.config.pace;$('traffic-label').textContent=pq?'· 56-byte signed message; upload separate':s.config.pace==='throughput'?'· single flight / 64-packet batches':'· paced presentation traffic';
  document.querySelectorAll('[data-op]').forEach(button=>{button.classList.toggle('selected',Number(button.dataset.op)===s.config.op);button.disabled=!live||(Number(button.dataset.op)>=7&&!s.capabilities?.lms_hss);});
  document.body.classList.toggle('pq-view',pq);$('post-quantum').hidden=!pq;
@@ -133,7 +160,8 @@ function render(s){
  }
 }
 async function poll(){if(busy)return;busy=true;try{const response=await fetch('/api/status',{cache:'no-store'});if(!response.ok)throw Error('Status unavailable');render(await response.json());}catch(error){$('connection').textContent='SERVER OFFLINE';$('phase').textContent=error.message;}finally{busy=false;}}
-window.addEventListener('resize',()=>status&&render(status));
+window.addEventListener('resize',layout);
+layout();
 poll();setInterval(poll,600);
 
 function chart(rows){const canvas=$('chart'),rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;canvas.width=rect.width*dpr;canvas.height=rect.height*dpr;const c=canvas.getContext('2d');c.scale(dpr,dpr);const w=rect.width,h=rect.height,l=48,r=12,t=10,b=22;let max=Math.max(100,...rows.map(x=>Math.max(x.rtt_us,x.device_us)))*1.15;for(let i=0;i<4;i++){const y=t+(h-t-b)*i/3;c.strokeStyle='#263545';c.lineWidth=1;c.beginPath();c.moveTo(l,y);c.lineTo(w-r,y);c.stroke();c.fillStyle='#8da2b5';c.font='10px Consolas, monospace';c.fillText(Math.round(max*(1-i/3)).toLocaleString(),0,y+3);}if(rows.length<2){c.fillText('Waiting for live samples…',l+25,h/2);return;}for(const [key,color]of[['rtt_us','#51dbed'],['device_us','#c5ef7b']]){c.beginPath();rows.forEach((v,i)=>{const x=l+(w-l-r)*i/Math.max(rows.length-1,1),y=t+(h-t-b)*(1-v[key]/max);i?c.lineTo(x,y):c.moveTo(x,y);});c.strokeStyle=color;c.lineWidth=2;c.stroke();}c.fillStyle='#8da2b5';c.fillText(new Date(rows[0].time*1000).toLocaleTimeString(),l,h-2);c.fillText('NOW',w-35,h-2);const values=rows.slice(-30).map(x=>x.rtt_us),hi=Math.max(...values,1),lo=Math.min(...values);$('spark').setAttribute('d',values.map((v,i)=>`${i?'L':'M'}${i*200/Math.max(values.length-1,1)} ${32-(v-lo)/Math.max(hi-lo,1)*28}`).join(''));}
