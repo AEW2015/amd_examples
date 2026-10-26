@@ -1,0 +1,145 @@
+
+****** Xilinx Vitis Development Environment
+****** Vitis v2026.1 (64-bit)
+****** SW Build 6511674 on 2026-06-16-13:14:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Vitis Server started on port '52683'.
+Platform plat creation started.
+Platform creation finished successfully.
+Initiating build for the plat component.
+The log will be written to the file: C:\aiup\epq\vsw\plat\logs\mb_build.log
+[INFO]: Building BSP
+-- Configuring done (0.7s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/aiup/epq/vsw/plat/mb/mb/bsp/libsrc/build_configs/gen_bsp
+[0/1] Re-running CMake...
+[1/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testcache.c.obj
+[2/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testio.c.obj
+[3/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testmem.c.obj
+[4/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_mem.c.obj
+[5/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xplatform_info.c.obj
+[6/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/print.c.obj
+[7/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/write.c.obj
+[8/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/read.c.obj
+[9/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_printf.c.obj
+[10/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/fcntl.c.obj
+[11/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_util.c.obj
+[12/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/inbyte.c.obj
+[13/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/errno.c.obj
+[14/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_sutil.c.obj
+[15/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/_exit.c.obj
+[16/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/_sbrk.c.obj
+[17/104] ========== BSP Build Information ==========
+
+Compiler PATH: D:/AMDDesignTools/2026.1/Vitis/gnu/riscv/nt/bin/riscv64-unknown-elf-gcc.exe
+
+Compiler FLAGS:   -march=rv32i_zicsr_zifencei -mabi=ilp32 -DSDT  -MMD -MP  -specs=C:/aiup/epq/vsw/pl
+at/mb/mb/bsp/Xilinx.spec -IC:/aiup/epq/vsw/plat/mb/mb/bsp/include  -O2 -g -ffunction-sections -fdata
+-sections -Wall -Wextra -fno-tree-loop-distribute-patterns -DNDEBUG
+
+===========================================
+** The above flags are BSP level flags. Increase verbosity to see component specific flags **
+===========================================
+[18/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/fstat.c.obj
+[19/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/close.c.obj
+[20/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_interrupt_handler.c.obj
+[21/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/_open.c.obj
+[22/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/boot.S.obj
+[23/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_disable_interrupts.S.obj
+[24/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_enable_interrupts.S.obj
+[25/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_scrub.S.obj
+[26/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/putnum.c.obj
+[27/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/xil_exception.c.obj
+[28/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/outbyte.c.obj
+[29/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xpm_init.c.obj
+[30/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_assert.c.obj
+[31/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj
+[32/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_flush_dcache_range.S.obj
+[33/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_flush_dcache.S.obj
+[34/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_invalidate_icache_range.S.obj
+[35/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/trap_handler.S.obj
+[36/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_flush_icache.S.obj
+[37/104] Building C object libsrc/bram/src/CMakeFiles/bram.dir/xbram_sinit.c.obj
+[38/104] Building C object libsrc/bram/src/CMakeFiles/bram.dir/xbram.c.obj
+[39/104] Building C object libsrc/csudma/src/CMakeFiles/csudma.dir/xcsudma_g.c.obj
+[40/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_invalidate_dcache.S.obj
+[41/104] Building C object libsrc/bram/src/CMakeFiles/bram.dir/xbram_g.c.obj
+[42/104] Building C object libsrc/emaclite/src/CMakeFiles/emaclite.dir/xemaclite_g.c.obj
+[43/104] Building C object libsrc/csudma/src/CMakeFiles/csudma.dir/xcsudma_selftest.c.obj
+[44/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_invalidate_icache.S.obj
+[45/104] Building C object libsrc/csudma/src/CMakeFiles/csudma.dir/xcsudma_sinit.c.obj
+[46/104] Building C object libsrc/bram/src/CMakeFiles/bram.dir/xbram_intr.c.obj
+[47/104] Building C object libsrc/csudma/src/CMakeFiles/csudma.dir/xcsudma_intr.c.obj
+[48/104] Building C object libsrc/csudma/src/CMakeFiles/csudma.dir/xcsudma.c.obj
+[49/104] Building C object libsrc/bram/src/CMakeFiles/bram.dir/xbram_selftest.c.obj
+[50/104] Building C object libsrc/emaclite/src/CMakeFiles/emaclite.dir/xemaclite.c.obj
+[51/104] Building C object libsrc/emaclite/src/CMakeFiles/emaclite.dir/xemaclite_selftest.c.obj
+[52/104] Building C object libsrc/emaclite/src/CMakeFiles/emaclite.dir/xemaclite_l.c.obj
+[53/104] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xmicroblaze_riscv_g.c.obj
+C:/aiup/epq/vsw/plat/mb/mb/bsp/libsrc/standalone/src/xmicroblaze_riscv_g.c:25:17: warning: excess elements in struct initializer
+   25 |                 0x3fffffff,  /* i-cache-highaddr */
+      |                 ^~~~~~~~~~
+C:/aiup/epq/vsw/plat/mb/mb/bsp/libsrc/standalone/src/xmicroblaze_riscv_g.c:25:17: note: (near initialization for 'XMicroblaze_RISCV_ConfigTable[0]')
+C:/aiup/epq/vsw/plat/mb/mb/bsp/libsrc/standalone/src/xmicroblaze_riscv_g.c:26:17: warning: excess elements in struct initializer
+   26 |                 0x0  /* reg */
+      |                 ^~~
+C:/aiup/epq/vsw/plat/mb/mb/bsp/libsrc/standalone/src/xmicroblaze_riscv_g.c:26:17: note: (near initialization for 'XMicroblaze_RISCV_ConfigTable[0]')
+[54/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_invalidate_dcache_range.S.obj
+[55/104] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/riscv/riscv_flush_icache_range.S.obj
+[56/104] Building C object libsrc/ospipsv/src/CMakeFiles/ospipsv.dir/xospipsv.c.obj
+[57/104] Building C object libsrc/ospipsv/src/CMakeFiles/ospipsv.dir/xospipsv_g.c.obj
+[58/104] Building C object libsrc/ospipsv/src/CMakeFiles/ospipsv.dir/xospipsv_options.c.obj
+[59/104] Building C object libsrc/ospipsv/src/CMakeFiles/ospipsv.dir/xospipsv_sinit.c.obj
+[60/104] Building C object libsrc/ospipsv/src/CMakeFiles/ospipsv.dir/xospipsv_control.c.obj
+[61/104] Building C object libsrc/ospipsv/src/CMakeFiles/ospipsv.dir/xospipsv_hw.c.obj
+[62/104] Building C object libsrc/ospipsv/src/CMakeFiles/ospipsv.dir/xospipsv_xfer.c.obj
+[63/104] Building C object libsrc/tmrctr/src/CMakeFiles/tmrctr.dir/xtmrctr.c.obj
+[64/104] Building C object libsrc/tmrctr/src/CMakeFiles/tmrctr.dir/xtmrctr_intr.c.obj
+[65/104] Building C object libsrc/tmrctr/src/CMakeFiles/tmrctr.dir/xtmrctr_l.c.obj
+[66/104] Building C object libsrc/tmrctr/src/CMakeFiles/tmrctr.dir/xtmrctr_options.c.obj
+[67/104] Linking C static library libsrc\csudma\src\libcsudma.a
+[68/104] Linking C static library libsrc\bram\src\libbram.a
+[69/104] Building C object libsrc/tmrctr/src/CMakeFiles/tmrctr.dir/xtmrctr_sinit.c.obj
+[70/104] Building C object libsrc/emaclite/src/CMakeFiles/emaclite.dir/xemaclite_sinit.c.obj[INFO]: Copying headers and built archives
+[INFO]: Successfully built BSP. Generated libtrngpsx.a, libxil.a, libxilsecure.a, libxilstandalone.a, libxiltimer.a
+
+[71/104] Building C object libsrc/emaclite/src/CMakeFiles/emaclite.dir/xemaclite_intr.c.obj
+[72/104] Building C object libsrc/trngpsx/src/CMakeFiles/trngpsx.dir/xtrngpsx.c.obj
+[73/104] Building C object libsrc/trngpsx/src/CMakeFiles/trngpsx.dir/xtrngpsx_g.c.obj
+[74/104] Linking C static library libsrc\standalone\src\libxilstandalone.a
+[75/104] Building C object libsrc/trngpsx/src/CMakeFiles/trngpsx.dir/xtrngpsx_sinit.c.obj
+[76/104] Building C object libsrc/trngpsx/src/CMakeFiles/trngpsx.dir/xtrngpsx_tests.c.obj
+[77/104] Building C object libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite.c.obj
+[78/104] Building C object libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_g.c.obj
+[79/104] Building C object libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_intr.c.obj
+[80/104] Building C object libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_l.c.obj
+[81/104] Linking C static library libsrc\ospipsv\src\libospipsv.a
+[82/104] Building C object libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_selftest.c.obj
+[83/104] Building C object libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_sinit.c.obj
+[84/104] Building C object libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_stats.c.obj
+[85/104] Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_riscv_sleep.c.obj
+[86/104] Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj
+[87/104] Building C object libsrc/xilsecure/src/CMakeFiles/xilsecure.dir/server/core/aes/xsecure_aes.c.obj
+[88/104] Building C object libsrc/xilsecure/src/CMakeFiles/xilsecure.dir/server/core/sha/sha_pmxc/xsecure_sha.c.obj
+[89/104] Building C object libsrc/xilsecure/src/CMakeFiles/xilsecure.dir/server/core/lms_hss/xsecure_lms.c.obj
+[90/104] Building C object libsrc/tmrctr/src/CMakeFiles/tmrctr.dir/xtmrctr_g.c.obj
+[91/104] Building C object libsrc/tmrctr/src/CMakeFiles/tmrctr.dir/xtmrctr_stats.c.obj
+[92/104] Linking C static library libsrc\emaclite\src\libemaclite.a
+[93/104] Linking C static library libsrc\trngpsx\src\libtrngpsx.a
+[94/104] Linking C static library libsrc\uartlite\src\libuartlite.a
+[95/104] Linking C static library libsrc\xiltimer\src\libxiltimer.a
+[96/104] Building C object libsrc/xilsecure/src/CMakeFiles/xilsecure.dir/server/core/lms_hss/xsecure_lms_ots.c.obj
+[97/104] Building C object libsrc/xilsecure/src/CMakeFiles/xilsecure.dir/server/spartanup/xsecure_utils.c.obj
+[98/104] Building C object libsrc/xilsecure/src/CMakeFiles/xilsecure.dir/server/spartanup/xsecure_sss.c.obj
+[99/104] Building C object libsrc/tmrctr/src/CMakeFiles/tmrctr.dir/xtmrctr_selftest.c.obj
+[100/104] Building C object libsrc/xilsecure/src/CMakeFiles/xilsecure.dir/server/spartanup/xsecure_plat.c.obj
+[101/104] Building C object libsrc/xilsecure/src/CMakeFiles/xilsecure.dir/server/core/lms_hss/xsecure_lms_core.c.obj
+[102/104] Linking C static library libsrc\tmrctr\src\libtmrctr.a
+[103/104] Linking C static library libsrc\xilsecure\src\libxilsecure.a
+[104/104] Archiving C static library libsrc/build_configs/gen_bsp/libxil.a
+Generating Export directory
+Platform Build Finished successfully.
+ETH_PLATFORM_PASS
+Shutting down Vitis server running on port '52683'

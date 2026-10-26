@@ -1,0 +1,73 @@
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 22:37:03 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source {C:\aiup\amdpub\scu35\ethernet\..\hw\program.tcl}
+# lassign $argv server cable pdi expected
+# if {![regexp {^[A-Za-z0-9]+$} $cable]} {error "Invalid exact cable serial"}
+# try {
+#  open_hw_manager
+#  connect_hw_server -url $server
+#  set targets [get_hw_targets -quiet */Xilinx/$cable]
+#  if {[llength $targets]!=1} {error "Exact SCU35 cable unavailable"}
+#  current_hw_target [lindex $targets 0]
+#  open_hw_target
+#  set devices [get_hw_devices -quiet]
+#  if {[llength $devices]!=1} {error "Expected one device on the selected cable"}
+#  set dev [lindex $devices 0]
+#  if {[get_property PART $dev] ne "xcsu35p" || [string tolower [get_property IDCODE_HEX $dev]] ne "04e80093"} {error "SCU35 target mismatch"}
+#  set_property PROGRAM.FILE [file normalize $pdi] $dev
+#  set programmed [catch {program_hw_devices $dev} message]
+#  refresh_hw_device $dev
+#  set done [get_property {REGISTER.JTAG_STATUS.BIT[34]_DONE} $dev]
+#  set errors [get_property REGISTER.ERROR_STATUS $dev]
+#  puts "DEVICE_STATUS DONE=$done ERROR=$errors"
+#  if {$expected eq "reject"} {
+#   if {$done!=0 || [scan $errors %x]==0} {error "Expected a rejected configuration"}
+#  } else {
+#   if {$programmed || $done!=1 || [scan $errors %x]!=0} {error "Configuration failed: $message"}
+#  }
+#  puts "PROGRAM_CHECK_PASS"
+# } finally {
+#  catch {close_hw_target};catch {disconnect_hw_server};catch {close_hw_manager}
+# }
+open_hw_manager: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 607.383 ; gain = 224.559
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2025.2.0
+  ****** Build date   : Nov 13 2025-16:16:52
+    **** Build number : 2025.2.1763075812
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 611.312 ; gain = 3.930
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/52041A454A5PA
+INFO: [Labtools 27-3439] Successfully programmed PDI file: C:/aiup/amdpub/scu35/reference/timer/compare.pdi.
+INFO: [Labtools 27-3477] DONE bit: HIGH
+INFO: [Labtools 27-1434] Device xcsu35p (JTAG device index = 0) is programmed with a design that has no supported soft debug core(s) in it.
+DEVICE_STATUS DONE=1 ERROR=0x000000000200000
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Xilinx/52041A454A5PA
+Configuration failed: 
+    while executing
+"error "Configuration failed: $message""
+    invoked from within
+"if {$programmed || $done!=1 || [scan $errors %x]!=0} {error "Configuration failed: $message"}"
+    invoked from within
+"if {$expected eq "reject"} {
+  if {$done!=0 || [scan $errors %x]==0} {error "Expected a rejected configuration"}
+ } else {
+  if {$programmed || $done!..."
+    ("try" body line 18)
+    (file "C:\aiup\amdpub\scu35\ethernet\..\hw\program.tcl" line 18)
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 22:37:23 2026...

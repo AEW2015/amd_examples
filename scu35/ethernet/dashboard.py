@@ -7,9 +7,10 @@ import argparse, hashlib, json, os, re, secrets, signal, statistics, subprocess,
 import serial
 from host import Client
 from stream import batch
+from pq import Verifier
 
 ROOT = Path(__file__).resolve().parent
-MODES = {3: 'Plain UDP echo', 1: 'AES-GCM encrypted response', 2: 'AES-GCM authenticated round trip', 5: 'SHA3-256 + encrypted digest', 6: 'SHAKE-256 + encrypted digest'}
+MODES = {3: 'Plain UDP echo', 1: 'AES-GCM encrypted response', 2: 'AES-GCM authenticated round trip', 5: 'SHA3-256 + encrypted digest', 6: 'SHAKE-256 + encrypted digest', 7: 'LMS-SHAKE256 live verification', 8: 'HSS-SHAKE256 live verification'}
 
 class NonceTracker:
  """Bounded check for this firmware's fixed boot prefix + increasing counter."""
@@ -21,9 +22,10 @@ class NonceTracker:
 class Dashboard:
  def __init__(self, a):
   self.a=a; self.guard=threading.Lock(); self.stop=threading.Event(); self.uart_stop=threading.Event(); self.ready=threading.Event(); self.recovered=threading.Event()
-  self.config={'op':2,'size':1024,'running':True,'pace':'throughput'}; self.events=deque(maxlen=40); self.history=deque(maxlen=120); self.window=deque(maxlen=300);self.rtts=deque(maxlen=2000)
-  self.state={'phase':'starting','checks':{},'count':0,'bytes':0,'errors':0,'latest':None,'started':time.time(),'recovery':'Not requested; live demo retains volatile configuration'}
+  self.config={'op':2,'size':1024,'running':True,'pace':'throughput','pq_case':'valid'}; self.events=deque(maxlen=40); self.history=deque(maxlen=120); self.window=deque(maxlen=300);self.rtts=deque(maxlen=2000)
+  self.state={'phase':'starting','checks':{},'count':0,'bytes':0,'errors':0,'latest':None,'started':time.time(),'capabilities':{'lms_hss':False},'recovery':'Not requested; live demo retains volatile configuration'}
   self.check_pending=True; self.finish_pending=False; self.serial=None; self.lease=None; self.client=None
+  self.pq_scope=None;self.pq_completed=0;self.pq_device_work=0;self.pq_python_work=0
   a.out.mkdir(parents=True,exist_ok=True)
   self.log=(a.out/'measurements.jsonl').open('a',encoding='utf-8')
  def event(self, message):
@@ -40,9 +42,13 @@ class Dashboard:
    return s
  def control(self, data):
   with self.guard:
+   if 'pq_case' in data:
+    if data['pq_case'] not in ('valid','bad_signature','bad_message','bad_key'):raise ValueError('Unsupported signature case')
+    self.config['pq_case']=data['pq_case'];self.window.clear();self.history.clear();self.rtts.clear()
    if 'op' in data:
     op=int(data['op'])
     if op not in MODES:raise ValueError('Unsupported operation')
+    if op>=7 and not self.state['capabilities']['lms_hss']:raise ValueError('Loaded firmware does not advertise LMS/HSS Ethernet support')
     self.config['op']=op;self.window.clear();self.history.clear();self.rtts.clear()
    if 'size' in data:
     size=int(data['size'])
@@ -67,6 +73,7 @@ class Dashboard:
     line=self.serial.readline().decode('utf-8',errors='replace')
     if line:
      f.write(line);f.flush()
+     if 'E35_START,2,' in line:self.state['capabilities']['lms_hss']=True
      if 'E35_READY,' in line:self.ready.set()
      if 'CMP_DONE,0' in line:self.recovered.set()
  def acquire(self):
@@ -115,6 +122,7 @@ class Dashboard:
     self.stop.wait(1)
    if not reachable:raise TimeoutError('Host link/ARP reachability failed before crypto requests')
    self.client=Client(self.a.board,self.a.bind,self.a.out/'peer_state.json');self.client.samples=deque(maxlen=1000);self.client.seen_nonces=NonceTracker()
+   self.pq=Verifier(self.client)
    self.state['phase']='live';self.event('Board ready · physical Ethernet payload path online')
    last_chart=0
    while not self.stop.is_set() and not self.finish_pending:
@@ -122,24 +130,43 @@ class Dashboard:
     if self.client.seq+128>=self.client.limit:
      nonces=self.client.seen_nonces;self.client.close()
      self.client=Client(self.a.board,self.a.bind,self.a.out/'peer_state.json');self.client.samples=deque(maxlen=1000);self.client.seen_nonces=nonces
+     self.pq.client=self.client
     if self.check_pending:self.check_pending=False;self.checks()
     with self.guard:config=dict(self.config)
     if config['running']:
      data=secrets.token_bytes(config['size']);op=config['op'];fast=config['pace']=='throughput'
      # Two in flight passed short bursts but later timed out on this Lite path.
      # Continuous operation remains single-flight until a DMA MAC is validated.
-     result=batch(self.client,op,data,count=64 if fast else 1,window=1)
-     output,rec,raw=result['latest'];times=[r['rtt_us'] for r in result['records']]
+     pq_result=None
+     if op in (7,8):
+      changed=self.pq.loaded!=(op,config['pq_case'])
+      pq_result=self.pq.verify(op,config['pq_case'])
+      if changed:self.event('Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35')
+      data=self.pq.message;rec=pq_result['record'];raw=bytes.fromhex(pq_result['response_hex']);output=bytes.fromhex(pq_result['result_hex'])
+      result={'packets':1,'input_bytes':56,'payload_Mbps':56*8/(rec['rtt_us']/1e6)/1e6,'window':1}
+      times=[rec['rtt_us']]
+     else:
+      result=batch(self.client,op,data,count=64 if fast else 1,window=1)
+      output,rec,raw=result['latest'];times=[r['rtt_us'] for r in result['records']]
      # Stats op does not update last_crypto_ticks: this aligns the device interval
      # to the completed primary request, outside its RTT measurement.
-     _,probe,_=self.client.call(4,bytes(16));device_us=probe['previous_operation_ticks']/100
-     record={**rec,'rtt_us':statistics.median(times),'device_us':device_us,'timestamp':time.time(),'at':time.monotonic(),'packets':result['packets'],'batch_input_bytes':result['input_bytes'],'batch_payload_Mbps':result['payload_Mbps'],'window':result['window'],'pace':config['pace']}
+     if pq_result:device_us=pq_result['device_verify_us']
+     else:
+      _,probe,_=self.client.call(4,bytes(16));device_us=probe['previous_operation_ticks']/100
+     record={**rec,'rtt_us':statistics.median(times),'device_us':device_us,'timestamp':time.time(),'at':time.monotonic(),'packets':result['packets'],'batch_input_bytes':result['input_bytes'],'batch_payload_Mbps':result['payload_Mbps'],'window':result['window'],'pace':config['pace'],'pq':pq_result}
      self.log.write(json.dumps(record)+'\n');self.log.flush()
      with self.guard:
       self.window.append({**record,'input_bytes':result['input_bytes']});self.rtts.extend(times);self.state['count']+=result['packets'];self.state['bytes']+=result['input_bytes'];self.state['last_received']=time.time()
       self.state['latest']={**record,'mode':MODES[op],'plain_hex':data[:48].hex(),'wire_hex':raw[44:92].hex(),'result_hex':output[:48].hex(),'verified':True,'nonce_hex':raw[32:44].hex() if op!=3 else None}
+      if pq_result:self.state['pq']=pq_result
+      if pq_result:
+       scope=(op,config['pq_case'])
+       if scope!=self.pq_scope:
+        self.pq_scope=scope;self.pq_completed=0;self.pq_device_work=0;self.pq_python_work=0;self.history.clear()
+       self.pq_completed+=1;self.pq_device_work+=device_us;self.pq_python_work+=pq_result['python_verify_us']
+       self.state['pq_totals']={'count':self.pq_completed,'device_work_us':self.pq_device_work,'python_work_us':self.pq_python_work,'algorithm':pq_result['algorithm'],'case':config['pq_case']}
       if start-last_chart>.5:
-       self.history.append({'time':time.time(),'rtt_us':rec['rtt_us'],'device_us':device_us});last_chart=start
+       self.history.append({'time':time.time(),'rtt_us':rec['rtt_us'],'device_us':device_us,'python_us':pq_result['python_verify_us'] if pq_result else None,'verification_number':pq_result['verification_number'] if pq_result else None,'pq_completed':self.pq_completed if pq_result else None,'pq_device_work_us':self.pq_device_work if pq_result else None,'pq_python_work_us':self.pq_python_work if pq_result else None});last_chart=start
     self.stop.wait(0 if config['running'] and config['pace']=='throughput' else max(.005,.05-(time.monotonic()-start)))
   except Exception as exc:
    self.state['errors']+=1;self.state['phase']='error';self.event(str(exc))

@@ -12,6 +12,8 @@
 #include "xsecure_error.h"
 #include "xpmcdma.h"
 #include "xtrngpsx.h"
+#include "xsecure_lms_core.h"
+#include "xsecure_lms_hss.h"
 
 #define ETH_BASE 0x40e00000U
 #define TIMER 0x40000000U
@@ -23,6 +25,10 @@ static XPmcDma dma SHARED;
 static u8 plain[1024] SHARED, cipher[1024] SHARED;
 static u8 key[32] SHARED, iv[16] SHARED, tag[16] SHARED, aad[64] SHARED;
 static u8 digest[32] SHARED;
+/* Fixed, bounded n=32 / h=5 / w=2 demonstration profile. Host uploads all
+ * signature/message/key bytes. No signing key or signing state on the board. */
+static u8 pq_work[4608] SHARED;
+static u32 pq_id,pq_received,pq_method,pq_runs;
 extern u8 __shared_start[],__shared_end[];
 static XEmacLite mac;
 static u8 rx[1600] __attribute__((aligned(64))),tx[1600] __attribute__((aligned(64)));
@@ -110,6 +116,46 @@ static int decrypt_request(const u8*request,unsigned n){
  if(rc)memset(plain,0,sizeof(plain));
  return rc;
 }
+static int pq_request(unsigned op,unsigned *length){
+ u32 id=be32(plain+4);
+ if(!memcmp(plain,"PQU1",4)){
+  unsigned offset=be16(plain+8),count=be16(plain+10),total=be16(plain+12);
+  if(total!=sizeof(pq_work)||count==0||count>1008||*length!=16+count||offset+count>total)return 5;
+  if(offset==0){pq_id=id;pq_method=op;pq_received=0;memset(pq_work,0,sizeof(pq_work));}
+  if(id!=pq_id||op!=pq_method||offset!=pq_received)return 5;
+  memcpy(pq_work+offset,plain+16,count);pq_received+=count;
+  memcpy(plain,"PQA1",4);put32(plain+4,id);put32(plain+8,pq_received);put32(plain+12,total);
+  *length=16;return 0;
+ }
+ if(memcmp(plain,"PQV1",4)||*length!=16||id!=pq_id||op!=pq_method||pq_received!=sizeof(pq_work))return 5;
+ unsigned hss=(op==8),base=hss?4:0,kbase=4544+(hss?4:0);
+ /* Reject unsupported lengths/parameter types before calling the vendor API. */
+ if((hss&&(be32(pq_work)!=0||be32(pq_work+4544)!=1))||
+    be32(pq_work+base)>=32||be32(pq_work+base+4)!=10||
+    be32(pq_work+base+4296)!=15||be32(pq_work+kbase)!=15||be32(pq_work+kbase+4)!=10)return 5;
+ XPmcDma_Config*cfg=XPmcDma_LookupConfig(0U);if(!cfg)return 4;
+ int rc=XPmcDma_CfgInitialize(&dma,cfg,cfg->BaseAddress);
+ if(!rc)rc=XSecure_ShaInitialize(&sha,&dma);
+ if(rc)return 4;
+ u32 begin=ticks();
+ if(hss){
+  XSecure_HssInitParams p;
+  p.SignBuff=pq_work;p.SignatureLen=4464;
+  p.PublicKey=pq_work+4544;p.PublicKeyLen=60;
+  rc=XSecure_HssSignatureVerification(&sha,&dma,&p,pq_work+4480,56);
+ }else{
+  XSecure_LmsSignVerifyParams p;
+  p.Data=pq_work+4480;p.DataLen=56;p.PreHashedMsg=FALSE;
+  p.LmsSign=pq_work;p.LmsSignLen=4460;
+  p.ExpectedPubKey=pq_work+4544;p.PubKeyLen=56;
+  rc=XSecure_LmsSignatureVerification(&sha,&dma,&p);
+ }
+ u32 elapsed=ticks()-begin;
+ memcpy(plain,"PQR1",4);put32(plain+4,id);put32(plain+8,rc==0);
+ put32(plain+12,(u32)rc);put32(plain+16,elapsed);put32(plain+20,++pq_runs);
+ put32(plain+24,pq_received);put32(plain+28,0x1f); /* CPU, RAM, DMA, SHAKE, timer path */
+ *length=32;return 0;
+}
 /* Wire response: 32-byte authenticated header, 12-byte nonce, n bytes data,
  * 16-byte tag. Header fields are network-endian; see host.py.
  * last_crypto_ticks reports the PREVIOUS operation (current encryption has
@@ -119,14 +165,16 @@ static unsigned process(const u8*request,unsigned request_len,u8*response){
  if(request_len<16||memcmp(request,"E35Q",4)||request[4]!=1)return 0;
  unsigned op=request[5],n=be16(request+6),status=0;
  u32 seq=be32(request+8),session=be32(request+12),begin=ticks();
- if(op<1||op>6||n>MAX_PAYLOAD||(n&15)||n<16||request_len!=(16+n+(op==2?28:0)))return 0;
- if(op==2){
+ unsigned encrypted=(op==2||op==7||op==8);
+ if(op<1||op>8||n>MAX_PAYLOAD||(n&15)||n<16||request_len!=(16+n+(encrypted?28:0)))return 0;
+ if(encrypted){
   int rc=decrypt_request(request,n);
   if(rc==XSECURE_AES_GCM_TAG_MISMATCH){status=2;++auth_reject;}
   else if(rc){status=4;xil_printf("E35_CRYPTO_FAIL,dec,%u\r\n",rc);}
   else if(peer_active&&(session!=peer_session||seq<=peer_seq)){status=3;++replay_reject;}
   else {peer_active=1;peer_session=session;peer_seq=seq;}
  }else memcpy(plain,request+16,n);
+ if(!status&&(op==7||op==8))status=pq_request(op,&n);
  if(!status&&(op==5||op==6)){
   int rc=XSecure_ShaDigest(&sha,op==5?XSECURE_SHA3_256:XSECURE_SHAKE_256,
     (UINTPTR)plain,n,(UINTPTR)digest,32);
@@ -178,7 +226,7 @@ static void packet(unsigned length){
  send_frame(out+42);
 }
 int main(void){
- timer_init();xil_printf("E35_START,1,128KiB,100MHz\r\n");
+ timer_init();xil_printf("E35_START,2,128KiB,100MHz,LMS_HSS_ETHERNET\r\n");
  int rc=crypto_init();xil_printf("E35_CRYPTO_INIT,%u\r\n",rc);if(rc)goto fail;
  rc=XEmacLite_Initialize(&mac,ETH_BASE);if(rc)goto fail;
  XEmacLite_SetMacAddress(&mac,(u8*)ownmac);XEmacLite_FlushReceive(&mac);

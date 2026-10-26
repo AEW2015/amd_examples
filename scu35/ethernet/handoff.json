@@ -1,11 +1,12 @@
 {
   "overall": "PASS",
-  "scope": "SCU35 laboratory Ethernet crypto demonstration; not production CDC, networking, security or line-rate qualification.",
+  "created_utc": "2026-10-26T04:48:37.059092+00:00",
+  "scope": "SCU35 v2 live Ethernet LMS/HSS laboratory demo; no production networking/security/CDC or line-rate qualification. Failed timer-baseline transition retained separately.",
   "artifacts": [
     {
       "role": "firmware_source",
       "path": "main.c",
-      "sha256": "8a8686d80393ef33dd5f24e2ffeb66cf099c2389e57cdbc68c2d6f253d1544d2"
+      "sha256": "9ad666dba2a6987dd09424bdd3d31ead92588ebf1d81955bc535ddb7750e5aad"
     },
     {
       "role": "constraints",
@@ -20,92 +21,132 @@
     {
       "role": "host",
       "path": "host.py",
-      "sha256": "db4b9979b68211b6e860de3ba137c2c02f6a04b5924569c9c3836e14042a04f6"
+      "sha256": "b2954a8e1b09760b27861f0de530ddfa30fd2af3d7b113fdfbd9faf6b37c877f"
     },
     {
-      "role": "bd",
-      "path": "reference/sys_built.bd",
-      "sha256": "6caaa5775873cd24fb71eecbbfa9869bf4d7f7b5707b3b83589285e743a0ffec"
+      "role": "host_pq",
+      "path": "pq.py",
+      "sha256": "0687cd382053ac623a21252c457f8e35bf9627585f2610750d62f4f425070a34"
     },
     {
-      "role": "bd_tcl",
-      "path": "reference/sys.tcl",
-      "sha256": "ba5ce9f51a92cade5aab76c2c7e2d1f6663a5a0c61b35234f1f77eb7d4b56a40"
+      "role": "dashboard",
+      "path": "dashboard.py",
+      "sha256": "43f65459e1bfdf8f071c9733570d3d23a47d2a592d8ab956c9ec6a9d23388f10"
     },
     {
-      "role": "elf",
+      "role": "launcher",
+      "path": "launch.py",
+      "sha256": "c1147db903c352db6d6c62ffbbff5880b8e289081b290d5f39f4e21d365bc078"
+    },
+    {
+      "role": "web",
+      "path": "web/index.html",
+      "sha256": "5772fdf4b2e0e2df8dcee64024423f943f2485ee9db130c825f22d9750e8d9a4"
+    },
+    {
+      "role": "web",
+      "path": "web/app.js",
+      "sha256": "6f9a6110e74c7e93c343d9e64da46fb844b78fb67c938b17488687410fae27aa"
+    },
+    {
+      "role": "web",
+      "path": "web/style.css",
+      "sha256": "6cd97bdcb0fe1011691f10e10bb3ccbac04bfeac5b88c4743d5b98df97ad2069"
+    },
+    {
+      "role": "reference",
       "path": "reference/eth.elf",
-      "sha256": "695e0b4c53abe984f90b87badc73d793aab1f187bcf76de17a2c8d1415aa4beb"
+      "sha256": "9591e52a0ac1f3679301a9bb9b9094c6023a84851c91f810b7f1cb25278a20b8"
     },
     {
-      "role": "programming_image",
+      "role": "reference",
       "path": "reference/ethernet.pdi",
-      "sha256": "20d94e8dfafd9408768d886696e23463e56b46872e0c390d00998f4e7a10c002"
+      "sha256": "9a9cf8fa98c4dab0b522a2a3642f0203d2996a2d46953966193f3cdbce6d5a4c"
     },
     {
-      "role": "hardware_handoff",
+      "role": "reference",
       "path": "reference/hw.xsa",
-      "sha256": "922143646f77cfd406617fab1c508d9f2831a7c22379fdae98fd5b6036470107"
+      "sha256": "f65d0dd7c2b25f8a071653742085011d48363843d7b3bdc4a094cea4a08ab809"
     },
     {
-      "role": "routed_checkpoint",
-      "path": "reference/routed.dcp",
-      "sha256": "e5919b98311ad4e55653015544b4dca440e1d33078decb6788f14d826aa00202"
-    },
-    {
-      "role": "plm",
+      "role": "reference",
       "path": "reference/plm.elf",
       "sha256": "fcdd4370633f343466245b7f99893bed2e235e3c890bc98225f03ed6ac992c72"
     },
     {
-      "role": "timing",
+      "role": "reference",
+      "path": "reference/sys.tcl",
+      "sha256": "ba5ce9f51a92cade5aab76c2c7e2d1f6663a5a0c61b35234f1f77eb7d4b56a40"
+    },
+    {
+      "role": "reference",
+      "path": "reference/sys_built.bd",
+      "sha256": "947cdac32e8dd18b10152fe26c820b3e4d6b2284c6acc481cfb56cf5e818c925"
+    },
+    {
+      "role": "implementation",
       "path": "evidence/timing_summary.txt",
-      "sha256": "524cf952ff6f8e48181678e43d40927b26b758b9141a4b6c13da448c62ad5e26"
+      "sha256": "4e8fa05df7d59997efec2e9839d103ff2a908c5e129b64a1af439e1b18278dd3"
     },
     {
-      "role": "drc",
+      "role": "implementation",
       "path": "evidence/drc.txt",
-      "sha256": "db7d358e419aa95504da5bbf4707e29249b5495d88760e0120540d3cd4712eaf"
+      "sha256": "b7c8a5391d27f951e9130744daafbbe452b18dbfd183e3082bf13a8ca4f05ad0"
     },
     {
-      "role": "cdc",
+      "role": "implementation",
       "path": "evidence/cdc.txt",
-      "sha256": "1c2f61c64ac6900e2cf8664dc87b91befaa677e86c6cc95e9eabec21b2dd96ea"
+      "sha256": "a5568a8b407e13a0010643a32c18dc0ee88b56d122fe90ea06584f7c8170163a"
     },
     {
-      "role": "cdc_review",
-      "path": "evidence/cdc_review.json",
-      "sha256": "b03213045e20b1083be2d5917e00f234660ba60f6cedbfaae0e71c0c87a265a6"
-    },
-    {
-      "role": "cdc_details",
+      "role": "implementation",
       "path": "evidence/cdc_details.txt",
-      "sha256": "023328a46e8c6ebdfffdca44b6356c39f983149a574c296903c990fa47503f16"
+      "sha256": "8dca6658f4803d34f212ae46ddd36c25a5c8729686e29f37b4a1f0f5335f581a"
     },
     {
-      "role": "hardware_session",
-      "path": "evidence/run2/session.json",
-      "sha256": "e6317bb1117d4a0bb14653c8fdf08b87f5d3e8babe6c71c0a5ad45e1efd541e1"
+      "role": "implementation",
+      "path": "evidence/cdc_review.json",
+      "sha256": "b46c4f658128014af8e2e3b63008324a3461cffc574ad317d0524f4519f094e4"
     },
     {
-      "role": "hardware_evidence",
-      "path": "evidence/run2/program.log",
-      "sha256": "85ad67205cf28fe650df72a8f844a5de53f9c1a4b40b5a431c5a488d1b2e8c63"
-    },
-    {
-      "role": "hardware_evidence",
-      "path": "evidence/run2/restore.log",
-      "sha256": "8f91bab3e2566ac6a0ec5a1e87b094853c6371301d6c247d31e96d1bac1f4581"
+      "role": "implementation",
+      "path": "evidence/firmware.json",
+      "sha256": "4747e19ddc830fc0f027609f621c3d5cc2ffc75d8a69e450e1c1e92cf7ddbc86"
     },
     {
       "role": "hardware_evidence",
-      "path": "evidence/run2/uart.txt",
-      "sha256": "f684e73d76fd50f37f8d132f12eef486b7a061536e1096be45568639fd5e78e3"
+      "path": "evidence/run4/session.json",
+      "sha256": "4c062d6ed353580044249ac804355a7b90c7104ee39f562751ac5fdd06c61660"
     },
     {
       "role": "hardware_evidence",
-      "path": "evidence/run2/ethernet/results.json",
-      "sha256": "bf9575f868b497b14604ef7dc333814708328f61ecfe4180a688553029cb42cd"
+      "path": "evidence/run4/pq.json",
+      "sha256": "26e79ec926e7309c825855b39435026c2105a03ead7862de71febd12255e6f54"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "evidence/run4/dashboard_check.json",
+      "sha256": "e9cc89ad87e2ea521c28b10015160a59eea1e4f98d8459d1c2b781644f889a1d"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "evidence/run4/uart.txt",
+      "sha256": "8323ac71e198cffc28646e778da9a86a95547b86f2116a2c03c84dbd0874d180"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "evidence/run4/program.log",
+      "sha256": "a49afb4156273b9b9ad4cf1584153619ccbaeb43d9b0b24984c51e2bef72496e"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "evidence/run4/restore.log",
+      "sha256": "fabd522b15610cfa7b49b2b0fff23ea106a0b16c15d37e410dd6f49ff82c8d8f"
+    },
+    {
+      "role": "hardware_evidence",
+      "path": "evidence/run4/ethernet/results.json",
+      "sha256": "2c0139a0e96be2bf57257778572bccbf9a87ba613e6241e1455eb866c4daeccd"
     }
   ],
   "checks": {
@@ -115,9 +156,9 @@
     },
     "memory": {
       "status": "pass",
-      "local_bram_used_bytes": 67728,
-      "local_bram_free_bytes": 63344,
-      "shared_used_bytes": 2784
+      "local_bram_used_bytes": 76968,
+      "local_bram_free_bytes": 54104,
+      "shared_used_bytes": 12060
     },
     "catalog_ip": {
       "status": "pass",
@@ -159,14 +200,17 @@
     },
     "hardware_and_recovery": {
       "status": "pass",
-      "evidence": "evidence/run2/session.json"
+      "evidence": "evidence/run4/session.json"
     },
-    "host_client_revision": {
+    "live_pq": {
       "status": "pass",
-      "original_host_sha256": "046758f20484ca7b36b91d4449d1360383375e691281d15a16766f29755f4111",
-      "current_host_sha256": "db4b9979b68211b6e860de3ba137c2c02f6a04b5924569c9c3836e14042a04f6",
-      "evidence": "evidence/throughput.json",
-      "scope": "Client response decoding was extracted into a shared decode method for transport experiments. Current client passed exact payload/digest checks, negative cases and conservative single-flight health checks. Original PDI/firmware/build and dated run2 evidence are unchanged; the sustained two-flight failure is preserved separately."
+      "evidence": "evidence/run4/pq.json",
+      "scope": "40 actual verifications, 8 algorithm/case combinations, six transport/profile guards; public H5/W2 one-level HSS"
+    },
+    "dashboard": {
+      "status": "pass",
+      "evidence": "evidence/run4/dashboard_check.json",
+      "scope": "Seven live modes, eight signature cases, block highlights, progress plots, desktop/mobile, no JS errors"
     }
   }
 }

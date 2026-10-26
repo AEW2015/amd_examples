@@ -1,9 +1,9 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
-| Date              : Sun Oct 25 15:35:17 2026
+| Date              : Sun Oct 25 22:36:53 2026
 | Host              : DESKTOP-I75K8PP running 64-bit major release  (build 9200)
-| Command           : report_cdc -details -file C:/aiup/e35/cdc_details.txt
+| Command           : report_cdc -details -file C:/aiup/epq/cdc_details.txt
 | Design            : sys_wrapper
 | Device            : xcsu35p-sbvb625
 | Speed File        : -2  PRODUCTION 1.14 03-03-2026

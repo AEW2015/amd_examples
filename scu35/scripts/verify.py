@@ -67,6 +67,26 @@ def main():
         verify_ethernet(ethernet/'ethernet/results.json')
         session=json.loads((ethernet/'session.json').read_text())
         assert session['hardware_pass'] and session['recovery_pass']
+        assert session['pdi_sha256'] in {sha(p) for p in (ROOT/'ethernet/reference').glob('ethernet*.pdi')}
+    v2=ROOT/'ethernet/evidence/run4'
+    if v2.exists():
+        verify_ethernet(v2/'ethernet/results.json')
+        session=json.loads((v2/'session.json').read_text())
+        assert session['hardware_pass'] and session['pq_pass'] and session['recovery_pass']
         assert sha(ROOT/'ethernet/reference/ethernet.pdi')==session['pdi_sha256']
+        pq=json.loads((v2/'pq.json').read_text());assert pq['overall']=='PASS' and len(pq['rows'])==40
+        assert len(pq['guards'])==6 and all(g['status']==g['expected_status'] for g in pq['guards'])
+        import struct
+        from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+        for row in pq['rows']:
+            wire=bytes.fromhex(row['response_hex'])
+            result=AESGCM(bytes(range(32))).decrypt(wire[32:44],wire[44:],wire[:32])
+            magic,ident,accepted,status,ticks,count,received,flags=struct.unpack('!4s7I',result)
+            assert magic==b'PQR1' and received==4608 and flags==31 and ticks>0
+            assert bool(accepted)==row['accepted']==(row['case']=='valid')
+            assert status==row['vendor_status']==(0 if accepted else 0xAB)
+            assert ticks/100==row['device_verify_us'] and row['result_matches_python']
+        handoff=json.loads((ROOT/'ethernet/handoff.json').read_text());assert handoff['overall']=='PASS'
+        for artifact in handoff['artifacts']:assert sha(ROOT/'ethernet'/artifact['path'])==artifact['sha256']
     print(json.dumps({'overall':'PASS','sha256_files':len(paths),'runtime_rows':31,'hash_vectors':10,'aes_vectors':5,'native_bulk_batches':66,'native_pq_batches':24,'public_hss_signatures':'PASS','tampered_hss_rejected':True,'combo_rolling_blocks':len(roll_a)+len(roll_b),'decrypted_payloads_match':True,'hardware_operations':'NONE'},indent=2))
 if __name__=='__main__':main()

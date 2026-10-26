@@ -4,6 +4,8 @@ from datetime import datetime,timezone,timedelta
 import argparse,hashlib,json,os,re,socket,subprocess,threading,time,uuid
 import serial
 from host import run
+from host import Client
+from pq import run as run_pq
 from verify_capture import verify
 SRC=Path(__file__).resolve().parent
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -16,6 +18,7 @@ def main():
  p.add_argument('--serial',required=True);p.add_argument('--server',default='localhost:3121')
  p.add_argument('--bind',default='192.168.10.1');p.add_argument('--board',default='192.168.10.2')
  p.add_argument('--out',type=Path,required=True);p.add_argument('--count',type=int,default=50)
+ p.add_argument('--pq',action='store_true',help='Also upload and verify actual LMS/HSS vectors and negative cases')
  p.add_argument('--restore-completion-marker',help='Optional known-good recovery firmware completion line; permits one documented SSS-status recovery retry')
  a=p.parse_args()
  if sha(a.restore)!=a.restore_sha256.lower():raise ValueError('Recovery image hash mismatch')
@@ -55,6 +58,11 @@ def main():
   if result.returncode:raise RuntimeError('Ethernet ICMP reachability failed')
   report=run(a.board,a.bind,a.out/'ethernet',a.count)
   verify(a.out/'ethernet/results.json')
+  if a.pq:
+   client=Client(a.board,a.bind,a.out/'ethernet/peer_state.json')
+   try:run_pq(client,a.out/'pq.json')
+   finally:client.close()
+   metadata['pq_pass']=True
   metadata['hardware_pass']=report['overall']=='PASS'
  finally:
   if armed:

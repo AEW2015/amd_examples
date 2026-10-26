@@ -33,6 +33,8 @@ def arguments(c, mode, out=None, count=50, port=None):
         args += ['--port', str(port or c.get('ethernet_dashboard_port', 8035))]
     else:
         args += ['--count', str(count)]
+        if c.get('ethernet_pq', True):
+            args += ['--pq']
         marker = c.get('ethernet_restore_completion_marker')
         if marker:
             args += ['--restore-completion-marker', marker]

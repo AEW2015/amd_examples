@@ -1,0 +1,522 @@
+{
+  "overall": "PASS",
+  "checks": [
+    {
+      "op": 3,
+      "verified": true,
+      "device_us": 427.67
+    },
+    {
+      "op": 1,
+      "verified": true,
+      "device_us": 511.71
+    },
+    {
+      "op": 2,
+      "verified": true,
+      "device_us": 585.37
+    },
+    {
+      "op": 5,
+      "verified": true,
+      "device_us": 320.14
+    },
+    {
+      "op": 6,
+      "verified": true,
+      "device_us": 320.17
+    },
+    {
+      "op": 7,
+      "verified": true,
+      "device_us": 12598.05
+    },
+    {
+      "op": 7,
+      "case": "valid",
+      "accepted": true,
+      "device_verify_us": 12598.0,
+      "python_verify_us": 767.5
+    },
+    {
+      "op": 7,
+      "case": "bad_signature",
+      "accepted": false,
+      "device_verify_us": 11763.28,
+      "python_verify_us": 537.6
+    },
+    {
+      "op": 7,
+      "case": "bad_message",
+      "accepted": false,
+      "device_verify_us": 12418.34,
+      "python_verify_us": 560.4
+    },
+    {
+      "op": 7,
+      "case": "bad_key",
+      "accepted": false,
+      "device_verify_us": 12597.82,
+      "python_verify_us": 649.0
+    },
+    {
+      "op": 8,
+      "verified": true,
+      "device_us": 11839.07
+    },
+    {
+      "op": 8,
+      "case": "valid",
+      "accepted": true,
+      "device_verify_us": 11839.04,
+      "python_verify_us": 523.1
+    },
+    {
+      "op": 8,
+      "case": "bad_signature",
+      "accepted": false,
+      "device_verify_us": 12642.65,
+      "python_verify_us": 610.3
+    },
+    {
+      "op": 8,
+      "case": "bad_message",
+      "accepted": false,
+      "device_verify_us": 12315.09,
+      "python_verify_us": 538.3
+    },
+    {
+      "op": 8,
+      "case": "bad_key",
+      "accepted": false,
+      "device_verify_us": 11839.18,
+      "python_verify_us": 525.7
+    }
+  ],
+  "js_errors": [],
+  "desktop_mobile": "PASS",
+  "status": {
+    "phase": "live",
+    "checks": {
+      "valid_roundtrip": "PASS",
+      "modified_tag": "REJECTED",
+      "replayed_packet": "REJECTED",
+      "time": "22:43:36"
+    },
+    "count": 59668,
+    "bytes": 53956192,
+    "errors": 0,
+    "latest": {
+      "op": 8,
+      "input_bytes": 16,
+      "output_bytes": 32,
+      "sequence": 60568,
+      "status": 0,
+      "rtt_us": 12464.0,
+      "previous_operation_ticks": 1201551,
+      "board_rx": 60568,
+      "board_tx_before_reply": 60573,
+      "device_us": 11839.04,
+      "timestamp": 1792989974.481561,
+      "at": 867970.14,
+      "packets": 1,
+      "batch_input_bytes": 56,
+      "batch_payload_Mbps": 0.03594351732991014,
+      "window": 1,
+      "pace": "throughput",
+      "pq": {
+        "algorithm": "HSS-SHAKE256",
+        "case": "valid",
+        "accepted": true,
+        "vendor_status": 0,
+        "device_verify_us": 11839.04,
+        "python_verify_us": 528.9,
+        "verification_number": 7380,
+        "blocks_used": 31,
+        "message_bytes": 56,
+        "signature_bytes": 4464,
+        "public_key_bytes": 60,
+        "upload": {
+          "bytes": 4608,
+          "packets": 5,
+          "wall_ms": 4.794799955561757,
+          "records": [
+            {
+              "op": 8,
+              "input_bytes": 1024,
+              "output_bytes": 16,
+              "sequence": 58119,
+              "status": 0,
+              "rtt_us": 1169.3,
+              "previous_operation_ticks": 1201559,
+              "board_rx": 58119,
+              "board_tx_before_reply": 58123
+            },
+            {
+              "op": 8,
+              "input_bytes": 1024,
+              "output_bytes": 16,
+              "sequence": 58120,
+              "status": 0,
+              "rtt_us": 874.3,
+              "previous_operation_ticks": 62970,
+              "board_rx": 58120,
+              "board_tx_before_reply": 58124
+            },
+            {
+              "op": 8,
+              "input_bytes": 1024,
+              "output_bytes": 16,
+              "sequence": 58121,
+              "status": 0,
+              "rtt_us": 873.6,
+              "previous_operation_ticks": 44518,
+              "board_rx": 58121,
+              "board_tx_before_reply": 58125
+            },
+            {
+              "op": 8,
+              "input_bytes": 1024,
+              "output_bytes": 16,
+              "sequence": 58122,
+              "status": 0,
+              "rtt_us": 897.8,
+              "previous_operation_ticks": 44517,
+              "board_rx": 58122,
+              "board_tx_before_reply": 58126
+            },
+            {
+              "op": 8,
+              "input_bytes": 592,
+              "output_bytes": 16,
+              "sequence": 58123,
+              "status": 0,
+              "rtt_us": 748.8,
+              "previous_operation_ticks": 44516,
+              "board_rx": 58123,
+              "board_tx_before_reply": 58127
+            }
+          ]
+        },
+        "result_matches_python": true,
+        "rtt_us": 12464.0,
+        "record": {
+          "op": 8,
+          "input_bytes": 16,
+          "output_bytes": 32,
+          "sequence": 60568,
+          "status": 0,
+          "rtt_us": 12464.0,
+          "previous_operation_ticks": 1201551,
+          "board_rx": 60568,
+          "board_tx_before_reply": 60573
+        },
+        "result_hex": "50515231d3a03e410000000100000000001210a000001cd4000012000000001f",
+        "response_hex": "45333552010800200000ec981c6f2add000000000012558f0000ec980000ec9dc1802053c526eb060000e265af56afe77513eb4fad2644dfe20ca906acb9f16e7325074a94ae7734c35b3c20121229eaf29094f5151bba8d90ae9abc"
+      },
+      "mode": "HSS-SHAKE256 live verification",
+      "plain_hex": "d37d1514d04de19444cdca3f4c4586534bf9519a2cc126301f8c682b90d80957a660fee697be94164681c3125cbb0096",
+      "wire_hex": "af56afe77513eb4fad2644dfe20ca906acb9f16e7325074a94ae7734c35b3c20121229eaf29094f5151bba8d90ae9abc",
+      "result_hex": "50515231d3a03e410000000100000000001210a000001cd4000012000000001f",
+      "verified": true,
+      "nonce_hex": "c1802053c526eb060000e265"
+    },
+    "started": 1792989791.0814903,
+    "capabilities": {
+      "lms_hss": true
+    },
+    "recovery": "Not requested; live demo retains volatile configuration",
+    "last_received": 1792989974.481561,
+    "pq": {
+      "algorithm": "HSS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 11839.04,
+      "python_verify_us": 528.9,
+      "verification_number": 7380,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.794799955561757,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 58119,
+            "status": 0,
+            "rtt_us": 1169.3,
+            "previous_operation_ticks": 1201559,
+            "board_rx": 58119,
+            "board_tx_before_reply": 58123
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 58120,
+            "status": 0,
+            "rtt_us": 874.3,
+            "previous_operation_ticks": 62970,
+            "board_rx": 58120,
+            "board_tx_before_reply": 58124
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 58121,
+            "status": 0,
+            "rtt_us": 873.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 58121,
+            "board_tx_before_reply": 58125
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 58122,
+            "status": 0,
+            "rtt_us": 897.8,
+            "previous_operation_ticks": 44517,
+            "board_rx": 58122,
+            "board_tx_before_reply": 58126
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 58123,
+            "status": 0,
+            "rtt_us": 748.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 58123,
+            "board_tx_before_reply": 58127
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12464.0,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 60568,
+        "status": 0,
+        "rtt_us": 12464.0,
+        "previous_operation_ticks": 1201551,
+        "board_rx": 60568,
+        "board_tx_before_reply": 60573
+      },
+      "result_hex": "50515231d3a03e410000000100000000001210a000001cd4000012000000001f",
+      "response_hex": "45333552010800200000ec981c6f2add000000000012558f0000ec980000ec9dc1802053c526eb060000e265af56afe77513eb4fad2644dfe20ca906acb9f16e7325074a94ae7734c35b3c20121229eaf29094f5151bba8d90ae9abc"
+    },
+    "pq_totals": {
+      "count": 235,
+      "device_work_us": 2782185.8399999994,
+      "python_work_us": 135165.99999999997,
+      "algorithm": "HSS-SHAKE256",
+      "case": "valid"
+    },
+    "config": {
+      "op": 8,
+      "size": 1024,
+      "running": true,
+      "pace": "throughput",
+      "pq_case": "valid"
+    },
+    "events": [
+      {
+        "time": "22:46:14",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:12",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:09",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:09",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:09",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:09",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:08",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:08",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:08",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:08",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:08",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:07",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:07",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:07",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:07",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:07",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:07",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:07",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:06",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:06",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:06",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:06",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:05",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:05",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:05",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:46:05",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:04",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:03",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:02",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:01",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:46:01",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:44:31",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:44:31",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:44:31",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:44:31",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:44:31",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:44:31",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:44:30",
+        "message": "Uploaded 4608 public signature/message/key bytes in five authenticated Ethernet chunks; verifying on SCU35"
+      },
+      {
+        "time": "22:44:30",
+        "message": "Controls updated"
+      },
+      {
+        "time": "22:44:30",
+        "message": "Controls updated"
+      }
+    ],
+    "history": [
+      {
+        "time": 1792989974.2025328,
+        "rtt_us": 12461.5,
+        "device_us": 11839.06,
+        "python_us": 573.3,
+        "verification_number": 7359,
+        "pq_completed": 214,
+        "pq_device_work_us": 2533564.3999999994,
+        "pq_python_work_us": 122632.59999999996
+      }
+    ],
+    "modes": {
+      "3": "Plain UDP echo",
+      "1": "AES-GCM encrypted response",
+      "2": "AES-GCM authenticated round trip",
+      "5": "SHA3-256 + encrypted digest",
+      "6": "SHAKE-256 + encrypted digest",
+      "7": "LMS-SHAKE256 live verification",
+      "8": "HSS-SHAKE256 live verification"
+    },
+    "median_us": 1002.8499999999999,
+    "p95_us": 12472.2,
+    "payload_Bps": 4059.701493190303,
+    "age_s": 0.008000612258911133
+  }
+}

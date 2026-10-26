@@ -42,9 +42,13 @@ Keep that process running and open the printed URL. With a foreground process, C
 
 Live controls:
 
-Selecting LMS or HSS also shows **Completed work** and **Batch latency** plots. These use the three actual saved native batches (20 verifications each) and Python batches (50 each) for the selected positive/negative case. Completed-work time is the sum of timed batches, excluding gaps and transport; dots mark measured batch boundaries and connecting lines do not imply sampled within-batch progress. This is recorded native verification data, not LMS/HSS Ethernet telemetry.
+The LMS-SHAKE256 and HSS-SHAKE256 buttons now run **actual Ethernet signature verification** with the v2 image. The host uploads 4608 aligned bytes containing the message, public key and signature in five AES-GCM protected chunks. The board stages them in PMC shared RAM. MicroBlaze V runs the AMD XilSecure verifier; hardened PMC DMA/SHAKE supplies the hash operations. The authenticated encrypted response includes the actual accept/reject result and AXI Timer verification interval. Python independently checks the same inputs on every displayed verification.
 
-The **LMS-SHAKE256** and **HSS-SHAKE256** buttons sit beside the live operation buttons with highlighted **POST-QUANTUM** badges. Selecting one opens its recorded results in the main panel; selecting a live mode returns to live charts. The selected panel explains HSS-SHAKE256 message authentication and provides recorded HSS/LMS valid, changed-message, changed-signature and wrong-key results. Its values come from `evidence/native/report.json`; they are not live Ethernet measurements. **Run the SHAKE building block live** selects the real SHAKE-256 Ethernet operation, not full HSS verification. Tutorial and measurement-source links accompany the example.
+The four case buttons send a valid vector, changed signature, changed message or changed public key. Only public AMD n=32/H5/W2 vectors and one-level HSS are supported. The public key comes from the host for this algorithm demonstration; it is not an owner-pinned trust root. No signing occurs and no stateful signing key is stored on the board. Public AES transport keys do not provide production secrecy.
+
+The full-width Host / SCU35 / PL / PMC diagram highlights the blocks used by the selected method. Click a block for its role. Highlights and arrows explain the operation path and update on actual verified replies; they are not cycle-sampled internal bus traces. TRNG is used at initialization, while PUF/eFUSE and PLM are outside the repeated payload path. Live completed-work curves sum actual device and Python verification intervals; dots are sampled completion checkpoints. Upload, AES transport, RTT and Python comparison are outside the device verification API interval. For normal hash/AES modes the existing aligned device-operation interval remains in use.
+
+The dashboard detects the v2 UART capability marker and disables PQ controls for older images. Upload buffers are bounded, ordered and bound to the authenticated peer. Incomplete uploads, wrong transfer IDs and overruns are rejected. The existing native-PMC benchmark remains a different, faster resident-buffer path; its historical numbers are not substituted into the live Ethernet panel.
 
 | Control | Actual device operation |
 |---|---|
@@ -52,12 +56,13 @@ The **LMS-SHAKE256** and **HSS-SHAKE256** buttons sit beside the live operation 
 | AES-GCM encrypted response | Plain request, authenticated encrypted response |
 | AES-GCM authenticated round trip | Authenticate and decrypt request, replay check, encrypt response |
 | SHA3-256 / SHAKE-256 | Hash actual input, return encrypted 32-byte digest, compare with Python |
+| LMS-SHAKE256 / HSS-SHAKE256 | Upload real public vectors, verify on MicroBlaze V + hardened SHAKE, return authenticated decision and measured API time |
 | Payload size | 16, 64, 256, 512 or 1,024 bytes |
 | Traffic mode | Unpaced: 64-packet batches, one request in flight; presentation: at most 20 primary requests/s |
 | Test tamper + replay | Accept a valid request, reject its replay, reject a fresh request with a corrupted tag |
 | Pause / resume | Stop / resume the paced request stream without reconfiguring hardware |
 
-The AES key is public diagnostic material. These buttons do not select boot authentication algorithms, provision keys, register a PUF or write eFUSE/flash. HSS/LMS secure boot uses the separate signed-image demo.
+The AES key is public diagnostic material. These buttons do not select boot authentication algorithms, provision keys, register a PUF or write eFUSE/flash. HSS/LMS secure boot uses the separate signed-image demo; these live buttons perform post-configuration payload verification.
 
 Every successful payload/digest is compared with the expected host result. AES-GCM replies verify their tags; negative-test error replies are unauthenticated diagnostics. The device nonce check requires a fixed boot prefix and strictly increasing response counter, with bounded memory. Sequence reservations renew before exhaustion while retaining the same authenticated peer session. One worker serializes all requests; do not run another host client against this firmware concurrently.
 

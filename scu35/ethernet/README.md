@@ -4,7 +4,7 @@ This is a separate MicroBlaze V application and IPI design for the onboard **100
 
 The design extends the shared tutorial BD with Clocking Wizard and AXI Ethernet Lite. It retains MicroBlaze V, MDM, 128 KiB local BRAM, SmartConnect, PMC Bridge, AXI UART Lite, AXI Timer, Processor System Reset, and constants. Ethernet Lite has independent transmit and receive ping-pong buffers, adding approximately 8 KiB of packet BRAM beyond the 128 KiB processor memory. Final device usage is in the implementation report.
 
-The validated implementation uses **36 of 48 BRAM tiles** (32 RAMB36 and 8 RAMB18) and 2,952 LUTs. Firmware reserves **67,728 bytes locally**, leaving 63,344 bytes in the 128 KiB local address space, plus 2,784 bytes in the owned PMC shared region. Logical packet-buffer capacity and physical BRAM primitive allocation are different quantities.
+The validated implementation uses **36 of 48 BRAM tiles** (32 RAMB36 and 8 RAMB18) and 2,952 LUTs. Firmware reserves **76,968 bytes locally**, leaving 54,104 bytes in the 128 KiB local address space, plus 12,060 bytes in the 12,288-byte owned PMC shared region. Logical packet-buffer capacity and physical BRAM primitive allocation are different quantities.
 
 PMC DMA is the hardened DMA used by XilSecure, not an AXI DMA IP instance. Ethernet Lite exposes AXI-Lite packet RAM; an AXI DMA streaming connection is not available on this MAC. Firmware copies received data into the owned PMC shared region, where PMC DMA transfers it through the hardened AES/SHA engines. This first implementation prioritizes reproducibility with the free AMD MAC; it does not claim Ethernet line rate.
 
@@ -83,3 +83,30 @@ The [live crypto dashboard](DASHBOARD.md) provides on-the-fly mode and payload-s
 
 
 For the proposed streaming MAC and DMA upgrade, see [DMA architecture and evidence boundaries](DMA.md). The current reference PDI remains Ethernet Lite.
+
+## Live LMS/HSS payload verification (v2)
+
+The v2 firmware adds operations 7/8 for LMS/HSS. Requests use the same AES-GCM
+AAD/nonce/tag envelope as authenticated echo. A 16-byte `PQU1` command header
+(`!4sIHHHH`: magic, transfer ID, offset, chunk length, total, reserved) precedes
+up to 1008 chunk bytes. Five requests upload a fixed 4608-byte workspace:
+signature at offset 0, 56-byte message at 4480, public key at 4544. Replies
+`PQA1` acknowledge the ID, received count and total. A 16-byte `PQV1` command
+triggers verification after the complete ordered upload. Encrypted `PQR1`
+results contain transfer ID, accepted flag, vendor status, verify ticks,
+verification counter, received bytes and a software path mask (not a hardware
+trace). Only the bounded AMD n=32/H5/W2 and one-level HSS profile is supported.
+
+`run_hardware.py --pq` checks valid/changed signatures/messages/keys and
+incomplete/wrong-ID/overrun guards. The configuration launcher enables PQ tests by default for the v2 reference image; set `ethernet_pq: false` only when intentionally testing a legacy v1 image. The dashboard repeats real verification and Python checks
+without another upload until method/case changes. It separates upload time,
+UDP RTT and the AXI Timer verification API interval. No signing state, PUF,
+eFUSE or persistent writes are involved.
+
+The fresh v2 run in `evidence/run4/` passed the original payload suite, 40 LMS/HSS
+verifications (both algorithms, four cases, five repetitions), six malformed /
+tag / replay guards, and recovery. The earlier failed timer-baseline restoration
+is retained in `evidence/pq_restore_attempt1/`; the successful repeat used an
+explicitly selected quiet known-good image. The transition's root cause remains
+unresolved. No status bits were cleared or masked. Legacy v1 captures remain
+historical; `reference/ethernet_v1.pdi` preserves their original image.

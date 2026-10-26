@@ -1,0 +1,114 @@
+[
+  {
+    "method": "SHA3-256",
+    "payload_bytes": 16,
+    "Python median us": 1.5,
+    "Python mean us": 1.5004,
+    "samples": 500
+  },
+  {
+    "method": "SHAKE-256",
+    "payload_bytes": 16,
+    "Python median us": 1.5,
+    "Python mean us": 1.567,
+    "samples": 500
+  },
+  {
+    "method": "AES-GCM-ENC",
+    "payload_bytes": 16,
+    "Python median us": 1.4,
+    "Python mean us": 1.3746,
+    "samples": 500
+  },
+  {
+    "method": "AES-GCM-DEC",
+    "payload_bytes": 16,
+    "Python median us": 1.4,
+    "Python mean us": 1.3954,
+    "samples": 500
+  },
+  {
+    "method": "SHA3-256",
+    "payload_bytes": 64,
+    "Python median us": 1.5,
+    "Python mean us": 1.7488,
+    "samples": 500
+  },
+  {
+    "method": "SHAKE-256",
+    "payload_bytes": 64,
+    "Python median us": 1.5,
+    "Python mean us": 1.5528,
+    "samples": 500
+  },
+  {
+    "method": "AES-GCM-ENC",
+    "payload_bytes": 64,
+    "Python median us": 1.4,
+    "Python mean us": 1.4143999999999999,
+    "samples": 500
+  },
+  {
+    "method": "AES-GCM-DEC",
+    "payload_bytes": 64,
+    "Python median us": 1.7,
+    "Python mean us": 1.765,
+    "samples": 500
+  },
+  {
+    "method": "SHA3-256",
+    "payload_bytes": 256,
+    "Python median us": 1.8,
+    "Python mean us": 1.8018,
+    "samples": 500
+  },
+  {
+    "method": "SHAKE-256",
+    "payload_bytes": 256,
+    "Python median us": 1.8,
+    "Python mean us": 1.8358,
+    "samples": 500
+  },
+  {
+    "method": "AES-GCM-ENC",
+    "payload_bytes": 256,
+    "Python median us": 1.5,
+    "Python mean us": 1.4747999999999999,
+    "samples": 500
+  },
+  {
+    "method": "AES-GCM-DEC",
+    "payload_bytes": 256,
+    "Python median us": 1.5,
+    "Python mean us": 1.4992,
+    "samples": 500
+  },
+  {
+    "method": "SHA3-256",
+    "payload_bytes": 1024,
+    "Python median us": 3.5,
+    "Python mean us": 3.5348,
+    "samples": 500
+  },
+  {
+    "method": "SHAKE-256",
+    "payload_bytes": 1024,
+    "Python median us": 3.5,
+    "Python mean us": 3.543,
+    "samples": 500
+  },
+  {
+    "method": "AES-GCM-ENC",
+    "payload_bytes": 1024,
+    "Python median us": 1.7,
+    "Python mean us": 1.7928,
+    "samples": 500
+  },
+  {
+    "method": "AES-GCM-DEC",
+    "payload_bytes": 1024,
+    "Python median us": 1.8,
+    "Python mean us": 1.7714,
+    "samples": 500
+  }
+]

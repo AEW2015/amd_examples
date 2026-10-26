@@ -1,0 +1,14 @@
+{
+  "pdi_sha256": "9a9cf8fa98c4dab0b522a2a3642f0203d2996a2d46953966193f3cdbce6d5a4c",
+  "restore_sha256": "4cde96513b9d7de10e8b4dee8574b11a36539797548163491d4021c020f291ce",
+  "cable": "52041A454A5PA",
+  "server": "localhost:3121",
+  "started_utc": "2026-10-26T04:36:11.753097+00:00",
+  "hardware_pass": true,
+  "recovery_pass": false,
+  "pq_pass": true,
+  "initial_recovery_error": "RuntimeError('Programming/status failed: restore.log')",
+  "recovery_retry_reason": "First recovery DONE=1 with SSS_CFG_ERR; named baseline completed; retry after its volatile crypto cleanup. No error-status writes.",
+  "recovery_error": "RuntimeError('Programming/status failed: restore_retry.log')",
+  "finished_utc": "2026-10-26T04:37:23.593294+00:00"
+}

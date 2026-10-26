@@ -1,0 +1,3638 @@
+{
+  "scope": "Fresh physical Ethernet uploads and device verification; upload excluded from API time",
+  "rows": [
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 12597.93,
+      "python_verify_us": 897.1,
+      "verification_number": 1,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.961499944329262,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000002,
+            "status": 0,
+            "rtt_us": 1290.4,
+            "previous_operation_ticks": 58538,
+            "board_rx": 476,
+            "board_tx_before_reply": 477
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000003,
+            "status": 0,
+            "rtt_us": 917.7,
+            "previous_operation_ticks": 62970,
+            "board_rx": 477,
+            "board_tx_before_reply": 478
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000004,
+            "status": 0,
+            "rtt_us": 925.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 478,
+            "board_tx_before_reply": 479
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000005,
+            "status": 0,
+            "rtt_us": 889.7,
+            "previous_operation_ticks": 44518,
+            "board_rx": 479,
+            "board_tx_before_reply": 480
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000006,
+            "status": 0,
+            "rtt_us": 717.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 480,
+            "board_tx_before_reply": 481
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 19961.4,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000007,
+        "status": 0,
+        "rtt_us": 19961.4,
+        "previous_operation_ticks": 32387,
+        "board_rx": 481,
+        "board_tx_before_reply": 482
+      },
+      "result_hex": "50515231f6096e0300000001000000000013391100000001000012000000001f",
+      "response_hex": "4533355201070020000f424753e7cc860000000000007e83000001e1000001e2032c81f36d5302bd000001440e75276fd49d0e99f5b37db96c9cfccbce24538fd5833c8a14a6e0531d352c5a9e99b55cb61146a997fc8e2774e86432"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 12597.89,
+      "python_verify_us": 638.4,
+      "verification_number": 2,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.961499944329262,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000002,
+            "status": 0,
+            "rtt_us": 1290.4,
+            "previous_operation_ticks": 58538,
+            "board_rx": 476,
+            "board_tx_before_reply": 477
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000003,
+            "status": 0,
+            "rtt_us": 917.7,
+            "previous_operation_ticks": 62970,
+            "board_rx": 477,
+            "board_tx_before_reply": 478
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000004,
+            "status": 0,
+            "rtt_us": 925.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 478,
+            "board_tx_before_reply": 479
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000005,
+            "status": 0,
+            "rtt_us": 889.7,
+            "previous_operation_ticks": 44518,
+            "board_rx": 479,
+            "board_tx_before_reply": 480
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000006,
+            "status": 0,
+            "rtt_us": 717.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 480,
+            "board_tx_before_reply": 481
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13213.3,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000008,
+        "status": 0,
+        "rtt_us": 13213.3,
+        "previous_operation_ticks": 1277356,
+        "board_rx": 482,
+        "board_tx_before_reply": 483
+      },
+      "result_hex": "50515231f6096e0300000001000000000013390d00000002000012000000001f",
+      "response_hex": "4533355201070020000f424853e7cc860000000000137dac000001e2000001e3032c81f36d5302bd00000145656ec096e2c4e48014b8ebaef36790de53597cdabcc268b4adfb85716b2025a52813baf1d49124adbe0e32ea8208e741"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 12597.88,
+      "python_verify_us": 733.2,
+      "verification_number": 3,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.961499944329262,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000002,
+            "status": 0,
+            "rtt_us": 1290.4,
+            "previous_operation_ticks": 58538,
+            "board_rx": 476,
+            "board_tx_before_reply": 477
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000003,
+            "status": 0,
+            "rtt_us": 917.7,
+            "previous_operation_ticks": 62970,
+            "board_rx": 477,
+            "board_tx_before_reply": 478
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000004,
+            "status": 0,
+            "rtt_us": 925.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 478,
+            "board_tx_before_reply": 479
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000005,
+            "status": 0,
+            "rtt_us": 889.7,
+            "previous_operation_ticks": 44518,
+            "board_rx": 479,
+            "board_tx_before_reply": 480
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000006,
+            "status": 0,
+            "rtt_us": 717.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 480,
+            "board_tx_before_reply": 481
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13216.1,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000009,
+        "status": 0,
+        "rtt_us": 13216.1,
+        "previous_operation_ticks": 1277352,
+        "board_rx": 483,
+        "board_tx_before_reply": 484
+      },
+      "result_hex": "50515231f6096e0300000001000000000013390c00000003000012000000001f",
+      "response_hex": "4533355201070020000f424953e7cc860000000000137da8000001e3000001e4032c81f36d5302bd00000146915e7719773adf414205fb1f9ae0cb3bf2d1defb2bbe0330747afb4e51995a569514d926f56c9ae7c556f20d024f9e8a"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 12597.94,
+      "python_verify_us": 641.1,
+      "verification_number": 4,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.961499944329262,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000002,
+            "status": 0,
+            "rtt_us": 1290.4,
+            "previous_operation_ticks": 58538,
+            "board_rx": 476,
+            "board_tx_before_reply": 477
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000003,
+            "status": 0,
+            "rtt_us": 917.7,
+            "previous_operation_ticks": 62970,
+            "board_rx": 477,
+            "board_tx_before_reply": 478
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000004,
+            "status": 0,
+            "rtt_us": 925.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 478,
+            "board_tx_before_reply": 479
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000005,
+            "status": 0,
+            "rtt_us": 889.7,
+            "previous_operation_ticks": 44518,
+            "board_rx": 479,
+            "board_tx_before_reply": 480
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000006,
+            "status": 0,
+            "rtt_us": 717.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 480,
+            "board_tx_before_reply": 481
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13595.7,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000010,
+        "status": 0,
+        "rtt_us": 13595.7,
+        "previous_operation_ticks": 1277350,
+        "board_rx": 484,
+        "board_tx_before_reply": 485
+      },
+      "result_hex": "50515231f6096e0300000001000000000013391200000004000012000000001f",
+      "response_hex": "4533355201070020000f424a53e7cc860000000000137da6000001e4000001e5032c81f36d5302bd000001477bd1cc0a82ec54a8e8ffe09568bb617c815970e71ea1715ba304c26cce43cfc8710c01691949324d74933f27c551f96f"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 12598.0,
+      "python_verify_us": 791.6,
+      "verification_number": 5,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.961499944329262,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000002,
+            "status": 0,
+            "rtt_us": 1290.4,
+            "previous_operation_ticks": 58538,
+            "board_rx": 476,
+            "board_tx_before_reply": 477
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000003,
+            "status": 0,
+            "rtt_us": 917.7,
+            "previous_operation_ticks": 62970,
+            "board_rx": 477,
+            "board_tx_before_reply": 478
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000004,
+            "status": 0,
+            "rtt_us": 925.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 478,
+            "board_tx_before_reply": 479
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000005,
+            "status": 0,
+            "rtt_us": 889.7,
+            "previous_operation_ticks": 44518,
+            "board_rx": 479,
+            "board_tx_before_reply": 480
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000006,
+            "status": 0,
+            "rtt_us": 717.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 480,
+            "board_tx_before_reply": 481
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13233.6,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000011,
+        "status": 0,
+        "rtt_us": 13233.6,
+        "previous_operation_ticks": 1277356,
+        "board_rx": 485,
+        "board_tx_before_reply": 486
+      },
+      "result_hex": "50515231f6096e0300000001000000000013391800000005000012000000001f",
+      "response_hex": "4533355201070020000f424b53e7cc860000000000137dac000001e5000001e6032c81f36d5302bd000001488bdb9d3b25cb18fe9de3872f9bd28c7c2410d7d457091c60d7162693b809f9e69e611c96a973bf35687f0b4c50fcb680"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_signature",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 11763.3,
+      "python_verify_us": 543.3,
+      "verification_number": 6,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.806799930520356,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000012,
+            "status": 0,
+            "rtt_us": 1182.6,
+            "previous_operation_ticks": 1277364,
+            "board_rx": 486,
+            "board_tx_before_reply": 487
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000013,
+            "status": 0,
+            "rtt_us": 895.4,
+            "previous_operation_ticks": 62969,
+            "board_rx": 487,
+            "board_tx_before_reply": 488
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000014,
+            "status": 0,
+            "rtt_us": 908.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 488,
+            "board_tx_before_reply": 489
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000015,
+            "status": 0,
+            "rtt_us": 885.8,
+            "previous_operation_ticks": 44517,
+            "board_rx": 489,
+            "board_tx_before_reply": 490
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000016,
+            "status": 0,
+            "rtt_us": 726.8,
+            "previous_operation_ticks": 44518,
+            "board_rx": 490,
+            "board_tx_before_reply": 491
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12303.5,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000017,
+        "status": 0,
+        "rtt_us": 12303.5,
+        "previous_operation_ticks": 32387,
+        "board_rx": 491,
+        "board_tx_before_reply": 492
+      },
+      "result_hex": "50515231a25dfe9400000000000000ab0011f30a00000006000012000000001f",
+      "response_hex": "4533355201070020000f425153e7cc860000000000007e83000001eb000001ec032c81f36d5302bd0000014ed28aa083d0ccc5b21157fa31bfa21249924cae1cd121b9d55485cc1eca13ecf28e67f3bd267ac86ea04ab9ddb8a597bc"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_signature",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 11763.25,
+      "python_verify_us": 539.4,
+      "verification_number": 7,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.806799930520356,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000012,
+            "status": 0,
+            "rtt_us": 1182.6,
+            "previous_operation_ticks": 1277364,
+            "board_rx": 486,
+            "board_tx_before_reply": 487
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000013,
+            "status": 0,
+            "rtt_us": 895.4,
+            "previous_operation_ticks": 62969,
+            "board_rx": 487,
+            "board_tx_before_reply": 488
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000014,
+            "status": 0,
+            "rtt_us": 908.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 488,
+            "board_tx_before_reply": 489
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000015,
+            "status": 0,
+            "rtt_us": 885.8,
+            "previous_operation_ticks": 44517,
+            "board_rx": 489,
+            "board_tx_before_reply": 490
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000016,
+            "status": 0,
+            "rtt_us": 726.8,
+            "previous_operation_ticks": 44518,
+            "board_rx": 490,
+            "board_tx_before_reply": 491
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12463.2,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000018,
+        "status": 0,
+        "rtt_us": 12463.2,
+        "previous_operation_ticks": 1193892,
+        "board_rx": 492,
+        "board_tx_before_reply": 493
+      },
+      "result_hex": "50515231a25dfe9400000000000000ab0011f30500000007000012000000001f",
+      "response_hex": "4533355201070020000f425253e7cc8600000000001237a4000001ec000001ed032c81f36d5302bd0000014fbf08df6975f1ba92b3fdaf303b676233d92f4210cc03533e1a18c9fc6e9e10d38c23ef0d88b07f03d73caba1b089a133"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_signature",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 11763.11,
+      "python_verify_us": 797.1,
+      "verification_number": 8,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.806799930520356,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000012,
+            "status": 0,
+            "rtt_us": 1182.6,
+            "previous_operation_ticks": 1277364,
+            "board_rx": 486,
+            "board_tx_before_reply": 487
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000013,
+            "status": 0,
+            "rtt_us": 895.4,
+            "previous_operation_ticks": 62969,
+            "board_rx": 487,
+            "board_tx_before_reply": 488
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000014,
+            "status": 0,
+            "rtt_us": 908.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 488,
+            "board_tx_before_reply": 489
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000015,
+            "status": 0,
+            "rtt_us": 885.8,
+            "previous_operation_ticks": 44517,
+            "board_rx": 489,
+            "board_tx_before_reply": 490
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000016,
+            "status": 0,
+            "rtt_us": 726.8,
+            "previous_operation_ticks": 44518,
+            "board_rx": 490,
+            "board_tx_before_reply": 491
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12298.9,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000019,
+        "status": 0,
+        "rtt_us": 12298.9,
+        "previous_operation_ticks": 1193888,
+        "board_rx": 493,
+        "board_tx_before_reply": 494
+      },
+      "result_hex": "50515231a25dfe9400000000000000ab0011f2f700000008000012000000001f",
+      "response_hex": "4533355201070020000f425353e7cc8600000000001237a0000001ed000001ee032c81f36d5302bd000001506de6b6070a94198ee51ef7225b99f5b5169f7fddfd0c505e1e0d2bc7d155061af51d2b841901baf60593700d174ae943"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_signature",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 11763.27,
+      "python_verify_us": 536.8,
+      "verification_number": 9,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.806799930520356,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000012,
+            "status": 0,
+            "rtt_us": 1182.6,
+            "previous_operation_ticks": 1277364,
+            "board_rx": 486,
+            "board_tx_before_reply": 487
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000013,
+            "status": 0,
+            "rtt_us": 895.4,
+            "previous_operation_ticks": 62969,
+            "board_rx": 487,
+            "board_tx_before_reply": 488
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000014,
+            "status": 0,
+            "rtt_us": 908.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 488,
+            "board_tx_before_reply": 489
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000015,
+            "status": 0,
+            "rtt_us": 885.8,
+            "previous_operation_ticks": 44517,
+            "board_rx": 489,
+            "board_tx_before_reply": 490
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000016,
+            "status": 0,
+            "rtt_us": 726.8,
+            "previous_operation_ticks": 44518,
+            "board_rx": 490,
+            "board_tx_before_reply": 491
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12340.0,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000020,
+        "status": 0,
+        "rtt_us": 12340.0,
+        "previous_operation_ticks": 1193874,
+        "board_rx": 494,
+        "board_tx_before_reply": 495
+      },
+      "result_hex": "50515231a25dfe9400000000000000ab0011f30700000009000012000000001f",
+      "response_hex": "4533355201070020000f425453e7cc860000000000123792000001ee000001ef032c81f36d5302bd00000151e6dce028090067acc7001e3beafbae707a33fc76c4e52d13694527aef6451989d1668d4f462a2649558ee29a10b5db10"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_signature",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 11763.29,
+      "python_verify_us": 552.4,
+      "verification_number": 10,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.806799930520356,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000012,
+            "status": 0,
+            "rtt_us": 1182.6,
+            "previous_operation_ticks": 1277364,
+            "board_rx": 486,
+            "board_tx_before_reply": 487
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000013,
+            "status": 0,
+            "rtt_us": 895.4,
+            "previous_operation_ticks": 62969,
+            "board_rx": 487,
+            "board_tx_before_reply": 488
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000014,
+            "status": 0,
+            "rtt_us": 908.8,
+            "previous_operation_ticks": 44516,
+            "board_rx": 488,
+            "board_tx_before_reply": 489
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000015,
+            "status": 0,
+            "rtt_us": 885.8,
+            "previous_operation_ticks": 44517,
+            "board_rx": 489,
+            "board_tx_before_reply": 490
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000016,
+            "status": 0,
+            "rtt_us": 726.8,
+            "previous_operation_ticks": 44518,
+            "board_rx": 490,
+            "board_tx_before_reply": 491
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12403.5,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000021,
+        "status": 0,
+        "rtt_us": 12403.5,
+        "previous_operation_ticks": 1193890,
+        "board_rx": 495,
+        "board_tx_before_reply": 496
+      },
+      "result_hex": "50515231a25dfe9400000000000000ab0011f3090000000a000012000000001f",
+      "response_hex": "4533355201070020000f425553e7cc8600000000001237a2000001ef000001f0032c81f36d5302bd00000152a79d349dae616f3865921c3eea53cd0a045a2081a915d01e2e3c0d43548a0906606fa8c256d2a4231ccbc1717f38b7dc"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_message",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12418.55,
+      "python_verify_us": 560.8,
+      "verification_number": 11,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.602200002409518,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000022,
+            "status": 0,
+            "rtt_us": 1092.5,
+            "previous_operation_ticks": 1193893,
+            "board_rx": 496,
+            "board_tx_before_reply": 497
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000023,
+            "status": 0,
+            "rtt_us": 854.8,
+            "previous_operation_ticks": 62968,
+            "board_rx": 497,
+            "board_tx_before_reply": 498
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000024,
+            "status": 0,
+            "rtt_us": 850.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 498,
+            "board_tx_before_reply": 499
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000025,
+            "status": 0,
+            "rtt_us": 895.0,
+            "previous_operation_ticks": 44517,
+            "board_rx": 499,
+            "board_tx_before_reply": 500
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000026,
+            "status": 0,
+            "rtt_us": 762.7,
+            "previous_operation_ticks": 44518,
+            "board_rx": 500,
+            "board_tx_before_reply": 501
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12987.7,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000027,
+        "status": 0,
+        "rtt_us": 12987.7,
+        "previous_operation_ticks": 32386,
+        "board_rx": 501,
+        "board_tx_before_reply": 502
+      },
+      "result_hex": "5051523123711ead00000000000000ab0012f2ff0000000b000012000000001f",
+      "response_hex": "4533355201070020000f425b53e7cc860000000000007e82000001f5000001f6032c81f36d5302bd00000158f2586b7fd4c3a81285adbb5e210e668559bac54d3ea47ded314003e2ad105ef2d1daded6d8a0eb80ae98213f64eb6625"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_message",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12418.5,
+      "python_verify_us": 547.5,
+      "verification_number": 12,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.602200002409518,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000022,
+            "status": 0,
+            "rtt_us": 1092.5,
+            "previous_operation_ticks": 1193893,
+            "board_rx": 496,
+            "board_tx_before_reply": 497
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000023,
+            "status": 0,
+            "rtt_us": 854.8,
+            "previous_operation_ticks": 62968,
+            "board_rx": 497,
+            "board_tx_before_reply": 498
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000024,
+            "status": 0,
+            "rtt_us": 850.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 498,
+            "board_tx_before_reply": 499
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000025,
+            "status": 0,
+            "rtt_us": 895.0,
+            "previous_operation_ticks": 44517,
+            "board_rx": 499,
+            "board_tx_before_reply": 500
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000026,
+            "status": 0,
+            "rtt_us": 762.7,
+            "previous_operation_ticks": 44518,
+            "board_rx": 500,
+            "board_tx_before_reply": 501
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13051.9,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000028,
+        "status": 0,
+        "rtt_us": 13051.9,
+        "previous_operation_ticks": 1259419,
+        "board_rx": 502,
+        "board_tx_before_reply": 503
+      },
+      "result_hex": "5051523123711ead00000000000000ab0012f2fa0000000c000012000000001f",
+      "response_hex": "4533355201070020000f425c53e7cc86000000000013379b000001f6000001f7032c81f36d5302bd00000159bc00464fa307f0b67d4771b5ab6bf1b5d842031d20cf6e31b9775fb52334115bb904a24b42b214d73019e8b6d27353ce"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_message",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12418.45,
+      "python_verify_us": 564.5,
+      "verification_number": 13,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.602200002409518,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000022,
+            "status": 0,
+            "rtt_us": 1092.5,
+            "previous_operation_ticks": 1193893,
+            "board_rx": 496,
+            "board_tx_before_reply": 497
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000023,
+            "status": 0,
+            "rtt_us": 854.8,
+            "previous_operation_ticks": 62968,
+            "board_rx": 497,
+            "board_tx_before_reply": 498
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000024,
+            "status": 0,
+            "rtt_us": 850.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 498,
+            "board_tx_before_reply": 499
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000025,
+            "status": 0,
+            "rtt_us": 895.0,
+            "previous_operation_ticks": 44517,
+            "board_rx": 499,
+            "board_tx_before_reply": 500
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000026,
+            "status": 0,
+            "rtt_us": 762.7,
+            "previous_operation_ticks": 44518,
+            "board_rx": 500,
+            "board_tx_before_reply": 501
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13066.7,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000029,
+        "status": 0,
+        "rtt_us": 13066.7,
+        "previous_operation_ticks": 1259413,
+        "board_rx": 503,
+        "board_tx_before_reply": 504
+      },
+      "result_hex": "5051523123711ead00000000000000ab0012f2f50000000d000012000000001f",
+      "response_hex": "4533355201070020000f425d53e7cc860000000000133795000001f7000001f8032c81f36d5302bd0000015aad7ff5aa42baa1fb142257f3c3c98a242cd19116902f0ef58b7d452bd824c95aa1890a40eaf05805416c9a5bf00d6f0b"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_message",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12418.46,
+      "python_verify_us": 588.9,
+      "verification_number": 14,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.602200002409518,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000022,
+            "status": 0,
+            "rtt_us": 1092.5,
+            "previous_operation_ticks": 1193893,
+            "board_rx": 496,
+            "board_tx_before_reply": 497
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000023,
+            "status": 0,
+            "rtt_us": 854.8,
+            "previous_operation_ticks": 62968,
+            "board_rx": 497,
+            "board_tx_before_reply": 498
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000024,
+            "status": 0,
+            "rtt_us": 850.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 498,
+            "board_tx_before_reply": 499
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000025,
+            "status": 0,
+            "rtt_us": 895.0,
+            "previous_operation_ticks": 44517,
+            "board_rx": 499,
+            "board_tx_before_reply": 500
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000026,
+            "status": 0,
+            "rtt_us": 762.7,
+            "previous_operation_ticks": 44518,
+            "board_rx": 500,
+            "board_tx_before_reply": 501
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13011.8,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000030,
+        "status": 0,
+        "rtt_us": 13011.8,
+        "previous_operation_ticks": 1259407,
+        "board_rx": 504,
+        "board_tx_before_reply": 505
+      },
+      "result_hex": "5051523123711ead00000000000000ab0012f2f60000000e000012000000001f",
+      "response_hex": "4533355201070020000f425e53e7cc86000000000013378f000001f8000001f9032c81f36d5302bd0000015bb5f5a838cde04d7d2e6cd5d83fc04821dac6bce0aa60637281952a2cfddd82c97c36f3c35d30c973712131f5a8a0b1ee"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_message",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12418.59,
+      "python_verify_us": 742.5,
+      "verification_number": 15,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.602200002409518,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000022,
+            "status": 0,
+            "rtt_us": 1092.5,
+            "previous_operation_ticks": 1193893,
+            "board_rx": 496,
+            "board_tx_before_reply": 497
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000023,
+            "status": 0,
+            "rtt_us": 854.8,
+            "previous_operation_ticks": 62968,
+            "board_rx": 497,
+            "board_tx_before_reply": 498
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000024,
+            "status": 0,
+            "rtt_us": 850.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 498,
+            "board_tx_before_reply": 499
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000025,
+            "status": 0,
+            "rtt_us": 895.0,
+            "previous_operation_ticks": 44517,
+            "board_rx": 499,
+            "board_tx_before_reply": 500
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000026,
+            "status": 0,
+            "rtt_us": 762.7,
+            "previous_operation_ticks": 44518,
+            "board_rx": 500,
+            "board_tx_before_reply": 501
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 14869.0,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000031,
+        "status": 0,
+        "rtt_us": 14869.0,
+        "previous_operation_ticks": 1259410,
+        "board_rx": 505,
+        "board_tx_before_reply": 506
+      },
+      "result_hex": "5051523123711ead00000000000000ab0012f3030000000f000012000000001f",
+      "response_hex": "4533355201070020000f425f53e7cc860000000000133792000001f9000001fa032c81f36d5302bd0000015c7a82ac3ff7e4f629e991338003ad9295f24953cd1eb2e5cb4ae5f00d665a8f988ce1f7c3b6409c3ad80a168ca573e67d"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_key",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12597.64,
+      "python_verify_us": 706.5,
+      "verification_number": 16,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.946900065988302,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000032,
+            "status": 0,
+            "rtt_us": 1159.6,
+            "previous_operation_ticks": 1259421,
+            "board_rx": 506,
+            "board_tx_before_reply": 507
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000033,
+            "status": 0,
+            "rtt_us": 918.4,
+            "previous_operation_ticks": 62968,
+            "board_rx": 507,
+            "board_tx_before_reply": 508
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000034,
+            "status": 0,
+            "rtt_us": 888.3,
+            "previous_operation_ticks": 44516,
+            "board_rx": 508,
+            "board_tx_before_reply": 509
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000035,
+            "status": 0,
+            "rtt_us": 866.4,
+            "previous_operation_ticks": 44517,
+            "board_rx": 509,
+            "board_tx_before_reply": 510
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000036,
+            "status": 0,
+            "rtt_us": 911.9,
+            "previous_operation_ticks": 44517,
+            "board_rx": 510,
+            "board_tx_before_reply": 511
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13123.7,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000037,
+        "status": 0,
+        "rtt_us": 13123.7,
+        "previous_operation_ticks": 32387,
+        "board_rx": 511,
+        "board_tx_before_reply": 512
+      },
+      "result_hex": "505152318ce5af3f00000000000000ab001338f400000010000012000000001f",
+      "response_hex": "4533355201070020000f426553e7cc860000000000007e83000001ff00000200032c81f36d5302bd00000162fcd8a690799b0373a547e9d223ee32538088499cdf387310988866812dd0e669f932fe175215b4be94d17a6016ace9f8"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_key",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12597.68,
+      "python_verify_us": 694.5,
+      "verification_number": 17,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.946900065988302,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000032,
+            "status": 0,
+            "rtt_us": 1159.6,
+            "previous_operation_ticks": 1259421,
+            "board_rx": 506,
+            "board_tx_before_reply": 507
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000033,
+            "status": 0,
+            "rtt_us": 918.4,
+            "previous_operation_ticks": 62968,
+            "board_rx": 507,
+            "board_tx_before_reply": 508
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000034,
+            "status": 0,
+            "rtt_us": 888.3,
+            "previous_operation_ticks": 44516,
+            "board_rx": 508,
+            "board_tx_before_reply": 509
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000035,
+            "status": 0,
+            "rtt_us": 866.4,
+            "previous_operation_ticks": 44517,
+            "board_rx": 509,
+            "board_tx_before_reply": 510
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000036,
+            "status": 0,
+            "rtt_us": 911.9,
+            "previous_operation_ticks": 44517,
+            "board_rx": 510,
+            "board_tx_before_reply": 511
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13178.6,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000038,
+        "status": 0,
+        "rtt_us": 13178.6,
+        "previous_operation_ticks": 1277328,
+        "board_rx": 512,
+        "board_tx_before_reply": 513
+      },
+      "result_hex": "505152318ce5af3f00000000000000ab001338f800000011000012000000001f",
+      "response_hex": "4533355201070020000f426653e7cc860000000000137d900000020000000201032c81f36d5302bd000001638ca759ab30c98c30779dd00ac19230ee4a9044d06d39cdc5a4223e177dee6a7c54d16d98dd2b3c69543b8724664e6417"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_key",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12597.63,
+      "python_verify_us": 561.1,
+      "verification_number": 18,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.946900065988302,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000032,
+            "status": 0,
+            "rtt_us": 1159.6,
+            "previous_operation_ticks": 1259421,
+            "board_rx": 506,
+            "board_tx_before_reply": 507
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000033,
+            "status": 0,
+            "rtt_us": 918.4,
+            "previous_operation_ticks": 62968,
+            "board_rx": 507,
+            "board_tx_before_reply": 508
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000034,
+            "status": 0,
+            "rtt_us": 888.3,
+            "previous_operation_ticks": 44516,
+            "board_rx": 508,
+            "board_tx_before_reply": 509
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000035,
+            "status": 0,
+            "rtt_us": 866.4,
+            "previous_operation_ticks": 44517,
+            "board_rx": 509,
+            "board_tx_before_reply": 510
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000036,
+            "status": 0,
+            "rtt_us": 911.9,
+            "previous_operation_ticks": 44517,
+            "board_rx": 510,
+            "board_tx_before_reply": 511
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13449.9,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000039,
+        "status": 0,
+        "rtt_us": 13449.9,
+        "previous_operation_ticks": 1277330,
+        "board_rx": 513,
+        "board_tx_before_reply": 514
+      },
+      "result_hex": "505152318ce5af3f00000000000000ab001338f300000012000012000000001f",
+      "response_hex": "4533355201070020000f426753e7cc860000000000137d920000020100000202032c81f36d5302bd000001642c41a85da1a009c292e70f9e391aa036959025df2ded96b94a0e5d06c6d9862919009a2b47681747331536ac30f93a75"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_key",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12597.89,
+      "python_verify_us": 562.0,
+      "verification_number": 19,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.946900065988302,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000032,
+            "status": 0,
+            "rtt_us": 1159.6,
+            "previous_operation_ticks": 1259421,
+            "board_rx": 506,
+            "board_tx_before_reply": 507
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000033,
+            "status": 0,
+            "rtt_us": 918.4,
+            "previous_operation_ticks": 62968,
+            "board_rx": 507,
+            "board_tx_before_reply": 508
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000034,
+            "status": 0,
+            "rtt_us": 888.3,
+            "previous_operation_ticks": 44516,
+            "board_rx": 508,
+            "board_tx_before_reply": 509
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000035,
+            "status": 0,
+            "rtt_us": 866.4,
+            "previous_operation_ticks": 44517,
+            "board_rx": 509,
+            "board_tx_before_reply": 510
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000036,
+            "status": 0,
+            "rtt_us": 911.9,
+            "previous_operation_ticks": 44517,
+            "board_rx": 510,
+            "board_tx_before_reply": 511
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13155.7,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000040,
+        "status": 0,
+        "rtt_us": 13155.7,
+        "previous_operation_ticks": 1277326,
+        "board_rx": 514,
+        "board_tx_before_reply": 515
+      },
+      "result_hex": "505152318ce5af3f00000000000000ab0013390d00000013000012000000001f",
+      "response_hex": "4533355201070020000f426853e7cc860000000000137d8e0000020200000203032c81f36d5302bd00000165daf79c7d22aafc988381a66c9342b228b559829ea24475bc2f9aee26d38962f1ee86f03ec8448616f31fb6efe2ffb489"
+    },
+    {
+      "algorithm": "LMS-SHAKE256",
+      "case": "bad_key",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12597.77,
+      "python_verify_us": 556.9,
+      "verification_number": 20,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4460,
+      "public_key_bytes": 56,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.946900065988302,
+        "records": [
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000032,
+            "status": 0,
+            "rtt_us": 1159.6,
+            "previous_operation_ticks": 1259421,
+            "board_rx": 506,
+            "board_tx_before_reply": 507
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000033,
+            "status": 0,
+            "rtt_us": 918.4,
+            "previous_operation_ticks": 62968,
+            "board_rx": 507,
+            "board_tx_before_reply": 508
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000034,
+            "status": 0,
+            "rtt_us": 888.3,
+            "previous_operation_ticks": 44516,
+            "board_rx": 508,
+            "board_tx_before_reply": 509
+          },
+          {
+            "op": 7,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000035,
+            "status": 0,
+            "rtt_us": 866.4,
+            "previous_operation_ticks": 44517,
+            "board_rx": 509,
+            "board_tx_before_reply": 510
+          },
+          {
+            "op": 7,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000036,
+            "status": 0,
+            "rtt_us": 911.9,
+            "previous_operation_ticks": 44517,
+            "board_rx": 510,
+            "board_tx_before_reply": 511
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13215.9,
+      "record": {
+        "op": 7,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000041,
+        "status": 0,
+        "rtt_us": 13215.9,
+        "previous_operation_ticks": 1277352,
+        "board_rx": 515,
+        "board_tx_before_reply": 516
+      },
+      "result_hex": "505152318ce5af3f00000000000000ab0013390100000014000012000000001f",
+      "response_hex": "4533355201070020000f426953e7cc860000000000137da80000020300000204032c81f36d5302bd000001660a506cfe034c6c72c9795ff0a88073ca5d7c6b8992a825fc57f5d0e8aca00aa3220b0783a0a646d275102aa9c3ca6a28"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 11839.13,
+      "python_verify_us": 540.5,
+      "verification_number": 21,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.428600077517331,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000042,
+            "status": 0,
+            "rtt_us": 1088.0,
+            "previous_operation_ticks": 1277340,
+            "board_rx": 516,
+            "board_tx_before_reply": 517
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000043,
+            "status": 0,
+            "rtt_us": 855.8,
+            "previous_operation_ticks": 62970,
+            "board_rx": 517,
+            "board_tx_before_reply": 518
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000044,
+            "status": 0,
+            "rtt_us": 854.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 518,
+            "board_tx_before_reply": 519
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000045,
+            "status": 0,
+            "rtt_us": 853.9,
+            "previous_operation_ticks": 44518,
+            "board_rx": 519,
+            "board_tx_before_reply": 520
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000046,
+            "status": 0,
+            "rtt_us": 692.3,
+            "previous_operation_ticks": 44516,
+            "board_rx": 520,
+            "board_tx_before_reply": 521
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12380.5,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000047,
+        "status": 0,
+        "rtt_us": 12380.5,
+        "previous_operation_ticks": 32388,
+        "board_rx": 521,
+        "board_tx_before_reply": 522
+      },
+      "result_hex": "5051523145f04fd50000000100000000001210a900000015000012000000001f",
+      "response_hex": "4533355201080020000f426f53e7cc860000000000007e84000002090000020a032c81f36d5302bd0000016c5a8e18c406ee820b188f9b87d9013e81e4fc4e2e84d16a72278c2e5c6cb36f4ce57ed337fd8355fa25b1a89357b92a94"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 11839.17,
+      "python_verify_us": 534.6,
+      "verification_number": 22,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.428600077517331,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000042,
+            "status": 0,
+            "rtt_us": 1088.0,
+            "previous_operation_ticks": 1277340,
+            "board_rx": 516,
+            "board_tx_before_reply": 517
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000043,
+            "status": 0,
+            "rtt_us": 855.8,
+            "previous_operation_ticks": 62970,
+            "board_rx": 517,
+            "board_tx_before_reply": 518
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000044,
+            "status": 0,
+            "rtt_us": 854.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 518,
+            "board_tx_before_reply": 519
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000045,
+            "status": 0,
+            "rtt_us": 853.9,
+            "previous_operation_ticks": 44518,
+            "board_rx": 519,
+            "board_tx_before_reply": 520
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000046,
+            "status": 0,
+            "rtt_us": 692.3,
+            "previous_operation_ticks": 44516,
+            "board_rx": 520,
+            "board_tx_before_reply": 521
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12455.9,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000048,
+        "status": 0,
+        "rtt_us": 12455.9,
+        "previous_operation_ticks": 1201556,
+        "board_rx": 522,
+        "board_tx_before_reply": 523
+      },
+      "result_hex": "5051523145f04fd50000000100000000001210ad00000016000012000000001f",
+      "response_hex": "4533355201080020000f427053e7cc8600000000001255940000020a0000020b032c81f36d5302bd0000016d87f09ca3e997580187dead53c46e6a4aeeeb1af6571bb8a2d75d14fc5004f9a2b10f104a72b02726cea858e2d70683d9"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 11839.17,
+      "python_verify_us": 545.8,
+      "verification_number": 23,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.428600077517331,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000042,
+            "status": 0,
+            "rtt_us": 1088.0,
+            "previous_operation_ticks": 1277340,
+            "board_rx": 516,
+            "board_tx_before_reply": 517
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000043,
+            "status": 0,
+            "rtt_us": 855.8,
+            "previous_operation_ticks": 62970,
+            "board_rx": 517,
+            "board_tx_before_reply": 518
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000044,
+            "status": 0,
+            "rtt_us": 854.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 518,
+            "board_tx_before_reply": 519
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000045,
+            "status": 0,
+            "rtt_us": 853.9,
+            "previous_operation_ticks": 44518,
+            "board_rx": 519,
+            "board_tx_before_reply": 520
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000046,
+            "status": 0,
+            "rtt_us": 692.3,
+            "previous_operation_ticks": 44516,
+            "board_rx": 520,
+            "board_tx_before_reply": 521
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12612.0,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000049,
+        "status": 0,
+        "rtt_us": 12612.0,
+        "previous_operation_ticks": 1201561,
+        "board_rx": 523,
+        "board_tx_before_reply": 524
+      },
+      "result_hex": "5051523145f04fd50000000100000000001210ad00000017000012000000001f",
+      "response_hex": "4533355201080020000f427153e7cc8600000000001255990000020b0000020c032c81f36d5302bd0000016efc6382ec6d5b02a602420beab6d7d48af65916517df9fa9569700e316bd0a574314696acdee98fbb91fbafe0d7f6ad78"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 11839.09,
+      "python_verify_us": 642.4,
+      "verification_number": 24,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.428600077517331,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000042,
+            "status": 0,
+            "rtt_us": 1088.0,
+            "previous_operation_ticks": 1277340,
+            "board_rx": 516,
+            "board_tx_before_reply": 517
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000043,
+            "status": 0,
+            "rtt_us": 855.8,
+            "previous_operation_ticks": 62970,
+            "board_rx": 517,
+            "board_tx_before_reply": 518
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000044,
+            "status": 0,
+            "rtt_us": 854.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 518,
+            "board_tx_before_reply": 519
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000045,
+            "status": 0,
+            "rtt_us": 853.9,
+            "previous_operation_ticks": 44518,
+            "board_rx": 519,
+            "board_tx_before_reply": 520
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000046,
+            "status": 0,
+            "rtt_us": 692.3,
+            "previous_operation_ticks": 44516,
+            "board_rx": 520,
+            "board_tx_before_reply": 521
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12393.1,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000050,
+        "status": 0,
+        "rtt_us": 12393.1,
+        "previous_operation_ticks": 1201562,
+        "board_rx": 524,
+        "board_tx_before_reply": 525
+      },
+      "result_hex": "5051523145f04fd50000000100000000001210a500000018000012000000001f",
+      "response_hex": "4533355201080020000f427253e7cc86000000000012559a0000020c0000020d032c81f36d5302bd0000016f05e4383df97a10137d68b724937ac92e24c99fe59327ce5470e08fcfa5d4710cfa83f913bc912101679a87cdab72fad5"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "valid",
+      "accepted": true,
+      "vendor_status": 0,
+      "device_verify_us": 11839.12,
+      "python_verify_us": 657.0,
+      "verification_number": 25,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.428600077517331,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000042,
+            "status": 0,
+            "rtt_us": 1088.0,
+            "previous_operation_ticks": 1277340,
+            "board_rx": 516,
+            "board_tx_before_reply": 517
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000043,
+            "status": 0,
+            "rtt_us": 855.8,
+            "previous_operation_ticks": 62970,
+            "board_rx": 517,
+            "board_tx_before_reply": 518
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000044,
+            "status": 0,
+            "rtt_us": 854.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 518,
+            "board_tx_before_reply": 519
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000045,
+            "status": 0,
+            "rtt_us": 853.9,
+            "previous_operation_ticks": 44518,
+            "board_rx": 519,
+            "board_tx_before_reply": 520
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000046,
+            "status": 0,
+            "rtt_us": 692.3,
+            "previous_operation_ticks": 44516,
+            "board_rx": 520,
+            "board_tx_before_reply": 521
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12414.0,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000051,
+        "status": 0,
+        "rtt_us": 12414.0,
+        "previous_operation_ticks": 1201554,
+        "board_rx": 525,
+        "board_tx_before_reply": 526
+      },
+      "result_hex": "5051523145f04fd50000000100000000001210a800000019000012000000001f",
+      "response_hex": "4533355201080020000f427353e7cc8600000000001255920000020d0000020e032c81f36d5302bd00000170bd93f9498cb960f4df016bb95331ec103b2fbb6bd51126878f4754cdd39868072f9c4dfe40c422914ece1a6792a5fda5"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_signature",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12642.54,
+      "python_verify_us": 688.4,
+      "verification_number": 26,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.765199963003397,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000052,
+            "status": 0,
+            "rtt_us": 1121.2,
+            "previous_operation_ticks": 1201557,
+            "board_rx": 526,
+            "board_tx_before_reply": 527
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000053,
+            "status": 0,
+            "rtt_us": 953.5,
+            "previous_operation_ticks": 62969,
+            "board_rx": 527,
+            "board_tx_before_reply": 528
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000054,
+            "status": 0,
+            "rtt_us": 1004.1,
+            "previous_operation_ticks": 44519,
+            "board_rx": 528,
+            "board_tx_before_reply": 529
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000055,
+            "status": 0,
+            "rtt_us": 861.7,
+            "previous_operation_ticks": 44519,
+            "board_rx": 529,
+            "board_tx_before_reply": 530
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000056,
+            "status": 0,
+            "rtt_us": 680.3,
+            "previous_operation_ticks": 44517,
+            "board_rx": 530,
+            "board_tx_before_reply": 531
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13172.7,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000057,
+        "status": 0,
+        "rtt_us": 13172.7,
+        "previous_operation_ticks": 32388,
+        "board_rx": 531,
+        "board_tx_before_reply": 532
+      },
+      "result_hex": "50515231e5a3082e00000000000000ab00134a7e0000001a000012000000001f",
+      "response_hex": "4533355201080020000f427953e7cc860000000000007e840000021300000214032c81f36d5302bd000001765ec4baad6deb6e258e1ec096e3a3c427dc7ccfe2866b778ea73c16b3a6a90c67b737d87a9c5246029eb96cc3b4133ea7"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_signature",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12642.78,
+      "python_verify_us": 700.6,
+      "verification_number": 27,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.765199963003397,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000052,
+            "status": 0,
+            "rtt_us": 1121.2,
+            "previous_operation_ticks": 1201557,
+            "board_rx": 526,
+            "board_tx_before_reply": 527
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000053,
+            "status": 0,
+            "rtt_us": 953.5,
+            "previous_operation_ticks": 62969,
+            "board_rx": 527,
+            "board_tx_before_reply": 528
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000054,
+            "status": 0,
+            "rtt_us": 1004.1,
+            "previous_operation_ticks": 44519,
+            "board_rx": 528,
+            "board_tx_before_reply": 529
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000055,
+            "status": 0,
+            "rtt_us": 861.7,
+            "previous_operation_ticks": 44519,
+            "board_rx": 529,
+            "board_tx_before_reply": 530
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000056,
+            "status": 0,
+            "rtt_us": 680.3,
+            "previous_operation_ticks": 44517,
+            "board_rx": 530,
+            "board_tx_before_reply": 531
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13255.4,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000058,
+        "status": 0,
+        "rtt_us": 13255.4,
+        "previous_operation_ticks": 1281898,
+        "board_rx": 532,
+        "board_tx_before_reply": 533
+      },
+      "result_hex": "50515231e5a3082e00000000000000ab00134a960000001b000012000000001f",
+      "response_hex": "4533355201080020000f427a53e7cc860000000000138f6a0000021400000215032c81f36d5302bd00000177594cb9bf3235ba7acfb463f55e3998ca331256256dc7c0a250bc2d9876f094272b34952fab307626d549cacb3f7289d9"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_signature",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12642.56,
+      "python_verify_us": 696.6,
+      "verification_number": 28,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.765199963003397,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000052,
+            "status": 0,
+            "rtt_us": 1121.2,
+            "previous_operation_ticks": 1201557,
+            "board_rx": 526,
+            "board_tx_before_reply": 527
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000053,
+            "status": 0,
+            "rtt_us": 953.5,
+            "previous_operation_ticks": 62969,
+            "board_rx": 527,
+            "board_tx_before_reply": 528
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000054,
+            "status": 0,
+            "rtt_us": 1004.1,
+            "previous_operation_ticks": 44519,
+            "board_rx": 528,
+            "board_tx_before_reply": 529
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000055,
+            "status": 0,
+            "rtt_us": 861.7,
+            "previous_operation_ticks": 44519,
+            "board_rx": 529,
+            "board_tx_before_reply": 530
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000056,
+            "status": 0,
+            "rtt_us": 680.3,
+            "previous_operation_ticks": 44517,
+            "board_rx": 530,
+            "board_tx_before_reply": 531
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13226.4,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000059,
+        "status": 0,
+        "rtt_us": 13226.4,
+        "previous_operation_ticks": 1281922,
+        "board_rx": 533,
+        "board_tx_before_reply": 534
+      },
+      "result_hex": "50515231e5a3082e00000000000000ab00134a800000001c000012000000001f",
+      "response_hex": "4533355201080020000f427b53e7cc860000000000138f820000021500000216032c81f36d5302bd00000178f9c0bf7e59591424aa033c31003efafffb3882735cabb755d3ee1d8dba3cdaf5e9550d9a2fe5f61c369ded1e108a0540"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_signature",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12642.78,
+      "python_verify_us": 551.3,
+      "verification_number": 29,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.765199963003397,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000052,
+            "status": 0,
+            "rtt_us": 1121.2,
+            "previous_operation_ticks": 1201557,
+            "board_rx": 526,
+            "board_tx_before_reply": 527
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000053,
+            "status": 0,
+            "rtt_us": 953.5,
+            "previous_operation_ticks": 62969,
+            "board_rx": 527,
+            "board_tx_before_reply": 528
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000054,
+            "status": 0,
+            "rtt_us": 1004.1,
+            "previous_operation_ticks": 44519,
+            "board_rx": 528,
+            "board_tx_before_reply": 529
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000055,
+            "status": 0,
+            "rtt_us": 861.7,
+            "previous_operation_ticks": 44519,
+            "board_rx": 529,
+            "board_tx_before_reply": 530
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000056,
+            "status": 0,
+            "rtt_us": 680.3,
+            "previous_operation_ticks": 44517,
+            "board_rx": 530,
+            "board_tx_before_reply": 531
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13187.5,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000060,
+        "status": 0,
+        "rtt_us": 13187.5,
+        "previous_operation_ticks": 1281899,
+        "board_rx": 534,
+        "board_tx_before_reply": 535
+      },
+      "result_hex": "50515231e5a3082e00000000000000ab00134a960000001d000012000000001f",
+      "response_hex": "4533355201080020000f427c53e7cc860000000000138f6b0000021600000217032c81f36d5302bd000001799d0d4457a3bc7c84d92692d81d0e2a802926430f8c8a1d003c4f59617c0951dec19c5cde39c55efb267e7769ba3f2dc7"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_signature",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12642.69,
+      "python_verify_us": 716.2,
+      "verification_number": 30,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.765199963003397,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000052,
+            "status": 0,
+            "rtt_us": 1121.2,
+            "previous_operation_ticks": 1201557,
+            "board_rx": 526,
+            "board_tx_before_reply": 527
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000053,
+            "status": 0,
+            "rtt_us": 953.5,
+            "previous_operation_ticks": 62969,
+            "board_rx": 527,
+            "board_tx_before_reply": 528
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000054,
+            "status": 0,
+            "rtt_us": 1004.1,
+            "previous_operation_ticks": 44519,
+            "board_rx": 528,
+            "board_tx_before_reply": 529
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000055,
+            "status": 0,
+            "rtt_us": 861.7,
+            "previous_operation_ticks": 44519,
+            "board_rx": 529,
+            "board_tx_before_reply": 530
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000056,
+            "status": 0,
+            "rtt_us": 680.3,
+            "previous_operation_ticks": 44517,
+            "board_rx": 530,
+            "board_tx_before_reply": 531
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 13327.8,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000061,
+        "status": 0,
+        "rtt_us": 13327.8,
+        "previous_operation_ticks": 1281921,
+        "board_rx": 535,
+        "board_tx_before_reply": 536
+      },
+      "result_hex": "50515231e5a3082e00000000000000ab00134a8d0000001e000012000000001f",
+      "response_hex": "4533355201080020000f427d53e7cc860000000000138f810000021700000218032c81f36d5302bd0000017aea2adf276e551ae77eda27fd0f712a7f94d3cd515a95fe2cf98336643356bb9befc98adaf2d6d402d5285c822625f4df"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_message",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12314.98,
+      "python_verify_us": 549.7,
+      "verification_number": 31,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.850400029681623,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000062,
+            "status": 0,
+            "rtt_us": 1090.9,
+            "previous_operation_ticks": 1281912,
+            "board_rx": 536,
+            "board_tx_before_reply": 537
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000063,
+            "status": 0,
+            "rtt_us": 875.3,
+            "previous_operation_ticks": 62970,
+            "board_rx": 537,
+            "board_tx_before_reply": 538
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000064,
+            "status": 0,
+            "rtt_us": 985.5,
+            "previous_operation_ticks": 44518,
+            "board_rx": 538,
+            "board_tx_before_reply": 539
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000065,
+            "status": 0,
+            "rtt_us": 917.7,
+            "previous_operation_ticks": 44517,
+            "board_rx": 539,
+            "board_tx_before_reply": 540
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000066,
+            "status": 0,
+            "rtt_us": 802.0,
+            "previous_operation_ticks": 44516,
+            "board_rx": 540,
+            "board_tx_before_reply": 541
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12858.3,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000067,
+        "status": 0,
+        "rtt_us": 12858.3,
+        "previous_operation_ticks": 32388,
+        "board_rx": 541,
+        "board_tx_before_reply": 542
+      },
+      "result_hex": "50515231d67dad0d00000000000000ab0012ca8a0000001f000012000000001f",
+      "response_hex": "4533355201080020000f428353e7cc860000000000007e840000021d0000021e032c81f36d5302bd00000180de60988b9469aa3d047eb7f2c6c8b571d0ec7056932bf1538a6f2f30f8431622ffea614f2405b5123924a23b7e015758"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_message",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12314.95,
+      "python_verify_us": 587.5,
+      "verification_number": 32,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.850400029681623,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000062,
+            "status": 0,
+            "rtt_us": 1090.9,
+            "previous_operation_ticks": 1281912,
+            "board_rx": 536,
+            "board_tx_before_reply": 537
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000063,
+            "status": 0,
+            "rtt_us": 875.3,
+            "previous_operation_ticks": 62970,
+            "board_rx": 537,
+            "board_tx_before_reply": 538
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000064,
+            "status": 0,
+            "rtt_us": 985.5,
+            "previous_operation_ticks": 44518,
+            "board_rx": 538,
+            "board_tx_before_reply": 539
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000065,
+            "status": 0,
+            "rtt_us": 917.7,
+            "previous_operation_ticks": 44517,
+            "board_rx": 539,
+            "board_tx_before_reply": 540
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000066,
+            "status": 0,
+            "rtt_us": 802.0,
+            "previous_operation_ticks": 44516,
+            "board_rx": 540,
+            "board_tx_before_reply": 541
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12973.6,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000068,
+        "status": 0,
+        "rtt_us": 12973.6,
+        "previous_operation_ticks": 1249143,
+        "board_rx": 542,
+        "board_tx_before_reply": 543
+      },
+      "result_hex": "50515231d67dad0d00000000000000ab0012ca8700000020000012000000001f",
+      "response_hex": "4533355201080020000f428453e7cc860000000000130f770000021e0000021f032c81f36d5302bd00000181fefec440ead578ce50d9cd60dba3e8a3bc1012c81787e3fd8645bd115cb4bf81afe463959eb8127202f480b1d795406a"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_message",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12315.09,
+      "python_verify_us": 543.5,
+      "verification_number": 33,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.850400029681623,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000062,
+            "status": 0,
+            "rtt_us": 1090.9,
+            "previous_operation_ticks": 1281912,
+            "board_rx": 536,
+            "board_tx_before_reply": 537
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000063,
+            "status": 0,
+            "rtt_us": 875.3,
+            "previous_operation_ticks": 62970,
+            "board_rx": 537,
+            "board_tx_before_reply": 538
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000064,
+            "status": 0,
+            "rtt_us": 985.5,
+            "previous_operation_ticks": 44518,
+            "board_rx": 538,
+            "board_tx_before_reply": 539
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000065,
+            "status": 0,
+            "rtt_us": 917.7,
+            "previous_operation_ticks": 44517,
+            "board_rx": 539,
+            "board_tx_before_reply": 540
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000066,
+            "status": 0,
+            "rtt_us": 802.0,
+            "previous_operation_ticks": 44516,
+            "board_rx": 540,
+            "board_tx_before_reply": 541
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12962.0,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000069,
+        "status": 0,
+        "rtt_us": 12962.0,
+        "previous_operation_ticks": 1249138,
+        "board_rx": 543,
+        "board_tx_before_reply": 544
+      },
+      "result_hex": "50515231d67dad0d00000000000000ab0012ca9500000021000012000000001f",
+      "response_hex": "4533355201080020000f428553e7cc860000000000130f720000021f00000220032c81f36d5302bd00000182f6b12eb142695d11cb33fb48b164d4e3ea0cc82d85c1ac1cad70240b32d9fd1e320f71b4a0de791e30a6bd9e164e770a"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_message",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12315.01,
+      "python_verify_us": 555.4,
+      "verification_number": 34,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.850400029681623,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000062,
+            "status": 0,
+            "rtt_us": 1090.9,
+            "previous_operation_ticks": 1281912,
+            "board_rx": 536,
+            "board_tx_before_reply": 537
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000063,
+            "status": 0,
+            "rtt_us": 875.3,
+            "previous_operation_ticks": 62970,
+            "board_rx": 537,
+            "board_tx_before_reply": 538
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000064,
+            "status": 0,
+            "rtt_us": 985.5,
+            "previous_operation_ticks": 44518,
+            "board_rx": 538,
+            "board_tx_before_reply": 539
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000065,
+            "status": 0,
+            "rtt_us": 917.7,
+            "previous_operation_ticks": 44517,
+            "board_rx": 539,
+            "board_tx_before_reply": 540
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000066,
+            "status": 0,
+            "rtt_us": 802.0,
+            "previous_operation_ticks": 44516,
+            "board_rx": 540,
+            "board_tx_before_reply": 541
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12945.1,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000070,
+        "status": 0,
+        "rtt_us": 12945.1,
+        "previous_operation_ticks": 1249153,
+        "board_rx": 544,
+        "board_tx_before_reply": 545
+      },
+      "result_hex": "50515231d67dad0d00000000000000ab0012ca8d00000022000012000000001f",
+      "response_hex": "4533355201080020000f428653e7cc860000000000130f810000022000000221032c81f36d5302bd000001838a39991aa5d54838bbd6300e3887d21c3524a384440145a3558916196a9ecc1f369c01bc3b0dc5c81f07e7cd337a6d23"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_message",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 12314.97,
+      "python_verify_us": 843.6,
+      "verification_number": 35,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.850400029681623,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000062,
+            "status": 0,
+            "rtt_us": 1090.9,
+            "previous_operation_ticks": 1281912,
+            "board_rx": 536,
+            "board_tx_before_reply": 537
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000063,
+            "status": 0,
+            "rtt_us": 875.3,
+            "previous_operation_ticks": 62970,
+            "board_rx": 537,
+            "board_tx_before_reply": 538
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000064,
+            "status": 0,
+            "rtt_us": 985.5,
+            "previous_operation_ticks": 44518,
+            "board_rx": 538,
+            "board_tx_before_reply": 539
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000065,
+            "status": 0,
+            "rtt_us": 917.7,
+            "previous_operation_ticks": 44517,
+            "board_rx": 539,
+            "board_tx_before_reply": 540
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000066,
+            "status": 0,
+            "rtt_us": 802.0,
+            "previous_operation_ticks": 44516,
+            "board_rx": 540,
+            "board_tx_before_reply": 541
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12940.1,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000071,
+        "status": 0,
+        "rtt_us": 12940.1,
+        "previous_operation_ticks": 1249146,
+        "board_rx": 545,
+        "board_tx_before_reply": 546
+      },
+      "result_hex": "50515231d67dad0d00000000000000ab0012ca8900000023000012000000001f",
+      "response_hex": "4533355201080020000f428753e7cc860000000000130f7a0000022100000222032c81f36d5302bd00000184024c7c9a01f11637a57031a4105a92e84a5f842d9ace989a49aabf1eb1160945ac4d17054101a8726af3e2586c98a04a"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_key",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 11839.19,
+      "python_verify_us": 541.7,
+      "verification_number": 36,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.490799969062209,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000072,
+            "status": 0,
+            "rtt_us": 1111.3,
+            "previous_operation_ticks": 1249142,
+            "board_rx": 546,
+            "board_tx_before_reply": 547
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000073,
+            "status": 0,
+            "rtt_us": 877.0,
+            "previous_operation_ticks": 62969,
+            "board_rx": 547,
+            "board_tx_before_reply": 548
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000074,
+            "status": 0,
+            "rtt_us": 862.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 548,
+            "board_tx_before_reply": 549
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000075,
+            "status": 0,
+            "rtt_us": 855.5,
+            "previous_operation_ticks": 44516,
+            "board_rx": 549,
+            "board_tx_before_reply": 550
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000076,
+            "status": 0,
+            "rtt_us": 687.0,
+            "previous_operation_ticks": 44518,
+            "board_rx": 550,
+            "board_tx_before_reply": 551
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12386.9,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000077,
+        "status": 0,
+        "rtt_us": 12386.9,
+        "previous_operation_ticks": 32389,
+        "board_rx": 551,
+        "board_tx_before_reply": 552
+      },
+      "result_hex": "505152311e78febe00000000000000ab001210af00000024000012000000001f",
+      "response_hex": "4533355201080020000f428d53e7cc860000000000007e850000022700000228032c81f36d5302bd0000018af9171417ec3724a841c3817dc77a52b63c68627104c778c9b88c7ebe02f487abdf0355348422fa1040779136f0a76873"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_key",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 11839.16,
+      "python_verify_us": 610.7,
+      "verification_number": 37,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.490799969062209,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000072,
+            "status": 0,
+            "rtt_us": 1111.3,
+            "previous_operation_ticks": 1249142,
+            "board_rx": 546,
+            "board_tx_before_reply": 547
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000073,
+            "status": 0,
+            "rtt_us": 877.0,
+            "previous_operation_ticks": 62969,
+            "board_rx": 547,
+            "board_tx_before_reply": 548
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000074,
+            "status": 0,
+            "rtt_us": 862.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 548,
+            "board_tx_before_reply": 549
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000075,
+            "status": 0,
+            "rtt_us": 855.5,
+            "previous_operation_ticks": 44516,
+            "board_rx": 549,
+            "board_tx_before_reply": 550
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000076,
+            "status": 0,
+            "rtt_us": 687.0,
+            "previous_operation_ticks": 44518,
+            "board_rx": 550,
+            "board_tx_before_reply": 551
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12543.1,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000078,
+        "status": 0,
+        "rtt_us": 12543.1,
+        "previous_operation_ticks": 1201564,
+        "board_rx": 552,
+        "board_tx_before_reply": 553
+      },
+      "result_hex": "505152311e78febe00000000000000ab001210ac00000025000012000000001f",
+      "response_hex": "4533355201080020000f428e53e7cc86000000000012559c0000022800000229032c81f36d5302bd0000018b123b100f4c8d78303862ebb4c76ca1315edb53b73b3a930d9592fe26245a7f5775405a7fde9bb6a22a20b291cd500232"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_key",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 11839.11,
+      "python_verify_us": 699.2,
+      "verification_number": 38,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.490799969062209,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000072,
+            "status": 0,
+            "rtt_us": 1111.3,
+            "previous_operation_ticks": 1249142,
+            "board_rx": 546,
+            "board_tx_before_reply": 547
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000073,
+            "status": 0,
+            "rtt_us": 877.0,
+            "previous_operation_ticks": 62969,
+            "board_rx": 547,
+            "board_tx_before_reply": 548
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000074,
+            "status": 0,
+            "rtt_us": 862.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 548,
+            "board_tx_before_reply": 549
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000075,
+            "status": 0,
+            "rtt_us": 855.5,
+            "previous_operation_ticks": 44516,
+            "board_rx": 549,
+            "board_tx_before_reply": 550
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000076,
+            "status": 0,
+            "rtt_us": 687.0,
+            "previous_operation_ticks": 44518,
+            "board_rx": 550,
+            "board_tx_before_reply": 551
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12461.3,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000079,
+        "status": 0,
+        "rtt_us": 12461.3,
+        "previous_operation_ticks": 1201559,
+        "board_rx": 553,
+        "board_tx_before_reply": 554
+      },
+      "result_hex": "505152311e78febe00000000000000ab001210a700000026000012000000001f",
+      "response_hex": "4533355201080020000f428f53e7cc860000000000125597000002290000022a032c81f36d5302bd0000018c14ff4446b69f5017a1038696f0f12afb9b10e7f6e0e665785362635b65f884b6cf7fbee30bf3acf34e7f7025c4dc9a2b"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_key",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 11839.06,
+      "python_verify_us": 653.4,
+      "verification_number": 39,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.490799969062209,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000072,
+            "status": 0,
+            "rtt_us": 1111.3,
+            "previous_operation_ticks": 1249142,
+            "board_rx": 546,
+            "board_tx_before_reply": 547
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000073,
+            "status": 0,
+            "rtt_us": 877.0,
+            "previous_operation_ticks": 62969,
+            "board_rx": 547,
+            "board_tx_before_reply": 548
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000074,
+            "status": 0,
+            "rtt_us": 862.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 548,
+            "board_tx_before_reply": 549
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000075,
+            "status": 0,
+            "rtt_us": 855.5,
+            "previous_operation_ticks": 44516,
+            "board_rx": 549,
+            "board_tx_before_reply": 550
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000076,
+            "status": 0,
+            "rtt_us": 687.0,
+            "previous_operation_ticks": 44518,
+            "board_rx": 550,
+            "board_tx_before_reply": 551
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12449.7,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000080,
+        "status": 0,
+        "rtt_us": 12449.7,
+        "previous_operation_ticks": 1201555,
+        "board_rx": 554,
+        "board_tx_before_reply": 555
+      },
+      "result_hex": "505152311e78febe00000000000000ab001210a200000027000012000000001f",
+      "response_hex": "4533355201080020000f429053e7cc8600000000001255930000022a0000022b032c81f36d5302bd0000018d31e0e80dc4152bbdcdb4058db857f34c2924aecc60b4bbd07018e854c2f3a2c120f8d597120bb9daec29a78ca52bad8a"
+    },
+    {
+      "algorithm": "HSS-SHAKE256",
+      "case": "bad_key",
+      "accepted": false,
+      "vendor_status": 171,
+      "device_verify_us": 11839.06,
+      "python_verify_us": 529.3,
+      "verification_number": 40,
+      "blocks_used": 31,
+      "message_bytes": 56,
+      "signature_bytes": 4464,
+      "public_key_bytes": 60,
+      "upload": {
+        "bytes": 4608,
+        "packets": 5,
+        "wall_ms": 4.490799969062209,
+        "records": [
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000072,
+            "status": 0,
+            "rtt_us": 1111.3,
+            "previous_operation_ticks": 1249142,
+            "board_rx": 546,
+            "board_tx_before_reply": 547
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000073,
+            "status": 0,
+            "rtt_us": 877.0,
+            "previous_operation_ticks": 62969,
+            "board_rx": 547,
+            "board_tx_before_reply": 548
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000074,
+            "status": 0,
+            "rtt_us": 862.6,
+            "previous_operation_ticks": 44518,
+            "board_rx": 548,
+            "board_tx_before_reply": 549
+          },
+          {
+            "op": 8,
+            "input_bytes": 1024,
+            "output_bytes": 16,
+            "sequence": 1000075,
+            "status": 0,
+            "rtt_us": 855.5,
+            "previous_operation_ticks": 44516,
+            "board_rx": 549,
+            "board_tx_before_reply": 550
+          },
+          {
+            "op": 8,
+            "input_bytes": 592,
+            "output_bytes": 16,
+            "sequence": 1000076,
+            "status": 0,
+            "rtt_us": 687.0,
+            "previous_operation_ticks": 44518,
+            "board_rx": 550,
+            "board_tx_before_reply": 551
+          }
+        ]
+      },
+      "result_matches_python": true,
+      "rtt_us": 12422.0,
+      "record": {
+        "op": 8,
+        "input_bytes": 16,
+        "output_bytes": 32,
+        "sequence": 1000081,
+        "status": 0,
+        "rtt_us": 12422.0,
+        "previous_operation_ticks": 1201551,
+        "board_rx": 555,
+        "board_tx_before_reply": 556
+      },
+      "result_hex": "505152311e78febe00000000000000ab001210a200000028000012000000001f",
+      "response_hex": "4533355201080020000f429153e7cc86000000000012558f0000022b0000022c032c81f36d5302bd0000018e1ec3df7c17e048c1fe30fcff20861cd851a9de5dbb08b574a46e05c2bdf6575fb63da7ff83bf143fade04da4e1cbdd21"
+    }
+  ],
+  "guards": [
+    {
+      "guard": "wrong_transfer_id",
+      "status": 5,
+      "expected_status": 5
+    },
+    {
+      "guard": "pq_replayed_command",
+      "status": 3,
+      "expected_status": 3
+    },
+    {
+      "guard": "pq_bad_gcm_tag",
+      "status": 2,
+      "expected_status": 2
+    },
+    {
+      "guard": "incomplete_upload",
+      "status": 5,
+      "expected_status": 5
+    },
+    {
+      "guard": "upload_overrun",
+      "status": 5,
+      "expected_status": 5
+    },
+    {
+      "guard": "unsupported_parameter_profile",
+      "status": 5,
+      "expected_status": 5
+    }
+  ],
+  "overall": "PASS"
+}

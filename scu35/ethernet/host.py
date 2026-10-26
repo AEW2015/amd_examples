@@ -25,7 +25,7 @@ class Client:
   if self.seq>=self.limit:raise ValueError('Reserved sequence range exhausted')
   assert 16<=len(data)<=1024 and len(data)%16==0
   header=REQUEST.pack(b'E35Q',1,op,len(data),self.seq,self.session)
-  if op==2:
+  if op in (2,7,8):
    nonce=self.host_nonce_prefix+self.seq.to_bytes(4,'big')
    wire=header+nonce+self.aes.encrypt(nonce,data,header)
   else:wire=header+data

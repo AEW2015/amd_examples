@@ -1,0 +1,11 @@
+{
+  "pdi_sha256": "9a9cf8fa98c4dab0b522a2a3642f0203d2996a2d46953966193f3cdbce6d5a4c",
+  "restore_sha256": "3edbbaa0eb1373812d032b7090620949e969706c3c6e9e9f3b40a8466abd0020",
+  "cable": "52041A454A5PA",
+  "server": "localhost:3121",
+  "started_utc": "2026-10-26T04:41:04.182443+00:00",
+  "hardware_pass": true,
+  "recovery_pass": true,
+  "pq_pass": true,
+  "finished_utc": "2026-10-26T04:41:48.814889+00:00"
+}
